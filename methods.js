@@ -1,36 +1,6 @@
 //test alerts
 alert("sup good boi");
 
-function uncheckClass(id) {
-
-	// change atributes of that class
-	document.getElementById(id).style.color = "black";
-	document.getElementById(id).style.backgroundColor = "orange";
-	
-	// DOESN'T WORK
-	// if you uncheck a class, check if the semester button needs to be unchecked
-	var auxS = "sem" + id[1];
-		auxB = "b" + aux;
-	if(document.getElementById(auxB).checked == true){
-		//alert("aaaaaaa");
-		document.getElementById(auxB).checked = false;
-		document.getElementById(auxS).style.color = "black";
-		document.getElementById(auxS).style.backgroundColor = "orange";
-	}
-}
-
-function checkClass(id){
-
-	// change atributes of that class
-	document.getElementById(id).style.color = "white";
-	document.getElementById(id).style.backgroundColor = "green";
-
-	// if you check a class, check if the semester button needs to turn green
-	// MISSING CODE
-}
-
-
-
 function checking(id) {
 
 	var aux0 = "b" + id;
@@ -203,41 +173,17 @@ document.getElementById("bs1m1").onclick = function(){
 
 // Semestre 1 Materia 2
 document.getElementById("bs1m2").onclick = function(){
-	if(document.getElementById("bs1m2").checked == true){
-		checkClass("s1m2");
-	}
-	else{
-		uncheckClass("s1m2");
-	}
+	checking("s1m2");
 }
 
 // Semestre 1 Materia 3
 document.getElementById("bs1m3").onclick = function(){
-	if(document.getElementById("bs1m3").checked == true){
-		checkClass("s1m3");
-	}
-	else{
-		uncheckClass("s1m3");
-	}
+	checking("s1m3");
 }
 
 // Semestre 1 Materia 4
 document.getElementById("bs1m4").onclick = function(){
-	if(document.getElementById("bs1m4").checked == true){
-		document.getElementById("s1m4").style.color = "white";
-		document.getElementById("s1m4").style.backgroundColor = "green";
-	}
-	else{
-		document.getElementById("s1m4").style.color = "black";
-		document.getElementById("s1m4").style.backgroundColor = "orange";
-
-		if(document.getElementById("bsem1").checked == true){
-			document.getElementById("bsem1").checked = false;
-			document.getElementById("sem1").style.color = "black";
-			document.getElementById("sem1").style.backgroundColor = "orange";
-		}
-
-	}
+	checking("s1m4");
 }
 
 // Semestre 1 Materia 5
