@@ -4,8 +4,7 @@ alert("sup good boi");
 function checking(id) {
 
 	var aux0 = "b" + id;
-	if(document.getElementById(aux0).checked == true){		
-		// change atributes of that class
+	if(document.getElementById(aux0).checked == true){
 		document.getElementById(id).style.color = "white";
 		document.getElementById(id).style.backgroundColor = "green";
 
@@ -18,9 +17,7 @@ function checking(id) {
 		document.getElementById(id).style.backgroundColor = "orange";
 
 		// if you uncheck a class, check if the semester button needs to be unchecked
-		// DOESN'T WORK
 		var auxS = "sem" + id[1];
-
 		if(document.getElementById("b" + auxS).checked == true){
 			document.getElementById("b" + auxS).checked = false;
 			document.getElementById(auxS).style.color = "black";
@@ -28,8 +25,6 @@ function checking(id) {
 		}
 	}	
 }
-
-
 
 // SEMESTRE BUTTONS
 
@@ -246,12 +241,7 @@ document.getElementById("bs1m7").onclick = function(){
 
 // Semestre 2 Materia 1
 document.getElementById("bs2m1").onclick = function(){
-	if(document.getElementById("bs2m1").checked == true){
-		checkClass("s2m1");
-	}
-	else{
-		uncheckClass("s2m1");
-	}
+	checking("s2m1");
 }
 
 // Semestre 2 Materia 2
