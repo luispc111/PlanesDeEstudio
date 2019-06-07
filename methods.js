@@ -1,15 +1,47 @@
 //test alerts
-alert("sup good boi");
+alert("te an jakeado");
 
 function checking(id) {
 
 	var aux0 = "b" + id;
 	if(document.getElementById(aux0).checked == true){
+
 		document.getElementById(id).style.color = "white";
 		document.getElementById(id).style.backgroundColor = "green";
-
-		// if you check a class, check if the semester button needs to turn green
+		
 		// MISSING CODE
+		// if you check a class, check if the semester button needs to turn green
+		if(document.getElementById("bsem" + id[1]).checked == false){
+			
+			bcheck = true;
+			if(id[1] == '1' || id[1] == '8' || id[1] == '9'){	
+				for(var i=1; i<=7; i++){
+					if(document.getElementById("bs" + id[1] + "m" + i).checked == false){
+						bcheck = false;
+						break;
+					}
+				}
+				if(bcheck == true){
+					document.getElementById("bsem" + id[1]).checked = true;
+					document.getElementById("sem" + id[1]).style.color = "white";
+					document.getElementById("sem" + id[1]).style.backgroundColor = "green";
+				}
+			}
+			else{
+				for(var i=1; i<=6; i++){
+					if(document.getElementById("bs" + id[1] + "m" + i).checked == false){
+						bcheck = false;
+						break;
+					}
+				}
+				if(bcheck == true){
+					document.getElementById("bsem" + id[1]).checked = true;
+					document.getElementById("sem" + id[1]).style.color = "white";
+					document.getElementById("sem" + id[1]).style.backgroundColor = "green";
+				}
+			}
+
+		}
 	}
 	else{
 		// change atributes of that class
@@ -183,61 +215,18 @@ document.getElementById("bs1m4").onclick = function(){
 
 // Semestre 1 Materia 5
 document.getElementById("bs1m5").onclick = function(){
-	if(document.getElementById("bs1m5").checked == true){
-		document.getElementById("s1m5").style.color = "white";
-		document.getElementById("s1m5").style.backgroundColor = "green";
-	}
-	else{
-		document.getElementById("s1m5").style.color = "black";
-		document.getElementById("s1m5").style.backgroundColor = "orange";
-
-		if(document.getElementById("bsem1").checked == true){
-			document.getElementById("bsem1").checked = false;
-			document.getElementById("sem1").style.color = "black";
-			document.getElementById("sem1").style.backgroundColor = "orange";
-		}
-
-	}
+	checking("s1m5");
 }
 
 // Semestre 1 Materia 6
 document.getElementById("bs1m6").onclick = function(){
-	if(document.getElementById("bs1m6").checked == true){
-		document.getElementById("s1m6").style.color = "white";
-		document.getElementById("s1m6").style.backgroundColor = "green";
-	}
-	else{
-		document.getElementById("s1m6").style.color = "black";
-		document.getElementById("s1m6").style.backgroundColor = "orange";
-
-		if(document.getElementById("bsem1").checked == true){
-			document.getElementById("bsem1").checked = false;
-			document.getElementById("sem1").style.color = "black";
-			document.getElementById("sem1").style.backgroundColor = "orange";
-		}
-
-	}
+	checking("s1m6");
 }
 
 // Semestre 1 Materia 7
 document.getElementById("bs1m7").onclick = function(){
-	if(document.getElementById("bs1m7").checked == true){
-		document.getElementById("s1m7").style.color = "white";
-		document.getElementById("s1m7").style.backgroundColor = "green";
-	}
-	else{
-		document.getElementById("s1m7").style.color = "black";
-		document.getElementById("s1m7").style.backgroundColor = "orange";
-
-		if(document.getElementById("bsem1").checked == true){
-			document.getElementById("bsem1").checked = false;
-			document.getElementById("sem1").style.color = "black";
-			document.getElementById("sem1").style.backgroundColor = "orange";
-		}
-
-	}
+	checking("s1m7");
 }
-
 
 // Semestre 2 Materia 1
 document.getElementById("bs2m1").onclick = function(){
