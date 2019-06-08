@@ -1,7 +1,4 @@
 
-var barWidth = 0;
-	width = 100/57;
-
 // checking classes
 function checking(id) {
 
@@ -71,7 +68,7 @@ function checkingSemester(id) {
 	var auxB = "b" + id;
 	if(document.getElementById(auxB).checked == true){
 
-
+		moveOneMoreSemester(id);
 
 		//semester box
 		document.getElementById(id).style.color = "white";
@@ -93,6 +90,8 @@ function checkingSemester(id) {
 	}
 	else{
 
+		moveOneLessSemester(id);
+
 		//semester box
 		document.getElementById(id).style.color = "black";
 		document.getElementById(id).style.backgroundColor = "orange";
@@ -113,6 +112,10 @@ function checkingSemester(id) {
 	}
 }
 
+
+var barWidth = 0;
+	width = 100/57;
+
 function moveOneMore() {
  	var elem = document.getElementById("myBar"); 
  	barWidth += width;
@@ -122,5 +125,27 @@ function moveOneMore() {
 function moveOneLess() {
  	var elem = document.getElementById("myBar"); 
  	barWidth -= width;
+ 	elem.style.width = barWidth + '%';
+}
+
+function moveOneMoreSemester(id) {
+ 	var elem = document.getElementById("myBar"); 
+ 	if(id[3] == '1' || id[3] == '8' || id[3] == '9'){
+ 		barWidth += (width * 7);
+ 	}
+ 	else{
+ 		barWidth += (width * 6);
+ 	}	
+ 	elem.style.width = barWidth + '%';
+}
+
+function moveOneLessSemester(id) {
+ 	var elem = document.getElementById("myBar"); 
+ 	if(id[3] == '1' || id[3] == '8' || id[3] == '9'){
+ 		barWidth -= (width * 7);
+ 	}
+ 	else{
+ 		barWidth -= (width * 6);
+ 	}	
  	elem.style.width = barWidth + '%';
 }
