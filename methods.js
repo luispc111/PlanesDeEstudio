@@ -8,11 +8,10 @@ function checking(id) {
 
 		document.getElementById(id).style.color = "white";
 		document.getElementById(id).style.backgroundColor = "green";
-		
-		// MISSING CODE
+
 		// if you check a class, check if the semester button needs to turn green
 		if(document.getElementById("bsem" + id[1]).checked == false){
-			
+
 			bcheck = true;
 			if(id[1] == '1' || id[1] == '8' || id[1] == '9'){	
 				for(var i=1; i<=7; i++){
@@ -40,7 +39,6 @@ function checking(id) {
 					document.getElementById("sem" + id[1]).style.backgroundColor = "green";
 				}
 			}
-
 		}
 	}
 	else{
@@ -187,142 +185,5 @@ document.getElementById("bsem2").onclick = function(){
 		document.getElementById("s2m6").style.color = "black";
 		document.getElementById("s2m6").style.backgroundColor = "orange";
 		document.getElementById("bs2m6").checked = false;
-	}
-}
-
-// -----------------------------------------------------------------------------------
-// MATERIAS BUTTONS
-
-// Semestre 1 Materia 1
-document.getElementById("bs1m1").onclick = function(){
-	checking("s1m1");
-}
-
-// Semestre 1 Materia 2
-document.getElementById("bs1m2").onclick = function(){
-	checking("s1m2");
-}
-
-// Semestre 1 Materia 3
-document.getElementById("bs1m3").onclick = function(){
-	checking("s1m3");
-}
-
-// Semestre 1 Materia 4
-document.getElementById("bs1m4").onclick = function(){
-	checking("s1m4");
-}
-
-// Semestre 1 Materia 5
-document.getElementById("bs1m5").onclick = function(){
-	checking("s1m5");
-}
-
-// Semestre 1 Materia 6
-document.getElementById("bs1m6").onclick = function(){
-	checking("s1m6");
-}
-
-// Semestre 1 Materia 7
-document.getElementById("bs1m7").onclick = function(){
-	checking("s1m7");
-}
-
-// Semestre 2 Materia 1
-document.getElementById("bs2m1").onclick = function(){
-	checking("s2m1");
-}
-
-// Semestre 2 Materia 2
-document.getElementById("bs2m2").onclick = function(){
-	if(document.getElementById("bs2m2").checked == true){
-		document.getElementById("s2m2").style.color = "white";
-		document.getElementById("s2m2").style.backgroundColor = "green";
-	}
-	else{
-		document.getElementById("s2m2").style.color = "black";
-		document.getElementById("s2m2").style.backgroundColor = "orange";
-		
-		if(document.getElementById("bsem2").checked == true){
-			document.getElementById("bsem2").checked = false;
-			document.getElementById("sem2").style.color = "black";
-			document.getElementById("sem2").style.backgroundColor = "orange";
-		}
-	}
-}
-
-// Semestre 2 Materia 3
-document.getElementById("bs2m3").onclick = function(){
-	if(document.getElementById("bs2m3").checked == true){
-		document.getElementById("s2m3").style.color = "white";
-		document.getElementById("s2m3").style.backgroundColor = "green";
-	}
-	else{
-		document.getElementById("s2m3").style.color = "black";
-		document.getElementById("s2m3").style.backgroundColor = "orange";
-
-		if(document.getElementById("bsem2").checked == true){
-			document.getElementById("bsem2").checked = false;
-			document.getElementById("sem2").style.color = "black";
-			document.getElementById("sem2").style.backgroundColor = "orange";
-		}
-
-	}
-}
-
-// Semestre 2 Materia 4
-document.getElementById("bs2m4").onclick = function(){
-	if(document.getElementById("bs2m4").checked == true){
-		document.getElementById("s2m4").style.color = "white";
-		document.getElementById("s2m4").style.backgroundColor = "green";
-	}
-	else{
-		document.getElementById("s2m4").style.color = "black";
-		document.getElementById("s2m4").style.backgroundColor = "orange";
-
-		if(document.getElementById("bsem2").checked == true){
-			document.getElementById("bsem2").checked = false;
-			document.getElementById("sem2").style.color = "black";
-			document.getElementById("sem2").style.backgroundColor = "orange";
-		}
-
-	}
-}
-
-// Semestre 2 Materia 5
-document.getElementById("bs2m5").onclick = function(){
-	if(document.getElementById("bs2m5").checked == true){
-		document.getElementById("s2m5").style.color = "white";
-		document.getElementById("s2m5").style.backgroundColor = "green";
-	}
-	else{
-		document.getElementById("s2m5").style.color = "black";
-		document.getElementById("s2m5").style.backgroundColor = "orange";
-
-		if(document.getElementById("bsem2").checked == true){
-			document.getElementById("bsem2").checked = false;
-			document.getElementById("sem2").style.color = "black";
-			document.getElementById("sem2").style.backgroundColor = "orange";
-		}
-
-	}
-}
-
-// Semestre 2 Materia 6
-document.getElementById("bs2m6").onclick = function(){
-	if(document.getElementById("bs2m6").checked == true){
-		document.getElementById("s2m6").style.color = "white";
-		document.getElementById("s2m6").style.backgroundColor = "green";
-	}
-	else{
-		document.getElementById("s2m6").style.color = "black";
-		document.getElementById("s2m6").style.backgroundColor = "orange";
-		
-		if(document.getElementById("bsem2").checked == true){
-			document.getElementById("bsem2").checked = false;
-			document.getElementById("sem2").style.color = "black";
-			document.getElementById("sem2").style.backgroundColor = "orange";
-		}
-
 	}
 }
