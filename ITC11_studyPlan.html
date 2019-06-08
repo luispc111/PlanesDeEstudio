@@ -2,20 +2,42 @@
 <html lang="es">
 	<head>
 		<title>
-			Plan de estudios ITC11
+			ITC11
 		</title>
 		<style>
 			table, th, td {
-			  border: 1px solid black;
+				border: 1px solid black;
 			}
+
+			td {
+				font-size: 75%;
+			}
+
 			#my-table{width:100%;} /*or whatever width you want*/
 			#my-table td{width:2000px;} /*something big*/
+
+			#myBar {
+			  width: 0%;
+			  height: 30px;
+			  background-color: #4CAF50;
+			  text-align: center; /* To center it horizontally (if you want) */
+			  line-height: 30px; /* To center it vertically */
+			  color: white; 
+			}
+
 		</style>
+		<script type="text/javascript" src="materiasITC.json"></script>
 	</head>
 
-	<body style="background-color:gray;">
+	<body style="background-color:#191C25;">
 		
-		<h1 id="titulo"> Plan de estudios ITC11 </h1>
+		<h1 id="titulo"><font color="white"><center>Plan de estudios ITC11</center></font> </h1>
+		<p><font color="white">PASO 1: Da clic en el checkbox de las materias aprobadas.</font></p>
+		<p><font color="white">PASO 2: ...</font></p>
+		
+	<div id="myProgress">
+	 	<div id="myBar"></div>
+	</div>
 
 		<p>
 			<table id="my-table", style="width:100%">

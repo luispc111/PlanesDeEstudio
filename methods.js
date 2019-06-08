@@ -1,11 +1,15 @@
-//test alerts
-alert("te an jakeado");
+
+var barWidth = 0;
+	width = 100/57;
 
 // checking classes
 function checking(id) {
 
 	var aux0 = "b" + id;
 	if(document.getElementById(aux0).checked == true){
+
+		// añadir a la barra de progreso
+		moveOneMore();
 
 		document.getElementById(id).style.color = "white";
 		document.getElementById(id).style.backgroundColor = "green";
@@ -43,6 +47,10 @@ function checking(id) {
 		}
 	}
 	else{
+
+		// quitarle a la barra de progreso
+		moveOneLess();
+
 		// change atributes of that class
 		document.getElementById(id).style.color = "black";
 		document.getElementById(id).style.backgroundColor = "orange";
@@ -59,13 +67,11 @@ function checking(id) {
 
 // checking semesters
 function checkingSemester(id) {
-	
-	// id 	== 	sem1
-	// auxB == 	bsem1
-	// id[3] == 1
 
 	var auxB = "b" + id;
 	if(document.getElementById(auxB).checked == true){
+
+
 
 		//semester box
 		document.getElementById(id).style.color = "white";
@@ -105,4 +111,16 @@ function checkingSemester(id) {
 			document.getElementById("bs" + id[3] + "m7").checked = false;
 		}
 	}
+}
+
+function moveOneMore() {
+ 	var elem = document.getElementById("myBar"); 
+ 	barWidth += width;
+ 	elem.style.width = barWidth + '%';
+}
+
+function moveOneLess() {
+ 	var elem = document.getElementById("myBar"); 
+ 	barWidth -= width;
+ 	elem.style.width = barWidth + '%';
 }
