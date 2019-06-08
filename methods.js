@@ -66,15 +66,19 @@ function checkingSemester(id) {
 
 	var auxB = "b" + id;
 	if(document.getElementById(auxB).checked == true){
+
+		//semester box
 		document.getElementById(id).style.color = "white";
 		document.getElementById(id).style.backgroundColor = "green";
 		
+		// classes boxes
 		for(var i = 1; i <= 6; i++){
-			document.getElementById("s" + id[3] "m" + i).style.color = "white";
-			document.getElementById("s" + id[3] "m" + i).style.backgroundColor = "green";
-			document.getElementById("bs" + id[3] "m" + i).checked = true;
+			document.getElementById("s" + id[3] + "m" + i).style.color = "white";
+			document.getElementById("s" + id[3] + "m" + i).style.backgroundColor = "green";
+			document.getElementById("bs" + id[3] + "m" + i).checked = true;
 		}
 
+		//7th box for semesters with 7 classes
 		if(id[3] == '1' || id[3] == '8' || id[3] == '9'){
 			document.getElementById("s" + id[3] + "m7").style.color = "white";
 			document.getElementById("s" + id[3] + "m7").style.backgroundColor = "green";
@@ -82,15 +86,19 @@ function checkingSemester(id) {
 		}
 	}
 	else{
+
+		//semester box
 		document.getElementById(id).style.color = "black";
 		document.getElementById(id).style.backgroundColor = "orange";
 		
+		// classes boxes
 		for(var i = 1; i <= 6; i++){
-			document.getElementById("s" + id[3] "m" + i).style.color = "black";
-			document.getElementById("s" + id[3] "m" + i).style.backgroundColor = "orange";
-			document.getElementById("bs" + id[3] "m" + i).checked = false;
+			document.getElementById("s" + id[3] + "m" + i).style.color = "black";
+			document.getElementById("s" + id[3] + "m" + i).style.backgroundColor = "orange";
+			document.getElementById("bs" + id[3] + "m" + i).checked = false;
 		}
 
+		// 7th box for semesters with 7 classes
 		if(id[3] == '1' || id[3] == '8' || id[3] == '9'){
 			document.getElementById("s" + id[3] + "m7").style.color = "black";
 			document.getElementById("s" + id[3] + "m7").style.backgroundColor = "orange";
