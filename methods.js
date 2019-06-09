@@ -68,7 +68,7 @@ function checkingSemester(id) {
 	var auxB = "b" + id;
 	if(document.getElementById(auxB).checked == true){
 
-		moveOneMoreSemester(id);
+		//moveOneMoreSemester(id);
 
 		//semester box
 		document.getElementById(id).style.color = "white";
@@ -76,76 +76,93 @@ function checkingSemester(id) {
 		
 		// classes boxes
 		for(var i = 1; i <= 6; i++){
-			document.getElementById("s" + id[3] + "m" + i).style.color = "white";
-			document.getElementById("s" + id[3] + "m" + i).style.backgroundColor = "green";
-			document.getElementById("bs" + id[3] + "m" + i).checked = true;
+			if(document.getElementById("bs" + id[3] + "m" + i).checked == false){
+				document.getElementById("s" + id[3] + "m" + i).style.color = "white";
+				document.getElementById("s" + id[3] + "m" + i).style.backgroundColor = "green";
+				document.getElementById("bs" + id[3] + "m" + i).checked = true;
+				moveOneMore();
+			}
 		}
 
 		//7th box for semesters with 7 classes
 		if(id[3] == '1' || id[3] == '8' || id[3] == '9'){
-			document.getElementById("s" + id[3] + "m7").style.color = "white";
-			document.getElementById("s" + id[3] + "m7").style.backgroundColor = "green";
-			document.getElementById("bs" + id[3] + "m7").checked = true;
+			if(document.getElementById("bs" + id[3] + "m7").checked == false){
+				document.getElementById("s" + id[3] + "m7").style.color = "white";
+				document.getElementById("s" + id[3] + "m7").style.backgroundColor = "green";
+				document.getElementById("bs" + id[3] + "m7").checked = true;
+				moveOneMore();
+			}
 		}
 	}
 	else{
 
-		moveOneLessSemester(id);
+		//moveOneLessSemester(id);
 
-		//semester box
+		// semester box
 		document.getElementById(id).style.color = "black";
 		document.getElementById(id).style.backgroundColor = "orange";
 		
 		// classes boxes
 		for(var i = 1; i <= 6; i++){
-			document.getElementById("s" + id[3] + "m" + i).style.color = "black";
-			document.getElementById("s" + id[3] + "m" + i).style.backgroundColor = "orange";
-			document.getElementById("bs" + id[3] + "m" + i).checked = false;
+			if(document.getElementById("bs" + id[3] + "m" + i).checked == true){
+				document.getElementById("s" + id[3] + "m" + i).style.color = "black";
+				document.getElementById("s" + id[3] + "m" + i).style.backgroundColor = "orange";
+				document.getElementById("bs" + id[3] + "m" + i).checked = false;
+				moveOneLess();
+			}
 		}
 
 		// 7th box for semesters with 7 classes
 		if(id[3] == '1' || id[3] == '8' || id[3] == '9'){
-			document.getElementById("s" + id[3] + "m7").style.color = "black";
-			document.getElementById("s" + id[3] + "m7").style.backgroundColor = "orange";
-			document.getElementById("bs" + id[3] + "m7").checked = false;
+			if(document.getElementById("bs" + id[3] + "m7").checked == true){
+				document.getElementById("s" + id[3] + "m7").style.color = "black";
+				document.getElementById("s" + id[3] + "m7").style.backgroundColor = "orange";
+				document.getElementById("bs" + id[3] + "m7").checked = false;
+				moveOneLess();
+			}
 		}
 	}
 }
-
 
 var barWidth = 0;
 	width = 100/57;
 
 function moveOneMore() {
- 	var elem = document.getElementById("myBar"); 
+ 	// var elem = document.getElementById("myBar"); 
+ 	// barWidth += width;
+ 	// elem.style.width = barWidth + '%';
+ 	
  	barWidth += width;
- 	elem.style.width = barWidth + '%';
+ 	document.getElementById("myBar").style.width = barWidth + '%';
 }
 
 function moveOneLess() {
- 	var elem = document.getElementById("myBar"); 
+ 	// var elem = document.getElementById("myBar"); 
+ 	// barWidth -= width;
+ 	// elem.style.width = barWidth + '%';
+
  	barWidth -= width;
- 	elem.style.width = barWidth + '%';
+ 	document.getElementById("myBar").style.width = barWidth + '%';
 }
 
-function moveOneMoreSemester(id) {
- 	var elem = document.getElementById("myBar"); 
- 	if(id[3] == '1' || id[3] == '8' || id[3] == '9'){
- 		barWidth += (width * 7);
- 	}
- 	else{
- 		barWidth += (width * 6);
- 	}	
- 	elem.style.width = barWidth + '%';
-}
+// function moveOneMoreSemester(id) {
+//  	var elem = document.getElementById("myBar"); 
+//  	if(id[3] == '1' || id[3] == '8' || id[3] == '9'){
+//  		barWidth += (width * 7);
+//  	}
+//  	else{
+//  		barWidth += (width * 6);
+//  	}	
+//  	elem.style.width = barWidth + '%';
+// }
 
-function moveOneLessSemester(id) {
- 	var elem = document.getElementById("myBar"); 
- 	if(id[3] == '1' || id[3] == '8' || id[3] == '9'){
- 		barWidth -= (width * 7);
- 	}
- 	else{
- 		barWidth -= (width * 6);
- 	}	
- 	elem.style.width = barWidth + '%';
-}
+// function moveOneLessSemester(id) {
+//  	var elem = document.getElementById("myBar"); 
+//  	if(id[3] == '1' || id[3] == '8' || id[3] == '9'){
+//  		barWidth -= (width * 7);
+//  	}
+//  	else{
+//  		barWidth -= (width * 6);
+//  	}	
+//  	elem.style.width = barWidth + '%';
+// }
