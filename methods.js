@@ -68,8 +68,6 @@ function checkingSemester(id) {
 	var auxB = "b" + id;
 	if(document.getElementById(auxB).checked == true){
 
-		//moveOneMoreSemester(id);
-
 		//semester box
 		document.getElementById(id).style.color = "white";
 		document.getElementById(id).style.backgroundColor = "green";
@@ -96,8 +94,6 @@ function checkingSemester(id) {
 	}
 	else{
 
-		//moveOneLessSemester(id);
-
 		// semester box
 		document.getElementById(id).style.color = "black";
 		document.getElementById(id).style.backgroundColor = "orange";
@@ -114,55 +110,35 @@ function checkingSemester(id) {
 
 		// 7th box for semesters with 7 classes
 		if(id[3] == '1' || id[3] == '8' || id[3] == '9'){
+
 			if(document.getElementById("bs" + id[3] + "m7").checked == true){
+
 				document.getElementById("s" + id[3] + "m7").style.color = "black";
 				document.getElementById("s" + id[3] + "m7").style.backgroundColor = "orange";
 				document.getElementById("bs" + id[3] + "m7").checked = false;
 				moveOneLess();
+
 			}
 		}
 	}
 }
 
 var barWidth = 0;
-	width = 100/57;
+	//widthAux = 100/57;
 
 function moveOneMore() {
- 	// var elem = document.getElementById("myBar"); 
- 	// barWidth += width;
- 	// elem.style.width = barWidth + '%';
- 	
- 	barWidth += width;
+ 	barWidth += (100/57);
  	document.getElementById("myBar").style.width = barWidth + '%';
 }
 
 function moveOneLess() {
- 	// var elem = document.getElementById("myBar"); 
- 	// barWidth -= width;
- 	// elem.style.width = barWidth + '%';
-
- 	barWidth -= width;
+ 	barWidth -= (100/57);
  	document.getElementById("myBar").style.width = barWidth + '%';
+
+ 	// alert(barWidth);
+
+ 	if(barWidth < 0){
+		document.getElementById("myBar").style.width = "0%";
+ 	}
+ 	
 }
-
-// function moveOneMoreSemester(id) {
-//  	var elem = document.getElementById("myBar"); 
-//  	if(id[3] == '1' || id[3] == '8' || id[3] == '9'){
-//  		barWidth += (width * 7);
-//  	}
-//  	else{
-//  		barWidth += (width * 6);
-//  	}	
-//  	elem.style.width = barWidth + '%';
-// }
-
-// function moveOneLessSemester(id) {
-//  	var elem = document.getElementById("myBar"); 
-//  	if(id[3] == '1' || id[3] == '8' || id[3] == '9'){
-//  		barWidth -= (width * 7);
-//  	}
-//  	else{
-//  		barWidth -= (width * 6);
-//  	}	
-//  	elem.style.width = barWidth + '%';
-// }
