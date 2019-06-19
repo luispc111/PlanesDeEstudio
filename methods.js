@@ -142,3 +142,11 @@ function moveOneLess() {
  	}
  	
 }
+
+function extra(btn) {
+	if (btn.style.backgroundColor == "orange") {
+		btn.style.backgroundColor = "green";
+	} else {
+		btn.style.backgroundColor = "orange";
+	}
+}

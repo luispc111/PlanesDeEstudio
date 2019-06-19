@@ -24,6 +24,17 @@
 				line-height: 30px; /* To center it vertically */
 				/*color: white;*/
 			}
+			.button {
+				/* background-color: orange; */
+				border: none;
+				/* color: white; */
+				padding: 12px 30px;
+				text-align: center;
+				/* text-decoration: none; */
+				/* display: inline-block; */
+				/* font-size: 16px; */
+				/* font-size: 75%; */
+			}
 		</style>
 
 		<script type="text/javascript" src="materiasITC.json"></script>
@@ -37,13 +48,23 @@
 		<p><font color="white">PASO 2: (aún no funciona) Selecciona las materias cursadas (queya llevaste pero no has pasado).</font></p>
 		<p><font color="white">PASO 3: ...</font></p>
 		
+		
+
 		<!-- Progress Bar -->
 		<div id="myProgress"><div id="myBar"></div></div>
 
 		<p>
-			<table id="my-table", style="width:100%">
+			<table id="my-table", style="width:100%; -webkit-user-select: none; /* webkit (safari, chrome) browsers */">
 				<tr>
-				    <th bgcolor="orange", id="sem1">Semestre 1<br><label><input type="checkbox" id="bsem1" onclick=checkingSemester("sem1")></label></th>
+					<th bgcolor="orange" type="button" style="background-color: orange" onclick="extra(this)">
+						<!-- <button type="button" class="button" id="hola" style="background-color: orange" onclick=extra(this)> -->
+							<label>
+									Semestre 1
+							</label>
+						<!-- </button> -->
+					</th>
+					
+				    <!-- <th bgcolor="orange", id="sem1">Semestre 1<br><label><input type="checkbox" id="bsem1" onclick=checkingSemester("sem1")></label></th> -->
 				    <th bgcolor="orange", id="sem2">Semestre 2<br><label><input type="checkbox" id="bsem2" onclick=checkingSemester("sem2")></label></th> 
 				    <th bgcolor="orange", id="sem3">Semestre 3<br><label><input type="checkbox" id="bsem3" onclick=checkingSemester("sem3")></label></th>
 				    <th bgcolor="orange", id="sem4">Semestre 4<br><label><input type="checkbox" id="bsem4" onclick=checkingSemester("sem4")></label></th>
