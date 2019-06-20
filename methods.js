@@ -154,11 +154,34 @@ function clickCourse(btn) {
 	}
 }
 
-function extra(btn) {
+function clickSemester(btn) {
+
+	// change semester box
 	if (btn.style.backgroundColor == "orange") {
 		btn.style.backgroundColor = "green";
 		btn.style.color = "white";
-	} else {
+
+		// course boxes
+		for(var i = 1; i <= 6; i++){
+			if(document.getElementById("s" + "1" + "m" + i).style.backgroundColor == "orange"){
+				document.getElementById("s" + "1" + "m" + i).style.color = "white";
+				document.getElementById("s" + "1" + "m" + i).style.backgroundColor = "green";
+				//document.getElementById("s" + "1" + "m" + i).checked = true;
+				moveOneMore();
+			}
+		}
+
+		//7th box for semesters with 7 classes
+		// if(id[3] == '1' || id[3] == '8' || id[3] == '9'){
+		// 	if(document.getElementById("bs" + id[3] + "m7").checked == false){
+		// 		document.getElementById("s" + id[3] + "m7").style.color = "white";
+		// 		document.getElementById("s" + id[3] + "m7").style.backgroundColor = "green";
+		// 		document.getElementById("bs" + id[3] + "m7").checked = true;
+		// 		moveOneMore();
+		// 	}
+		// }
+	} 
+	else {
 		btn.style.backgroundColor = "orange";
 		btn.style.color = "black";
 	}
