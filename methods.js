@@ -135,12 +135,23 @@ function moveOneLess() {
  	barWidth -= (100/57);
  	document.getElementById("myBar").style.width = barWidth + '%';
 
- 	// alert(barWidth);
-
  	if(barWidth < 0){
 		document.getElementById("myBar").style.width = "0%";
  	}
  	
+}
+
+function clickCourse(btn) {
+	if (btn.style.backgroundColor == "orange") {
+		btn.style.backgroundColor = "green";
+		btn.style.color = "white";
+		moveOneMore();
+	} 
+	else {
+		btn.style.backgroundColor = "orange";
+		btn.style.color = "black";
+		moveOneLess();
+	}
 }
 
 function extra(btn) {
@@ -152,3 +163,5 @@ function extra(btn) {
 		btn.style.color = "black";
 	}
 }
+
+

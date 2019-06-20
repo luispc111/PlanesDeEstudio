@@ -56,108 +56,99 @@
 		<p>
 			<table id="my-table", style="width:100%; -webkit-user-select: none; /* webkit (safari, chrome) browsers */">
 				<tr>
-
-					<th  style="background-color: orange; color: black" onclick="extra(this)">
-						<!-- <button type="button" class="button" id="hola" style="background-color: orange" onclick=extra(this)> -->
-							<label>
-									Semestre 1
-							</label>
-						<!-- </button> -->
-					</th>
-					
-				    <!-- <th bgcolor="orange", id="sem1">Semestre 1<br><label><input type="checkbox" id="bsem1" onclick=checkingSemester("sem1")></label></th> -->
-				    <th bgcolor="orange", id="sem2">Semestre 2<br><label><input type="checkbox" id="bsem2" onclick=checkingSemester("sem2")></label></th> 
-				    <th bgcolor="orange", id="sem3">Semestre 3<br><label><input type="checkbox" id="bsem3" onclick=checkingSemester("sem3")></label></th>
-				    <th bgcolor="orange", id="sem4">Semestre 4<br><label><input type="checkbox" id="bsem4" onclick=checkingSemester("sem4")></label></th>
-					<th bgcolor="orange", id="sem5">Semestre 5<br><label><input type="checkbox" id="bsem5" onclick=checkingSemester("sem5")></label></th>
-					<th bgcolor="orange", id="sem6">Semestre 6<br><label><input type="checkbox" id="bsem6" onclick=checkingSemester("sem6")></label></th>
-					<th bgcolor="orange", id="sem7">Semestre 7<br><label><input type="checkbox" id="bsem7" onclick=checkingSemester("sem7")></label></th>
-					<th bgcolor="orange", id="sem8">Semestre 8<br><label><input type="checkbox" id="bsem8" onclick=checkingSemester("sem8")></label></th>
-					<th bgcolor="orange", id="sem9">Semestre 9<br><label><input type="checkbox" id="bsem9" onclick=checkingSemester("sem9")></label></th>
+					<th style="background-color: orange; color: black" onclick="extra(this)"><label>Semestre 1</label></th>
+					<th style="background-color: orange; color: black" onclick="extra(this)"><label>Semestre 2</label></th>
+					<th style="background-color: orange; color: black" onclick="extra(this)"><label>Semestre 3</label></th>
+					<th style="background-color: orange; color: black" onclick="extra(this)"><label>Semestre 4</label></th>
+					<th style="background-color: orange; color: black" onclick="extra(this)"><label>Semestre 5</label></th>
+					<th style="background-color: orange; color: black" onclick="extra(this)"><label>Semestre 6</label></th>
+					<th style="background-color: orange; color: black" onclick="extra(this)"><label>Semestre 7</label></th>
+					<th style="background-color: orange; color: black" onclick="extra(this)"><label>Semestre 8</label></th>
+					<th style="background-color: orange; color: black" onclick="extra(this)"><label>Semestre 9</label></th>
 			  	</tr>
 			  
 				<tr>
-				  	<td bgcolor="orange", id="s1m1"><label><input type="checkbox" id="bs1m1" onclick=checking("s1m1")></label>Fundamentos de Programación</td>
-				    <td bgcolor="orange", id="s2m1"><label><input type="checkbox" id="bs2m1" onclick=checking("s2m1")></label>Programación Orientada a Objetos</td>
-				    <td bgcolor="orange", id="s3m1"><label><input type="checkbox" id="bs3m1" onclick=checking("s3m1")></label>Estructura de Datos</td>
-				    <td bgcolor="orange", id="s4m1"><label><input type="checkbox" id="bs4m1" onclick=checking("s4m1")></label>Bases de Datos</td>
-				    <td bgcolor="orange", id="s5m1"><label><input type="checkbox" id="bs5m1" onclick=checking("s5m1")></label>Analisis y modelacion de sistemas de software</td>
-				    <td bgcolor="orange", id="s6m1"><label><input type="checkbox" id="bs6m1" onclick=checking("s6m1")></label>Programacion Avanzada</td>
-				    <td bgcolor="orange", id="s7m1"><label><input type="checkbox" id="bs7m1" onclick=checking("s7m1")></label>Lenguajes de Programacion</td>
-				    <td bgcolor="orange", id="s8m1"><label><input type="checkbox" id="bs8m1" onclick=checking("s8m1")></label>Metodos cuantitativos y simulacion</td>
-				    <td bgcolor="orange", id="s9m1"><label><input type="checkbox" id="bs9m1" onclick=checking("s9m1")></label>Sistemas inteligentes</td>
+				  	<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Fundamentos de Programación</label></td>
+				  	<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Programación Orientada a Objetos</label></td>
+				  	<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Estructura de Datos</label></td>
+				  	<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Bases de Datos</label></td>
+				  	<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Analisis y modelacion de sistemas de software</label></td>
+				  	<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Programacion Avanzada</label></td>
+				  	<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Lenguajes de Programacion</label></td>
+				  	<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Metodos cuantitativos y simulacion</label></td>
+				  	<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Sistemas inteligentes</label></td>
 				</tr>
 
 				<tr>
-				    <td bgcolor="orange", id="s1m2"><label><input type="checkbox" id="bs1m2" onclick=checking("s1m2")></label>Física I</td>
-				    <td bgcolor="orange", id="s2m2"><label><input type="checkbox" id="bs2m2" onclick=checking("s2m2")></label>Fundamentos de Diseño Interactivo</td>
-				    <td bgcolor="orange", id="s3m2"><label><input type="checkbox" id="bs3m2" onclick=checking("s3m2")></label>Fundamentos de Ingenieria de Software</td>
-				    <td bgcolor="orange", id="s4m2"><label><input type="checkbox" id="bs4m2" onclick=checking("s4m2")></label>Analisis y Diseño de Algoritmos</td>
-				    <td bgcolor="orange", id="s5m2"><label><input type="checkbox" id="bs5m2" onclick=checking("s5m2")></label>Sistemas Operativos</td>
-				    <td bgcolor="orange", id="s6m2"><label><input type="checkbox" id="bs6m2" onclick=checking("s6m2")></label>Proyecto de Desarrollo para Dispositivos Moviles</td>
-				    <td bgcolor="orange", id="s7m2"><label><input type="checkbox" id="bs7m2" onclick=checking("s7m2")></label>Desarrollo de Aplicaciones Web</td>
-				    <td bgcolor="orange", id="s8m2"><label><input type="checkbox" id="bs8m2" onclick=checking("s8m2")></label>Graficas Computacionales</td>
-				    <td bgcolor="orange", id="s9m2"><label><input type="checkbox" id="bs9m2" onclick=checking("s9m2")></label>Proyecto integrador para el desarrollo de soluciones empresariales</td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Física I</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Fundamentos de Diseño Interactivo</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Fundamentos de Ingenieria de Software</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Analisis y Diseño de Algoritmos</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Sistemas Operativos</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Proyecto de Desarrollo para Dispositivos Moviles</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Desarrollo de Aplicaciones Web</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Graficas Computacionales</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Proyecto integrador para el desarrollo de soluciones empresariales</label></td>
 				</tr>
 			
 				<tr>
-			    	<td bgcolor="orange", id="s1m3"><label><input type="checkbox" id="bs1m3" onclick=checking("s1m3")></label>Matemáticas Discretas</td>
-			    	<td bgcolor="orange", id="s2m3"><label><input type="checkbox" id="bs2m3" onclick=checking("s2m3")></label>Administración e innovación en modelos de negocios</td>
-			    	<td bgcolor="orange", id="s3m3"><label><input type="checkbox" id="bs3m3" onclick=checking("s3m3")></label>Electricidad y Magnetismo</td>
-			    	<td bgcolor="orange", id="s4m3"><label><input type="checkbox" id="bs4m3" onclick=checking("s4m3")></label>Proyecto de desarrollo de videojuegos</td>
-			    	<td bgcolor="orange", id="s5m3"><label><input type="checkbox" id="bs5m3" onclick=checking("s5m3")></label>Algebra lineal</td>
-			    	<td bgcolor="orange", id="s6m3"><label><input type="checkbox" id="bs6m3" onclick=checking("s6m3")></label>Calidad y pruebas de software</td>
-			    	<td bgcolor="orange", id="s7m3"><label><input type="checkbox" id="bs7m3" onclick=checking("s7m3")></label>Administracion de proyectos de ingenieria de software</td>
-			    	<td bgcolor="orange", id="s8m3"><label><input type="checkbox" id="bs8m3" onclick=checking("s8m3")></label>Diseño de compiladores</ td>
-			    	<td bgcolor="orange", id="s9m3"><label><input type="checkbox" id="bs9m3" onclick=checking("s9m3")></label>Introduccion a la vida profesional</td>
+			    	<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Matemáticas Discretas</label></td>
+			    	<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Administración e innovación en modelos de negocios</label></td>
+			    	<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Electricidad y Magnetismo</label></td>
+			    	<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Proyecto de desarrollo de videojuegos</label></td>
+			    	<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Algebra lineal</label></td>
+			    	<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Calidad y pruebas de software</label></td>
+			    	<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Administracion de proyectos de ingenieria de software</label></td>
+			    	<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Diseño de compiladores</label></td>
+			    	<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Introduccion a la vida profesional</label></td>
 			  	</tr>
 
 				<tr>
-				    <td bgcolor="orange", id="s1m4"><label><input type="checkbox" id="bs1m4" onclick=checking("s1m4")></label>Matemáticas I</td>
-				    <td bgcolor="orange", id="s2m4"><label><input type="checkbox" id="bs2m4" onclick=checking("s2m4")></label>Organización Computacional</td>
-				    <td bgcolor="orange", id="s3m4"><label><input type="checkbox" id="bs3m4" onclick=checking("s3m4")></label>Matemáticas III</td>
-				    <td bgcolor="orange", id="s4m4"><label><input type="checkbox" id="bs4m4" onclick=checking("s4m4")></label>Métodos numéricos en ingeniería</td>
-				    <td bgcolor="orange", id="s5m4"><label><input type="checkbox" id="bs5m4" onclick=checking("s5m4")></label>Humanidades y bellas artes</td>
-				    <td bgcolor="orange", id="s6m4"><label><input type="checkbox" id="bs6m4" onclick=checking("s6m4")></label>Bases de datos avanzadas</td>
-				    <td bgcolor="orange", id="s7m4"><label><input type="checkbox" id="bs7m4" onclick=checking("s7m4")></label>Tópicos I</td>
-				    <td bgcolor="orange", id="s8m4"><label><input type="checkbox" id="bs8m4" onclick=checking("s8m4")></label>Diseño y Arquitectura de Software</td>
-				    <td bgcolor="orange", id="s9m4"><label><input type="checkbox" id="bs9m4" onclick=checking("s9m4")></label>Tópicos IV</td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Matemáticas I</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Organización Computacional</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Matemáticas III</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Métodos numéricos en ingeniería</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Humanidades y bellas artes</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Bases de datos avanzadas</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Tópicos I</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Diseño y Arquitectura de Software</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Tópicos IV</label></td>
 				</tr>
 
 				<tr>
-				    <td bgcolor="orange", id="s1m5"><label><input type="checkbox" id="bs1m5" onclick=checking("s1m5")></label>Ciencias naturales y desarrollo sustentable</td>
-				    <td bgcolor="orange", id="s2m5"><label><input type="checkbox" id="bs2m5" onclick=checking("s2m5")></label>Matemáticas II</td>
-				    <td bgcolor="orange", id="s3m5"><label><input type="checkbox" id="bs3m5" onclick=checking("s3m5")></label>Probabilidad y Estadística</td>
-				    <td bgcolor="orange", id="s4m5"><label><input type="checkbox" id="bs4m5" onclick=checking("s4m5")></label>Expresión verbal en el ámbito profesional</td>
-				    <td bgcolor="orange", id="s5m5"><label><input type="checkbox" id="bs5m5" onclick=checking("s5m5")></label>Interconexión de redes</td>
-				    <td bgcolor="orange", id="s6m5"><label><input type="checkbox" id="bs6m5" onclick=checking("s6m5")></label>Evaluación y administración de proyectos</td>
-				    <td bgcolor="orange", id="s7m5"><label><input type="checkbox" id="bs7m5" onclick=checking("s7m5")></label>Seguridad informática</td>
-				    <td bgcolor="orange", id="s8m5"><label><input type="checkbox" id="bs8m5" onclick=checking("s8m5")></label>Laboratorio de desarrollo de aplicaciones web</td>
-				    <td bgcolor="orange", id="s9m5"><label><input type="checkbox" id="bs9m5" onclick=checking("s9m5")></label>Tópicos V</td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Ciencias naturales y desarrollo sustentable</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Matemáticas II</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Probabilidad y Estadística</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Expresión verbal en el ámbito profesional</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Interconexión de redes</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Evaluación y administración de proyectos</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Seguridad informática</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Laboratorio de desarrollo de aplicaciones web</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Tópicos V</label></td>
 				</tr>
 
 				<tr>
-				    <td bgcolor="orange", id="s1m6"><label><input type="checkbox" id="bs1m6" onclick=checking("s1m6")></label>Lengua extranjera</td>
-					<td bgcolor="orange", id="s2m6"><label><input type="checkbox" id="bs2m6" onclick=checking("s2m6")></label>Análisis y expresión verbal</td>
-					<td bgcolor="orange", id="s3m6"><label><input type="checkbox" id="bs3m6" onclick=checking("s3m6")></label>Ética, persona y sociedad</td>
-					<td bgcolor="orange", id="s4m6"><label><input type="checkbox" id="bs4m6" onclick=checking("s4m6")></label>Fundamentos de redes</td>
-					<td bgcolor="orange", id="s5m6"><label><input type="checkbox" id="bs5m6" onclick=checking("s5m6")></label>Matemáticas computacionales</td>
-					<td bgcolor="orange", id="s6m6"><label><input type="checkbox" id="bs6m6" onclick=checking("s6m6")></label>Emprendimiento</td>
-					<td bgcolor="orange", id="s7m6"><label><input type="checkbox" id="bs7m6" onclick=checking("s7m6")></label>Ciudadania</td>
-					<td bgcolor="orange", id="s8m6"><label><input type="checkbox" id="bs8m6" onclick=checking("s8m6")></label>Tópicos II</td>
-					<td bgcolor="orange", id="s9m6"><label><input type="checkbox" id="bs9m6" onclick=checking("s9m6")></label>Tópicos VI</td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Lengua extranjera</label></td>
+					<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Análisis y expresión verbal</label></td>
+					<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Ética, persona y sociedad</label></td>
+					<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Fundamentos de redes</label></td>
+					<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Matemáticas computacionales</label></td>
+					<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Emprendimiento</label></td>
+					<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Ciudadania</label></td>
+					<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Tópicos II</label></td>
+					<td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Tópicos VI</label></td>
 				</tr>
 
 				<tr>
-				    <td bgcolor="orange", id="s1m7"><label><input type="checkbox" id="bs1m7" onclick=checking("s1m7")></label>Introducción a la Ingeniería en tecnologías computacionales</td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Introducción a la Ingeniería en tecnologías computacionales</label></td>
 				    <td></td>
 				    <td></td>
 				    <td></td>
 				    <td></td>
 				    <td></td>
 				    <td></td>
-				    <td bgcolor="orange", id="s8m7"><label><input type="checkbox" id="bs8m7" onclick=checking("s8m6")></label>Tópicos III</td>
-				    <td bgcolor="orange", id="s9m7"><label><input type="checkbox" id="bs9m7" onclick=checking("s9m6")></label>Ética aplicada</td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Tópicos III</label></td>
+				    <td style="background-color: orange; color: black" onclick="clickCourse(this)"><label>Ética aplicada</label></td>
 				</tr>
 			</table>
 		</p>
