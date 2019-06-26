@@ -1,11 +1,19 @@
 # ITC11 StudyPlan
 
+## CURRENT STATUS OF THE PROJECT
+Still in development.
+- Course selection: *DONE!*
+- Progress bar: *DONE!*
+- Show possible subjects to enroll: *IN DEVELOPMENT...*
+
 ## User description
 
-Web page that includes the classes of the ITESM's study model for software engineering (ITC11). It allows you to select the accredited subjects, as well as pointing out the ones you have available to register. 
-
-Of these subjects, it recommends which ones are better to take depending on the semester and the classes that will open to you to accredit them.
+Web page that includes the classes of the ITESM study model for software engineering (ITC11). It allows you to select the accredited courses, with this information, it indicates the courses that are already available for enrollment.
 
 ## Technical description
 
-HTML, Javascript and CSS were used.
+HTML and CSS is used for the frontend.
+
+Javascript is used for the modification of tables and changes in the progress bar.
+
+JSON is used to have the information of the courses, as well as their semester and the requirements to register it.
