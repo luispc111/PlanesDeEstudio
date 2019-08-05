@@ -20,4 +20,4 @@ JSON is used to have the information of the courses, as well as their semester a
 
 ## How can I try?
 
-Download the whole repository and open "ITC11_studyPlan.html" on any browser.
+Download the whole repository and open *"ITC11_studyPlan.html"* on any browser.
