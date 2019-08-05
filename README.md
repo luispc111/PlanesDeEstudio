@@ -17,3 +17,7 @@ HTML and CSS is used for the frontend.
 Javascript is used for the modification of tables and changes in the progress bar.
 
 JSON is used to have the information of the courses, as well as their semester and the requirements to register it.
+
+## How can I try?
+
+Download the whole repository and open "ITC11_studyPlan.html" on any browser.
