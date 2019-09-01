@@ -16,6 +16,19 @@ function moveOneLess() {
  	
 }
 
+function test(btn) {
+	if (btn.style.backgroundColor == "orange") {
+		btn.style.backgroundColor = "green";
+		// if (btn.parentElement.style.backgroundColor == "orange") {
+		// 	btn.parentElement.style.backgroundColor = "green";
+		// }	
+	} else {
+		btn.style.backgroundColor = "orange";
+	}
+
+	
+}
+
 function clickCourse(btn) {
 	if (btn.style.backgroundColor == "orange") {
 

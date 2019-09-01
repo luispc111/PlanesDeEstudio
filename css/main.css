@@ -43,16 +43,23 @@ h1 {
 
 .plan {
     display: flex;
-    
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
 }
 
 .semester {
     /* display: flex; */
+    width: 100/9%;
     color: white;
     padding: 5px;
+    margin: 5px;
+    
+    text-align: center;
+    /* border: ridge white; */
 }
 
 .semester > div {
-    display: flex;
+    /* display: flex; */
+    border: ridge white;
+    background-color: orange;
     /* flex-direction: column; */
 }
