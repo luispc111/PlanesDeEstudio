@@ -1,0 +1,47 @@
+body {
+    background-color:#191C25;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+td {
+    font-size: 75%;
+}
+
+font {
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+#my-table{width:100%;} /*or whatever width you want*/
+#my-table td{width:2000px;} /*something big*/
+
+#myBar {
+    width: 0%;
+    height: 30px;
+    background-color: #4CAF50;
+    /*text-align: center;  To center it horizontally (if you want) 
+    line-height: 30px; /* To center it vertically */
+    /*color: white;*/
+}
+.button {
+    /* background-color: orange; */
+    border: none;
+    /* color: white; */
+    padding: 12px 30px;
+    text-align: center;
+    /* text-decoration: none; */
+    /* display: inline-block; */
+    /* font-size: 16px; */
+    /* font-size: 75%; */
+}
+
+.semester > div {
+    display: flex;
+
+}
