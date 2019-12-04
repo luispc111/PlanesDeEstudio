@@ -1,0 +1,31 @@
+.btnGreen {
+	border: 1px solid;
+	color: white;
+    background-color: green;
+	height: 50px; 
+	width: 50px;
+}
+
+.btnBlue {
+	border: 1px solid;
+	color: white;
+    background-color: blue;
+	height: 50px; 
+	width: 50px;
+}
+
+.btnYellow {
+	border: 1px solid;
+	color: white;
+    background-color: yellow;
+	height: 50px; 
+	width: 50px;
+}
+
+.btnPurple {
+	border: 1px solid;
+	color: white;
+    background-color: purple;
+	height: 50px; 
+	width: 50px;
+}

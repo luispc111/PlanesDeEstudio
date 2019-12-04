@@ -4,7 +4,7 @@
 Still in development.
 - Course selection: *DONE!*
 - Progress bar: *DONE!*
-- Different colors to select: *IN PROGRESS...*
+- Show possible subjects to enroll: *IN DEVELOPMENT...*
 
 ## User description
 
@@ -16,7 +16,7 @@ HTML and CSS is used for the frontend.
 
 Javascript is used for the modification of tables and changes in the progress bar.
 
-JSON will be used to have the information of the courses, as well as their semester and the requirements to register it.
+JSON is used to have the information of the courses, as well as their semester and the requirements to register it.
 
 ## How can I try?
 

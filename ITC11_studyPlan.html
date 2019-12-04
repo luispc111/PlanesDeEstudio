@@ -5,53 +5,26 @@
 			ITC11
 		</title>
 
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<script type="text/javascript" src="materiasITC.json"></script>
 		<link rel="stylesheet" type="text/css" href="./css/main.css">
+		<link rel="stylesheet" type="text/css" href="./css/colorPicker.css">
 		<link rel="icon" type="image/png" href="./img/comp.png">
-
-
-
 		<meta charset="UTF-8" />
 
 	</head>
 
 	<body>
-
-		<!-- Inicio de prueabas de flex -->
-
-<!-- 		<div class="plan">
-			<div class="semester">
-				Semester 1
-				<div onclick="test(this)">class 1</div>
-				<div>class 1</div>
-			</div>
-			<div class="semester">
-				Semester 1
-				<div>class 1</div>
-				<div>class 1</div>
-			</div>
-			<div class="semester">
-				Semester 1
-				<div>class 1</div>
-				<div>class 1</div>
-				<div>class 1</div>
-				<div>class 1</div>
-			</div>
-			
-		</div> -->
-		
-
-		<!-- Fin de prubeas de flex -->
 		
 		<h1 id="titulo"><font FACE="impact" size ="30">Plan de estudios ITC11</font></h1>
-		<p><font>Plan de estudios para el modelo de estudios de ITC del 2011. <br> <br> Selecciona las materias que has llevado (o estás llevando), mira tu progreso y explora que materias te conviene llevar en el futuro.</font></p>
-		
-		<!-- 
-		<p><font>PASO 1: Da clic en el checkbox de las materias aprobadas.</font></p>
-		<p><font>PASO 2: (aún no funciona) Selecciona las materias cursadas (queya llevaste pero no has pasado).</font></p>
-		<p><font>PASO 3: ...</font></p> 
-		-->
+		<!-- <p><font>Plan de estudios para el modelo de estudios de ITC del 2011. <br> <br> Selecciona las materias que has llevado (o estás llevando), mira tu progreso y explora que materias te conviene llevar en el futuro.</font></p> -->
 
+		<button class=btnYellow onclick="changeColor('yellow')"></button>
+		<button class=btnBlue onclick="changeColor('blue')"></button>
+		<button class=btnGreen onclick="changeColor('green')"></button>
+		<button class=btnPurple onclick="changeColor('purple')"></button>
+
+		<br>
 		<font color = white> Ve el PDF del plan de estudios aquí: </font>
 		<a href="./PDF_files/ITC11.pdf" download>
 			<img width = "40" height = "25" src="./PDF_files/downloadImage.png" alt="Download link">
