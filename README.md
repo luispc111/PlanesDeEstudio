@@ -4,7 +4,7 @@
 Still in development.
 - Course selection: *DONE!*
 - Progress bar: *DONE!*
-- Show possible subjects to enroll: *IN DEVELOPMENT...*
+- Color selection: *IN DEVELOPMENT...*
 
 ## User description
 
@@ -12,11 +12,13 @@ Web page that includes the classes of the ITESM study model for software enginee
 
 ## Technical description
 
-HTML and CSS is used for the frontend.
+Front-end:
+- HTML and CSS is used for the frontend.
+- Bootstrap.
 
-Javascript is used for the modification of tables and changes in the progress bar.
-
-JSON is used to have the information of the courses, as well as their semester and the requirements to register it.
+Back-end:
+- Javascript is used in tables, colors, buttons and progress bar modificactions.
+- JSON will be used to have the information of the courses, as well as their semester and the requirements to register it.
 
 ## How can I try?
 
