@@ -18,8 +18,12 @@ h1 {
     text-align: center;
 }
 
-#my-table{width:100%;} /*or whatever width you want*/
-#my-table td{width:2000px;} /*something big*/
+#my-table{
+    width:100%;
+} /*or whatever width you want*/
+#my-table td{
+    width:2000px;
+} /*something big*/
 
 #myBar {
     width: 0%;
@@ -30,8 +34,13 @@ h1 {
     line-height: 30px; /* To center it vertically */
     color: white;
 }
+
+.courseBtn {
+    background-color: "red";
+}
+
 .button {
-    /* background-color: orange; */
+    background-color: red;
     border: none;
     /* color: white; */
     padding: 12px 30px;

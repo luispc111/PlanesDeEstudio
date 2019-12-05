@@ -1,11 +1,25 @@
 var barWidth = 0;
 var color = "green";
 
-//console.log(color);
-
 // change the color of the buttons about to press
 function changeColor(newColor){
 	color = newColor;
+	document.getElementById("btnBLUE").style.border = "1px solid";
+	document.getElementById("btnGREEN").style.border = "1px solid";
+	document.getElementById("btnYELLOW").style.border = "1px solid";
+	document.getElementById("btnPURPLE").style.border = "1px solid";
+	if(newColor == "blue"){
+		document.getElementById("btnBLUE").style.border = "3px solid";
+	}
+	else if(newColor == "yellow"){
+		document.getElementById("btnYELLOW").style.border = "3px solid";
+	}
+	else if(newColor == "green"){
+		document.getElementById("btnGREEN").style.border = "3px solid";
+	}
+	else if(newColor == "purple"){
+		document.getElementById("btnPURPLE").style.border = "3px solid";
+	}
 }
 
 // add an extra "course" to the bar
@@ -23,15 +37,6 @@ function moveOneLess() {
 		document.getElementById("myBar").style.width = "0%";
  	}
 }
-
-// function test(btn) {
-// 	if (btn.style.backgroundColor == "orange") {
-// 		btn.style.backgroundColor = color;
-// 	} 
-// 	else {
-// 		btn.style.backgroundColor = "orange";
-// 	}
-// }
 
 function clickCourse(btn) {
 	if (btn.style.backgroundColor == "orange") {
