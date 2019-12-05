@@ -20,20 +20,16 @@ h1 {
 
 #my-table{
     width:100%;
+/*color: white;*/
 } /*or whatever width you want*/
 #my-table td{
     width:2000px;
     border-color: #191C25;
+
 } /*something big*/
 
-#myBar {
-    width: 0%;
-    height: 30px;
-    background-color: #4CAF50;
-    text-align: center;  
-    /*To center it horizontally (if you want) */
-    line-height: 30px; /* To center it vertically */
-    color: white;
+#myProgress {
+   display: flex;
 }
 
 .courseBtn {
@@ -43,7 +39,7 @@ h1 {
 .button {
     background-color: red;
     border: none;
-    /* color: white; */
+    color: white;
     padding: 12px 30px;
     text-align: center;
     /* text-decoration: none; */
