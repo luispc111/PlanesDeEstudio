@@ -23,6 +23,7 @@ h1 {
 } /*or whatever width you want*/
 #my-table td{
     width:2000px;
+    border-color: #191C25;
 } /*something big*/
 
 #myBar {
