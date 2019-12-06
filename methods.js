@@ -28,6 +28,7 @@ function changeColor(newColor){
 
 // changes color of course and changes the progress bar
 function clickCourse(btn) {
+	
 	if(color == "orange"){
 		if(btn.style.backgroundColor != "orange"){
 			barWidthOrange += (100/57);
@@ -134,6 +135,7 @@ function clickCourse(btn) {
 	// }
 } 
 
+
 function clickSemester(btn) {
 
 		btn.style.backgroundColor = color;
@@ -141,65 +143,16 @@ function clickSemester(btn) {
 		// 1 to 6 course boxes
 		for(var i = 1; i <= 6; i++){
 			if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != color){
-				//clickCourse(btn);
 				clickCourse(document.getElementById("s" + btn.id[1] + "m" + i));
 		 	}
-		 	//document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor = color;
-		 	
 		}
 
 		// 7th box for semesters with 7 classes
 		if(btn.id[1] == '1' || btn.id[1] == '8' || btn.id[1] == '9'){
-			if(document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor == color){
-				//clickCourse(btn);
-				clickCourse(document.getElementById("s" + btn.id[1] + "m" + i));
+			if(document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor != color){
+				clickCourse(document.getElementById("s" + btn.id[1] + "m7"));
 		 	}
-		 	//document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor = color;
 		}
-
-	// change semester box
-	// if (btn.style.backgroundColor == "orange") {
-	// 	btn.style.backgroundColor = color;
-
-	// 	// 1 to 6 course boxes
-	// 	for(var i = 1; i <= 6; i++){
-	// 		if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor == "orange"){
-	// 			document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor = color;
-	// 			moveOneMore(btn);
-	// 		}
-	// 	}
-
-	// 	// 7th box for semesters with 7 classes
-	// 	if(btn.id[1] == '1' || btn.id[1] == '8' || btn.id[1] == '9'){
-	// 		if(document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor == "orange"){
-	// 			document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor = color;
-	// 			moveOneMore(btn);
-	// 		}
-	// 	}
-	// } 
-	// else {
-
-	// 	btn.style.backgroundColor = "orange";
-	// 	btn.style.color = "black";
-
-	// 	// 1 to 6 course boxes
-	// 	for(var i = 1; i <= 6; i++){
-	// 		if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor == color){
-	// 			document.getElementById("s" + btn.id[1] + "m" + i).style.color = "black";
-	// 			document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor = "orange";
-	// 			moveOneLess();
-	// 		}
-	// 	}
-
-	// 	// 7th box for semesters with 7 classes
-	// 	if(btn.id[1] == '1' || btn.id[1] == '8' || btn.id[1] == '9'){
-	// 		if(document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor == color){
-	// 			document.getElementById("s" + btn.id[1] + "m7").style.color = "black";
-	// 			document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor = "orange";
-	// 			moveOneLess();
-	// 		}
-	// 	}
-	// }
 }
 
 
