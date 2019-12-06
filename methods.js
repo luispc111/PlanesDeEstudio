@@ -26,35 +26,7 @@ function changeColor(newColor){
 	}
 }
 
-// add an extra "course" to the bar
-// function moveOneMore(btn) {
- 	
-//  	if(color == "green" && btn.style.backgroundColor != "green"){
-//  		barWidthGreen += (100/57);
-//  		barWidthOrange -= (100/57);
-//  		document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
-//  		document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
-//  	}
-//  	 if(color == "blue" && btn.style.backgroundColor != "blue"){
-//  	 	barWidthBlue += (100/57);
-//  		barWidthOrange -= (100/57);
-//  		document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
-//  		document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
-//  	}
-//  	if(color == "orange"){
-//  		// barWidthOrange += (100/57);
-//  		// document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
-//  	}
-//  	if(color == "purple" && btn.style.backgroundColor != "purple"){
-//  		barWidthPurple += (100/57);
-//  		barWidthOrange -= (100/57);
-//  		document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
-//  		document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
-//  	}
-// }
-
 function clickCourse(btn) {
-
 	if(color == "orange"){
 		if(btn.style.backgroundColor != "orange"){
 			barWidthOrange += (100/57);
@@ -161,7 +133,6 @@ function clickCourse(btn) {
 	// }
 } 
 
-
 function clickSemester(btn) {
 
 		btn.style.backgroundColor = color;
@@ -176,13 +147,11 @@ function clickSemester(btn) {
 
 		// 7th box for semesters with 7 classes
 		if(btn.id[1] == '1' || btn.id[1] == '8' || btn.id[1] == '9'){
-			if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor == color){
+			if(document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor == color){
 				clickCourse(btn);
 		 	}
-		 	document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor = color;
+		 	document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor = color;
 		}
-
-
 
 	// change semester box
 	// if (btn.style.backgroundColor == "orange") {
@@ -228,5 +197,6 @@ function clickSemester(btn) {
 	// 	}
 	// }
 }
+
 
 
