@@ -26,6 +26,7 @@ function changeColor(newColor){
 	}
 }
 
+// changes color of course and changes the progress bar
 function clickCourse(btn) {
 	if(color == "orange"){
 		if(btn.style.backgroundColor != "orange"){
@@ -140,17 +141,20 @@ function clickSemester(btn) {
 		// 1 to 6 course boxes
 		for(var i = 1; i <= 6; i++){
 			if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != color){
-				clickCourse(btn);
+				//clickCourse(btn);
+				clickCourse(document.getElementById("s" + btn.id[1] + "m" + i));
 		 	}
-		 	document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor = color;
+		 	//document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor = color;
+		 	
 		}
 
 		// 7th box for semesters with 7 classes
 		if(btn.id[1] == '1' || btn.id[1] == '8' || btn.id[1] == '9'){
 			if(document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor == color){
-				clickCourse(btn);
+				//clickCourse(btn);
+				clickCourse(document.getElementById("s" + btn.id[1] + "m" + i));
 		 	}
-		 	document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor = color;
+		 	//document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor = color;
 		}
 
 	// change semester box
