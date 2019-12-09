@@ -1,10 +1,8 @@
 # ITC11 StudyPlan
 
-## CURRENT STATUS OF THE PROJECT
-In constant development
-- Course selection: *DONE!*
-- Semester selection: *DONE!*
-- Progress bar: *DONE!*
+## How can I try?
+
+Visit https://luispc111.github.io/ITC11
 
 ## User description
 
@@ -18,6 +16,8 @@ Javascript is used for the modification of tables and changes in the progress ba
 
 JSON is used to have the information of the courses, as well as their semester and the requirements to register it. (NOT IMPLEMENTED)
 
-## How can I try?
-
-Download the whole repository and open *"ITC11_studyPlan.html"* on any browser.
+## Current status of the project
+In constant development
+- Course selection: *DONE!*
+- Semester selection: *DONE!*
+- Progress bar: *DONE!*
