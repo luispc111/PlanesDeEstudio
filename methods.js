@@ -1,6 +1,6 @@
 var barWidthGreen = 0;
 var barWidthBlue = 0;
-var barWidthOrange = 100;
+var barWidthOrange = 99.75;
 var barWidthPurple = 0;
 var color = "green";
 

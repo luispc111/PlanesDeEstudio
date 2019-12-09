@@ -3,9 +3,8 @@
 ## CURRENT STATUS OF THE PROJECT
 Still in development.
 - Course selection: *DONE!*
-- Semester selection: *DONE!*
-- Progress bar: *DONE!*
-- Cool style: *WORKING ON IT...*
+- Semester selection: *WORKING WITH MINOR BUGS...*
+- Progress bar: *WORKING WITH MINOR BUGS...*
 
 ## User description
 
