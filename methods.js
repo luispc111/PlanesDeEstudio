@@ -14,7 +14,7 @@ function changeColor(newColor){
 	
 	if(newColor == "blue"){
 		document.getElementById("btnBLUE").style.border = "3px solid";
-	}
+	}	
 	else if(newColor == "orange"){
 		document.getElementById("btnORANGE").style.border = "3px solid";
 	}
@@ -31,72 +31,72 @@ function clickCourse(btn) {
 	
 	if(color == "orange"){
 		if(btn.style.backgroundColor != "orange"){
-			barWidthOrange += (100/57);
+			barWidthOrange += (1.75);
 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';		
 			if(btn.style.backgroundColor == "green"){
-				barWidthGreen -= (100/57);
+				barWidthGreen -= (1.75);
 	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
 			}
 			else if(btn.style.backgroundColor == "blue"){
-				barWidthBlue -= (100/57);
+				barWidthBlue -= (1.75);
 	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
 			}
 			else if(btn.style.backgroundColor == "purple"){
-				barWidthPurple -= (100/57);
+				barWidthPurple -= (1.75);
 	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
 			}
 		}
 	}
 	else if(color == "blue"){
 		if(btn.style.backgroundColor != "blue"){
-			barWidthBlue += (100/57);
+			barWidthBlue += (1.75);
 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';		
 			if(btn.style.backgroundColor == "green"){
-				barWidthGreen -= (100/57);
+				barWidthGreen -= (1.75);
 	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
 			}
 			else if(btn.style.backgroundColor == "orange"){
-				barWidthOrange -= (100/57);
+				barWidthOrange -= (1.75);
 	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
 			}
 			else if(btn.style.backgroundColor == "purple"){
-				barWidthPurple -= (100/57);
+				barWidthPurple -= (1.75);
 	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
 			}
 		}
 	}
 	else if(color == "green"){
 		if(btn.style.backgroundColor != "green"){
-			barWidthGreen += (100/57);
+			barWidthGreen += (1.75);
 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';		
 			if(btn.style.backgroundColor == "blue"){
-				barWidthBlue -= (100/57);
+				barWidthBlue -= (1.75);
 	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
 			}
 			else if(btn.style.backgroundColor == "orange"){
-				barWidthOrange -= (100/57);
+				barWidthOrange -= (1.75);
 	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
 			}
 			else if(btn.style.backgroundColor == "purple"){
-				barWidthPurple -= (100/57);
+				barWidthPurple -= (1.75);
 	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
 			}
 		}
 	}
 	else if(color == "purple"){
 		if(btn.style.backgroundColor != "purple"){
-			barWidthPurple += (100/57);
+			barWidthPurple += (1.75);
 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';		
 			if(btn.style.backgroundColor == "blue"){
-				barWidthBlue -= (100/57);
+				barWidthBlue -= (1.75);
 	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
 			}
 			else if(btn.style.backgroundColor == "orange"){
-				barWidthOrange -= (100/57);
+				barWidthOrange -= (1.75);
 	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
 			}
 			else if(btn.style.backgroundColor == "green"){
-				barWidthGreen -= (100/57);
+				barWidthGreen -= (1.75);
 	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
 			}
 		}
@@ -104,6 +104,7 @@ function clickCourse(btn) {
 
 	btn.style.backgroundColor = color;
 
+	//alert(barWidthBlue);
 	// if you check a class, check if the semester button needs to turn green
 	// if(document.getElementById("s" + btn.id[1]).style.backgroundColor == "orange"){
 
@@ -138,21 +139,21 @@ function clickCourse(btn) {
 
 function clickSemester(btn) {
 
-		btn.style.backgroundColor = color;
+	btn.style.backgroundColor = color;
 
-		// 1 to 6 course boxes
-		for(var i = 1; i <= 6; i++){
-			if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != color){
-				clickCourse(document.getElementById("s" + btn.id[1] + "m" + i));
-		 	}
-		}
+	// 1 to 6 course boxes
+	for(var i = 1; i <= 6; i++){
+		if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != color){
+			clickCourse(document.getElementById("s" + btn.id[1] + "m" + i));
+	 	}
+	}
 
-		// 7th box for semesters with 7 classes
-		if(btn.id[1] == '1' || btn.id[1] == '8' || btn.id[1] == '9'){
-			if(document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor != color){
-				clickCourse(document.getElementById("s" + btn.id[1] + "m7"));
-		 	}
-		}
+	// 7th box for semesters with 7 classes
+	if(btn.id[1] == '1' || btn.id[1] == '8' || btn.id[1] == '9'){
+		if(document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor != color){
+			clickCourse(document.getElementById("s" + btn.id[1] + "m7"));
+	 	}
+	}
 }
 
 
