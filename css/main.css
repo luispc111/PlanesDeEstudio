@@ -20,8 +20,8 @@ h1 {
 }
 
 #my-table{
-    width: 100%;
-    width: 2000px;
+    width: 80%;
+    /*width: 2000px;*/
     border-color: #191C25;
 }
 
@@ -44,7 +44,7 @@ h1 {
 
 .semester {
     /* display: flex; */
-    width: 100/9%;
+    /*width: 100/9%;*/
     color: white;
     padding: 5px;
     margin: 5px;
