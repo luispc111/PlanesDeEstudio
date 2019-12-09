@@ -104,36 +104,26 @@ function clickCourse(btn) {
 
 	btn.style.backgroundColor = color;
 
-	//alert(barWidthBlue);
 	// if you check a class, check if the semester button needs to turn green
-	// if(document.getElementById("s" + btn.id[1]).style.backgroundColor == "orange"){
+	var bcheck = true;
+	for(var i=1; i<=6; i++){
+		if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != color){
+			bcheck = false;
+		}
+	}
 
-	// 	bcheck = true;
-	// 	if(btn.id[1] == '1' || btn.id[1] == '8' || btn.id[1] == '9'){
-	// 		for(var i=1; i<=7; i++){
-	// 			if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor == "orange"){
-	// 				bcheck = false;
-	// 				break;
-	// 			}
-	// 		}
-	// 		if(bcheck == true){
-	// 			document.getElementById("s" + btn.id[1]).style.color = "white";
-	// 			document.getElementById("s" + btn.id[1]).style.backgroundColor = color;
-	// 		}
-	// 	}
-	// 	else{
-	// 		for(var i=1; i<=6; i++){
-	// 			if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor == "orange"){
-	// 				bcheck = false;
-	// 				break;
-	// 			}
-	// 		}
-	// 		if(bcheck == true){
-	// 			document.getElementById("s" + btn.id[1]).style.color = "white";
-	// 			document.getElementById("s" + btn.id[1]).style.backgroundColor = color;
-	// 		}
-	// 	}
-	// }
+	if(btn.id[1] == '1' || btn.id[1] == '8' || btn.id[1] == '9'){
+		if(document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor != color){
+			bcheck = false;
+		}
+	}
+
+	if(bcheck){
+		document.getElementById("s" + btn.id[1]).style.backgroundColor = color;
+	}
+	else{
+		document.getElementById("s" + btn.id[1]).style.backgroundColor = "orange";
+	}
 } 
 
 
