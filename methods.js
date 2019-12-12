@@ -1,137 +1,150 @@
-var barWidth = 0;
-//  widthAux = 100/57;
+var barWidthGreen = 0;
+var barWidthBlue = 0;
+var barWidthOrange = 99.75;
+var barWidthPurple = 0;
+var color = "green";
 
-function moveOneMore() {
- 	barWidth += (100/57);
- 	document.getElementById("myBar").style.width = barWidth + '%';
-}
-
-function moveOneLess() {
- 	barWidth -= (100/57);
- 	document.getElementById("myBar").style.width = barWidth + '%';
-
- 	if(barWidth < 0){
-		document.getElementById("myBar").style.width = "0%";
- 	}
- 	
-}
-
-function test(btn) {
-	if (btn.style.backgroundColor == "orange") {
-		btn.style.backgroundColor = "green";
-		// if (btn.parentElement.style.backgroundColor == "orange") {
-		// 	btn.parentElement.style.backgroundColor = "green";
-		// }	
-	} else {
-		btn.style.backgroundColor = "orange";
-	}
-
+// change the color of the buttons about to press
+function changeColor(newColor){
+	color = newColor;
+	document.getElementById("btnBLUE").style.border = "1px solid";
+	document.getElementById("btnGREEN").style.border = "1px solid";
+	document.getElementById("btnORANGE").style.border = "1px solid";
+	document.getElementById("btnPURPLE").style.border = "1px solid";
 	
-}
-
-function clickCourse(btn) {
-	if (btn.style.backgroundColor == "orange") {
-
-		btn.style.backgroundColor = "green";
-		btn.style.color = "white";
-		moveOneMore();
-
-		// if you check a class, check if the semester button needs to turn green
-		if(document.getElementById("s" + btn.id[1]).style.backgroundColor == "orange"){
-
-			bcheck = true;
-			if(btn.id[1] == '1' || btn.id[1] == '8' || btn.id[1] == '9'){
-				for(var i=1; i<=7; i++){
-					if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor == "orange"){
-						bcheck = false;
-						break;
-					}
-				}
-				if(bcheck == true){
-					document.getElementById("s" + btn.id[1]).style.color = "white";
-					document.getElementById("s" + btn.id[1]).style.backgroundColor = "green";
-				}
-			}
-			else{
-				for(var i=1; i<=6; i++){
-					if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor == "orange"){
-						bcheck = false;
-						break;
-					}
-				}
-				if(bcheck == true){
-					document.getElementById("s" + btn.id[1]).style.color = "white";
-					document.getElementById("s" + btn.id[1]).style.backgroundColor = "green";
-				}
-			}
-		}
-	} 
-	else {
-
-		// quitarle a la barra de progreso
-		moveOneLess();
-
-		// change atributes of that class
-		btn.style.color = "black";
-		btn.style.backgroundColor = "orange";
-
-		// if you uncheck a class, check if the semester button needs to be unchecked
-		if(document.getElementById("s" + btn.id[1]).style.backgroundColor == "green"){
-			document.getElementById("s" + btn.id[1]).style.color = "black";
-			document.getElementById("s" + btn.id[1]).style.backgroundColor = "orange";
-		}
+	if(newColor == "blue"){
+		document.getElementById("btnBLUE").style.border = "3px solid";
+	}	
+	else if(newColor == "orange"){
+		document.getElementById("btnORANGE").style.border = "3px solid";
+	}
+	else if(newColor == "green"){
+		document.getElementById("btnGREEN").style.border = "3px solid";
+	}
+	else if(newColor == "purple"){
+		document.getElementById("btnPURPLE").style.border = "3px solid";
 	}
 }
+
+// changes color of course and changes the progress bar
+function clickCourse(btn) {
+	
+	if(color == "orange"){
+		if(btn.style.backgroundColor != "orange"){
+			barWidthOrange += (1.75);
+			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';		
+			if(btn.style.backgroundColor == "green"){
+				barWidthGreen -= (1.75);
+	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
+			}
+			else if(btn.style.backgroundColor == "blue"){
+				barWidthBlue -= (1.75);
+	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
+			}
+			else if(btn.style.backgroundColor == "purple"){
+				barWidthPurple -= (1.75);
+	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
+			}
+		}
+	}
+	else if(color == "blue"){
+		if(btn.style.backgroundColor != "blue"){
+			barWidthBlue += (1.75);
+			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';		
+			if(btn.style.backgroundColor == "green"){
+				barWidthGreen -= (1.75);
+	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
+			}
+			else if(btn.style.backgroundColor == "orange"){
+				barWidthOrange -= (1.75);
+	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
+			}
+			else if(btn.style.backgroundColor == "purple"){
+				barWidthPurple -= (1.75);
+	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
+			}
+		}
+	}
+	else if(color == "green"){
+		if(btn.style.backgroundColor != "green"){
+			barWidthGreen += (1.75);
+			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';		
+			if(btn.style.backgroundColor == "blue"){
+				barWidthBlue -= (1.75);
+	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
+			}
+			else if(btn.style.backgroundColor == "orange"){
+				barWidthOrange -= (1.75);
+	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
+			}
+			else if(btn.style.backgroundColor == "purple"){
+				barWidthPurple -= (1.75);
+	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
+			}
+		}
+	}
+	else if(color == "purple"){
+		if(btn.style.backgroundColor != "purple"){
+			barWidthPurple += (1.75);
+			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';		
+			if(btn.style.backgroundColor == "blue"){
+				barWidthBlue -= (1.75);
+	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
+			}
+			else if(btn.style.backgroundColor == "orange"){
+				barWidthOrange -= (1.75);
+	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
+			}
+			else if(btn.style.backgroundColor == "green"){
+				barWidthGreen -= (1.75);
+	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
+			}
+		}
+	}
+
+	btn.style.backgroundColor = color;
+
+	// if you check a class, check if the semester button needs to turn green
+	var bcheck = true;
+	for(var i=1; i<=6; i++){
+		if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != color){
+			bcheck = false;
+		}
+	}
+
+	if(btn.id[1] == '1' || btn.id[1] == '8' || btn.id[1] == '9'){
+		if(document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor != color){
+			bcheck = false;
+		}
+	}
+
+	if(bcheck){
+		document.getElementById("s" + btn.id[1]).style.backgroundColor = color;
+	}
+	else{
+		document.getElementById("s" + btn.id[1]).style.backgroundColor = "orange";
+	}
+} 
+
 
 function clickSemester(btn) {
 
-	// change semester box
-	if (btn.style.backgroundColor == "orange") {
-		
-		btn.style.backgroundColor = "green";
-		btn.style.color = "white";
+	btn.style.backgroundColor = color;
 
-		// 1 to 6 course boxes
-		for(var i = 1; i <= 6; i++){
-			if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor == "orange"){
-				document.getElementById("s" + btn.id[1] + "m" + i).style.color = "white";
-				document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor = "green";
-				moveOneMore();
-			}
-		}
+	// 1 to 6 course boxes
+	for(var i = 1; i <= 6; i++){
+		if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != color){
+			clickCourse(document.getElementById("s" + btn.id[1] + "m" + i));
+	 	}
+	}
 
-		// 7th box for semesters with 7 classes
-		if(btn.id[1] == '1' || btn.id[1] == '8' || btn.id[1] == '9'){
-			if(document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor == "orange"){
-				document.getElementById("s" + btn.id[1] + "m7").style.color = "white";
-				document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor = "green";
-				moveOneMore();
-			}
-		}
-	} 
-	else {
-
-		btn.style.backgroundColor = "orange";
-		btn.style.color = "black";
-
-		// 1 to 6 course boxes
-		for(var i = 1; i <= 6; i++){
-			if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor == "green"){
-				document.getElementById("s" + btn.id[1] + "m" + i).style.color = "black";
-				document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor = "orange";
-				moveOneLess();
-			}
-		}
-
-		// 7th box for semesters with 7 classes
-		if(btn.id[1] == '1' || btn.id[1] == '8' || btn.id[1] == '9'){
-			if(document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor == "green"){
-				document.getElementById("s" + btn.id[1] + "m7").style.color = "black";
-				document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor = "orange";
-				moveOneLess();
-			}
-		}
+	// 7th box for semesters with 7 classes
+	if(btn.id[1] == '1' || btn.id[1] == '8' || btn.id[1] == '9'){
+		if(document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor != color){
+			clickCourse(document.getElementById("s" + btn.id[1] + "m7"));
+	 	}
 	}
 }
+
 
 

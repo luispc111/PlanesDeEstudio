@@ -1,9 +1,10 @@
 body {
-    background-color:#191C25;
+    background-color: #191C25;
 }
 
 table, th, td {
     border: 1px solid black;
+    color: #191C25;
 }
 
 td {
@@ -18,48 +19,49 @@ h1 {
     text-align: center;
 }
 
-#my-table{width:100%;} /*or whatever width you want*/
-#my-table td{width:2000px;} /*something big*/
-
-#myBar {
-    width: 0%;
-    height: 30px;
-    background-color: #4CAF50;
-    /*text-align: center;  To center it horizontally (if you want) 
-    line-height: 30px; /* To center it vertically */
-    /*color: white;*/
+#my-table{
+    width: 80%;
+    /*width: 2000px;*/
+    border-color: #191C25;
 }
+
+
+#myProgress {
+   display: flex;
+}
+
+
 .button {
-    /* background-color: orange; */
+    background-color: red;
     border: none;
-    /* color: white; */
+    color: white;
     padding: 12px 30px;
     text-align: center;
-    /* text-decoration: none; */
-    /* display: inline-block; */
+    /*display: inline-block;*/
     /* font-size: 16px; */
     /* font-size: 75%; */
 }
 
-.plan {
-    display: flex;
-    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
-}
-
 .semester {
     /* display: flex; */
-    width: 100/9%;
+    /* width: 100/9%; */
     color: white;
-    padding: 10px;
+    /* padding: 10px; */
     /* margin: 5px; */
     background-color: orange;
     text-align: center;
     /* border: ridge white; */
+    padding: 5px;
+    margin: 5px;
+    
+    /* text-align: center;
+    border: ridge white; */
 }
 
 .semester > div {
     /* display: flex; */
     border: ridge white;
     background-color: orange;
-    /* flex-direction: column; */
+    
+    /*flex-direction: column*/
 }
