@@ -7,6 +7,8 @@ body {
 table, th, td {
     border: 1px solid black;
     color: #191C25;
+    color: antiquewhite;
+    padding: 3px 5px;
 }
 
 td {
@@ -72,22 +74,23 @@ h1 {
 $themes: (
   default-theme: (
     white: #fff,
-    gray-5: #fbfbfb, // Background
-    gray-10: #e0e0e0, // Border
+    gray-5: #fbfbfb, /*Background*/
+    gray-10: #e0e0e0, /*Border*/ 
     gray-20: #dee0e1,
-    gray-30: #b1b6b8, // Disabled
-    gray-50: #858d90, // Secondary
+    gray-30: #b1b6b8, /*Disabled*/
+    gray-50: #858d90, /*Secondary*/ 
     gray-60: #76888c,
     gray-70: #344146,
-    gray-80: #253338, // Text
+    gray-80: #253338, /*Text*/ 
     black: #000,
     blue-links: #059ADB,
     
-    clover-green: #43b02a, // Primary
-    clover-blue: #059adb, // Secondary / Links
-    clover-red: #ff5555, // Error
-    clover-yellow: #edce3a  // Warning 
+    clover-green: #43b02a, /*Primary*/ 
+    clover-blue: #059adb, /*Secondary / Links*/ 
+    clover-red: #ff5555, /*Error*/ 
+    clover-yellow: #edce3a  /*Warning*/  
   ),
+  
   high-contrast-theme: (
     white: #fff,
     gray-5: #617587,
@@ -97,7 +100,7 @@ $themes: (
     gray-50: #617587,
     gray-60: #617587,
     gray-70: #344146,
-    gray-80: #253338, // Text
+    gray-80: #253338, /*Text*/ 
     black: #000,
     blue-links: #0374A5,
     
