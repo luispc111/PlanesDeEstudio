@@ -1,5 +1,12 @@
 body {
     background-color: #191C25;
+    margin: 20px;
+    margin-top: 0px;
+}
+
+.scroll
+{
+     overflow-y:hidden;
 }
 
 table, th, td {
@@ -20,7 +27,7 @@ h1 {
 }
 
 #my-table{
-    width: 80%;
+    width: 100%;
     /*width: 2000px;*/
     border-color: #191C25;
 }
