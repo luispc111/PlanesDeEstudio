@@ -1,5 +1,4 @@
-{
-    "Materias":[
+Materias = `[
         {
             "nombre": "Introducción a la Ingeniería en tecnologías computacionales",
             "clave": "TC1022",
@@ -344,6 +343,13 @@
             "requisito cursado": []
         },
         {
+            "nombre": "Tópicos 3",
+            "clave": "VA2012",
+            "semestre": 8,
+            "requisitoAcreditado": [],
+            "requisito cursado": []
+        },
+        {
             "nombre": "Sistemas Inteligentes",
             "clave": "TC2011",
             "semestre": 9,
@@ -386,18 +392,10 @@
             "requisito cursado": []
         },
         {
-            "nombre": "Tópicos 3",
-            "clave": "VA2012",
-            "semestre": 9,
-            "requisitoAcreditado": [],
-            "requisito cursado": []
-        },
-        {
             "nombre": "Ética Aplicada",
             "clave": "HS2006",
             "semestre": 9,
             "requisitoAcreditado": ["H1018"],
             "requisito cursado": []
         }
-    ]
-}
+    ]`;
