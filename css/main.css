@@ -4,11 +4,6 @@ body {
     margin-top: 0px;
 }
 
-.scroll
-{
-     overflow-y:hidden;
-}
-
 table, th, td {
     border: 1px solid black;
     color: #191C25;
@@ -72,3 +67,42 @@ h1 {
     
     /*flex-direction: column*/
 }
+
+$themes: (
+  default-theme: (
+    white: #fff,
+    gray-5: #fbfbfb, // Background
+    gray-10: #e0e0e0, // Border
+    gray-20: #dee0e1,
+    gray-30: #b1b6b8, // Disabled
+    gray-50: #858d90, // Secondary
+    gray-60: #76888c,
+    gray-70: #344146,
+    gray-80: #253338, // Text
+    black: #000,
+    blue-links: #059ADB,
+    
+    clover-green: #43b02a, // Primary
+    clover-blue: #059adb, // Secondary / Links
+    clover-red: #ff5555, // Error
+    clover-yellow: #edce3a  // Warning 
+  ),
+  high-contrast-theme: (
+    white: #fff,
+    gray-5: #617587,
+    gray-10: #617587,
+    gray-20: #617587,
+    gray-30: #617587,
+    gray-50: #617587,
+    gray-60: #617587,
+    gray-70: #344146,
+    gray-80: #253338, // Text
+    black: #000,
+    blue-links: #0374A5,
+    
+    clover-green: #328320,
+    clover-blue: #0374A5,
+    clover-red: #E60000,
+    clover-yellow: #edce3a
+  )  
+);

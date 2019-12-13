@@ -146,5 +146,17 @@ function clickSemester(btn) {
 	}
 }
 
-
-
+document.addEventListener("keypress", function onEvent(event) {
+    if (event.key === "1") {
+        changeColor("orange");
+    }
+    else if (event.key === "2") {
+        changeColor("blue");
+    }
+    else if (event.key === "3") {
+        changeColor("green");
+    }
+    else if (event.key === "4") {
+        changeColor("purple");
+    }
+});
