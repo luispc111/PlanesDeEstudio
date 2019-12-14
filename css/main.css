@@ -35,6 +35,10 @@ h1 {
    display: flex;
 }
 
+#divTable {
+    margin: 5px 0px;
+}
+
 
 .button {
     background-color: red;
