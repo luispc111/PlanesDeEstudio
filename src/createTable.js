@@ -1,5 +1,5 @@
-function createTable() {
-    let materias = JSON.parse(MateriasITC);
+function createTable(studyPlan) {
+    let materias = JSON.parse(studyPlan);
 
     let materiasSem = [];
 
@@ -103,5 +103,5 @@ function createTable() {
     // }
 }
 
-createTable();
+// createTable();
 

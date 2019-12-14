@@ -68,5 +68,5 @@ MateriasARQ = `[
         "semestre": 10,
         "requisitoAcreditado": [],
         "requisito cursado": []
-    },
+    }
 ]`;

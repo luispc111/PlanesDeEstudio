@@ -21,6 +21,10 @@ font {
 
 h1 {
     text-align: center;
+    color: white;
+    font-family: 'Lucida Bright';
+    margin: 10px 0px;
+    /* , 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 }
 
 #my-table{
@@ -38,7 +42,6 @@ h1 {
 #divTable {
     margin: 5px 0px;
 }
-
 
 .button {
     background-color: red;

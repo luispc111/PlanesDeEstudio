@@ -6,7 +6,6 @@
 		</title>
 
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-		<script type="text/javascript" src="materiasITC.json"></script>
 		<link rel="stylesheet" type="text/css" href="./css/main.css">
 		<link rel="stylesheet" type="text/css" href="./css/colorPicker.css">
 		<link rel="icon" type="image/png" href="./img/comp.png">
@@ -16,14 +15,25 @@
 	<body>
 		
 		<form id="seleccionPlan">
-			<h1>Seleccion de plan de estudios</h1>
+			<h1 class="titulo">Seleccion de plan de estudios</h1>
+
+			<div class="form-group">
+				<label for="studyPlanSelected">Selecciona una plan de estudios</label>
+				<select class="form-control" id="studyPlanSelected">
+					<option value="0">Selecciona un semestre</option>
+					<option value="MateriasITC">ITC</option>
+					<option value="MateriasARQ">ARQ</option>
+				</select>
+			</div>
+
+			<button type="button" class="btn btn-primary" id="selectStudyPlan">Seleccionar</button>
 
 		</form>
 
-		<form id="planDeEstudios">
+		<form id="planDeEstudios" hidden>
 
-			<br>
-			<h1 id="titulo"><font FACE="Lucida Bright" size ="30">Plan de estudios ITC11</font></h1>
+			<!-- <br> -->
+			<h1 class="titulo"><font FACE="Lucida Bright" size ="30">Plan de estudios ITC11</font></h1>
 			<button id="btnORANGE" class=btnOrange onclick="changeColor('orange')"><kbd class="key">1</kbd></button>
 			<button id="btnBLUE" class=btnBlue onclick="changeColor('blue')"><kbd class="key">2</kbd></button>
 			<button id="btnGREEN" class=btnGreen onclick="changeColor('green')"><kbd class="key">3</kbd></button>
@@ -159,6 +169,8 @@
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="./materiasITC.json"></script>
+		<script src="./materiasARQ.json"></script>
 		<script src="./src/createTable.js"></script>
 		<script src="./src/selectStudyPlan.js"></script>
 		<script src="./src/methods.js"></script>
