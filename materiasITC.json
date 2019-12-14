@@ -1,4 +1,4 @@
-Materias = `[
+MateriasITC = `[
         {
             "nombre": "Introducción a la Ingeniería en tecnologías computacionales",
             "clave": "TC1022",

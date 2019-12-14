@@ -1,27 +1,26 @@
 function createTable() {
-    let materias = JSON.parse(Materias);
+    let materias = JSON.parse(MateriasITC);
 
-    let materiasSem = {
-        sem1: [],
-        sem2: [],
-        sem3: [],
-        sem4: [],
-        sem5: [],
-        sem6: [],
-        sem7: [],
-        sem8: [],
-        sem9: [],
-    }
+    let materiasSem = [];
 
     for (let i = 0; i < materias.length; i++) {
-        materiasSem["sem" + materias[i].semestre].push(materias[i]);
+        while (materiasSem.length < materias[i].semestre) {
+            materiasSem.push([]);
+        }
+        materiasSem[materias[i].semestre - 1].push(materias[i]);
     }
 
     console.log("materias", materiasSem);
+
+    for (let i = 0; i < materiasSem.length; i ++) {
+        $("#rowSemester").append(`
+        <th id="s${i+1}" style="background-color: orange;" onclick="clickSemester(this)"><label>Semestre ${i+1}</label></th>
+        `);
+    }
     
     let maxLength = 0;
 
-    let arraysMatSem = Object.values(materiasSem);
+    // let arraysMatSem = Object.values(materiasSem);
 
     // arraysMatSem.forEach((item)=> {
     //     console.log(item);
@@ -31,29 +30,53 @@ function createTable() {
     //     });
     // });
 
-    arraysMatSem.forEach((item)=> {
-        if (item.length > maxLength) {
-            maxLength = item.length;
+    for (let i = 0; i < materiasSem.length; i++) {
+        if (materiasSem[i].length > maxLength) {
+            maxLength = materiasSem[i].length;
         }
-    });
+    }
 
-    arraysMatSem.forEach((item)=> {
+    for (let i = 0; i < materiasSem.length; i++) {
         for (let j = 0; j < maxLength; j++) {
             let num = j+1;
             
-            if (item[j] != undefined) {
-                if (item[j].semestre == 1) {
-                    $("#row" + num).html("");
-                }
+            if (materiasSem[i][j] != undefined) {
+                // if (materiasSem[i][j].semestre == 1) {
+                //     $("#row" + num).html("");
+                // }
                 $("#row" + num).append(`
-                <td id="s${item[j].semestre}m${j+1}" style="background-color: orange;" onclick="clickCourse(this)"><label>${item[j].nombre}</label></td>
+                <td id="s${materiasSem[i][j].semestre}m${num}" style="background-color: orange;" onclick="clickCourse(this)"><label>${materiasSem[i][j].nombre}</label></td>
                 `);
             } else {
                 $("#row" + num).append(`<td></td>`);
             }
             
         }
-    });
+    }
+
+    // arraysMatSem.forEach((item)=> {
+    //     if (item.length > maxLength) {
+    //         maxLength = item.length;
+    //     }
+    // });
+
+    // arraysMatSem.forEach((item)=> {
+    //     for (let j = 0; j < maxLength; j++) {
+    //         let num = j+1;
+            
+    //         if (item[j] != undefined) {
+    //             // if (item[j].semestre == 1) {
+    //             //     $("#row" + num).html("");
+    //             // }
+    //             $("#row" + num).append(`
+    //             <td id="s${item[j].semestre}m${num}" style="background-color: orange;" onclick="clickCourse(this)"><label>${item[j].nombre}</label></td>
+    //             `);
+    //         } else {
+    //             $("#row" + num).append(`<td></td>`);
+    //         }
+            
+    //     }
+    // });
     
     // for (let i = 0; i < materiasSem.length; i++) {
     //     if (materiasSem[i].length > maxLength) {

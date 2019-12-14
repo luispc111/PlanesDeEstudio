@@ -1,0 +1,72 @@
+MateriasARQ = `[
+    {
+        "nombre": "Introducción a la Ingeniería en tecnologías computacionales",
+        "clave": "TC1022",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Introducción a la Ingeniería en tecnologías computacionales",
+        "clave": "TC1022",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Introducción a la Ingeniería en tecnologías computacionales",
+        "clave": "TC1022",
+        "semestre": 3,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Introducción a la Ingeniería en tecnologías computacionales",
+        "clave": "TC1022",
+        "semestre": 4,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Introducción a la Ingeniería en tecnologías computacionales",
+        "clave": "TC1022",
+        "semestre": 5,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Introducción a la Ingeniería en tecnologías computacionales",
+        "clave": "TC1022",
+        "semestre": 6,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Introducción a la Ingeniería en tecnologías computacionales",
+        "clave": "TC1022",
+        "semestre": 7,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Introducción a la Ingeniería en tecnologías computacionales",
+        "clave": "TC1022",
+        "semestre": 8,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Introducción a la Ingeniería en tecnologías computacionales",
+        "clave": "TC1022",
+        "semestre": 9,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Introducción a la Ingeniería en tecnologías computacionales",
+        "clave": "TC1022",
+        "semestre": 10,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+]`;
