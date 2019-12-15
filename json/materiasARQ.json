@@ -1,4 +1,4 @@
-MateriasARQ = `[
+[
     {
         "nombre": "Introducción a la Ingeniería en tecnologías computacionales",
         "clave": "TC1022",
@@ -69,4 +69,4 @@ MateriasARQ = `[
         "requisitoAcreditado": [],
         "requisito cursado": []
     }
-]`;
+]

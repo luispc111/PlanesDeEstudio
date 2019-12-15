@@ -1,107 +1,61 @@
+let materias;
+
 function createTable(studyPlan) {
-    let materias = JSON.parse(studyPlan);
 
-    let materiasSem = [];
+    let settings = {
+        url: `${studyPlan}.json`,
+        method: "GET",
+        success: function (responseJSON){
+            materias = responseJSON;
 
-    for (let i = 0; i < materias.length; i++) {
-        while (materiasSem.length < materias[i].semestre) {
-            materiasSem.push([]);
-        }
-        materiasSem[materias[i].semestre - 1].push(materias[i]);
-    }
+            // creates array where classes will be stored
+            let materiasSem = [];
 
-    console.log("materias", materiasSem);
+            // stores classes in array
+            for (let i = 0; i < materias.length; i++) {
+                while (materiasSem.length < materias[i].semestre) {
+                    materiasSem.push([]);
+                }
+                materiasSem[materias[i].semestre - 1].push(materias[i]);
+            }
 
-    for (let i = 0; i < materiasSem.length; i ++) {
-        $("#rowSemester").append(`
-        <th id="s${i+1}" style="background-color: orange;" onclick="clickSemester(this)"><label>Semestre ${i+1}</label></th>
-        `);
-    }
-    
-    let maxLength = 0;
-
-    // let arraysMatSem = Object.values(materiasSem);
-
-    // arraysMatSem.forEach((item)=> {
-    //     console.log(item);
-    //     let semester = Object.values(item);
-    //     semester.forEach((item)=> {
-    //         console.log(item);
-    //     });
-    // });
-
-    for (let i = 0; i < materiasSem.length; i++) {
-        if (materiasSem[i].length > maxLength) {
-            maxLength = materiasSem[i].length;
-        }
-    }
-
-    for (let i = 0; i < materiasSem.length; i++) {
-        for (let j = 0; j < maxLength; j++) {
-            let num = j+1;
-            
-            if (materiasSem[i][j] != undefined) {
-                // if (materiasSem[i][j].semestre == 1) {
-                //     $("#row" + num).html("");
-                // }
-                $("#row" + num).append(`
-                <td id="s${materiasSem[i][j].semestre}m${num}" style="background-color: orange;" onclick="clickCourse(this)"><label>${materiasSem[i][j].nombre}</label></td>
+            // creates the quantity of semesters in study plan
+            for (let i = 0; i < materiasSem.length; i ++) {
+                $("#rowSemester").append(`
+                <th id="s${i+1}" style="background-color: orange;" onclick="clickSemester(this)"><label>Semestre ${i+1}</label></th>
                 `);
-            } else {
-                $("#row" + num).append(`<td></td>`);
             }
             
+            let maxLength = 0;
+
+            // checks the highest quantity of classes on a single semester
+            for (let i = 0; i < materiasSem.length; i++) {
+                if (materiasSem[i].length > maxLength) {
+                    maxLength = materiasSem[i].length;
+                }
+            }
+        
+            // poblates table with the classes of each semester
+            for (let i = 0; i < materiasSem.length; i++) {
+                for (let j = 0; j < maxLength; j++) {
+                    let num = j+1;
+                    
+                    // checks if there's a class or if it needs to create an empty <td></td> for the table to be correct
+                    if (materiasSem[i][j] != undefined) {
+                        $("#row" + num).append(`
+                        <td id="s${materiasSem[i][j].semestre}m${num}" style="background-color: orange;" onclick="clickCourse(this)"><label>${materiasSem[i][j].nombre}</label></td>
+                        `);
+                    } else {
+                        $("#row" + num).append(`<td></td>`);
+                    }
+                    
+                }
+            }
+        },
+        error: function (error) {
+            console.log(error);
         }
     }
 
-    // arraysMatSem.forEach((item)=> {
-    //     if (item.length > maxLength) {
-    //         maxLength = item.length;
-    //     }
-    // });
-
-    // arraysMatSem.forEach((item)=> {
-    //     for (let j = 0; j < maxLength; j++) {
-    //         let num = j+1;
-            
-    //         if (item[j] != undefined) {
-    //             // if (item[j].semestre == 1) {
-    //             //     $("#row" + num).html("");
-    //             // }
-    //             $("#row" + num).append(`
-    //             <td id="s${item[j].semestre}m${num}" style="background-color: orange;" onclick="clickCourse(this)"><label>${item[j].nombre}</label></td>
-    //             `);
-    //         } else {
-    //             $("#row" + num).append(`<td></td>`);
-    //         }
-            
-    //     }
-    // });
-    
-    // for (let i = 0; i < materiasSem.length; i++) {
-    //     if (materiasSem[i].length > maxLength) {
-    //         console.log("maxLength changed");
-    //         maxLength = materiasSem[i].length;
-    //     }
-    // }
-    
-    // for (let i = 0; i < materiasSem.length; i++) {
-    //     console.log("hola");
-    //     for (let j = 0; j < materiasSem[i].length; j++) {
-    //         let num = j+1;
-    //         if (i == 0) {
-    //             $("#row" + num).html("");
-    //         }
-    //         console.log(materiasSem[i][j])
-    //         if (materiasSem[i][j]) {
-    //             $("#row" + num).append(`
-    //             <td id="s${i}m${j+1}" style="background-color: orange;" onclick="clickCourse(this)"><label>${materiasSem[i][j].nombre}</label></td>
-    //             `);
-    //         }
-            
-    //     }
-    // }
+    $.ajax(settings);
 }
-
-// createTable();
-

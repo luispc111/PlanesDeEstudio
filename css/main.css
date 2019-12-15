@@ -27,6 +27,10 @@ h1 {
     /* , 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 }
 
+label {
+    color: white;
+}
+
 #my-table{
     table-layout: fixed;
     width: 100%;

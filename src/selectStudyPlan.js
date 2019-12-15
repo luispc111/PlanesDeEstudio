@@ -3,19 +3,13 @@ function selectStudyPlan() {
         event.preventDefault();
 
         console.log("clicked");
-
+        
         let val = $("#studyPlanSelected").val();
-
-        document.querySelector("#seleccionPlan").hidden = true;
-        // switch
-        if (val == 'MateriasITC') {
-            createTable(MateriasITC);
+        if (val != "0") {
+            document.querySelector("#seleccionPlan").hidden = true;
+            createTable(val);
+            document.querySelector("#planDeEstudios").hidden = false;
         }
-        else if (val == 'MateriasARQ') {
-            createTable(MateriasARQ);
-        }
-        document.querySelector("#planDeEstudios").hidden = false;
-
     });
 }
 
