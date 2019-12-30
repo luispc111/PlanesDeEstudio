@@ -1,21 +1,133 @@
 MateriasARQ = `[
     {
-        "nombre": "Introducción a la Ingeniería en tecnologías computacionales",
-        "clave": "TC1022",
+        "nombre": "Dibujo",
+        "clave": "",
         "semestre": 1,
         "requisitoAcreditado": [],
         "requisito cursado": []
     },
     {
-        "nombre": "Introducción a la Ingeniería en tecnologías computacionales",
-        "clave": "TC1022",
+        "nombre": "Geometría descriptiva",
+        "clave": "",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Introducción a la arquitectura",
+        "clave": "",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },    
+    {
+        "nombre": "Fundamentos del diseño I",
+        "clave": "",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Modelos y maquetas",
+        "clave": "",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Lengua extranjera",
+        "clave": "",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Matemáticas para el diseño",
+        "clave": "",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Dibujo arquitectónico",
+        "clave": "",
         "semestre": 2,
         "requisitoAcreditado": [],
         "requisito cursado": []
     },
     {
-        "nombre": "Introducción a la Ingeniería en tecnologías computacionales",
-        "clave": "TC1022",
+        "nombre": "Geometría aplicada",
+        "clave": "",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Fundamentos del diseño II",
+        "clave": "",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Creatividad e innovación",
+        "clave": "",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Ciencias naturales y desarrollo sustentable",
+        "clave": "",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Análisis y expresión verbal",
+        "clave": "",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Historia de la arquitectura y de la ciudad I",
+        "clave": "",
+        "semestre": 3,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Dibujo computarizado",
+        "clave": "",
+        "semestre": 3,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Teorías de arquitectura y metodologías de diseño",
+        "clave": "",
+        "semestre": 3,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Diseño bioclimático",
+        "clave": "",
+        "semestre": 3,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Proyectos I: Casa habitación",
+        "clave": "",
+        "semestre": 3,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Mecánica de estructuras I",
+        "clave": "",
         "semestre": 3,
         "requisitoAcreditado": [],
         "requisito cursado": []
@@ -68,5 +180,5 @@ MateriasARQ = `[
         "semestre": 10,
         "requisitoAcreditado": [],
         "requisito cursado": []
-    },
+    }
 ]`;
