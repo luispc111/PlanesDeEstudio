@@ -4,6 +4,10 @@ var barWidthOrange = 99.75;
 var barWidthPurple = 0;
 var color = "green";
 
+$("button").on("click", (event) => {
+	event.preventDefault();
+})
+
 // change the color of the buttons about to press
 function changeColor(newColor){
 	color = newColor;
