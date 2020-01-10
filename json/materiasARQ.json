@@ -1,4 +1,4 @@
-MateriasARQ = `[
+[
     {
         "nombre": "Dibujo",
         "clave": "",
@@ -405,4 +405,4 @@ MateriasARQ = `[
         "requisitoAcreditado": [],
         "requisito cursado": []
     }
-]`;
+]

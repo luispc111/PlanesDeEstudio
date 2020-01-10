@@ -3,8 +3,10 @@ function selectStudyPlan() {
         event.preventDefault();
 
         console.log("clicked");
+        console.log($("#studyPlanSelected").val());
         
         let val = $("#studyPlanSelected").val();
+        
         if (val != "0") {
             document.querySelector("#seleccionPlan").hidden = true;
             createTable(val);

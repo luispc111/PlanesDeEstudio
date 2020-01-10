@@ -3,16 +3,18 @@ let materias;
 function createTable(studyPlan) {
 
     let settings = {
-        url: `${studyPlan}.json`,
+        url: `json/materias${studyPlan}.json`,
         method: "GET",
         success: function (responseJSON){
+            console.log(responseJSON);
             materias = responseJSON;
 
             // creates array where classes will be stored
             let materiasSem = [];
 
-            // stores classes in array
+            // stores classes in array seprated by semester
             for (let i = 0; i < materias.length; i++) {
+                // creates a new semester in case needed
                 while (materiasSem.length < materias[i].semestre) {
                     materiasSem.push([]);
                 }
@@ -20,9 +22,9 @@ function createTable(studyPlan) {
             }
 
             // creates the quantity of semesters in study plan
-            for (let i = 0; i < materiasSem.length; i ++) {
+            for (let i = 1; i <= materiasSem.length; i ++) {
                 $("#rowSemester").append(`
-                <th id="s${i+1}" style="background-color: orange;" onclick="clickSemester(this)"><label>Semestre ${i+1}</label></th>
+                <th id="s${i}" style="background-color: orange;" onclick="clickSemester(this)"><label>Semestre ${i}</label></th>
                 `);
             }
             
