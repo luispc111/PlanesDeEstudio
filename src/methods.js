@@ -2,8 +2,12 @@ var barWidthGreen = 0;
 var barWidthBlue = 0;
 var barWidthOrange = 99.75;
 var barWidthPurple = 0;
+
+var color = '#439630';
 var green = '#439630';
-var color = "green";
+var blue = "#2653AD";
+var orange = "#BF7913";
+var purple = "#633B8D";
 
 $("button").on("click", (event) => {
 	event.preventDefault();
@@ -20,11 +24,11 @@ function changeColor(newColor){
 	
 	if(newColor == "blue"){
 		document.getElementById("btnBLUE").style.border = "3px solid";
-		color = newColor;
+		color = blue;
 	}	
 	else if(newColor == "orange"){
 		document.getElementById("btnORANGE").style.border = "3px solid";
-		color = newColor;
+		color = orange;
 	}
 	else if(newColor == "green"){
 		document.getElementById("btnGREEN").style.border = "3px solid";
@@ -32,80 +36,81 @@ function changeColor(newColor){
 	}
 	else if(newColor == "purple"){
 		document.getElementById("btnPURPLE").style.border = "3px solid";
-		color = newColor;
+		color = purple;
 	}
+	console.log(color);
 }
 
 // changes color of course and changes the progress bar
 function clickCourse(btn) {
 	
-	if(color == "orange"){
-		if(btn.style.backgroundColor != "orange"){
+	if(color == orange){
+		if(btn.style.backgroundColor != orange){
 			barWidthOrange += (1.75);
 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';		
-			if(btn.style.backgroundColor == "green"){
+			if(btn.style.backgroundColor == green){
 				barWidthGreen -= (1.75);
 	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
 			}
-			else if(btn.style.backgroundColor == "blue"){
+			else if(btn.style.backgroundColor == blue){
 				barWidthBlue -= (1.75);
 	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
 			}
-			else if(btn.style.backgroundColor == "purple"){
+			else if(btn.style.backgroundColor == purple){
 				barWidthPurple -= (1.75);
 	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
 			}
 		}
 	}
-	else if(color == "blue"){
-		if(btn.style.backgroundColor != "blue"){
+	else if(color == blue){
+		if(btn.style.backgroundColor != blue){
 			barWidthBlue += (1.75);
 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';		
-			if(btn.style.backgroundColor == "green"){
+			if(btn.style.backgroundColor == green){
 				barWidthGreen -= (1.75);
 	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
 			}
-			else if(btn.style.backgroundColor == "orange"){
+			else if(btn.style.backgroundColor == orange){
 				barWidthOrange -= (1.75);
 	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
 			}
-			else if(btn.style.backgroundColor == "purple"){
+			else if(btn.style.backgroundColor == purple){
 				barWidthPurple -= (1.75);
 	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
 			}
 		}
 	}
-	else if(color == "green"){
-		if(btn.style.backgroundColor != "green"){
+	else if(color == green){
+		if(btn.style.backgroundColor != green){
 			barWidthGreen += (1.75);
 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';		
-			if(btn.style.backgroundColor == "blue"){
+			if(btn.style.backgroundColor == blue){
 				barWidthBlue -= (1.75);
 	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
 			}
-			else if(btn.style.backgroundColor == "orange"){
+			else if(btn.style.backgroundColor == orange){
 				barWidthOrange -= (1.75);
 	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
 			}
-			else if(btn.style.backgroundColor == "purple"){
+			else if(btn.style.backgroundColor == purple){
 				barWidthPurple -= (1.75);
 	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
 			}
 		}
 	}
-	else if(color == "purple"){
-		if(btn.style.backgroundColor != "purple"){
+	else if(color == purple){
+		if(btn.style.backgroundColor != purple){
 			barWidthPurple += (1.75);
 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';		
-			if(btn.style.backgroundColor == "blue"){
+			if(btn.style.backgroundColor == blue){
 				barWidthBlue -= (1.75);
 	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
 			}
-			else if(btn.style.backgroundColor == "orange"){
+			else if(btn.style.backgroundColor == orange){
 				barWidthOrange -= (1.75);
 	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
 			}
-			else if(btn.style.backgroundColor == "green"){
+			else if(btn.style.backgroundColor == green){
 				barWidthGreen -= (1.75);
 	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
 			}
@@ -132,7 +137,7 @@ function clickCourse(btn) {
 		document.getElementById("s" + btn.id[1]).style.backgroundColor = color;
 	}
 	else{
-		document.getElementById("s" + btn.id[1]).style.backgroundColor = "orange";
+		document.getElementById("s" + btn.id[1]).style.backgroundColor = orange;
 	}
 } 
 
