@@ -15,4 +15,15 @@ function selectStudyPlan() {
     });
 }
 
+function gobackBTN() {
+    $("#goback").on("click", (event) => {
+        event.preventDefault();
+        document.querySelector("#planDeEstudios").hidden = true;
+        document.querySelector("#seleccionPlan").hidden = false;
+
+    });
+}
+
+gobackBTN();
+
 selectStudyPlan();
