@@ -1,5 +1,7 @@
 let materias;
 
+
+
 function createTable(studyPlan) {
 
     let settings = {
@@ -20,6 +22,8 @@ function createTable(studyPlan) {
                 }
                 materiasSem[materias[i].semestre - 1].push(materias[i]);
             }
+
+            localStorage.cantSemestres = materiasSem.length;
 
             // creates the quantity of semesters in study plan
             for (let i = 1; i <= materiasSem.length; i ++) {

@@ -15,10 +15,19 @@ function selectStudyPlan() {
     });
 }
 
+function eraseTable() {
+    $("#rowSemester").html("");
+
+    for (let i = 1; i <= localStorage.cantSemestres; i++) {
+        $("#row" + i).html("");
+    }
+}
+
 function gobackBTN() {
     $("#goback").on("click", (event) => {
         event.preventDefault();
         document.querySelector("#planDeEstudios").hidden = true;
+        eraseTable();
         document.querySelector("#seleccionPlan").hidden = false;
 
     });
