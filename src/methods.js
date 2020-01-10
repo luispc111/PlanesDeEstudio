@@ -2,11 +2,13 @@ var barWidthGreen = 0;
 var barWidthBlue = 0;
 var barWidthOrange = 99.75;
 var barWidthPurple = 0;
+var green = '#439630';
 var color = "green";
 
-// change the color of the buttons about to press
+// change selected color
 function changeColor(newColor){
-	color = newColor;
+
+	// color = newColor;
 	document.getElementById("btnBLUE").style.border = "1px solid";
 	document.getElementById("btnGREEN").style.border = "1px solid";
 	document.getElementById("btnORANGE").style.border = "1px solid";
@@ -14,15 +16,19 @@ function changeColor(newColor){
 	
 	if(newColor == "blue"){
 		document.getElementById("btnBLUE").style.border = "3px solid";
+		color = newColor;
 	}	
 	else if(newColor == "orange"){
 		document.getElementById("btnORANGE").style.border = "3px solid";
+		color = newColor;
 	}
 	else if(newColor == "green"){
 		document.getElementById("btnGREEN").style.border = "3px solid";
+		color = green;
 	}
 	else if(newColor == "purple"){
 		document.getElementById("btnPURPLE").style.border = "3px solid";
+		color = newColor;
 	}
 }
 
