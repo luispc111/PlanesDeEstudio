@@ -1,401 +1,401 @@
 MateriasITC = `[
-        {
-            "nombre": "Introducción a la Ingeniería en tecnologías computacionales",
-            "clave": "TC1022",
-            "semestre": 1,
-            "requisitoAcreditado": [],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Lengua Extranjera",
-            "clave": "H1016",
-            "semestre": 1,
-            "requisitoAcreditado": [],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Ciencias naturales y desarrollo sustentable",
-            "clave": "DS1003",
-            "semestre": 1,
-            "requisitoAcreditado": [],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Mate 1",
-            "clave": "MA1015",
-            "semestre": 1,
-            "requisitoAcreditado": [],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Matematicas discretas",
-            "clave": "TC1003",
-            "semestre": 1,
-            "requisitoAcreditado": [],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Física 1",
-            "clave": "F1002",
-            "semestre": 1,
-            "requisitoAcreditado": [],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Fundamentos de Programación",
-            "clave": "TC1014",
-            "semestre": 1,
-            "requisitoAcreditado": [],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Programación Orientada a Objetos",
-            "clave": "TC1016",
-            "semestre": 2,
-            "requisitoAcreditado": ["TC1014"],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Fundamentos de Diseño Interactivo",
-            "clave": "TC1015",
-            "semestre": 2,
-            "requisitoAcreditado": [],
-            "requisito cursado": ["TC1014"]
-        },
-        {
-            "nombre": "Administración  e Innovación en Modelos de Negocios",
-            "clave": "AD1005",
-            "semestre": 2,
-            "requisitoAcreditado": [],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Organización Computacional",
-            "clave": "TC1016",
-            "semestre": 2,
-            "requisitoAcreditado": [],
-            "requisito cursado": ["TC1014"]
-        },
-        {
-            "nombre": "Matemáticas 2",
-            "clave": "MA1017",
-            "semestre": 2,
-            "requisitoAcreditado": ["MA1015"],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Análisis y Expresión Verbal",
-            "clave": "H1040",
-            "semestre": 2,
-            "requisitoAcreditado": [],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Estructura de Datos",
-            "clave": "TC1018",
-            "semestre": 3,
-            "requisitoAcreditado": ["TC2016"],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Fundamentos de Ingeniería de Software",
-            "clave": "TC1019",
-            "semestre": 3,
-            "requisitoAcreditado": [],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Electricidad y Magnetismo",
-            "clave": "F1005",
-            "semestre": 3,
-            "requisitoAcreditado": ["F1002"],
-            "requisito cursado": ["MA1017"]
-        },
-        {
-            "nombre": "Matemáticas 3",
-            "clave": "MA2009",
-            "semestre": 3,
-            "requisitoAcreditado": ["MA1017"],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Probabilidad y Estadística",
-            "clave": "MA1006",
-            "semestre": 3,
-            "requisitoAcreditado": ["MA1017"],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Ètica, persona y sociedad",
-            "clave": "H1018",
-            "semestre": 3,
-            "requisitoAcreditado": ["H1040"],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Bases de Datos",
-            "clave": "TC1020",
-            "semestre": 4,
-            "requisitoAcreditado": [],
-            "requisito cursado": ["TC1019"]
-        },
-        {
-            "nombre": "Análisis y Diseño de Algoritmos",
-            "clave": "TC2017",
-            "semestre": 4,
-            "requisitoAcreditado": ["TC1018"],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Proyecto de Desarrollo de Videojuegos",
-            "clave": "TC2021",
-            "semestre": 4,
-            "requisitoAcreditado": [],
-            "requisito cursado": ["TC1018"]
-        },
-        {
-            "nombre": "Métodos Numéricos en Ingeniería",
-            "clave": "TC2019",
-            "semestre": 4,
-            "requisitoAcreditado": [],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Expresión Verbal en el Ámbito Profesional",
-            "clave": "H2001",
-            "semestre": 4,
-            "requisitoAcreditado": ["H1040"],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Fundamentos de Redes",
-            "clave": "TC2018",
-            "semestre": 4,
-            "requisitoAcreditado": ["TC1016"],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Análisis y Modelación de Sistemas de Software",
-            "clave": "TC2004",
-            "semestre": 5,
-            "requisitoAcreditado": [],
-            "requisito cursado": ["TC1020"]
-        },
-        {
-            "nombre": "Sistemas Operativos",
-            "clave": "TC2008",
-            "semestre": 5,
-            "requisitoAcreditado": [],
-            "requisito cursado": ["TC1016"]
-        },
-        {
-            "nombre": "Álgebra Lineal",
-            "clave": "MA2019",
-            "semestre": 5,
-            "requisitoAcreditado": [],
-            "requisito cursado": ["MA1017"]
-        },
-        {
-            "nombre": "Humanidades y Bellas Artes",
-            "clave": "HS2000",
-            "semestre": 5,
-            "requisitoAcreditado": ["H1040"],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Interconexión de Redes",
-            "clave": "TC2022",
-            "semestre": 5,
-            "requisitoAcreditado": ["TC2018"],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Matemáticas Computacionales",
-            "clave": "TC2020",
-            "semestre": 5,
-            "requisitoAcreditado": ["TC1003"],
-            "requisito cursado": ["TC1018"]
-        },
-        {
-            "nombre": "Programación Avanzada",
-            "clave": "TC2025",
-            "semestre": 6,
-            "requisitoAcreditado": ["TC2017"],
-            "requisito cursado": ["TC2008"]
-        },
-        {
-            "nombre": "Proyecto de Desarrollo para Dispositivos Móviles",
-            "clave": "TC2024",
-            "semestre": 6,
-            "requisitoAcreditado": [],
-            "requisito cursado": ["TC2004"]
-        },
-        {
-            "nombre": "Calidad y Pruebas de Software",
-            "clave": "TC3045",
-            "semestre": 6,
-            "requisitoAcreditado": [],
-            "requisito cursado": ["TC2004"]
-        },
-        {
-            "nombre": "Bases de Datos Avanzadas",
-            "clave": "TC3041",
-            "semestre": 6,
-            "requisitoAcreditado": ["TC1020"],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Evaluación y Administración de Proyectos",
-            "clave": "TI2011",
-            "semestre": 6,
-            "requisitoAcreditado": [],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Emprendimiento",
-            "clave": "EM1005",
-            "semestre": 6,
-            "requisitoAcreditado": [],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Lenguajes de Programación",
-            "clave": "TC2006",
-            "semestre": 7,
-            "requisitoAcreditado": [],
-            "requisito cursado": ["TC2020"]
-        },
-        {
-            "nombre": "Desarrollo de Aplicaciones Web",
-            "clave": "TC2026",
-            "semestre": 7,
-            "requisitoAcreditado": [],
-            "requisito cursado": ["TC1020", "TC2022"]
-        },
-        {
-            "nombre": "Administración de Proyectos de Ingeniería de Software",
-            "clave": "TC3002",
-            "semestre": 7,
-            "requisitoAcreditado": [],
-            "requisito cursado": ["TC2004", "TI2011"]
-        },
-        {
-            "nombre": "Tópicos 1",
-            "clave": "VA2010",
-            "semestre": 7,
-            "requisitoAcreditado": ["TC1020"],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Seguridad Informática",
-            "clave": "TC2027",
-            "semestre": 7,
-            "requisitoAcreditado": [],
-            "requisito cursado": ["TC2008", "TC2018"]
-        },
-        {
-            "nombre": "Ciudadanía",
-            "clave": "HS2005",
-            "semestre": 7,
-            "requisitoAcreditado": ["H1040", "H1018"],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Métodos Cuantitativos y Simulación",
-            "clave": "TC2007",
-            "semestre": 8,
-            "requisitoAcreditado": ["TC1018", "MA1006"],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Gráficas Computacionales",
-            "clave": "TC3022",
-            "semestre": 8,
-            "requisitoAcreditado": [],
-            "requisito cursado": ["MA2009", "TC2017"]
-        },
-        {
-            "nombre": "Diseño de Compiladores",
-            "clave": "TC3048",
-            "semestre": 8,
-            "requisitoAcreditado": [],
-            "requisito cursado": ["TC2006"]
-        },
-        {
-            "nombre": "Diseño y Arquitectura de Software",
-            "clave": "TC3049",
-            "semestre": 8,
-            "requisitoAcreditado": [],
-            "requisito cursado": ["TC2004"]
-        },
-        {
-            "nombre": "Laboratorio de Desarrollo de Aplicaciones Web",
-            "clave": "TC3052",
-            "semestre": 8,
-            "requisitoAcreditado": [],
-            "requisito cursado": ["TC2026"]
-        },
-        {
-            "nombre": "Tópicos 2",
-            "clave": "VA2011",
-            "semestre": 8,
-            "requisitoAcreditado": [],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Tópicos 3",
-            "clave": "VA2012",
-            "semestre": 8,
-            "requisitoAcreditado": [],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Sistemas Inteligentes",
-            "clave": "TC2011",
-            "semestre": 9,
-            "requisitoAcreditado": ["TC2006"],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Proyecto Integrador",
-            "clave": "TC3054",
-            "semestre": 9,
-            "requisitoAcreditado": ["TC2024"],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Introducción a la Vida Profesional",
-            "clave": "TI3035",
-            "semestre": 9,
-            "requisitoAcreditado": [],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Tópicos 4",
-            "clave": "VA2013",
-            "semestre": 9,
-            "requisitoAcreditado": [],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Tópicos 5",
-            "clave": "VA2014",
-            "semestre": 9,
-            "requisitoAcreditado": [],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Tópicos 6",
-            "clave": "VA2015",
-            "semestre": 9,
-            "requisitoAcreditado": [],
-            "requisito cursado": []
-        },
-        {
-            "nombre": "Ética Aplicada",
-            "clave": "HS2006",
-            "semestre": 9,
-            "requisitoAcreditado": ["H1018"],
-            "requisito cursado": []
-        }
-    ]`;
+    {
+        "nombre": "Introducción a la Ingeniería en tecnologías computacionales",
+        "clave": "TC1022",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Lengua Extranjera",
+        "clave": "H1016",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Ciencias naturales y desarrollo sustentable",
+        "clave": "DS1003",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Mate 1",
+        "clave": "MA1015",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Matematicas discretas",
+        "clave": "TC1003",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Física 1",
+        "clave": "F1002",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Fundamentos de Programación",
+        "clave": "TC1014",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Programación Orientada a Objetos",
+        "clave": "TC1016",
+        "semestre": 2,
+        "requisitoAcreditado": ["TC1014"],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Fundamentos de Diseño Interactivo",
+        "clave": "TC1015",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisito cursado": ["TC1014"]
+    },
+    {
+        "nombre": "Administración  e Innovación en Modelos de Negocios",
+        "clave": "AD1005",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Organización Computacional",
+        "clave": "TC1016",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisito cursado": ["TC1014"]
+    },
+    {
+        "nombre": "Matemáticas 2",
+        "clave": "MA1017",
+        "semestre": 2,
+        "requisitoAcreditado": ["MA1015"],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Análisis y Expresión Verbal",
+        "clave": "H1040",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Estructura de Datos",
+        "clave": "TC1018",
+        "semestre": 3,
+        "requisitoAcreditado": ["TC2016"],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Fundamentos de Ingeniería de Software",
+        "clave": "TC1019",
+        "semestre": 3,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Electricidad y Magnetismo",
+        "clave": "F1005",
+        "semestre": 3,
+        "requisitoAcreditado": ["F1002"],
+        "requisito cursado": ["MA1017"]
+    },
+    {
+        "nombre": "Matemáticas 3",
+        "clave": "MA2009",
+        "semestre": 3,
+        "requisitoAcreditado": ["MA1017"],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Probabilidad y Estadística",
+        "clave": "MA1006",
+        "semestre": 3,
+        "requisitoAcreditado": ["MA1017"],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Ètica, persona y sociedad",
+        "clave": "H1018",
+        "semestre": 3,
+        "requisitoAcreditado": ["H1040"],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Bases de Datos",
+        "clave": "TC1020",
+        "semestre": 4,
+        "requisitoAcreditado": [],
+        "requisito cursado": ["TC1019"]
+    },
+    {
+        "nombre": "Análisis y Diseño de Algoritmos",
+        "clave": "TC2017",
+        "semestre": 4,
+        "requisitoAcreditado": ["TC1018"],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Proyecto de Desarrollo de Videojuegos",
+        "clave": "TC2021",
+        "semestre": 4,
+        "requisitoAcreditado": [],
+        "requisito cursado": ["TC1018"]
+    },
+    {
+        "nombre": "Métodos Numéricos en Ingeniería",
+        "clave": "TC2019",
+        "semestre": 4,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Expresión Verbal en el Ámbito Profesional",
+        "clave": "H2001",
+        "semestre": 4,
+        "requisitoAcreditado": ["H1040"],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Fundamentos de Redes",
+        "clave": "TC2018",
+        "semestre": 4,
+        "requisitoAcreditado": ["TC1016"],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Análisis y Modelación de Sistemas de Software",
+        "clave": "TC2004",
+        "semestre": 5,
+        "requisitoAcreditado": [],
+        "requisito cursado": ["TC1020"]
+    },
+    {
+        "nombre": "Sistemas Operativos",
+        "clave": "TC2008",
+        "semestre": 5,
+        "requisitoAcreditado": [],
+        "requisito cursado": ["TC1016"]
+    },
+    {
+        "nombre": "Álgebra Lineal",
+        "clave": "MA2019",
+        "semestre": 5,
+        "requisitoAcreditado": [],
+        "requisito cursado": ["MA1017"]
+    },
+    {
+        "nombre": "Humanidades y Bellas Artes",
+        "clave": "HS2000",
+        "semestre": 5,
+        "requisitoAcreditado": ["H1040"],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Interconexión de Redes",
+        "clave": "TC2022",
+        "semestre": 5,
+        "requisitoAcreditado": ["TC2018"],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Matemáticas Computacionales",
+        "clave": "TC2020",
+        "semestre": 5,
+        "requisitoAcreditado": ["TC1003"],
+        "requisito cursado": ["TC1018"]
+    },
+    {
+        "nombre": "Programación Avanzada",
+        "clave": "TC2025",
+        "semestre": 6,
+        "requisitoAcreditado": ["TC2017"],
+        "requisito cursado": ["TC2008"]
+    },
+    {
+        "nombre": "Proyecto de Desarrollo para Dispositivos Móviles",
+        "clave": "TC2024",
+        "semestre": 6,
+        "requisitoAcreditado": [],
+        "requisito cursado": ["TC2004"]
+    },
+    {
+        "nombre": "Calidad y Pruebas de Software",
+        "clave": "TC3045",
+        "semestre": 6,
+        "requisitoAcreditado": [],
+        "requisito cursado": ["TC2004"]
+    },
+    {
+        "nombre": "Bases de Datos Avanzadas",
+        "clave": "TC3041",
+        "semestre": 6,
+        "requisitoAcreditado": ["TC1020"],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Evaluación y Administración de Proyectos",
+        "clave": "TI2011",
+        "semestre": 6,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Emprendimiento",
+        "clave": "EM1005",
+        "semestre": 6,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Lenguajes de Programación",
+        "clave": "TC2006",
+        "semestre": 7,
+        "requisitoAcreditado": [],
+        "requisito cursado": ["TC2020"]
+    },
+    {
+        "nombre": "Desarrollo de Aplicaciones Web",
+        "clave": "TC2026",
+        "semestre": 7,
+        "requisitoAcreditado": [],
+        "requisito cursado": ["TC1020", "TC2022"]
+    },
+    {
+        "nombre": "Administración de Proyectos de Ingeniería de Software",
+        "clave": "TC3002",
+        "semestre": 7,
+        "requisitoAcreditado": [],
+        "requisito cursado": ["TC2004", "TI2011"]
+    },
+    {
+        "nombre": "Tópicos 1",
+        "clave": "VA2010",
+        "semestre": 7,
+        "requisitoAcreditado": ["TC1020"],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Seguridad Informática",
+        "clave": "TC2027",
+        "semestre": 7,
+        "requisitoAcreditado": [],
+        "requisito cursado": ["TC2008", "TC2018"]
+    },
+    {
+        "nombre": "Ciudadanía",
+        "clave": "HS2005",
+        "semestre": 7,
+        "requisitoAcreditado": ["H1040", "H1018"],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Métodos Cuantitativos y Simulación",
+        "clave": "TC2007",
+        "semestre": 8,
+        "requisitoAcreditado": ["TC1018", "MA1006"],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Gráficas Computacionales",
+        "clave": "TC3022",
+        "semestre": 8,
+        "requisitoAcreditado": [],
+        "requisito cursado": ["MA2009", "TC2017"]
+    },
+    {
+        "nombre": "Diseño de Compiladores",
+        "clave": "TC3048",
+        "semestre": 8,
+        "requisitoAcreditado": [],
+        "requisito cursado": ["TC2006"]
+    },
+    {
+        "nombre": "Diseño y Arquitectura de Software",
+        "clave": "TC3049",
+        "semestre": 8,
+        "requisitoAcreditado": [],
+        "requisito cursado": ["TC2004"]
+    },
+    {
+        "nombre": "Laboratorio de Desarrollo de Aplicaciones Web",
+        "clave": "TC3052",
+        "semestre": 8,
+        "requisitoAcreditado": [],
+        "requisito cursado": ["TC2026"]
+    },
+    {
+        "nombre": "Tópicos 2",
+        "clave": "VA2011",
+        "semestre": 8,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Tópicos 3",
+        "clave": "VA2012",
+        "semestre": 8,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Sistemas Inteligentes",
+        "clave": "TC2011",
+        "semestre": 9,
+        "requisitoAcreditado": ["TC2006"],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Proyecto Integrador",
+        "clave": "TC3054",
+        "semestre": 9,
+        "requisitoAcreditado": ["TC2024"],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Introducción a la Vida Profesional",
+        "clave": "TI3035",
+        "semestre": 9,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Tópicos 4",
+        "clave": "VA2013",
+        "semestre": 9,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Tópicos 5",
+        "clave": "VA2014",
+        "semestre": 9,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Tópicos 6",
+        "clave": "VA2015",
+        "semestre": 9,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Ética Aplicada",
+        "clave": "HS2006",
+        "semestre": 9,
+        "requisitoAcreditado": ["H1018"],
+        "requisito cursado": []
+    }
+]`;
