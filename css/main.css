@@ -9,12 +9,13 @@ table, th, td {
     color: #191C25;
     color: antiquewhite;
     padding: 3px 5px;
-    background-color: #BF7913;
+    border-color: #191C25;
+    /*background-color: #BF7913;*/
 }
 
 td {
     font-size: 75%;
-    background-color: #BF7913;
+    border-color: #191C25;
 }
 
 font {
@@ -37,7 +38,7 @@ label {
     table-layout: fixed;
     width: 100%;
     /*width: 2000px;*/
-    border-color: #BF7913;
+    /*border-color: #BF7913;*/
 }
 
 
@@ -66,9 +67,9 @@ label {
     color: white;
     /* padding: 10px; */
     /* margin: 5px; */
-    background-color: #BF7913;
+    /*background-color: white;*/
     text-align: center;
-    /* border: ridge white; */
+    /*border: white; */
     padding: 5px;
     margin: 5px;
     
@@ -78,8 +79,8 @@ label {
 
 .semester > div {
     /* display: flex; */
-    border: ridge white;
-    background-color: #BF7913;
+    border-color: #191C25;
+    /*background-color: #BF7913;*/
     
     /*flex-direction: column*/
 }

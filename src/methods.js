@@ -141,9 +141,9 @@ function clickCourse(btn) {
 	}
 } 
 
-
 function clickSemester(btn) {
 
+	console.log("semester selection");
 	btn.style.backgroundColor = color;
 
 	// 1 to 6 course boxes
