@@ -5,7 +5,11 @@ var barWidthPurple = 0;
 var green = '#439630';
 var color = "green";
 
-// change selected color
+$("button").on("click", (event) => {
+	event.preventDefault();
+})
+
+// change the color of the buttons about to press
 function changeColor(newColor){
 
 	// color = newColor;
