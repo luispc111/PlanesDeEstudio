@@ -1,11 +1,11 @@
 function selectStudyPlan() {
-    $("#selectStudyPlan").on("click", (event) => {
+    $(".selectStudyPlan").on("click", (event) => {
         event.preventDefault();
 
         console.log("clicked");
-        console.log($("#studyPlanSelected").val());
+        console.log(event.target.value);
         
-        let val = $("#studyPlanSelected").val();
+        let val = event.target.value;//$(".selectStudyPlan").val();
         
         if (val != "0") {
             document.querySelector("#seleccionPlan").hidden = true;
