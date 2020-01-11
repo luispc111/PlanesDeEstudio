@@ -1,7 +1,5 @@
 let materias;
 
-
-
 function createTable(studyPlan) {
 
     let settings = {

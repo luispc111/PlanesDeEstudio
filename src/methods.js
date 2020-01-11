@@ -38,12 +38,13 @@ function changeColor(newColor){
 		document.getElementById("btnPURPLE").style.border = "3px solid";
 		color = purple;
 	}
-	console.log(color);
+	console.log("change to color " + color);
 }
 
 // changes color of course and changes the progress bar
 function clickCourse(btn) {
 	
+	console.log("click course")
 	if(color == orange){
 		if(btn.style.backgroundColor != orange){
 			barWidthOrange += (1.75);
@@ -143,7 +144,7 @@ function clickCourse(btn) {
 
 function clickSemester(btn) {
 
-	console.log("semester selection");
+	console.log("click on semester");
 	btn.style.backgroundColor = color;
 
 	// 1 to 6 course boxes
