@@ -44,7 +44,8 @@ function changeColor(newColor){
 // changes color of course and changes the progress bar
 function clickCourse(btn) {
 	
-	console.log("click course")
+	console.log("click courseeee");
+
 	if(color == orange){
 		if(btn.style.backgroundColor != orange){
 			barWidthOrange += (1.75);
@@ -61,6 +62,7 @@ function clickCourse(btn) {
 				barWidthPurple -= (1.75);
 	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
 			}
+			btn.style.backgroundColor = color;
 		}
 	}
 	else if(color == blue){
@@ -79,10 +81,18 @@ function clickCourse(btn) {
 				barWidthPurple -= (1.75);
 	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
 			}
+			btn.style.backgroundColor = color;
+		}
+		else{
+			barWidthBlue -= (1.75);
+			document.getElementById("myBarBlue").style.width = barWidthGreen + '%';
+			btn.style.backgroundColor = orange;
 		}
 	}
 	else if(color == green){
+		// console.log("ecsito");
 		if(btn.style.backgroundColor != green){
+			console.log("ecsito");
 			barWidthGreen += (1.75);
 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';		
 			if(btn.style.backgroundColor == blue){
@@ -97,6 +107,13 @@ function clickCourse(btn) {
 				barWidthPurple -= (1.75);
 	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
 			}
+			btn.style.backgroundColor = color;
+		}
+		else{
+			console.log("heEey");
+			barWidthGreen -= (1.75);
+			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
+			btn.style.backgroundColor = orange;
 		}
 	}
 	else if(color == purple){
@@ -115,10 +132,16 @@ function clickCourse(btn) {
 				barWidthGreen -= (1.75);
 	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
 			}
+			btn.style.backgroundColor = color;
+		}
+		else{
+			barWidthPurple -= (1.75);
+			document.getElementById("myBarPurple").style.width = barWidthGreen + '%';
+			btn.style.backgroundColor = orange;
 		}
 	}
 
-	btn.style.backgroundColor = color;
+	// btn.style.backgroundColor = color;
 
 	// if you check a class, check if the semester button needs to turn green
 	var bcheck = true;
