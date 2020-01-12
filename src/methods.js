@@ -22,7 +22,6 @@ document.addEventListener('click', function(e) {
 		document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
 		document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
 		document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
-		console.log("wuhuuuuu");
 	}
 });
 
@@ -125,7 +124,6 @@ function clickCourse(btn) {
 			btn.style.backgroundColor = color;
 		}
 		else{
-			console.log("heEey");
 			barWidthGreen -= (1.75);
 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
 			btn.style.backgroundColor = orange;
@@ -185,25 +183,24 @@ function clickSemester(btn) {
 	console.log("clicked on semester btn");
 	btn.style.backgroundColor = color;
 
-	// top to 10 courses per semester just in case
-	for(var i = 1; i <= 10; i++){
-		// console.log("course " + i);
-		if(document.getElementById("s" + btn.id[1] + "m" + i) != null){
-			if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != color){
-				clickCourse(document.getElementById("s" + btn.id[1] + "m" + i));
+	if(btn.id[1] === '1' && btn.id[2] === '0'){
+		for(var i = 1; i <= 10; i++){
+			if(document.getElementById("s10m" + i) != null){
+				if(document.getElementById("s10m" + i).style.backgroundColor != color){
+					clickCourse(document.getElementById("s10m" + i));
+			 	}
 		 	}
 		}
-		else{
-			console.log("null " + i);
+	}
+	else{
+		for(var i = 1; i <= 10; i++){
+			if(document.getElementById("s" + btn.id[1] + "m" + i) != null){
+				if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != color){
+					clickCourse(document.getElementById("s" + btn.id[1] + "m" + i));
+			 	}
+			}
 		}
 	}
-
-	// // 7th box for semesters with 7 classes
-	// if(btn.id[1] == '1' || btn.id[1] == '8' || btn.id[1] == '9'){
-	// 	if(document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor != color){
-	// 		clickCourse(document.getElementById("s" + btn.id[1] + "m7"));
-	//  	}
-	// }
 }
 
 document.addEventListener("keypress", function onEvent(event) {
