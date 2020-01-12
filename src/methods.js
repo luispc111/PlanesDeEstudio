@@ -9,6 +9,12 @@ var blue = "#2653AD";
 var orange = "#BF7913";
 var purple = "#633B8D";
 
+// var color = 'rgb(67,150,48)';
+// var green = 'rgb(67,150,48)';
+// var blue = "rgb(38,83,173)";
+// var orange = "rgb(191,121,19)";
+// var purple = "rgb(99,59,141)";
+
 const isOnId = (path,id) => path.some(element => element.id === id);
 
 document.addEventListener('click', function(e) {
@@ -60,8 +66,6 @@ function changeColor(newColor){
 // changes color of course and changes the progress bar
 function clickCourse(btn) {
 	
-	// console.log(color === green);
-
 	if(color === orange){
 		if(btn.style.backgroundColor != orange){
 			barWidthOrange += (1.75);
@@ -106,18 +110,20 @@ function clickCourse(btn) {
 		}
 	}
 	else if(color === green){
-		if(btn.style.backgroundColor != green){
+		console.log(btn.style.backgroundColor);
+		if(btn.style.backgroundColor != "rgb(67, 150, 48)"){
+			// console.log('entró a la zona prohibida');
 			barWidthGreen += (1.75);
 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';		
-			if(btn.style.backgroundColor == blue){
+			if(btn.style.backgroundColor === blue){
 				barWidthBlue -= (1.75);
 	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
 			}
-			else if(btn.style.backgroundColor == orange){
+			else if(btn.style.backgroundColor === orange){
 				barWidthOrange -= (1.75);
 	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
 			}
-			else if(btn.style.backgroundColor == purple){
+			else if(btn.style.backgroundColor === purple){
 				barWidthPurple -= (1.75);
 	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
 			}
@@ -153,8 +159,6 @@ function clickCourse(btn) {
 			btn.style.backgroundColor = orange;
 		}
 	}
-
-	// btn.style.backgroundColor = color;
 
 	// if you check a class, check if the semester button needs to turn green
 	// var bcheck = true;
