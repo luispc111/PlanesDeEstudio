@@ -159,45 +159,51 @@ function clickCourse(btn) {
 	// btn.style.backgroundColor = color;
 
 	// if you check a class, check if the semester button needs to turn green
-	var bcheck = true;
-	for(var i=1; i<=6; i++){
-		if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != color){
-			bcheck = false;
-		}
-	}
+	// var bcheck = true;
+	// for(var i=1; i<=6; i++){
+	// 	if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != color){
+	// 		bcheck = false;
+	// 	}
+	// }
 
-	if(btn.id[1] == '1' || btn.id[1] == '8' || btn.id[1] == '9'){
-		if(document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor != color){
-			bcheck = false;
-		}
-	}
+	// if(btn.id[1] == '1' || btn.id[1] == '8' || btn.id[1] == '9'){
+	// 	if(document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor != color){
+	// 		bcheck = false;
+	// 	}
+	// }
 
-	if(bcheck){
-		document.getElementById("s" + btn.id[1]).style.backgroundColor = color;
-	}
-	else{
-		document.getElementById("s" + btn.id[1]).style.backgroundColor = orange;
-	}
+	// if(bcheck){
+	// 	document.getElementById("s" + btn.id[1]).style.backgroundColor = color;
+	// }
+	// else{
+	// 	document.getElementById("s" + btn.id[1]).style.backgroundColor = orange;
+	// }
 } 
 
 function clickSemester(btn) {
 
-	console.log("click on semester");
+	console.log("clicked on semester btn");
 	btn.style.backgroundColor = color;
 
-	// 1 to 6 course boxes
-	for(var i = 1; i <= 6; i++){
-		if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != color){
-			clickCourse(document.getElementById("s" + btn.id[1] + "m" + i));
-	 	}
+	// top to 10 courses per semester just in case
+	for(var i = 1; i <= 10; i++){
+		// console.log("course " + i);
+		if(document.getElementById("s" + btn.id[1] + "m" + i) != null){
+			if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != color){
+				clickCourse(document.getElementById("s" + btn.id[1] + "m" + i));
+		 	}
+		}
+		else{
+			console.log("null " + i);
+		}
 	}
 
-	// 7th box for semesters with 7 classes
-	if(btn.id[1] == '1' || btn.id[1] == '8' || btn.id[1] == '9'){
-		if(document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor != color){
-			clickCourse(document.getElementById("s" + btn.id[1] + "m7"));
-	 	}
-	}
+	// // 7th box for semesters with 7 classes
+	// if(btn.id[1] == '1' || btn.id[1] == '8' || btn.id[1] == '9'){
+	// 	if(document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor != color){
+	// 		clickCourse(document.getElementById("s" + btn.id[1] + "m7"));
+	//  	}
+	// }
 }
 
 document.addEventListener("keypress", function onEvent(event) {
