@@ -9,6 +9,23 @@ var blue = "#2653AD";
 var orange = "#BF7913";
 var purple = "#633B8D";
 
+const isOnId = (path,id) => path.some(element => element.id === id);
+
+document.addEventListener('click', function(e) {
+	if(isOnId(e.path, 'goback')) {
+	  	barWidthGreen = 0;
+		barWidthBlue = 0;
+		barWidthOrange = 99.75;
+		barWidthPurple = 0;
+
+		document.getElementById("myBarOrange").style.width = barWidthOrange + '%';		
+		document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
+		document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
+		document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
+		console.log("wuhuuuuu");
+	}
+});
+
 $("button").on("click", (event) => {
 	event.preventDefault();
 })
@@ -44,9 +61,9 @@ function changeColor(newColor){
 // changes color of course and changes the progress bar
 function clickCourse(btn) {
 	
-	console.log("click courseeee");
+	// console.log(color === green);
 
-	if(color == orange){
+	if(color === orange){
 		if(btn.style.backgroundColor != orange){
 			barWidthOrange += (1.75);
 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';		
@@ -65,7 +82,7 @@ function clickCourse(btn) {
 			btn.style.backgroundColor = color;
 		}
 	}
-	else if(color == blue){
+	else if(color === blue){
 		if(btn.style.backgroundColor != blue){
 			barWidthBlue += (1.75);
 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';		
@@ -89,10 +106,8 @@ function clickCourse(btn) {
 			btn.style.backgroundColor = orange;
 		}
 	}
-	else if(color == green){
-		// console.log("ecsito");
+	else if(color === green){
 		if(btn.style.backgroundColor != green){
-			console.log("ecsito");
 			barWidthGreen += (1.75);
 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';		
 			if(btn.style.backgroundColor == blue){
@@ -116,7 +131,7 @@ function clickCourse(btn) {
 			btn.style.backgroundColor = orange;
 		}
 	}
-	else if(color == purple){
+	else if(color === purple){
 		if(btn.style.backgroundColor != purple){
 			barWidthPurple += (1.75);
 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';		
