@@ -14,7 +14,7 @@ HTML and CSS is used for the frontend. Some bootstrap elements are also included
 
 Javascript is used for the modification of tables and changes in the progress bar.
 
-JSON is used to have the information of the courses, as well as their semester and the requirements to register it. We use HTTP requests to access the JSON files, so to run locally the app you'll need to set up a server.
+JSON is used to have the information of the courses, as well as their semester and the requirements to register it. We use HTTP requests to access the JSON files, so to run locally the app you'll need to set up a local server.
 
 ## Current status of the project
 In constant development
