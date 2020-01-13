@@ -10,6 +10,7 @@ function selectStudyPlan() {
         if (val != "0") {
             document.querySelector("#seleccionPlan").hidden = true;
             createTable(val);
+            document.title = val;
             document.querySelector("#planDeEstudios").hidden = false;
         }
     });
@@ -29,7 +30,7 @@ function gobackBTN() {
         document.querySelector("#planDeEstudios").hidden = true;
         eraseTable();
         document.querySelector("#seleccionPlan").hidden = false;
-
+        document.title = "Planes de Estudio";
     });
 }
 
