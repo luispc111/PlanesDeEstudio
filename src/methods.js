@@ -17,16 +17,16 @@ var blueRGB = "rgb(38, 83, 173)";
 var orangeRGB = "rgb(191, 121, 19)";
 var purpleRGB = "rgb(99, 59, 141)";
 
+
 function sendMethodsJS(cantMaterias){
-	
 	var materia = 99.75 / cantMaterias;
-	var materia = materia.toFixed(2);
+	// var materia = materia.toFixed(2);
 	var barWidthOrange = materia*cantMaterias;
 	document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
 
-	console.log(cantMaterias);
-	console.log(materia);
-	console.log(barWidthOrange);
+	console.log("cant mats: " + cantMaterias);
+	console.log("avance por materia: " + materia);
+	console.log("width de barra naranja: " + barWidthOrange);
 }
 
 const isOnId = (path,id) => path.some(element => element.id === id);
