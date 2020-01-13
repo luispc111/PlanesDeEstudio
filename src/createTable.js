@@ -55,8 +55,7 @@ function createTable(studyPlan) {
                     
                 }
             }
-
-            sendMethodsJS(materias.length);
+            // sendMethodsJS(materias.length);
         },
         error: function (error) {
             console.log(error);
@@ -65,3 +64,11 @@ function createTable(studyPlan) {
 
     $.ajax(settings);
 }
+
+// function selectStudyPlan() {
+//     $(".selectStudyPlan").on("click", (event) => {
+//         sendMethodsJS(materias.length);
+//     });
+// }
+
+// selectStudyPlan();

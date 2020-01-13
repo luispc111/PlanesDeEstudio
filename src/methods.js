@@ -18,12 +18,15 @@ var orangeRGB = "rgb(191, 121, 19)";
 var purpleRGB = "rgb(99, 59, 141)";
 
 function sendMethodsJS(cantMaterias){
+	
 	var materia = 99.75 / cantMaterias;
-	materia = materia.toFixed(2);
-	barWidthOrange = materia*cantMaterias;
+	var materia = materia.toFixed(2);
+	var barWidthOrange = materia*cantMaterias;
 	document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
-	// console.log(materia);
-	// console.log(barWidthOrange);
+
+	console.log(cantMaterias);
+	console.log(materia);
+	console.log(barWidthOrange);
 }
 
 const isOnId = (path,id) => path.some(element => element.id === id);
@@ -75,14 +78,14 @@ function changeColor(newColor){
 		color = purple;
 		colorRGB = purpleRGB;
 	}
-	console.log("change to color " + color);
+	// console.log("change to color " + color);
 }
 
 // changes color of course and changes the progress bar
 function clickCourse(btn) {
 	
 	if(color === orange){
-		if(btn.style.backgroundColor != "rgb(191, 121, 19)"){
+		if(btn.style.backgroundColor != orangeRGB){
 			barWidthOrange += (materia);
 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';		
 			if(btn.style.backgroundColor === greenRGB){
@@ -106,7 +109,7 @@ function clickCourse(btn) {
 		}
 	}
 	else if(color === blue){
-		if(btn.style.backgroundColor != "rgb(38, 83, 173)"){
+		if(btn.style.backgroundColor != blueRGB){
 			barWidthBlue += (materia);
 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';		
 			if(btn.style.backgroundColor === greenRGB){
@@ -132,7 +135,7 @@ function clickCourse(btn) {
 		}
 	}
 	else if(color === green){
-		if(btn.style.backgroundColor != "rgb(67, 150, 48)"){
+		if(btn.style.backgroundColor != greenRGB){
 			barWidthGreen += (materia);
 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';		
 			if(btn.style.backgroundColor === blueRGB){
@@ -158,7 +161,7 @@ function clickCourse(btn) {
 		}
 	}
 	else if(color === purple){
-		if(btn.style.backgroundColor != "rgb(99, 59, 141)"){
+		if(btn.style.backgroundColor != purpleRGB){
 			barWidthPurple += (materia);
 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';		
 			if(btn.style.backgroundColor === blueRGB){
@@ -215,12 +218,15 @@ function clickCourse(btn) {
 			document.getElementById("s" + btn.id[1]).style.backgroundColor = orange;
 		}
 	}
+
+	console.log(barWidthGreen);	
+
 } 
 
 function CourseCheck(btn) {
 	
 	if(color === orange){
-		if(btn.style.backgroundColor != "rgb(191, 121, 19)"){
+		if(btn.style.backgroundColor != orangeRGB){
 			barWidthOrange += (materia);
 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';		
 			if(btn.style.backgroundColor === greenRGB){
@@ -241,7 +247,7 @@ function CourseCheck(btn) {
 		}
 	}
 	else if(color === blue){
-		if(btn.style.backgroundColor != "rgb(38, 83, 173)"){
+		if(btn.style.backgroundColor != blueRGB){
 			barWidthBlue += (materia);
 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';		
 			if(btn.style.backgroundColor === greenRGB){
@@ -262,7 +268,7 @@ function CourseCheck(btn) {
 		}
 	}
 	else if(color === green){
-		if(btn.style.backgroundColor != "rgb(67, 150, 48)"){
+		if(btn.style.backgroundColor != greenRGB){
 			barWidthGreen += (materia);
 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';		
 			if(btn.style.backgroundColor === blueRGB){
@@ -283,7 +289,7 @@ function CourseCheck(btn) {
 		}
 	}
 	else if(color === purple){
-		if(btn.style.backgroundColor != "rgb(99, 59, 141)"){
+		if(btn.style.backgroundColor != purpleRGB){
 			barWidthPurple += (materia);
 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';		
 			if(btn.style.backgroundColor === blueRGB){
@@ -307,7 +313,7 @@ function CourseCheck(btn) {
 
 function clickSemester(btn) {
 
-	console.log("clicked on semester btn");
+	// console.log("clicked on semester btn");
 	btn.style.backgroundColor = color;
 
 	if(btn.id[1] === '1' && btn.id[2] === '0'){
