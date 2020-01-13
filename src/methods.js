@@ -3,6 +3,8 @@ var barWidthBlue = 0;
 var barWidthOrange = 99.75;
 var barWidthPurple = 0;
 
+var materia = 1.75;
+
 var color = '#439630';
 var green = '#439630';
 var blue = "#2653AD";
@@ -14,6 +16,15 @@ var greenRGB = "rgb(67, 150, 48)";
 var blueRGB = "rgb(38, 83, 173)";
 var orangeRGB = "rgb(191, 121, 19)";
 var purpleRGB = "rgb(99, 59, 141)";
+
+function sendMethodsJS(cantMaterias){
+	var materia = 99.75 / cantMaterias;
+	materia = materia.toFixed(2);
+	barWidthOrange = materia*cantMaterias;
+	document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
+	// console.log(materia);
+	// console.log(barWidthOrange);
+}
 
 const isOnId = (path,id) => path.some(element => element.id === id);
 
@@ -72,102 +83,102 @@ function clickCourse(btn) {
 	
 	if(color === orange){
 		if(btn.style.backgroundColor != "rgb(191, 121, 19)"){
-			barWidthOrange += (1.75);
+			barWidthOrange += (materia);
 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';		
 			if(btn.style.backgroundColor === greenRGB){
-				barWidthGreen -= (1.75);
+				barWidthGreen -= (materia);
 	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
 			}
 			else if(btn.style.backgroundColor === blueRGB){
-				barWidthBlue -= (1.75);
+				barWidthBlue -= (materia);
 	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
 			}
 			else if(btn.style.backgroundColor === purpleRGB){
-				barWidthPurple -= (1.75);
+				barWidthPurple -= (materia);
 	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
 			}
 			btn.style.backgroundColor = color;
 		}
 		else{
-			// barWidthOrange -= (1.75);
+			// barWidthOrange -= (materia);
 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
 			btn.style.backgroundColor = orange;
 		}
 	}
 	else if(color === blue){
 		if(btn.style.backgroundColor != "rgb(38, 83, 173)"){
-			barWidthBlue += (1.75);
+			barWidthBlue += (materia);
 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';		
 			if(btn.style.backgroundColor === greenRGB){
-				barWidthGreen -= (1.75);
+				barWidthGreen -= (materia);
 	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
 			}
 			else if(btn.style.backgroundColor === orangeRGB){
-				barWidthOrange -= (1.75);
+				barWidthOrange -= (materia);
 	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
 			}
 			else if(btn.style.backgroundColor === purpleRGB){
-				barWidthPurple -= (1.75);
+				barWidthPurple -= (materia);
 	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
 			}
 			btn.style.backgroundColor = color;
 		}
 		else{
-			barWidthBlue -= (1.75);
+			barWidthBlue -= (materia);
 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
-			barWidthOrange += (1.75);
+			barWidthOrange += (materia);
 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
 			btn.style.backgroundColor = orange;
 		}
 	}
 	else if(color === green){
 		if(btn.style.backgroundColor != "rgb(67, 150, 48)"){
-			barWidthGreen += (1.75);
+			barWidthGreen += (materia);
 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';		
 			if(btn.style.backgroundColor === blueRGB){
-				barWidthBlue -= (1.75);
+				barWidthBlue -= (materia);
 	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
 			}
 			else if(btn.style.backgroundColor === orangeRGB){
-				barWidthOrange -= (1.75);
+				barWidthOrange -= (materia);
 	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
 			}
 			else if(btn.style.backgroundColor === purpleRGB){
-				barWidthPurple -= (1.75);
+				barWidthPurple -= (materia);
 	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
 			}
 			btn.style.backgroundColor = color;
 		}
 		else{
-			barWidthGreen -= (1.75);
+			barWidthGreen -= (materia);
 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
-			barWidthOrange += (1.75);
+			barWidthOrange += (materia);
 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
 			btn.style.backgroundColor = orange;
 		}
 	}
 	else if(color === purple){
 		if(btn.style.backgroundColor != "rgb(99, 59, 141)"){
-			barWidthPurple += (1.75);
+			barWidthPurple += (materia);
 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';		
 			if(btn.style.backgroundColor === blueRGB){
-				barWidthBlue -= (1.75);
+				barWidthBlue -= (materia);
 	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
 			}
 			else if(btn.style.backgroundColor === orangeRGB){
-				barWidthOrange -= (1.75);
+				barWidthOrange -= (materia);
 	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
 			}
 			else if(btn.style.backgroundColor === greenRGB){
-				barWidthGreen -= (1.75);
+				barWidthGreen -= (materia);
 	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
 			}
 			btn.style.backgroundColor = color;
 		}
 		else{
-			barWidthPurple -= (1.75);
+			barWidthPurple -= (materia);
 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
-			barWidthOrange += (1.75);
+			barWidthOrange += (materia);
 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
 			btn.style.backgroundColor = orange;
 		}
@@ -210,18 +221,18 @@ function CourseCheck(btn) {
 	
 	if(color === orange){
 		if(btn.style.backgroundColor != "rgb(191, 121, 19)"){
-			barWidthOrange += (1.75);
+			barWidthOrange += (materia);
 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';		
 			if(btn.style.backgroundColor === greenRGB){
-				barWidthGreen -= (1.75);
+				barWidthGreen -= (materia);
 	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
 			}
 			else if(btn.style.backgroundColor === blueRGB){
-				barWidthBlue -= (1.75);
+				barWidthBlue -= (materia);
 	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
 			}
 			else if(btn.style.backgroundColor === purpleRGB){
-				barWidthPurple -= (1.75);
+				barWidthPurple -= (materia);
 	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
 			}
 			btn.style.backgroundColor = color;
@@ -231,18 +242,18 @@ function CourseCheck(btn) {
 	}
 	else if(color === blue){
 		if(btn.style.backgroundColor != "rgb(38, 83, 173)"){
-			barWidthBlue += (1.75);
+			barWidthBlue += (materia);
 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';		
 			if(btn.style.backgroundColor === greenRGB){
-				barWidthGreen -= (1.75);
+				barWidthGreen -= (materia);
 	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
 			}
 			else if(btn.style.backgroundColor === orangeRGB){
-				barWidthOrange -= (1.75);
+				barWidthOrange -= (materia);
 	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
 			}
 			else if(btn.style.backgroundColor === purpleRGB){
-				barWidthPurple -= (1.75);
+				barWidthPurple -= (materia);
 	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
 			}
 			btn.style.backgroundColor = color;
@@ -252,18 +263,18 @@ function CourseCheck(btn) {
 	}
 	else if(color === green){
 		if(btn.style.backgroundColor != "rgb(67, 150, 48)"){
-			barWidthGreen += (1.75);
+			barWidthGreen += (materia);
 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';		
 			if(btn.style.backgroundColor === blueRGB){
-				barWidthBlue -= (1.75);
+				barWidthBlue -= (materia);
 	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
 			}
 			else if(btn.style.backgroundColor === orangeRGB){
-				barWidthOrange -= (1.75);
+				barWidthOrange -= (materia);
 	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
 			}
 			else if(btn.style.backgroundColor === purpleRGB){
-				barWidthPurple -= (1.75);
+				barWidthPurple -= (materia);
 	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
 			}
 			btn.style.backgroundColor = color;
@@ -273,18 +284,18 @@ function CourseCheck(btn) {
 	}
 	else if(color === purple){
 		if(btn.style.backgroundColor != "rgb(99, 59, 141)"){
-			barWidthPurple += (1.75);
+			barWidthPurple += (materia);
 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';		
 			if(btn.style.backgroundColor === blueRGB){
-				barWidthBlue -= (1.75);
+				barWidthBlue -= (materia);
 	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
 			}
 			else if(btn.style.backgroundColor === orangeRGB){
-				barWidthOrange -= (1.75);
+				barWidthOrange -= (materia);
 	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
 			}
 			else if(btn.style.backgroundColor === greenRGB){
-				barWidthGreen -= (1.75);
+				barWidthGreen -= (materia);
 	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
 			}
 			btn.style.backgroundColor = color;

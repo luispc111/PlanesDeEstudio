@@ -55,6 +55,8 @@ function createTable(studyPlan) {
                     
                 }
             }
+
+            sendMethodsJS(materias.length);
         },
         error: function (error) {
             console.log(error);
