@@ -30,6 +30,10 @@ h1 {
     /* , 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 }
 
+h2 {
+    color: white;
+}
+
 label {
     color: white;
 }
