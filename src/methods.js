@@ -47,18 +47,22 @@ function changeColor(newColor){
 	if(newColor == "blue"){
 		document.getElementById("btnBLUE").style.border = "3px solid";
 		color = blue;
+		colorRGB = blueRGB;
 	}	
 	else if(newColor == "orange"){
 		document.getElementById("btnORANGE").style.border = "3px solid";
 		color = orange;
+		colorRGB = orangeRGB;
 	}
 	else if(newColor == "green"){
 		document.getElementById("btnGREEN").style.border = "3px solid";
 		color = green;
+		colorRGB = greenRGB;
 	}
 	else if(newColor == "purple"){
 		document.getElementById("btnPURPLE").style.border = "3px solid";
 		color = purple;
+		colorRGB = purpleRGB;
 	}
 	console.log("change to color " + color);
 }
@@ -168,27 +172,38 @@ function clickCourse(btn) {
 			btn.style.backgroundColor = orange;
 		}
 	}
-
-	// if you check a class, check if the semester button needs to turn green
-	// var bcheck = true;
-	// for(var i=1; i<=6; i++){
-	// 	if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != color){
-	// 		bcheck = false;
-	// 	}
-	// }
-
-	// if(btn.id[1] == '1' || btn.id[1] == '8' || btn.id[1] == '9'){
-	// 	if(document.getElementById("s" + btn.id[1] + "m7").style.backgroundColor != color){
-	// 		bcheck = false;
-	// 	}
-	// }
-
-	// if(bcheck){
-	// 	document.getElementById("s" + btn.id[1]).style.backgroundColor = color;
-	// }
-	// else{
-	// 	document.getElementById("s" + btn.id[1]).style.backgroundColor = orange;
-	// }
+	
+	var bcheck = true;
+	if(btn.id[1] === '1' && btn.id[2] === '0'){
+		for(var i = 1; i <= 10; i++){
+			if(document.getElementById("s10m" + i) != null){
+				if(document.getElementById("s10m" + i).style.backgroundColor != colorRGB){
+					bcheck = false;
+				}
+			}
+		}	
+		if(bcheck){
+			document.getElementById("s10").style.backgroundColor = color;
+		}
+		else{
+			document.getElementById("s10").style.backgroundColor = orange;
+		}
+	}
+	else{
+		for(var i = 1; i <= 10; i++){
+			if(document.getElementById("s" + btn.id[1] + "m" + i) != null){
+				if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != colorRGB){
+					bcheck = false;
+				}
+			}
+		}	
+		if(bcheck){
+			document.getElementById("s" + btn.id[1]).style.backgroundColor = color;
+		}
+		else{
+			document.getElementById("s" + btn.id[1]).style.backgroundColor = orange;
+		}
+	}
 } 
 
 function CourseCheck(btn) {
