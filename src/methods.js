@@ -23,10 +23,6 @@ function sendMethodsJS(cantMaterias){
 	// materia = materia.toFixed(2);
 	barWidthOrange = materia*cantMaterias;
 	document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
-
-	console.log("cant mats: " + cantMaterias);
-	console.log("avance por materia: " + materia);
-	console.log("width de barra naranja: " + barWidthOrange);
 }
 
 const isOnId = (path,id) => path.some(element => element.id === id);
@@ -218,9 +214,6 @@ function clickCourse(btn) {
 			document.getElementById("s" + btn.id[1]).style.backgroundColor = orange;
 		}
 	}
-
-	console.log(barWidthGreen);	
-
 } 
 
 function CourseCheck(btn) {
