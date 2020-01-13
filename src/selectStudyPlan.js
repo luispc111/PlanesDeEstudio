@@ -11,6 +11,7 @@ function selectStudyPlan() {
             document.querySelector("#seleccionPlan").hidden = true;
             createTable(val);
             document.title = val;
+            document.querySelector("#tituloTabla").textContent = `Plan de estudios ${val}`;
             document.querySelector("#planDeEstudios").hidden = false;
         }
     });
