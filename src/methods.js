@@ -1,27 +1,27 @@
-var barWidthGreen = 0;
-var barWidthBlue = 0;
-var barWidthOrange = 99.75;
-var barWidthPurple = 0;
+let barWidthGreen = 0;
+let barWidthBlue = 0;
+let barWidthOrange = 99.75;
+let barWidthPurple = 0;
 
-var materia = 1.75;
+let materia = 1.75;
 
-var color = '#439630';
-var green = '#439630';
-var blue = "#2653AD";
-var orange = "#BF7913";
-var purple = "#633B8D";
+let color = '#439630';
+let green = '#439630';
+let blue = "#2653AD";
+let orange = "#BF7913";
+let purple = "#633B8D";
 
-var colorRGB = "rgb(67, 150, 48)";
-var greenRGB = "rgb(67, 150, 48)";
-var blueRGB = "rgb(38, 83, 173)";
-var orangeRGB = "rgb(191, 121, 19)";
-var purpleRGB = "rgb(99, 59, 141)";
+let colorRGB = "rgb(67, 150, 48)";
+let greenRGB = "rgb(67, 150, 48)";
+let blueRGB = "rgb(38, 83, 173)";
+let orangeRGB = "rgb(191, 121, 19)";
+let purpleRGB = "rgb(99, 59, 141)";
 
 
 function sendMethodsJS(cantMaterias){
-	var materia = 99.75 / cantMaterias;
-	// var materia = materia.toFixed(2);
-	var barWidthOrange = materia*cantMaterias;
+	materia = 99.75 / cantMaterias;
+	// materia = materia.toFixed(2);
+	barWidthOrange = materia*cantMaterias;
 	document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
 
 	console.log("cant mats: " + cantMaterias);
@@ -187,9 +187,9 @@ function clickCourse(btn) {
 		}
 	}
 	
-	var bcheck = true;
+	let bcheck = true;
 	if(btn.id[1] === '1' && btn.id[2] === '0'){
-		for(var i = 1; i <= 10; i++){
+		for(let i = 1; i <= 10; i++){
 			if(document.getElementById("s10m" + i) != null){
 				if(document.getElementById("s10m" + i).style.backgroundColor != colorRGB){
 					bcheck = false;
@@ -204,7 +204,7 @@ function clickCourse(btn) {
 		}
 	}
 	else{
-		for(var i = 1; i <= 10; i++){
+		for(let i = 1; i <= 10; i++){
 			if(document.getElementById("s" + btn.id[1] + "m" + i) != null){
 				if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != colorRGB){
 					bcheck = false;
@@ -317,7 +317,7 @@ function clickSemester(btn) {
 	btn.style.backgroundColor = color;
 
 	if(btn.id[1] === '1' && btn.id[2] === '0'){
-		for(var i = 1; i <= 10; i++){
+		for(let i = 1; i <= 10; i++){
 			if(document.getElementById("s10m" + i) != null){
 				if(document.getElementById("s10m" + i).style.backgroundColor != color){
 					CourseCheck(document.getElementById("s10m" + i));
@@ -326,7 +326,7 @@ function clickSemester(btn) {
 		}
 	}
 	else{
-		for(var i = 1; i <= 10; i++){
+		for(let i = 1; i <= 10; i++){
 			if(document.getElementById("s" + btn.id[1] + "m" + i) != null){
 				if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != color){
 					CourseCheck(document.getElementById("s" + btn.id[1] + "m" + i));
