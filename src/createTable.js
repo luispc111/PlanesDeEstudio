@@ -3,7 +3,7 @@ let materias;
 function createTable(studyPlan) {
 
     let settings = {
-        url: `json/materias${studyPlan}.json`,
+        url: `json/${studyPlan}.json`,
         method: "GET",
         success: function (responseJSON){
             console.log(responseJSON);
