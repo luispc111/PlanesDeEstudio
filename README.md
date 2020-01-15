@@ -7,7 +7,7 @@ Visit https://luispc111.github.io/ITC11
 
 Web page that includes the classes of various ITESM study models. It allows you to mark subjects with different colors to visualize the ones you have already taken, the ones you are currently taking and the ones you are planning to take.
 
-## Implented study models
+### Implented study models
 
 - ARQ11
 - IDS11
@@ -15,7 +15,7 @@ Web page that includes the classes of various ITESM study models. It allows you 
 - ITC11
 - LRI11
 
-## How to contribute
+### How to contribute
 
 You can help the web page by making the JSON files of your study model. The format of the JSON files is:
 
