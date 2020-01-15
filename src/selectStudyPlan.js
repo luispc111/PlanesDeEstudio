@@ -10,8 +10,8 @@ function selectStudyPlan() {
         if (val != "0") {
             document.querySelector("#seleccionPlan").hidden = true;
             createTable(val);
-            document.title = val;
-            document.querySelector("#tituloTabla").textContent = `Plan de estudios ${val}`;
+            document.title = event.target.textContent;
+            document.querySelector("#tituloTabla").textContent = `Plan de estudios ${event.target.textContent}`;
             document.querySelector("#planDeEstudios").hidden = false;
         }
     });

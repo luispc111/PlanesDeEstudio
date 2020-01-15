@@ -38,6 +38,8 @@ document.addEventListener('click', function(e) {
 		document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
 		document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
 		document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
+
+		progressBarRefresh();
 	}
 });
 
