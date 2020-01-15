@@ -4,405 +4,405 @@
         "clave": "",
         "semestre": 1,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Geometría descriptiva",
         "clave": "",
         "semestre": 1,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Introducción a la arquitectura",
         "clave": "",
         "semestre": 1,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },    
     {
         "nombre": "Fundamentos del diseño I",
         "clave": "",
         "semestre": 1,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Modelos y maquetas",
         "clave": "",
         "semestre": 1,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Lengua extranjera",
         "clave": "",
         "semestre": 1,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Matemáticas para el diseño",
         "clave": "",
         "semestre": 1,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Dibujo arquitectónico",
         "clave": "",
         "semestre": 2,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Geometría aplicada",
         "clave": "",
         "semestre": 2,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Fundamentos del diseño II",
         "clave": "",
         "semestre": 2,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Creatividad e innovación",
         "clave": "",
         "semestre": 2,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Ciencias naturales y desarrollo sustentable",
         "clave": "",
         "semestre": 2,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Análisis y expresión verbal",
         "clave": "",
         "semestre": 2,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Historia de la arquitectura y de la ciudad I",
         "clave": "",
         "semestre": 3,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Dibujo computarizado",
         "clave": "",
         "semestre": 3,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Teorías de arquitectura y metodologías de diseño",
         "clave": "",
         "semestre": 3,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Diseño bioclimático",
         "clave": "",
         "semestre": 3,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Proyectos I: Casa habitación",
         "clave": "",
         "semestre": 3,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Mecánica de estructuras I",
         "clave": "",
         "semestre": 3,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Historia de la arquitectura y de la ciudad II",
         "clave": "",
         "semestre": 4,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Visualización digital",
         "clave": "",
         "semestre": 4,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Proyectos II: Vivienda colectiva",
         "clave": "",
         "semestre": 4,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Materiales y procedimientos de contruscción I",
         "clave": "",
         "semestre": 4,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Mecánica de estructuras II",
         "clave": "",
         "semestre": 4,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Ética, persona y sociedad",
         "clave": "",
         "semestre": 4,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Historia de la arquitectura y de la ciudad III",
         "clave": "",
         "semestre": 5,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Instalaciones y sistemas alternos",
         "clave": "",
         "semestre": 5,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Materiales y procedimientos de construcción II",
         "clave": "",
         "semestre": 5,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Proyectos III: Edificios de educación o recreación",
         "clave": "",
         "semestre": 5,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Sistemas estructurales",
         "clave": "",
         "semestre": 5,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Expresión verbal en el ámbito profesional",
         "clave": "",
         "semestre": 5,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Historia de la arquitectura y de la ciudad IV",
         "clave": "",
         "semestre": 6,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
         {
         "nombre": "Proyectos constructivos I",
         "clave": "",
         "semestre": 6,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
         {
         "nombre": "Proyectos IV: Edificios comunitarios",
         "clave": "",
         "semestre": 6,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
         {
         "nombre": "Diseño de estructuras de concreto",
         "clave": "",
         "semestre": 6,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
         {
         "nombre": "Emprendimiento",
         "clave": "",
         "semestre": 6,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Ánalisis crítico de la arquitectura y su contexto",
         "clave": "",
         "semestre": 7,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Proyectos constructivos II",
         "clave": "",
         "semestre": 7,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Proyectos V: Conjuntos de usos mixtos",
         "clave": "",
         "semestre": 7,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Costos de construcción",
         "clave": "",
         "semestre": 7,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Diseño de estructuras de acero",
         "clave": "",
         "semestre": 7,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Edificación y eficiencia energética",
         "clave": "",
         "semestre": 8,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Práctica profesional",
         "clave": "",
         "semestre": 8,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Proyectos integradores I",
         "clave": "",
         "semestre": 8,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Teorías urbanas",
         "clave": "",
         "semestre": 8,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Administración de obras",
         "clave": "",
         "semestre": 8,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Ciudadanía",
         "clave": "",
         "semestre": 8,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Metodologías de diseño urbano",
         "clave": "",
         "semestre": 9,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Proyectos inmobiliarios",
         "clave": "",
         "semestre": 9,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Proyectos integradores II",
         "clave": "",
         "semestre": 9,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Tópicos I",
         "clave": "",
         "semestre": 9,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Tópicos II",
         "clave": "",
         "semestre": 9,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Introducción a la vida profesional",
         "clave": "",
         "semestre": 10,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Proyecto de fin de carrera",
         "clave": "",
         "semestre": 10,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Gestión empresarial de la industria de la construcción",
         "clave": "",
         "semestre": 10,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Ética aplicada",
         "clave": "",
         "semestre": 10,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Tópicos III",
         "clave": "",
         "semestre": 10,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Tópicos IV",
         "clave": "",
         "semestre": 10,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     }
 ]

@@ -4,405 +4,405 @@
         "clave": "",
         "semestre": 1,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },    
     {
         "nombre": "Introducción a la ingeniería en desarrollo sustentable",
         "clave": "",
         "semestre": 1,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },      
     {
         "nombre": "Física I",
         "clave": "",
         "semestre": 1,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },         
     {
         "nombre": "Lengua extranjera",
         "clave": "",
         "semestre": 1,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },       
     {
         "nombre": "Análisis y expresión verbal",
         "clave": "",
         "semestre": 1,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },       
     {
         "nombre": "Matemáticas I",
         "clave": "",
         "semestre": 1,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },       
     {
         "nombre": "Química",
         "clave": "",
         "semestre": 1,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },       
     {
         "nombre": "Ecosistemas y biodiversidad",
         "clave": "",
         "semestre": 2,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },          
     {
         "nombre": "Física II",
         "clave": "",
         "semestre": 2,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },         
     {
         "nombre": "Ética, persona y sociedad",
         "clave": "",
         "semestre": 2,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },         
     {
         "nombre": "Expresión verbal en el ámbito profesional",
         "clave": "",
         "semestre": 2,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },         
     {
         "nombre": "Matemáticas II",
         "clave": "",
         "semestre": 2,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },         
     {
         "nombre": "Laboratorio de química",
         "clave": "",
         "semestre": 2,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },         
     {
         "nombre": "Solución de problemas con programación",
         "clave": "",
         "semestre": 2,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Fundamentos del desarrollo sustentable",
         "clave": "",
         "semestre": 3,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Electricidad y magnetismo",
         "clave": "",
         "semestre": 3,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Humanidades y bellas artes",
         "clave": "",
         "semestre": 3,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Balance de materia",
         "clave": "",
         "semestre": 3,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Probabilidad y estadística",
         "clave": "",
         "semestre": 3,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Matemáticas III",
         "clave": "",
         "semestre": 3,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Balance de energía",
         "clave": "",
         "semestre": 4,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Termodinámica",
         "clave": "",
         "semestre": 4,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Estática",
         "clave": "",
         "semestre": 4,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Métodos numéricos en ingeniería",
         "clave": "",
         "semestre": 4,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Ecuaciones diferenciales",
         "clave": "",
         "semestre": 4,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Circuitos eléctricos I",
         "clave": "",
         "semestre": 4,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Uso sustentable del agua I",
         "clave": "",
         "semestre": 5,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Economía para la creación de negocios",
         "clave": "",
         "semestre": 5,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Diseño y análisis de experimentos",
         "clave": "",
         "semestre": 5,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Operaciones de transferencia de momentum",
         "clave": "",
         "semestre": 5,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Comportamiento organizacional y desarrollo del talento humano",
         "clave": "",
         "semestre": 5,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Laboratorio de circuitos eléctricos y mediciones",
         "clave": "",
         "semestre": 5,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Circuitos eléctricos II",
         "clave": "",
         "semestre": 5,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Ecología industrial",
         "clave": "",
         "semestre": 6,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Manejo de recursos naturales y cambio climático",
         "clave": "",
         "semestre": 6,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Evaluación y administración de proyectos",
         "clave": "",
         "semestre": 6,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Operaciones de transferencia de calor",
         "clave": "",
         "semestre": 6,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Negociación y manejo de conflictos",
         "clave": "",
         "semestre": 6,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Tópicos I",
         "clave": "",
         "semestre": 6,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Responsabilidad social y sustentabilidad corporativa",
         "clave": "",
         "semestre": 7,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Emprendimiento",
         "clave": "",
         "semestre": 7,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Energías alternas",
         "clave": "",
         "semestre": 7,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Ecoeficiencia y procesos sustentables",
         "clave": "",
         "semestre": 7,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Sistemas para la generación de energía",
         "clave": "",
         "semestre": 7,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Tópicos II",
         "clave": "",
         "semestre": 7,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Negocios y conservación de ecosistemas",
         "clave": "",
         "semestre": 8,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Ciudadanía",
         "clave": "",
         "semestre": 8,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Tecnologías para el uso eficiente de energía térmica",
         "clave": "",
         "semestre": 8,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Laboratorio de administración y monitoreo de energía",
         "clave": "",
         "semestre": 8,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Tópicos III",
         "clave": "",
         "semestre": 8,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Tópicos IV",
         "clave": "",
         "semestre": 8,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Proyecto integrador en desarrollo sustentable",
         "clave": "",
         "semestre": 9,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Introducción a la vida profesional",
         "clave": "",
         "semestre": 9,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Ética aplicada",
         "clave": "",
         "semestre": 9,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Tecnologías para el uso eficiente de energía eléctrica",
         "clave": "",
         "semestre": 9,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Administración de los proyectos energéticos",
         "clave": "",
         "semestre": 9,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Tópicos V",
         "clave": "",
         "semestre": 9,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     },
     {
         "nombre": "Tópicos VI",
         "clave": "",
         "semestre": 9,
         "requisitoAcreditado": [],
-        "requisito cursado": []
+        "requisitoCursado": []
     }
 ]
