@@ -365,7 +365,7 @@ function progressBarRefresh(){
 
 	if(barWidthPurple != 0){
   		var myDiv = document.getElementById("myBarPurple");
-	  	myDiv.innerHTML = (myBarPurple*(1.002506266)).toFixed(2) + "%";
+	  	myDiv.innerHTML = (barWidthPurple*(1.002506266)).toFixed(2) + "%";
 	}
 	else{
 		var myDiv = document.getElementById("myBarPurple");
