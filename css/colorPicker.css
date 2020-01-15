@@ -1,7 +1,11 @@
+button {
+    margin: 10px 0px;
+}
+
 .btnGreen {
 	border: 3px solid;
 	color: white;
-    background-color: green;
+    background-color: #439630;
 	height: 50px; 
 	width: 50px;
 }
@@ -9,7 +13,7 @@
 .btnBlue {
 	border: 1px solid;
 	color: white;
-    background-color: blue;
+    background-color: #2653AD;
 	height: 50px; 
 	width: 50px;
 }
@@ -17,7 +21,7 @@
 .btnOrange {
 	border: 1px solid;
 	color: white;
-    background-color: orange;
+    background-color: #BF7913;
 	height: 50px; 
 	width: 50px;
 }
@@ -25,7 +29,7 @@
 .btnPurple {
 	border: 1px solid;
 	color: white;
-    background-color: purple;
+    background-color: #633B8D;
 	height: 50px; 
 	width: 50px;
 }
@@ -34,7 +38,7 @@
     width: 0%;
     height: 30px;
     /*background-color: #4CAF50;*/
-    background-color: green;
+    background-color: #439630;
     text-align: center;  
     /*To center it horizontally (if you want) */
     line-height: 30px; /* To center it vertically */
@@ -45,7 +49,7 @@
     width: 0%;
     height: 30px;
     /*background-color: #4CAF50;*/
-    background-color: blue;
+    background-color: #2653AD;
     text-align: center;  
     /*To center it horizontally (if you want) */
     line-height: 30px; /* To center it vertically */
@@ -56,7 +60,7 @@
     width: 99.75%;
     height: 30px;
     /*background-color: #4CAF50;*/
-    background-color: orange;
+    background-color: #BF7913;
     text-align: center;  
     /*To center it horizontally (if you want) */
     line-height: 30px; /* To center it vertically */
@@ -67,7 +71,7 @@
     width: 0%;
     height: 30px;
     /*background-color: #4CAF50;*/
-    background-color: purple;
+    background-color: #633B8D;
     text-align: center;  
     /*To center it horizontally (if you want) */
     line-height: 30px; /* To center it vertically */

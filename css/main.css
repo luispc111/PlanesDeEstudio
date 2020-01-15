@@ -9,10 +9,13 @@ table, th, td {
     color: #191C25;
     color: antiquewhite;
     padding: 3px 5px;
+    border-color: #191C25;
+    /*background-color: #BF7913;*/
 }
 
 td {
     font-size: 75%;
+    border-color: #191C25;
 }
 
 font {
@@ -21,13 +24,25 @@ font {
 
 h1 {
     text-align: center;
+    color: white;
+    font-family: 'Lucida Bright';
+    margin: 10px 0px;
+    /* , 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+}
+
+h2 {
+    color: white;
+}
+
+label {
+    color: white;
 }
 
 #my-table{
     table-layout: fixed;
     width: 100%;
     /*width: 2000px;*/
-    border-color: #191C25;
+    /*border-color: #BF7913;*/
 }
 
 
@@ -35,6 +50,9 @@ h1 {
    display: flex;
 }
 
+#divTable {
+    margin: 5px 0px;
+}
 
 .button {
     background-color: red;
@@ -53,9 +71,9 @@ h1 {
     color: white;
     /* padding: 10px; */
     /* margin: 5px; */
-    background-color: orange;
+    /*background-color: white;*/
     text-align: center;
-    /* border: ridge white; */
+    /*border: white; */
     padding: 5px;
     margin: 5px;
     
@@ -65,8 +83,8 @@ h1 {
 
 .semester > div {
     /* display: flex; */
-    border: ridge white;
-    background-color: orange;
+    border-color: #191C25;
+    /*background-color: #BF7913;*/
     
     /*flex-direction: column*/
 }
