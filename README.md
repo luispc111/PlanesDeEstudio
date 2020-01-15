@@ -1,7 +1,7 @@
 # Planes de Estudio ITESM
 
 ### How can I try?
-Visit https://luispc111.github.io/ITC11
+Visit https://luispc111.github.io/PlanesDeEstudio/
 
 ### User description
 
