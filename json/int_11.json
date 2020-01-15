@@ -1,0 +1,401 @@
+[
+    {
+        "nombre": "Administración e innovación en modelos de negocios",
+        "clave": "",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },    
+    {
+        "nombre": "Ciencias naturales y desarrollo sustentable",
+        "clave": "",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },        
+    {
+        "nombre": "Lengua extranjera",
+        "clave": "",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },        
+    {
+        "nombre": "Análisis y expresión verbal",
+        "clave": "",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },        
+    {
+        "nombre": "Matemáticas I",
+        "clave": "",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },        
+    {
+        "nombre": "Fundamentos de programación",
+        "clave": "",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },        
+    {
+        "nombre": "Introducción a la ingeniería en negocios y tecnologías de información",
+        "clave": "",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Física I",
+        "clave": "",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Ética, persona y sociedad",
+        "clave": "",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Expresión verbal en el ámbito profesional",
+        "clave": "",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Matemáticas II",
+        "clave": "",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Comportamiento organizacional y desarrollo del talento humano",
+        "clave": "",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Programación orientada a objetos",
+        "clave": "",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Contabilidad y administración de costos",
+        "clave": "",
+        "semestre": 3,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Probabilidad y estadística",
+        "clave": "",
+        "semestre": 3,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Matemáticas III",
+        "clave": "",
+        "semestre": 3,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Organización computacional",
+        "clave": "",
+        "semestre": 3,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Fundamentos de ingeniería de software",
+        "clave": "",
+        "semestre": 3,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Creatividad e innovación para la solución de problemas",
+        "clave": "",
+        "semestre": 3,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Matemáticas financieras",
+        "clave": "",
+        "semestre": 4,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Ecuaciones diferenciales",
+        "clave": "",
+        "semestre": 4,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Bases de datos",
+        "clave": "",
+        "semestre": 4,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Fundamentos de redes",
+        "clave": "",
+        "semestre": 4,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Métodos numéricos en ingeniería",
+        "clave": "",
+        "semestre": 4,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Procesos de comercialización",
+        "clave": "",
+        "semestre": 4,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Emprendimiento",
+        "clave": "",
+        "semestre": 5,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Humanidades y bellas artes",
+        "clave": "",
+        "semestre": 5,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Control estadístico de la calidad",
+        "clave": "",
+        "semestre": 5,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Modelos de optimización",
+        "clave": "",
+        "semestre": 5,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Uso y administración de sistemas operativos",
+        "clave": "",
+        "semestre": 5,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Administración de procesos de negocios",
+        "clave": "",
+        "semestre": 5,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Finanzas personales y empresariales",
+        "clave": "",
+        "semestre": 6,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Laboratorio de ingeniería de sistemas",
+        "clave": "",
+        "semestre": 6,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Administración de inventarios",
+        "clave": "",
+        "semestre": 6,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Diseño y análisis de experimentos",
+        "clave": "",
+        "semestre": 6,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Proyecto integrador I",
+        "clave": "",
+        "semestre": 6,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Evaluación y administración de proyectos",
+        "clave": "",
+        "semestre": 6,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Administración de la información",
+        "clave": "",
+        "semestre": 6,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Ciudadanía",
+        "clave": "",
+        "semestre": 7,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Dinámica de sistemas",
+        "clave": "",
+        "semestre": 7,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Administración de la producción",
+        "clave": "",
+        "semestre": 7,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Métodos cuantitativos y simulación",
+        "clave": "",
+        "semestre": 7,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Administración estratégica de tecnologías de información",
+        "clave": "",
+        "semestre": 7,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Sistemas de información empresarial",
+        "clave": "",
+        "semestre": 7,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Consultoría administrativa",
+        "clave": "",
+        "semestre": 8,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Metodologías para la solución de problemas",
+        "clave": "",
+        "semestre": 8,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Administración del cambio",
+        "clave": "",
+        "semestre": 8,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Gobernabilidad de tecnologías de información",
+        "clave": "",
+        "semestre": 8,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Tópicos I",
+        "clave": "",
+        "semestre": 8,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Tópicos II",
+        "clave": "",
+        "semestre": 8,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Ética aplicada",
+        "clave": "",
+        "semestre": 9,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Administración de servicios de tecnologías de información",
+        "clave": "",
+        "semestre": 9,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Proyecto integrador II",
+        "clave": "",
+        "semestre": 9,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Inteligencia de negocios",
+        "clave": "",
+        "semestre": 9,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Introducción a la vida profesional",
+        "clave": "",
+        "semestre": 9,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Tópicos III",
+        "clave": "",
+        "semestre": 9,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    },
+    {
+        "nombre": "Tópicos IV",
+        "clave": "",
+        "semestre": 9,
+        "requisitoAcreditado": [],
+        "requisito cursado": []
+    }
+]
