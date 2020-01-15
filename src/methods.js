@@ -214,6 +214,8 @@ function clickCourse(btn) {
 			document.getElementById("s" + btn.id[1]).style.backgroundColor = orange;
 		}
 	}
+	
+	progressBarRefresh();
 } 
 
 function CourseCheck(btn) {
@@ -327,7 +329,49 @@ function clickSemester(btn) {
 			}
 		}
 	}
+	progressBarRefresh();
 }
+
+function progressBarRefresh(){
+
+	if(barWidthOrange != 0){
+		var myDiv = document.getElementById("myBarOrange");
+  		myDiv.innerHTML = (barWidthOrange*(1.002506266)).toFixed(2) + "%";
+	}
+	else{
+		var myDiv = document.getElementById("myBarOrange");
+  		myDiv.innerHTML = "";
+	}
+
+	if(barWidthGreen != 0){
+		var myDiv = document.getElementById("myBarGreen");
+	  	myDiv.innerHTML = (barWidthGreen*(1.002506266)).toFixed(2) + "%";
+	}
+	else{
+		var myDiv = document.getElementById("myBarGreen");
+  		myDiv.innerHTML = "";
+	}
+
+	if(barWidthBlue != 0){
+	  	var myDiv = document.getElementById("myBarBlue");
+	  	myDiv.innerHTML = (barWidthBlue*(1.002506266)).toFixed(2) + "%";
+	}	
+	else{
+		var myDiv = document.getElementById("myBarBlue");
+  		myDiv.innerHTML = "";
+	}
+
+	if(barWidthPurple != 0){
+  		var myDiv = document.getElementById("myBarPurple");
+	  	myDiv.innerHTML = (myBarPurple*(1.002506266)).toFixed(2) + "%";
+	}
+	else{
+		var myDiv = document.getElementById("myBarPurple");
+  		myDiv.innerHTML = "";
+	}
+}
+
+progressBarRefresh();
 
 document.addEventListener("keypress", function onEvent(event) {
     if (event.key === "1") {
