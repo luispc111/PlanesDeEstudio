@@ -11,6 +11,7 @@ Web page that includes the classes of various ITESM study models. It allows you 
 
 - ARQ11
 - IDS11
+- IMI11
 - INT11
 - ITC11
 - LRI11
