@@ -305,6 +305,7 @@ function CourseCheck(btn) {
 		}
 		else{
 		}
+		progressBarRefresh();
 	}
 } 
 
