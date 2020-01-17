@@ -26,7 +26,7 @@ function createTable(studyPlan) {
             // creates the quantity of semesters in study plan
             for (let i = 1; i <= materiasSem.length; i ++) {
                 $("#rowSemester").append(`
-                <th id="s${i}" style="background-color: #BF7913;" onclick="clickSemester(this)"><label>Semestre ${i}</label></th>
+                <th id="s${i}" style="background-color: #BF7913;" class="materia"><label>Semestre ${i}</label></th>
                 `);
             }
             
@@ -47,7 +47,7 @@ function createTable(studyPlan) {
                     // checks if there's a class or if it needs to create an empty <td></td> for the table to be correct
                     if (materiasSem[i][j] != undefined) {
                         $("#row" + num).append(`
-                        <td id="s${materiasSem[i][j].semestre}m${num}" style="background-color: #BF7913;" onclick="clickCourse(this)"><label>${materiasSem[i][j].nombre}</label></td>
+                        <td id="s${materiasSem[i][j].semestre}m${num}" style="background-color: #BF7913;" class="materia"><label class="label">${materiasSem[i][j].nombre}</label></td>
                         `);
                     } else {
                         $("#row" + num).append(`<td></td>`);
@@ -56,6 +56,7 @@ function createTable(studyPlan) {
                 }
             }
             sendMethodsJS(materias.length);
+            materiasBtns();
         },
         error: function (error) {
             console.log(error);

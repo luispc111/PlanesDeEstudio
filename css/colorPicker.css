@@ -2,36 +2,28 @@ button {
     margin: 10px 0px;
 }
 
-.btnGreen {
-	border: 3px solid;
-	color: white;
+.colorBtn {
+    border: 1px solid;
+	color: white;;
+	height: 50px; 
+	width: 50px;
+}
+
+#btnGreen {
+    border: 3px solid;
     background-color: #439630;
-	height: 50px; 
-	width: 50px;
 }
 
-.btnBlue {
-	border: 1px solid;
-	color: white;
+#btnBlue {
     background-color: #2653AD;
-	height: 50px; 
-	width: 50px;
 }
 
-.btnOrange {
-	border: 1px solid;
-	color: white;
+#btnOrange {
     background-color: #BF7913;
-	height: 50px; 
-	width: 50px;
 }
 
-.btnPurple {
-	border: 1px solid;
-	color: white;
+#btnPurple {
     background-color: #633B8D;
-	height: 50px; 
-	width: 50px;
 }
 
 #myBarGreen {

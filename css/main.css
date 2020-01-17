@@ -54,6 +54,20 @@ label {
     margin: 5px 0px;
 }
 
+#tituloTabla {
+    display: flex;
+    /* float: none; */
+    /* float: right; */
+    float: right;
+    /* justify-content: center; */
+    /* align-self: center  */
+    /* align-self: center; */
+}
+
+.materia {
+    background-color: #BF7913;
+}
+
 .button {
     background-color: red;
     border: none;
