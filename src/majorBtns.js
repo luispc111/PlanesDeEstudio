@@ -30,6 +30,10 @@ const majors = [
     {
         name: "LAD 11",
         id: "lad_11"
+    },
+    {
+        name: "IIS 11",
+        id: "iis_11"
     }
 ]
 
