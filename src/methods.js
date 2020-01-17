@@ -200,42 +200,16 @@ function materiasBtns() {
 			}
 
 			let bcheck = true;
+			let extra = ((event.target.id.length == 5) ? "s10" : `s${event.target.id[1]}`);
 
-			if (event.target.id.length == 5) {
-
-			} else {
-
+			for(let i = 1; bcheck && i <= 10; i++){
+				if(document.getElementById(extra + "m" + i) != null && document.getElementById(extra + "m" + i).style.backgroundColor != colorsRGB[nameColors[currentColor]]){
+					bcheck = false;
+				}
 			}
-			// if(btn.id[1] === '1' && btn.id[2] === '0'){
-			// 	for(let i = 1; i <= 10; i++){
-			// 		if(document.getElementById("s10m" + i) != null){
-			// 			if(document.getElementById("s10m" + i).style.backgroundColor != colorRGB){
-			// 				bcheck = false;
-			// 			}
-			// 		}
-			// 	}	
-			// 	if(bcheck){
-			// 		document.getElementById("s10").style.backgroundColor = color;
-			// 	}
-			// 	else{
-			// 		document.getElementById("s10").style.backgroundColor = orange;
-			// 	}
-			// }
-			// else{
-			// 	for(let i = 1; i <= 10; i++){
-			// 		if(document.getElementById("s" + btn.id[1] + "m" + i) != null){
-			// 			if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != colorRGB){
-			// 				bcheck = false;
-			// 			}
-			// 		}
-			// 	}	
-			// 	if(bcheck){
-			// 		document.getElementById("s" + btn.id[1]).style.backgroundColor = color;
-			// 	}
-			// 	else{
-			// 		document.getElementById("s" + btn.id[1]).style.backgroundColor = orange;
-			// 	}
-			// }
+
+			// document.getElementById(extra).style.backgroundColor = (bcheck) ? colorsHex[nameColors[currentColor]]: colorsHex.Orange;
+			document.getElementById(extra).style.backgroundColor = (bcheck) ? colorsHex[nameColors[currentColor]]: colorsHex.Orange;
 			
 			progressBarRefresh();
 		}
@@ -273,41 +247,17 @@ function materiasBtns() {
 			}
 
 			let bcheck = true;
-			if (event.target.parentNode.id.length == 5) {
+			let extra = ((event.target.parentNode.id.length == 5) ? "s10" : `s${event.target.parentNode.id[1]}`);
 
-			} else {
+			console.log("extra", extra);
 
+			for(let i = 1; bcheck && i <= 10; i++){
+				if(document.getElementById(extra + "m" + i) != null && document.getElementById(extra + "m" + i).style.backgroundColor != colorsRGB[nameColors[currentColor]]){
+					bcheck = false;
+				}
 			}
-			// if(btn.id[1] === '1' && btn.id[2] === '0'){
-			// 	for(let i = 1; i <= 10; i++){
-			// 		if(document.getElementById("s10m" + i) != null){
-			// 			if(document.getElementById("s10m" + i).style.backgroundColor != colorRGB){
-			// 				bcheck = false;
-			// 			}
-			// 		}
-			// 	}	
-			// 	if(bcheck){
-			// 		document.getElementById("s10").style.backgroundColor = color;
-			// 	}
-			// 	else{
-			// 		document.getElementById("s10").style.backgroundColor = orange;
-			// 	}
-			// }
-			// else{
-			// 	for(let i = 1; i <= 10; i++){
-			// 		if(document.getElementById("s" + btn.id[1] + "m" + i) != null){
-			// 			if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != colorRGB){
-			// 				bcheck = false;
-			// 			}
-			// 		}
-			// 	}	
-			// 	if(bcheck){
-			// 		document.getElementById("s" + btn.id[1]).style.backgroundColor = color;
-			// 	}
-			// 	else{
-			// 		document.getElementById("s" + btn.id[1]).style.backgroundColor = orange;
-			// 	}
-			// }
+
+			document.getElementById(extra).style.backgroundColor = (bcheck) ? colorsHex[nameColors[currentColor]]: colorsHex.Orange;
 			
 			progressBarRefresh();
 		}
