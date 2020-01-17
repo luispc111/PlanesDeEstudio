@@ -51,7 +51,7 @@ function sendMethodsJS(cantMaterias){
 	document.getElementById("myBarOrange").style.width = barWidths.Orange + '%';
 }
 
-const isOnId = (path,id) => path.some(element => element.id === id);
+// const isOnId = (path,id) => path.some(element => element.id === id);
 
 // document.addEventListener('click', function(e) {
 // 	if(isOnId(e.path, 'goback')) {
@@ -241,16 +241,166 @@ function materiasBtns() {
 		}
 	});
 
-	$(".label").on("click", (event) => {
+	$(".labelMateria").on("click", (event) => {
 		event.preventDefault();
 
 		console.log(event.target.parentNode);
+
+		if (event.target.parentNode.className == "materia") {
+			let rgb = event.target.parentNode.style.backgroundColor;
+			let pos;
+			for (let i = 0; i < nameColors.length; i++) {
+				if (rgb == colorsRGB[nameColors[i]]) {
+					pos = i;
+				}
+			}
+
+			if (rgb != colorsRGB[nameColors[currentColor]]) {
+
+				barWidths[nameColors[currentColor]] += materia;
+				document.querySelector("#myBar" + nameColors[currentColor]).style.width = barWidths[nameColors[currentColor]] + '%';
+				barWidths[nameColors[pos]] -= materia;
+				document.querySelector("#myBar" + nameColors[pos]).style.width = barWidths[nameColors[pos]] + '%';
+
+				event.target.parentNode.style.backgroundColor = colorsRGB[nameColors[currentColor]];
+			} else{
+
+				// edge case para cuando se pica dos veces
+
+				// barWidthOrange -= (materia);
+				// document.getElementById("myBarOrange").style.width = barWidths.Orange + '%';
+				// event.target.style.backgroundColor = orange;
+			}
+
+			let bcheck = true;
+			if (event.target.parentNode.id.length == 5) {
+
+			} else {
+
+			}
+			// if(btn.id[1] === '1' && btn.id[2] === '0'){
+			// 	for(let i = 1; i <= 10; i++){
+			// 		if(document.getElementById("s10m" + i) != null){
+			// 			if(document.getElementById("s10m" + i).style.backgroundColor != colorRGB){
+			// 				bcheck = false;
+			// 			}
+			// 		}
+			// 	}	
+			// 	if(bcheck){
+			// 		document.getElementById("s10").style.backgroundColor = color;
+			// 	}
+			// 	else{
+			// 		document.getElementById("s10").style.backgroundColor = orange;
+			// 	}
+			// }
+			// else{
+			// 	for(let i = 1; i <= 10; i++){
+			// 		if(document.getElementById("s" + btn.id[1] + "m" + i) != null){
+			// 			if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != colorRGB){
+			// 				bcheck = false;
+			// 			}
+			// 		}
+			// 	}	
+			// 	if(bcheck){
+			// 		document.getElementById("s" + btn.id[1]).style.backgroundColor = color;
+			// 	}
+			// 	else{
+			// 		document.getElementById("s" + btn.id[1]).style.backgroundColor = orange;
+			// 	}
+			// }
+			
+			progressBarRefresh();
+		}
+	});
+
+	$(".semestre").on("click", (event) => {
+		event.preventDefault();
+	
+		console.log("semestre");
+	
+		// if(document.getElementById("s10m" + i) != null)
+		// 	if(document.getElementById("s10m" + i).style.backgroundColor != color)
+
+		if (event.target.className == "semestre") {
+			let extra = ((event.target.id.length == 5) ? "s10m" : `s${event.target.id[1]}m`);
+			console.log("extra", extra);
+			event.target.style.backgroundColor = colorsRGB[nameColors[currentColor]];
+			for (let i = 1; i <= maxLength; i++) {
+		
+				let mat = document.getElementById(extra + i);
+				
+				console.log("mat", mat);
+				// console.log("back", mat.style.backgroundColor);
+				
+				if (mat != null && mat.style.backgroundColor != color && event.target.className == "semestre") {
+					let rgb = mat.style.backgroundColor;
+					let pos;
+					for (let i = 0; i < nameColors.length; i++) {
+						if (rgb == colorsRGB[nameColors[i]]) {
+							pos = i;
+						}
+					}
+			
+					if (rgb != colorsRGB[nameColors[currentColor]]) {
+			
+						barWidths[nameColors[currentColor]] += materia;
+						document.querySelector("#myBar" + nameColors[currentColor]).style.width = barWidths[nameColors[currentColor]] + '%';
+						barWidths[nameColors[pos]] -= materia;
+						document.querySelector("#myBar" + nameColors[pos]).style.width = barWidths[nameColors[pos]] + '%';
+			
+						mat.style.backgroundColor = colorsRGB[nameColors[currentColor]];
+					} else {
+						
+					}
+					
+					progressBarRefresh();
+				}
+			}
+		}
+	});
+
+	$(".labelSemestre").on("click", (event) => {
+		event.preventDefault();
+
+		let extra = ((event.target.parentNode.id.length == 5) ? "s10m" : `s${event.target.parentNode.id[1]}m`);
+		event.target.parentNode.style.backgroundColor = colorsRGB[nameColors[currentColor]];
+		for (let i = 1; i <= maxLength; i++) {
+	
+			let mat = document.getElementById(extra + i);
+			
+			console.log("mat", mat);
+			// console.log("back", mat.style.backgroundColor);
+			
+			if (mat != null && mat.style.backgroundColor != color) {
+				let rgb = mat.style.backgroundColor;
+				let pos;
+				for (let i = 0; i < nameColors.length; i++) {
+					if (rgb == colorsRGB[nameColors[i]]) {
+						pos = i;
+					}
+				}
+		
+				if (rgb != colorsRGB[nameColors[currentColor]]) {
+		
+					barWidths[nameColors[currentColor]] += materia;
+					document.querySelector("#myBar" + nameColors[currentColor]).style.width = barWidths[nameColors[currentColor]] + '%';
+					barWidths[nameColors[pos]] -= materia;
+					document.querySelector("#myBar" + nameColors[pos]).style.width = barWidths[nameColors[pos]] + '%';
+		
+					mat.style.backgroundColor = colorsRGB[nameColors[currentColor]];
+				} else {
+					
+				}
+				
+				progressBarRefresh();
+			}
+		}
 	});
 }
 
-function clickCourse(btn) {
+// function clickCourse(btn) {
 
-	console.log("course");
+// 	console.log("course");
 	
 	// if(color === orange){
 	// 	if(btn.style.backgroundColor != orangeRGB){
@@ -388,122 +538,122 @@ function clickCourse(btn) {
 	// }
 	
 	// progressBarRefresh();
-} 
+// } 
 
-function CourseCheck(btn) {
+// function CourseCheck(btn) {
 	
-	if(color === orange){
-		if(btn.style.backgroundColor != orangeRGB){
-			barWidthOrange += (materia);
-			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';		
-			if(btn.style.backgroundColor === greenRGB){
-				barWidthGreen -= (materia);
-	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
-			}
-			else if(btn.style.backgroundColor === blueRGB){
-				barWidthBlue -= (materia);
-	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
-			}
-			else if(btn.style.backgroundColor === purpleRGB){
-				barWidthPurple -= (materia);
-	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
-			}
-			btn.style.backgroundColor = color;
-		}
-		else{
-		}
-	}
-	else if(color === blue){
-		if(btn.style.backgroundColor != blueRGB){
-			barWidthBlue += (materia);
-			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';		
-			if(btn.style.backgroundColor === greenRGB){
-				barWidthGreen -= (materia);
-	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
-			}
-			else if(btn.style.backgroundColor === orangeRGB){
-				barWidthOrange -= (materia);
-	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
-			}
-			else if(btn.style.backgroundColor === purpleRGB){
-				barWidthPurple -= (materia);
-	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
-			}
-			btn.style.backgroundColor = color;
-		}
-		else{
-		}
-	}
-	else if(color === green){
-		if(btn.style.backgroundColor != greenRGB){
-			barWidthGreen += (materia);
-			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';		
-			if(btn.style.backgroundColor === blueRGB){
-				barWidthBlue -= (materia);
-	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
-			}
-			else if(btn.style.backgroundColor === orangeRGB){
-				barWidthOrange -= (materia);
-	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
-			}
-			else if(btn.style.backgroundColor === purpleRGB){
-				barWidthPurple -= (materia);
-	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
-			}
-			btn.style.backgroundColor = color;
-		}
-		else{
-		}
-	}
-	else if(color === purple){
-		if(btn.style.backgroundColor != purpleRGB){
-			barWidthPurple += (materia);
-			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';		
-			if(btn.style.backgroundColor === blueRGB){
-				barWidthBlue -= (materia);
-	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
-			}
-			else if(btn.style.backgroundColor === orangeRGB){
-				barWidthOrange -= (materia);
-	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
-			}
-			else if(btn.style.backgroundColor === greenRGB){
-				barWidthGreen -= (materia);
-	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
-			}
-			btn.style.backgroundColor = color;
-		}
-		else{
-		}
-		progressBarRefresh();
-	}
-} 
+// 	if(color === orange){
+// 		if(btn.style.backgroundColor != orangeRGB){
+// 			barWidthOrange += (materia);
+// 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';		
+// 			if(btn.style.backgroundColor === greenRGB){
+// 				barWidthGreen -= (materia);
+// 	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
+// 			}
+// 			else if(btn.style.backgroundColor === blueRGB){
+// 				barWidthBlue -= (materia);
+// 	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
+// 			}
+// 			else if(btn.style.backgroundColor === purpleRGB){
+// 				barWidthPurple -= (materia);
+// 	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
+// 			}
+// 			btn.style.backgroundColor = color;
+// 		}
+// 		else{
+// 		}
+// 	}
+// 	else if(color === blue){
+// 		if(btn.style.backgroundColor != blueRGB){
+// 			barWidthBlue += (materia);
+// 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';		
+// 			if(btn.style.backgroundColor === greenRGB){
+// 				barWidthGreen -= (materia);
+// 	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
+// 			}
+// 			else if(btn.style.backgroundColor === orangeRGB){
+// 				barWidthOrange -= (materia);
+// 	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
+// 			}
+// 			else if(btn.style.backgroundColor === purpleRGB){
+// 				barWidthPurple -= (materia);
+// 	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
+// 			}
+// 			btn.style.backgroundColor = color;
+// 		}
+// 		else{
+// 		}
+// 	}
+// 	else if(color === green){
+// 		if(btn.style.backgroundColor != greenRGB){
+// 			barWidthGreen += (materia);
+// 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';		
+// 			if(btn.style.backgroundColor === blueRGB){
+// 				barWidthBlue -= (materia);
+// 	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
+// 			}
+// 			else if(btn.style.backgroundColor === orangeRGB){
+// 				barWidthOrange -= (materia);
+// 	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
+// 			}
+// 			else if(btn.style.backgroundColor === purpleRGB){
+// 				barWidthPurple -= (materia);
+// 	 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
+// 			}
+// 			btn.style.backgroundColor = color;
+// 		}
+// 		else{
+// 		}
+// 	}
+// 	else if(color === purple){
+// 		if(btn.style.backgroundColor != purpleRGB){
+// 			barWidthPurple += (materia);
+// 			document.getElementById("myBarPurple").style.width = barWidthPurple + '%';		
+// 			if(btn.style.backgroundColor === blueRGB){
+// 				barWidthBlue -= (materia);
+// 	 			document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
+// 			}
+// 			else if(btn.style.backgroundColor === orangeRGB){
+// 				barWidthOrange -= (materia);
+// 	 			document.getElementById("myBarOrange").style.width = barWidthOrange + '%';
+// 			}
+// 			else if(btn.style.backgroundColor === greenRGB){
+// 				barWidthGreen -= (materia);
+// 	 			document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
+// 			}
+// 			btn.style.backgroundColor = color;
+// 		}
+// 		else{
+// 		}
+// 		progressBarRefresh();
+// 	}
+// }
 
-function clickSemester(btn) {
+// function clickSemester(btn) {
 
-	// console.log("clicked on semester btn");
-	btn.style.backgroundColor = color;
+// 	// console.log("clicked on semester btn");
+// 	btn.style.backgroundColor = color;
 
-	if(btn.id[1] === '1' && btn.id[2] === '0'){
-		for(let i = 1; i <= 10; i++){
-			if(document.getElementById("s10m" + i) != null){
-				if(document.getElementById("s10m" + i).style.backgroundColor != color){
-					CourseCheck(document.getElementById("s10m" + i));
-			 	}
-		 	}
-		}
-	}
-	else{
-		for(let i = 1; i <= 10; i++){
-			if(document.getElementById("s" + btn.id[1] + "m" + i) != null){
-				if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != color){
-					CourseCheck(document.getElementById("s" + btn.id[1] + "m" + i));
-			 	}
-			}
-		}
-	}
-	progressBarRefresh();
-}
+// 	if(btn.id[1] === '1' && btn.id[2] === '0'){
+// 		for(let i = 1; i <= 10; i++){
+// 			if(document.getElementById("s10m" + i) != null){
+// 				if(document.getElementById("s10m" + i).style.backgroundColor != color){
+// 					CourseCheck(document.getElementById("s10m" + i));
+// 			 	}
+// 		 	}
+// 		}
+// 	}
+// 	else{
+// 		for(let i = 1; i <= 10; i++){
+// 			if(document.getElementById("s" + btn.id[1] + "m" + i) != null){
+// 				if(document.getElementById("s" + btn.id[1] + "m" + i).style.backgroundColor != color){
+// 					CourseCheck(document.getElementById("s" + btn.id[1] + "m" + i));
+// 			 	}
+// 			}
+// 		}
+// 	}
+// 	progressBarRefresh();
+// }
 
 function progressBarRefresh(){
 

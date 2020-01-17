@@ -64,7 +64,7 @@ label {
     /* align-self: center; */
 }
 
-.materia {
+.materia, .semestre {
     background-color: #BF7913;
 }
 
