@@ -34,6 +34,22 @@ const majors = [
     {
         name: "IIS 11",
         id: "iis_11"
+    },
+    {
+        name: "ISD 11",
+        id: "isd_11"
+    },
+    {
+        name: "INCQ 13",
+        id: "incq_13"
+    },
+    {
+        name: "LED 11",
+        id: "led_11"
+    },
+    {
+        name: "LEM 11",
+        id: "lem_11"
     }
 ]
 

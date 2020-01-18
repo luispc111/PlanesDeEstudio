@@ -13,10 +13,14 @@ Web page that includes the classes of various ITESM study models. It allows you 
 - IDS11
 - IIS11
 - IMI11
+- INCQ13
 - INT11
+- ISD11
 - ITC11
 - LAD11
 - LDI11
+- LED11
+- LEM11
 - LRI11
 
 ### How to contribute
