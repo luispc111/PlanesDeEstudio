@@ -14,6 +14,10 @@ button {
     background-color: #439630;
 }
 
+#btnPink {
+    background-color: #C14B4C;
+}
+
 #btnBlue {
     background-color: #2653AD;
 }
@@ -64,6 +68,17 @@ button {
     height: 30px;
     /*background-color: #4CAF50;*/
     background-color: #633B8D;
+    text-align: center;  
+    /*To center it horizontally (if you want) */
+    line-height: 30px; /* To center it vertically */
+    color: white;
+}
+
+#myBarPink {
+    width: 0%;
+    height: 30px;
+    /*background-color: #4CAF50;*/
+    background-color: #C14B4C;
     text-align: center;  
     /*To center it horizontally (if you want) */
     line-height: 30px; /* To center it vertically */

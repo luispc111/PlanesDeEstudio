@@ -2,28 +2,34 @@ let barWidths = {
 	Green: 0,
 	Blue: 0,
 	Orange: 99.75,
-	Purple: 0
+	Purple: 0,
+	Pink: 0
 }
 
 let materia = 1.75;
 
 let currentColor = 1;
 let nameColors = [
-	"Orange", "Green", "Blue", "Purple"
+	"Orange", "Green", "Blue", "Purple", "Pink"
 ]
+
+color = "#439630";
+colorRGB = "rgb(67, 150, 48)";
 
 let colorsHex = {
 	Green: '#439630',
 	Blue: "#2653AD",
 	Orange: "#BF7913",
 	Purple: "#633B8D",
+	Pink: "#C14B4C"
 }
 
 let colorsRGB = {
 	Green: "rgb(67, 150, 48)",
 	Blue: "rgb(38, 83, 173)",
 	Orange: "rgb(191, 121, 19)",
-	Purple: "rgb(99, 59, 141)"
+	Purple: "rgb(99, 59, 141)",
+	Pink: "rgb(193, 75, 76)"
 }
 
 
@@ -34,23 +40,23 @@ function sendMethodsJS(cantMaterias){
 	document.getElementById("myBarOrange").style.width = barWidths.Orange + '%';
 }
 
-// const isOnId = (path,id) => path.some(element => element.id === id);
+const isOnId = (path,id) => path.some(element => element.id === id);
 
-// document.addEventListener('click', function(e) {
-// 	if(isOnId(e.path, 'goback')) {
-// 	  	barWidthGreen = 0;
-// 		barWidthBlue = 0;
-// 		barWidthOrange = 99.75;
-// 		barWidthPurple = 0;
+document.addEventListener('click', function(e) {
+	if(isOnId(e.path, 'goback')) {
+	  	barWidthGreen = 0;
+		barWidthBlue = 0;
+		barWidthOrange = 99.75;
+		barWidthPurple = 0;
 
-// 		document.getElementById("myBarOrange").style.width = barWidthOrange + '%';		
-// 		document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
-// 		document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
-// 		document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
+		document.getElementById("myBarOrange").style.width = barWidthOrange + '%';		
+		document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
+		document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
+		document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
 
-// 		progressBarRefresh();
-// 	}
-// });
+		progressBarRefresh();
+	}
+});
 
 // create buttons to change color
 for (let i = 0; i < nameColors.length; i++) {
