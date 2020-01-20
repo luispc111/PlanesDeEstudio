@@ -9,6 +9,13 @@ button {
 	width: 50px;
 }
 
+.selectStudyPlan {
+    margin: 10px 5px;
+    width: 130px;
+    height: 60px;
+    font-size: 25px;
+}
+
 #btnGreen {
     border: 3px solid;
     background-color: #439630;
