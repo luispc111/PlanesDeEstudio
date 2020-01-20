@@ -2,78 +2,76 @@ button {
     margin: 10px 0px;
 }
 
-.btnGreen {
-	border: 3px solid;
-	color: white;
+.colorBtn {
+    border: 1px solid;
+	color: white;;
+	height: 50px; 
+	width: 50px;
+}
+
+.selectStudyPlan {
+    margin: 10px 5px;
+    width: 130px;
+    height: 60px;
+    font-size: 25px;
+}
+
+#btnGreen {
+    border: 3px solid;
     background-color: #439630;
-	height: 50px; 
-	width: 50px;
 }
 
-.btnBlue {
-	border: 1px solid;
-	color: white;
+#btnPink {
+    background-color: #C14B4C;
+}
+
+#btnBlue {
     background-color: #2653AD;
-	height: 50px; 
-	width: 50px;
 }
 
-.btnOrange {
-	border: 1px solid;
-	color: white;
+#btnOrange {
     background-color: #BF7913;
-	height: 50px; 
-	width: 50px;
 }
 
-.btnPurple {
-	border: 1px solid;
-	color: white;
+#btnPurple {
     background-color: #633B8D;
-	height: 50px; 
-	width: 50px;
+}
+
+#btnRed {
+    background-color: #B02828;
+}
+
+.progressBar {
+    width: 0%;
+    height: 30px;
+    /*background-color: #4CAF50;*/
+    background-color: #439630;
+    text-align: center;  
+    /*To center it horizontally (if you want) */
+    line-height: 30px; /* To center it vertically */
+    color: white;
 }
 
 #myBarGreen {
-    width: 0%;
-    height: 30px;
-    /*background-color: #4CAF50;*/
     background-color: #439630;
-    text-align: center;  
-    /*To center it horizontally (if you want) */
-    line-height: 30px; /* To center it vertically */
-    color: white;
 }
 
 #myBarBlue {
-    width: 0%;
-    height: 30px;
-    /*background-color: #4CAF50;*/
     background-color: #2653AD;
-    text-align: center;  
-    /*To center it horizontally (if you want) */
-    line-height: 30px; /* To center it vertically */
-    color: white;
 }
 
 #myBarOrange {
-    width: 99.75%;
-    height: 30px;
-    /*background-color: #4CAF50;*/
     background-color: #BF7913;
-    text-align: center;  
-    /*To center it horizontally (if you want) */
-    line-height: 30px; /* To center it vertically */
-    color: white;
 }
 
 #myBarPurple {
-    width: 0%;
-    height: 30px;
-    /*background-color: #4CAF50;*/
     background-color: #633B8D;
-    text-align: center;  
-    /*To center it horizontally (if you want) */
-    line-height: 30px; /* To center it vertically */
-    color: white;
+}
+
+#myBarPink {
+    background-color: #C14B4C;
+}
+
+#myBarRed {
+    background-color: #B02828;
 }

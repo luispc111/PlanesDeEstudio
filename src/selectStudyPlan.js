@@ -5,7 +5,7 @@ function selectStudyPlan() {
         console.log("clicked");
         console.log(event.target.value);
         
-        let val = event.target.value;//$(".selectStudyPlan").val();
+        let val = event.target.value;
         
         if (val != "0") {
             document.querySelector("#seleccionPlan").hidden = true;
@@ -30,10 +30,24 @@ function gobackBTN() {
         event.preventDefault();
         document.querySelector("#planDeEstudios").hidden = true;
         eraseTable();
+        cleanProgressBars()
         document.querySelector("#seleccionPlan").hidden = false;
         document.title = "Planes de Estudio";
     });
 }
+
+document.getElementById("searchStudyPlan").addEventListener('input', (event) => {
+    event.preventDefault();
+
+    // console.log("hello");
+
+    let btns = document.querySelector("#majorBtns").children;
+
+    for (let i = 0; i < btns.length; i++) {
+        console.log(i);
+        btns[i].hidden = !btns[i].innerText.includes(event.target.value.toUpperCase());
+    }
+});
 
 gobackBTN();
 
