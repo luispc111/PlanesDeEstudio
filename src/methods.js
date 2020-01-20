@@ -32,17 +32,14 @@ let colorsRGB = {
 	Pink: "rgb(193, 75, 76)"
 }
 
-
 function sendMethodsJS(cantMaterias){
 	materia = 99.75 / cantMaterias;
-	// materia = materia.toFixed(2);
 	barWidths.Orange = materia*cantMaterias;
 	document.getElementById("myBarOrange").style.width = barWidths.Orange + '%';
 }
 
-// const isOnId = (path,id) => path.some(element => element.id === id);
-
-document.querySelector("#goback").addEventListener('click', function(e) {
+function cleanProgressBars() {
+	
 	for (let i = 0; i < nameColors.length; i++) {
 		barWidths[nameColors[i]] = 0;
 		document.getElementById("myBar" + nameColors[i]).style.width = 	barWidths[nameColors[i]] + '%';
@@ -51,7 +48,7 @@ document.querySelector("#goback").addEventListener('click', function(e) {
 	barWidths.Orange = 99.75
 
 	progressBarRefresh();
-});
+}
 
 // create buttons to change color
 for (let i = 0; i < nameColors.length; i++) {

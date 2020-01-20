@@ -64,11 +64,3 @@ function createTable(studyPlan) {
 
     $.ajax(settings);
 }
-
-// function selectStudyPlan() {
-//     $(".selectStudyPlan").on("click", (event) => {
-//         sendMethodsJS(materias.length);
-//     });
-// }
-
-// selectStudyPlan();
