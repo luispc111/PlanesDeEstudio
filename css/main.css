@@ -64,6 +64,13 @@ label {
     /* align-self: center; */
 }
 
+.centerImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; */
+  }
+
 .materia, .semestre {
     background-color: #BF7913;
 }
