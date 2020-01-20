@@ -36,6 +36,19 @@ function gobackBTN() {
     });
 }
 
+document.getElementById("searchStudyPlan").addEventListener('input', (event) => {
+    event.preventDefault();
+
+    // console.log("hello");
+
+    let btns = document.querySelector("#majorBtns").children;
+
+    for (let i = 0; i < btns.length; i++) {
+        console.log(i);
+        btns[i].hidden = !btns[i].innerText.includes(event.target.value.toUpperCase());
+    }
+});
+
 gobackBTN();
 
 selectStudyPlan();

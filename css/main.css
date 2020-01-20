@@ -103,6 +103,10 @@ label {
     /*flex-direction: column*/
 }
 
+#searchStudyPlan {
+    margin: 10px 0px;
+}
+
 $themes: (
   default-theme: (
     white: #fff,
