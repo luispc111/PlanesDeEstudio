@@ -3,14 +3,15 @@ let barWidths = {
 	Blue: 0,
 	Orange: 99.75,
 	Purple: 0,
-	Pink: 0
+	Pink: 0,
+	Red: 0
 }
 
 let materia = 1.75;
 
 let currentColor = 1;
 let nameColors = [
-	"Orange", "Green", "Blue", "Purple", "Pink"
+	"Orange", "Green", "Blue", "Purple", "Pink", "Red"
 ]
 
 color = "#439630";
@@ -21,7 +22,8 @@ let colorsHex = {
 	Blue: "#2653AD",
 	Orange: "#BF7913",
 	Purple: "#633B8D",
-	Pink: "#C14B4C"
+	Pink: "#C14B4C",
+	Red: "#B02828"
 }
 
 let colorsRGB = {
@@ -29,7 +31,8 @@ let colorsRGB = {
 	Blue: "rgb(38, 83, 173)",
 	Orange: "rgb(191, 121, 19)",
 	Purple: "rgb(99, 59, 141)",
-	Pink: "rgb(193, 75, 76)"
+	Pink: "rgb(193, 75, 76)",
+	Red: "rgb(176, 40, 40)"
 }
 
 function sendMethodsJS(cantMaterias){

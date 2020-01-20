@@ -30,6 +30,10 @@ button {
     background-color: #633B8D;
 }
 
+#btnRed {
+    background-color: #B02828;
+}
+
 .progressBar {
     width: 0%;
     height: 30px;
@@ -59,4 +63,8 @@ button {
 
 #myBarPink {
     background-color: #C14B4C;
+}
+
+#myBarRed {
+    background-color: #B02828;
 }
