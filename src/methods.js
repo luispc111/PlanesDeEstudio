@@ -40,22 +40,17 @@ function sendMethodsJS(cantMaterias){
 	document.getElementById("myBarOrange").style.width = barWidths.Orange + '%';
 }
 
-const isOnId = (path,id) => path.some(element => element.id === id);
+// const isOnId = (path,id) => path.some(element => element.id === id);
 
-document.addEventListener('click', function(e) {
-	if(isOnId(e.path, 'goback')) {
-	  	barWidthGreen = 0;
-		barWidthBlue = 0;
-		barWidthOrange = 99.75;
-		barWidthPurple = 0;
-
-		document.getElementById("myBarOrange").style.width = barWidthOrange + '%';		
-		document.getElementById("myBarGreen").style.width = barWidthGreen + '%';
-		document.getElementById("myBarBlue").style.width = barWidthBlue + '%';
-		document.getElementById("myBarPurple").style.width = barWidthPurple + '%';
-
-		progressBarRefresh();
+document.querySelector("#goback").addEventListener('click', function(e) {
+	for (let i = 0; i < nameColors.length; i++) {
+		barWidths[nameColors[i]] = 0;
+		document.getElementById("myBar" + nameColors[i]).style.width = 	barWidths[nameColors[i]] + '%';
 	}
+
+	barWidths.Orange = 99.75
+
+	progressBarRefresh();
 });
 
 // create buttons to change color
