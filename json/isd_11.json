@@ -1,28 +1,14 @@
 [
 	{
-	"nombre": "TeorÃ­a del derecho",
-	"clave": "D1005",
+	"nombre": "Ciencias naturales y desarrollo sustentable",
+	"clave": "DS1003",
 	"semestre": 1,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "TeorÃ­a polÃ­tica del estado",
-	"clave": "D1013",
-	"semestre": 1,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Derecho romano",
-	"clave": "D1023",
-	"semestre": 1,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "IntroducciÃ³n al campo del derecho",
-	"clave": "D1026",
+	"nombre": "Física I",
+	"clave": "F1002",
 	"semestre": 1,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
@@ -35,219 +21,226 @@
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "SociologÃ­a",
-	"clave": "P1000",
+	"nombre": "Matemáticas I",
+	"clave": "MA1015",
 	"semestre": 1,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Perspectiva internacional",
-	"clave": "RI1004",
+	"nombre": "Química",
+	"clave": "Q1001",
 	"semestre": 1,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "MÃ©todos cualitativos de investigaciÃ³n",
-	"clave": "CO2004",
+	"nombre": "Fundamentos de programación",
+	"clave": "TC1014",
+	"semestre": 1,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Introducción a la ingeniería en sistemas digitales y robótica",
+	"clave": "TE1015",
+	"semestre": 1,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Física II",
+	"clave": "F1003",
 	"semestre": 2,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Personas y familia",
-	"clave": "D1010",
-	"semestre": 2,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "TeorÃ­a general del derecho penal",
-	"clave": "D1011",
-	"semestre": 2,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Derecho constitucional",
-	"clave": "D1012",
-	"semestre": 2,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "InvestigaciÃ³n y anÃ¡lisis jurÃ­dicos",
-	"clave": "D2006",
-	"semestre": 2,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "AnÃ¡lisis y expresiÃ³n verbal",
+	"nombre": "Análisis y expresión verbal",
 	"clave": "H1040",
 	"semestre": 2,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Bienes, derechos reales y sucesiones",
-	"clave": "D1003",
-	"semestre": 3,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "TeorÃ­a general del proceso",
-	"clave": "D1007",
-	"semestre": 3,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Derechos fundamentales",
-	"clave": "D2009",
-	"semestre": 3,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Delitos en especial",
-	"clave": "D2012",
-	"semestre": 3,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "ExpresiÃ³n verbal en el Ã¡mbito profesional",
-	"clave": "H2001",
-	"semestre": 3,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "MatemÃ¡ticas I",
-	"clave": "MA1016",
-	"semestre": 3,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Derecho de las obligaciones I",
-	"clave": "D2013",
-	"semestre": 4,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Derecho administrativo y polÃ­ticas pÃºblicas I",
-	"clave": "D2021",
-	"semestre": 4,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Derecho procesal civil",
-	"clave": "D3017",
-	"semestre": 4,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Derecho procesal penal",
-	"clave": "D3018",
-	"semestre": 4,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "EconomÃ­a de la empresa",
-	"clave": "EC1008",
-	"semestre": 4,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Ã‰tica, persona y sociedad",
-	"clave": "H1018",
-	"semestre": 4,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Juicios orales",
-	"clave": "D2004",
-	"semestre": 5,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Derecho de las obligaciones II",
-	"clave": "D2010",
-	"semestre": 5,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Derecho internacional pÃºblico",
-	"clave": "D2016",
-	"semestre": 5,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Derecho administrativo y polÃ­ticas pÃºblicas II",
-	"clave": "D2022",
-	"semestre": 5,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Derecho del trabajo I",
-	"clave": "D2023",
-	"semestre": 5,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
 	"nombre": "Humanidades y bellas artes",
 	"clave": "HS2000",
+	"semestre": 2,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Matemáticas II",
+	"clave": "MA1017",
+	"semestre": 2,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Laboratorio de química",
+	"clave": "Q1004",
+	"semestre": 2,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Programación orientada a objetos",
+	"clave": "TC2016",
+	"semestre": 2,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Sistemas digitales",
+	"clave": "TE1010",
+	"semestre": 2,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Electricidad y magnetismo",
+	"clave": "F1005",
+	"semestre": 3,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Ética, persona y sociedad",
+	"clave": "H1018",
+	"semestre": 3,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Matemáticas III",
+	"clave": "MA2009",
+	"semestre": 3,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Estructura de datos",
+	"clave": "TC1018",
+	"semestre": 3,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Circuitos eléctricos I",
+	"clave": "TE1002",
+	"semestre": 3,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Laboratorio de sistemas digitales",
+	"clave": "TE1011",
+	"semestre": 3,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Sistemas digitales avanzados",
+	"clave": "TE2030",
+	"semestre": 3,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Expresión verbal en el ámbito profesional",
+	"clave": "H2001",
+	"semestre": 4,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Métodos numéricos en ingeniería",
+	"clave": "M2025",
+	"semestre": 4,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Probabilidad y estadística",
+	"clave": "MA1006",
+	"semestre": 4,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Ecuaciones diferenciales",
+	"clave": "MA2010",
+	"semestre": 4,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Electrónica",
+	"clave": "TE1003",
+	"semestre": 4,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Laboratorio de circuitos eléctricos y mediciones",
+	"clave": "TE1014",
+	"semestre": 4,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Circuitos eléctricos II",
+	"clave": "TE2032",
+	"semestre": 4,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Economía para la creación de negocios",
+	"clave": "EC1010",
 	"semestre": 5,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Contratos mercantiles",
-	"clave": "D2011",
-	"semestre": 6,
+	"nombre": "Matemáticas avanzadas",
+	"clave": "MA3002",
+	"semestre": 5,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Contratos civiles",
-	"clave": "D3000",
-	"semestre": 6,
+	"nombre": "Fundamentos de redes",
+	"clave": "TC2018",
+	"semestre": 5,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Derecho internacional privado",
-	"clave": "D3010",
-	"semestre": 6,
+	"nombre": "Microcontroladores",
+	"clave": "TE2023",
+	"semestre": 5,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Derecho del trabajo II",
-	"clave": "D3020",
-	"semestre": 6,
+	"nombre": "Laboratorio de microcontroladores",
+	"clave": "TE2024",
+	"semestre": 5,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Derecho financiero pÃºblico",
-	"clave": "D3021",
-	"semestre": 6,
+	"nombre": "Electrónica aplicada",
+	"clave": "TE2033",
+	"semestre": 5,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Laboratorio integral de electrónica",
+	"clave": "TE2034",
+	"semestre": 5,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
@@ -259,134 +252,176 @@
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Sociedades mercantiles",
-	"clave": "D1015",
+	"nombre": "Sensores y actuadores",
+	"clave": "MR2018",
+	"semestre": 6,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Sistemas operativos",
+	"clave": "TC2008",
+	"semestre": 6,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Interconexión de redes",
+	"clave": "TC2022",
+	"semestre": 6,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Arquitectura de computadoras",
+	"clave": "TE2031",
+	"semestre": 6,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Análisis de señales y sistemas",
+	"clave": "TE2035",
+	"semestre": 6,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Evaluación y administración de proyectos",
+	"clave": "IN2025",
 	"semestre": 7,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Derecho fiscal",
-	"clave": "D2015",
+	"nombre": "Ingeniería de control",
+	"clave": "MR2004",
 	"semestre": 7,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Derecho de la propiedad intelectual",
-	"clave": "D2024",
+	"nombre": "Lenguajes y traductores",
+	"clave": "TC2028",
 	"semestre": 7,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Derecho ambiental y desarrollo sustentable",
-	"clave": "D3025",
+	"nombre": "Interfaces de equipo de cómputo",
+	"clave": "TE2038",
 	"semestre": 7,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "TÃ³picos I",
+	"nombre": "Robótica aplicada",
+	"clave": "TE2041",
+	"semestre": 7,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Tópicos I",
 	"clave": "VA2010",
 	"semestre": 7,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "TÃ³picos II",
-	"clave": "VA2011",
-	"semestre": 7,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "TÃ­tulos de crÃ©dito",
-	"clave": "D2017",
-	"semestre": 8,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Derecho procesal fiscal y administrativo",
-	"clave": "D3023",
-	"semestre": 8,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Juicio de amparo I",
-	"clave": "D3024",
-	"semestre": 8,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "CiudadanÃ­a",
+	"nombre": "Ciudadanía",
 	"clave": "HS2005",
 	"semestre": 8,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "TÃ³picos III",
-	"clave": "VA2012",
+	"nombre": "Control computarizado",
+	"clave": "MR2007",
 	"semestre": 8,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "TÃ³picos IV",
-	"clave": "VA2013",
+	"nombre": "Laboratorio de ingeniería de control",
+	"clave": "MR3028",
 	"semestre": 8,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Derecho procesal mercantil",
-	"clave": "D3026",
-	"semestre": 9,
+	"nombre": "Visión para robots",
+	"clave": "TC3050",
+	"semestre": 8,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Juicio de amparo II",
-	"clave": "D3027",
-	"semestre": 9,
+	"nombre": "Sistemas embebidos",
+	"clave": "TE3059",
+	"semestre": 8,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Medios alternos de soluciÃ³n de controversias",
-	"clave": "D3028",
-	"semestre": 9,
+	"nombre": "Laboratorio de sistemas embebidos",
+	"clave": "TE3060",
+	"semestre": 8,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "IntroducciÃ³n a la vida profesional",
-	"clave": "D3029",
-	"semestre": 9,
+	"nombre": "Tópicos II",
+	"clave": "VA2011",
+	"semestre": 8,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Ã‰tica aplicada",
+	"nombre": "Ética aplicada",
 	"clave": "HS2006",
 	"semestre": 9,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "TÃ³picos V",
-	"clave": "VA2014",
+	"nombre": "Desarrollo de aplicaciones web",
+	"clave": "TC2026",
 	"semestre": 9,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "TÃ³picos VI",
-	"clave": "VA2015",
+	"nombre": "Proyecto de robótica",
+	"clave": "TE3045",
+	"semestre": 9,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Multiprocesadores",
+	"clave": "TE3061",
+	"semestre": 9,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Introducción a la vida profesional",
+	"clave": "TE3065",
+	"semestre": 9,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Tópicos III",
+	"clave": "VA2012",
+	"semestre": 9,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Tópicos IV",
+	"clave": "VA2013",
 	"semestre": 9,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []

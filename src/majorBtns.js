@@ -36,6 +36,14 @@ const majors = [
         id: "iis_11"
     },
     {
+        name: "ISD 11",
+        id: "isd_11"
+    },
+    {
+        name: "INCQ 13",
+        id: "incq_13"
+    },
+    {
         name: "LED 11",
         id: "led_11"
     },
@@ -44,8 +52,20 @@ const majors = [
         id: "lem_11"
     },
     {
-        name: "INCQ 13",
-        id: "incq_13"
+        name: "LAF 11",
+        id: "laf_11"
+    },
+    {
+        name: "LIN 11",
+        id: "lin_11"
+    },
+    {
+        name: "IME 11",
+        id: "ime_11"
+    },
+    {
+        name: "IFI 11",
+        id: "ifi_11"
     }
 ]
 
