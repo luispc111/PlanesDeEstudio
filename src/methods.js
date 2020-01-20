@@ -114,49 +114,7 @@ function materiasBtns() {
 		event.preventDefault();
 
 		if (event.target.className == "materia") {
-			let rgb = event.target.style.backgroundColor;
-			let pos;
-			for (let i = 0; i < nameColors.length; i++) {
-				if (rgb == colorsRGB[nameColors[i]]) {
-					pos = i;
-				}
-			}
-
-			if (rgb != colorsRGB[nameColors[currentColor]]) {
-
-				barWidths[nameColors[currentColor]] += materia;
-				if (barWidths[nameColors[currentColor]].toFixed(2) == 99.75) {
-					barWidths[nameColors[currentColor]] = 99.75;
-				}
-				document.querySelector("#myBar" + nameColors[currentColor]).style.width = barWidths[nameColors[currentColor]] + '%';
-				barWidths[nameColors[pos]] -= materia;
-				if (barWidths[nameColors[pos]].toFixed(2) == 0) {
-					barWidths[nameColors[pos]] = 0;
-				}
-				document.querySelector("#myBar" + nameColors[pos]).style.width = barWidths[nameColors[pos]] + '%';
-
-				event.target.style.backgroundColor = colorsRGB[nameColors[currentColor]];
-			} else{
-
-				// edge case para cuando se pica dos veces
-
-				// barWidthOrange -= (materia);
-				// document.getElementById("myBarOrange").style.width = barWidths.Orange + '%';
-				// event.target.style.backgroundColor = orange;
-			}
-
-			let bcheck = true;
-			let extra = ((event.target.id.length == 5) ? "s10" : `s${event.target.id[1]}`);
-
-			for(let i = 1; bcheck && i <= 10; i++){
-				if(document.getElementById(extra + "m" + i) != null && document.getElementById(extra + "m" + i).style.backgroundColor != colorsRGB[nameColors[currentColor]]){
-					bcheck = false;
-				}
-			}
-
-			document.getElementById(extra).style.backgroundColor = (bcheck) ? colorsHex[nameColors[currentColor]]: colorsHex.Orange;
-			
-			progressBarRefresh();
+			colorCourse(event.target, true);
 		}
 	});
 
@@ -164,49 +122,8 @@ function materiasBtns() {
 		event.preventDefault();
 
 		if (event.target.parentNode.className == "materia") {
-			let rgb = event.target.parentNode.style.backgroundColor;
-			let pos;
-			for (let i = 0; i < nameColors.length; i++) {
-				if (rgb == colorsRGB[nameColors[i]]) {
-					pos = i;
-				}
-			}
 
-			if (rgb != colorsRGB[nameColors[currentColor]]) {
-
-				barWidths[nameColors[currentColor]] += materia;
-				if (barWidths[nameColors[currentColor]].toFixed(2) == 99.75) {
-					barWidths[nameColors[currentColor]] = 99.75;
-				}
-				document.querySelector("#myBar" + nameColors[currentColor]).style.width = barWidths[nameColors[currentColor]] + '%';
-				barWidths[nameColors[pos]] -= materia;
-				if (barWidths[nameColors[pos]].toFixed(2) == 0) {
-					barWidths[nameColors[pos]] = 0;
-				}
-				document.querySelector("#myBar" + nameColors[pos]).style.width = barWidths[nameColors[pos]] + '%';
-
-				event.target.parentNode.style.backgroundColor = colorsRGB[nameColors[currentColor]];
-			} else{
-
-				// edge case para cuando se pica dos veces
-
-				// barWidthOrange -= (materia);
-				// document.getElementById("myBarOrange").style.width = barWidths.Orange + '%';
-				// event.target.style.backgroundColor = orange;
-			}
-
-			let bcheck = true;
-			let extra = ((event.target.parentNode.id.length == 5) ? "s10" : `s${event.target.parentNode.id[1]}`);
-
-			for(let i = 1; bcheck && i <= 10; i++){
-				if(document.getElementById(extra + "m" + i) != null && document.getElementById(extra + "m" + i).style.backgroundColor != colorsRGB[nameColors[currentColor]]){
-					bcheck = false;
-				}
-			}
-
-			document.getElementById(extra).style.backgroundColor = (bcheck) ? colorsHex[nameColors[currentColor]]: colorsHex.Orange;
-			
-			progressBarRefresh();
+			colorCourse(event.target.parentNode, true);
 		}
 	});
 
@@ -220,36 +137,8 @@ function materiasBtns() {
 			for (let i = 1; i <= maxLength; i++) {
 
 				let mat = document.getElementById(extra + i);
-				
-				if (mat != null && mat.style.backgroundColor != color && event.target.className == "semestre") {
-					let rgb = mat.style.backgroundColor;
-					let pos;
-					for (let i = 0; i < nameColors.length; i++) {
-						if (rgb == colorsRGB[nameColors[i]]) {
-							pos = i;
-						}
-					}
-			
-					if (rgb != colorsRGB[nameColors[currentColor]]) {
-			
-						barWidths[nameColors[currentColor]] += materia;
-						if (barWidths[nameColors[currentColor]].toFixed(2) == 99.75) {
-							barWidths[nameColors[currentColor]] = 99.75;
-						}
-						document.querySelector("#myBar" + nameColors[currentColor]).style.width = barWidths[nameColors[currentColor]] + '%';
-						barWidths[nameColors[pos]] -= materia;
-						if (barWidths[nameColors[pos]].toFixed(2) == 0) {
-							barWidths[nameColors[pos]] = 0;
-						}
-						document.querySelector("#myBar" + nameColors[pos]).style.width = barWidths[nameColors[pos]] + '%';
-			
-						mat.style.backgroundColor = colorsRGB[nameColors[currentColor]];
-					} else {
-						
-					}
-					
-					progressBarRefresh();
-				}
+
+				colorCourse(mat, false);
 			}
 		}
 	});
@@ -263,35 +152,7 @@ function materiasBtns() {
 	
 			let mat = document.getElementById(extra + i);
 			
-			if (mat != null && mat.style.backgroundColor != color) {
-				let rgb = mat.style.backgroundColor;
-				let pos;
-				for (let i = 0; i < nameColors.length; i++) {
-					if (rgb == colorsRGB[nameColors[i]]) {
-						pos = i;
-					}
-				}
-		
-				if (rgb != colorsRGB[nameColors[currentColor]]) {
-		
-					barWidths[nameColors[currentColor]] += materia;
-					if (barWidths[nameColors[currentColor]].toFixed(2) == 99.75) {
-						barWidths[nameColors[currentColor]] = 99.75;
-					}
-					document.querySelector("#myBar" + nameColors[currentColor]).style.width = barWidths[nameColors[currentColor]] + '%';
-					barWidths[nameColors[pos]] -= materia;
-					if (barWidths[nameColors[pos]].toFixed(2) == 0) {
-						barWidths[nameColors[pos]] = 0;
-					}
-					document.querySelector("#myBar" + nameColors[pos]).style.width = barWidths[nameColors[pos]] + '%';
-		
-					mat.style.backgroundColor = colorsRGB[nameColors[currentColor]];
-				} else {
-					
-				}
-				
-				progressBarRefresh();
-			}
+			colorCourse(mat, false);
 		}
 	});
 }
@@ -308,6 +169,58 @@ function progressBarRefresh(){
 			  myDiv.innerHTML = "";
 		}
 	}
+}
+
+function colorCourse (mat, comesFromIndividualCourse) {
+
+	if (mat != null && mat.style.backgroundColor != color) {
+		let rgb = mat.style.backgroundColor;
+		let pos;
+		for (let i = 0; i < nameColors.length; i++) {
+			if (rgb == colorsRGB[nameColors[i]]) {
+				pos = i;
+			}
+		}
+
+		if (rgb != colorsRGB[nameColors[currentColor]]) {
+
+			barWidths[nameColors[currentColor]] += materia;
+			if (barWidths[nameColors[currentColor]].toFixed(2) == 99.75) {
+				barWidths[nameColors[currentColor]] = 99.75;
+			}
+			document.querySelector("#myBar" + nameColors[currentColor]).style.width = barWidths[nameColors[currentColor]] + '%';
+			barWidths[nameColors[pos]] -= materia;
+			if (barWidths[nameColors[pos]].toFixed(2) == 0) {
+				barWidths[nameColors[pos]] = 0;
+			}
+			document.querySelector("#myBar" + nameColors[pos]).style.width = barWidths[nameColors[pos]] + '%';
+
+			mat.style.backgroundColor = colorsRGB[nameColors[currentColor]];
+		} else {
+			// edge case para cuando se pica dos veces
+
+				// barWidthOrange -= (materia);
+				// document.getElementById("myBarOrange").style.width = barWidths.Orange + '%';
+				// event.target.style.backgroundColor = orange;
+		}
+
+		if (comesFromIndividualCourse) {
+			let bcheck = true;
+			let extra = ((mat.id.length == 5) ? "s10" : `s${mat.id[1]}`);
+
+			for(let i = 1; bcheck && i <= 10; i++){
+				if(document.getElementById(extra + "m" + i) != null && document.getElementById(extra + "m" + i).style.backgroundColor != colorsRGB[nameColors[currentColor]]){
+					bcheck = false;
+				}
+			}
+
+			document.getElementById(extra).style.backgroundColor = (bcheck) ? colorsHex[nameColors[currentColor]]: colorsHex.Orange;
+		}
+		
+		progressBarRefresh();
+	}
+
+	
 }
 
 progressBarRefresh();
