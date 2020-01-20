@@ -12,11 +12,13 @@ Web page that includes the classes of various ITESM study models. It allows you 
 - ARQ11
 - IDS11
 - IFI11
+- IIA11
 - IIS11
 - IME11
 - IMI11
 - INCQ13
 - INT11
+- IQP11
 - ISD11
 - ITC11
 - LAD11
