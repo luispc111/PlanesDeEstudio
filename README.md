@@ -13,6 +13,7 @@ Web page that includes the classes of various ITESM study models. It allows you 
 - IDS11
 - IFI11
 - IIA11
+- IID12
 - IIS11
 - IMA11
 - IME11
