@@ -48,7 +48,8 @@ function createTable(studyPlan) {
                         $("#row" + num).append(`
                         <td id="s${materiasSem[i][j].semestre}m${num}" style="background-color: #BF7913;" class="materia"><label class="labelMateria">${materiasSem[i][j].nombre}</label></td>
                         `);
-                    } else {
+                    } 
+                    else {
                         $("#row" + num).append(`<td></td>`);
                     }
                     

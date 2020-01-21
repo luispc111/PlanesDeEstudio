@@ -39,6 +39,9 @@ function sendMethodsJS(cantMaterias){
 	materia = 99.75 / cantMaterias;
 	barWidths.Orange = materia*cantMaterias;
 	document.getElementById("myBarOrange").style.width = barWidths.Orange + '%';
+
+	console.log("materia: " + materia);
+	console.log("barra: " + materia*cantMaterias);
 }
 
 function cleanProgressBars() {
@@ -172,6 +175,9 @@ function progressBarRefresh(){
 			  myDiv.innerHTML = "";
 		}
 	}
+
+	console.log("orange " + barWidths.Orange);
+	console.log("green " + barWidths.Green);
 }
 
 function colorCourse (mat, comesFromIndividualCourse) {
