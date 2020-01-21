@@ -33,6 +33,7 @@ Web page that includes the classes of various ITESM study models. It allows you 
 - LED11
 - LEM11
 - LIN11
+- LPM12
 - LRI11
 
 ### How to contribute
