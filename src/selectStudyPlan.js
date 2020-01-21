@@ -18,10 +18,7 @@ function selectStudyPlan() {
 
 function eraseTable() {
     $("#rowSemester").html("");
-
-    for (let i = 1; i <= localStorage.cantSemestres; i++) {
-        $("#row" + i).html("");
-    }
+    $(".courseRows").html("");
 }
 
 function gobackBTN() {

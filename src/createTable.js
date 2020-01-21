@@ -22,7 +22,7 @@ function createTable(studyPlan) {
                 materiasSem[materias[i].semestre - 1].push(materias[i]);
             }
 
-            localStorage.cantSemestres = materiasSem.length;
+            // localStorage.cantSemestres = materiasSem.length;
 
             // creates the quantity of semesters in study plan
             for (let i = 1; i <= materiasSem.length; i ++) {
@@ -31,11 +31,19 @@ function createTable(studyPlan) {
                 `);
             }
 
-            // checks the highest quantity of classes on a single semester
+            // checks the maximum quantity of classes on a single semester
             for (let i = 0; i < materiasSem.length; i++) {
                 if (materiasSem[i].length > maxLength) {
                     maxLength = materiasSem[i].length;
                 }
+            }
+
+            // creates trs for the table where courses will be added
+            for (let i = 0; i < maxLength; i++) {
+                $(".courseRows").append(`
+                <tr id="row${i+1}">
+				</tr>
+                `);
             }
         
             // poblates table with the classes of each semester
