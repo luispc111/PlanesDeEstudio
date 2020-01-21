@@ -19,6 +19,7 @@ Web page that includes the classes of various ITESM study models. It allows you 
 - IMT11
 - INCQ13
 - INT11
+- IQA11
 - IQP11
 - ISD11
 - ITC11
@@ -37,11 +38,11 @@ You can help the web page by making the JSON files of your study model. The form
 ```bash
 [
     {
-        "nombre": "Nombre de la materia",
-        "clave": "Clave de la materia",
+        "nombre": "subject name",
+        "clave": "subject key",
         "semestre": 0,
-        "requisitoAcreditado": ["Clave de la materia"],
-        "requisitoCursado": ["Clave de la materia"]
+        "requisitoAcreditado": ["subject key"],
+        "requisitoCursado": ["subject key"]
     },
 ]
 ```
