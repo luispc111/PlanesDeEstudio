@@ -2,7 +2,6 @@ function selectStudyPlan() {
     $(".selectStudyPlan").on("click", (event) => {
         event.preventDefault();
 
-        console.log("clicked");
         console.log(event.target.value);
         
         let val = event.target.value;
@@ -38,13 +37,9 @@ function gobackBTN() {
 
 document.getElementById("searchStudyPlan").addEventListener('input', (event) => {
     event.preventDefault();
-
-    // console.log("hello");
-
     let btns = document.querySelector("#majorBtns").children;
 
     for (let i = 0; i < btns.length; i++) {
-        console.log(i);
         btns[i].hidden = !btns[i].innerText.includes(event.target.value.toUpperCase());
     }
 });
