@@ -10,6 +10,7 @@ Web page that includes the classes of various ITESM study models. It allows you 
 ### Implented study models
 
 - ARQ11
+- IBT11
 - IDS11
 - IFI11
 - IIA11
