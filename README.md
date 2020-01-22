@@ -28,6 +28,7 @@ Web page that includes the classes of various ITESM study models. It allows you 
 - ITC11
 - LAD11
 - LAF11
+- LCDE11
 - LDI11
 - LEC11
 - LED11
