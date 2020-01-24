@@ -122,6 +122,10 @@ const majors = [
     {
         name: "LDF 11",
         id: "ldf_11"
+    },
+    {
+        name: "LCMD 17",
+        id: "lcmd_17"
     }
 ]
 
