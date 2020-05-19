@@ -4,14 +4,15 @@ let barWidths = {
 	Orange: 99.75,
 	Purple: 0,
 	Pink: 0,
-	Red: 0
+	Red: 0,
+	Teal: 0
 }
 
 let materia = 1.75;
 
 let currentColor = 1;
 let nameColors = [
-	"Orange", "Green", "Blue", "Purple", "Pink", "Red"
+	"Orange", "Green", "Blue", "Purple", "Pink", "Red", "Teal"
 ]
 
 color = "#439630";
@@ -23,7 +24,8 @@ let colorsHex = {
 	Orange: "#BF7913",
 	Purple: "#633B8D",
 	Pink: "#C14B4C",
-	Red: "#B02828"
+	Red: "#B02828",
+	Teal: "#008080"
 }
 
 let colorsRGB = {
@@ -32,7 +34,8 @@ let colorsRGB = {
 	Orange: "rgb(191, 121, 19)",
 	Purple: "rgb(99, 59, 141)",
 	Pink: "rgb(193, 75, 76)",
-	Red: "rgb(176, 40, 40)"
+	Red: "rgb(176, 40, 40)",
+	Teal: "rgb(0, 128, 128)"
 }
 
 function sendMethodsJS(cantMaterias){
@@ -54,6 +57,7 @@ function cleanProgressBars() {
 }
 
 // create buttons to change color
+// console.log(nameColors.length);
 for (let i = 0; i < nameColors.length; i++) {
 	$(".colorBtns").append(`
 	<button id="btn${nameColors[i]}" class="colorBtn" value="${nameColors[i]}"><kbd class="key">${i+1}</kbd></button>
