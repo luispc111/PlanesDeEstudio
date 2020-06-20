@@ -2,19 +2,10 @@
 
 const $boton = document.querySelector("#btnCapturar"), // El botón que desencadena
       $objetivo = document.querySelector("#planDeEstudios"); // A qué le tomamos la foto
-      // $objetivo = document.body; // A qué le tomamos la foto
 
 $boton.addEventListener("click", () => {
     const options = {
-        // ignoreElements: elemento => {
-        //   const tipo = elemento.nodeName.toLowerCase();
-          
-        //   if (tipo === "img" || tipo === "h1") {
-        //     return true;
-        //   }
-        //   return false;
-        // },
-        backgroundColor: "#212529",
+        backgroundColor: "#191C25",
         scale: 3,
     };
     html2canvas($objetivo, options)
@@ -25,3 +16,5 @@ $boton.addEventListener("click", () => {
         enlace.click();
       });
   });
+
+  
