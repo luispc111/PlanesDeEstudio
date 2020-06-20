@@ -1,8 +1,8 @@
 // import html2canvas from 'html2canvas';
 
 const $boton = document.querySelector("#btnCapturar"), // El botón que desencadena
-    //   $objetivo = document.querySelector("#planDeEstudios"); // A qué le tomamos la foto
-      $objetivo = document.body; // A qué le tomamos la foto
+      $objetivo = document.querySelector("#planDeEstudios"); // A qué le tomamos la foto
+      // $objetivo = document.body; // A qué le tomamos la foto
 
 $boton.addEventListener("click", () => {
     const options = {
