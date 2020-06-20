@@ -72,4 +72,4 @@ JSON is used to have the information of the courses, as well as their semester a
 
 html2canvas library was used to generate the dowloadable png file of the modifications users create on their study plans.
 - github repo: https://github.com/niklasvh/html2canvas
-- documentation: https://github.com/niklasvh/html2canvas
+- documentation: https://html2canvas.hertzen.com/
