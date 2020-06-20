@@ -14,7 +14,8 @@ $boton.addEventListener("click", () => {
         //   }
         //   return false;
         // },
-        backgroundColor: "#212529"
+        backgroundColor: "#212529",
+        scale: 3,
     };
     html2canvas($objetivo, options)
       .then(canvas => {
