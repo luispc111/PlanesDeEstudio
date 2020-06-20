@@ -5,15 +5,16 @@ const $boton = document.querySelector("#btnCapturar"), // El botón que desencad
 
 $boton.addEventListener("click", () => {
     const options = {
-        // ignoreElements: elemento => {
-        //   const tipo = elemento.nodeName.toLowerCase();
-        //   if (tipo === "img" || tipo === "h1") {
-        //     return true;
-        //   }
-        //   return false;
-        // }
+        ignoreElements: elemento => {
+          const tipo = elemento.nodeName.toLowerCase();
+          
+          if (tipo === "img" || tipo === "h1") {
+            return true;
+          }
+          return false;
+        },
         backgroundColor: "#212529"
-      };
+    };
     html2canvas($objetivo, options)
       .then(canvas => {
         let enlace = document.createElement('a');
