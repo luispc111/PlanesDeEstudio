@@ -7,6 +7,7 @@ $boton.addEventListener("click", () => {
     const options = {
         backgroundColor: "#191C25",
         scale: 3,
+        border: "blue",
     };
     html2canvas($objetivo, options)
       .then(canvas => {
@@ -14,7 +15,10 @@ $boton.addEventListener("click", () => {
         enlace.download = "MiPlanDeEstudios.png";
         enlace.href = canvas.toDataURL();
         enlace.click();
+        
       });
   });
+  
+ 
 
   
