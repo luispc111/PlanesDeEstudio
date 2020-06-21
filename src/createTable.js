@@ -24,6 +24,7 @@ function createTable(studyPlan) {
 
             // localStorage.cantSemestres = materiasSem.length;
 
+            console.log(materiasSem);
             // creates the quantity of semesters in study plan
             for (let i = 1; i <= materiasSem.length; i ++) {
                 $("#rowSemester").append(`
@@ -54,7 +55,7 @@ function createTable(studyPlan) {
                     // checks if there's a class or if it needs to create an empty <td></td> for the table to be correct
                     if (materiasSem[i][j] != undefined) {
                         $("#row" + num).append(`
-                        <td id="s${materiasSem[i][j].semestre}m${num}" style="background-color: #BF7913;" class="materia"><label class="labelMateria">${materiasSem[i][j].nombre}</label></td>
+                        <td id="s${materiasSem[i][j].semestre}m${num}" style="background-color: #BF7913;" value="${materiasSem[i][j].clave}" class="materia"><label class="labelMateria">${materiasSem[i][j].nombre}</label></td>
                         `);
                     } 
                     else {
