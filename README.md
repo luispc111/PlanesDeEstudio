@@ -7,7 +7,7 @@ Visit https://luispc111.github.io/PlanesDeEstudio/
 
 Web page that includes the classes of various ITESM study models. It allows you to mark subjects with different colors to visualize the ones you have already taken, the ones you are currently taking and the ones you are planning to take.
 
-More than 1400 users (data by Google Analytics).
+More than 1500 users (data by Google Analytics).
 
 ### **Implented study models**
 
