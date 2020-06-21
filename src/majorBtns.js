@@ -143,9 +143,11 @@ function compare(a, b) {
 function createMajorBtns () {
     // order majors array
 
-    console.log(majors);
+    document.querySelector('#seleccionPlan').hidden = false;
+
+    // console.log(majors);
     majors.sort(compare);
-    console.log(majors);
+    // console.log(majors);
 
     for (let i = 0; i < majors.length; i++) {
         $("#majorBtns").append(`
@@ -153,6 +155,8 @@ function createMajorBtns () {
         `) 
     }
 
+    selectStudyPlan();
+
 }
 
-createMajorBtns();
+// createMajorBtns();

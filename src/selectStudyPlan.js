@@ -1,18 +1,16 @@
 function selectStudyPlan() {
-    $(".selectStudyPlan").on("click", (event) => {
+    console.log('aiuda');   
+    $('.btn.btn-primary.btn-lg.selectStudyPlan').on('click', (event) => {
         event.preventDefault();
 
         console.log(event.target.value);
         
         let val = event.target.value;
+
+        localStorage.setItem('carreraID', event.target.value);
+        localStorage.setItem('carreraNombre', event.target.textContent);
         
-        if (val != "0") {
-            document.querySelector("#seleccionPlan").hidden = true;
-            createTable(val);
-            document.title = event.target.textContent;
-            document.querySelector("#tituloTabla").textContent = `Plan de estudios ${event.target.textContent}`;
-            document.querySelector("#planDeEstudios").hidden = false;
-        }
+        changeToCourses(val, event.target.textContent);
     });
 }
 
@@ -43,4 +41,4 @@ document.getElementById("searchStudyPlan").addEventListener('input', (event) => 
 
 gobackBTN();
 
-selectStudyPlan();
+// selectStudyPlan();
