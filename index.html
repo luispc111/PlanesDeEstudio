@@ -23,7 +23,6 @@
 	</head>
 
 	<body>
-		
 		<section id="seleccionPlan">
 			<br>
 			<h1 class="titulo">Planes de estudio</h1>
@@ -46,11 +45,12 @@
 			</div>
 		</section>
 
+		
 		<section id="planDeEstudios" hidden>
 
 			<h1 class="titulo" id="tituloTabla"><font FACE="Lucida Bright" size ="30">Plan de estudios</font></h1>
 
-			<button type="button" id="goback" class="btn btn-primary btn-lg">Selecionar otro plan</button>
+			<button data-html2canvas-ignore="true" type="button" id="goback" class="btn btn-primary btn-lg">Selecionar otro plan</button>
 
 			<div class="colorBtns">
 			</div>
@@ -81,25 +81,32 @@
 					</tbody>
 				</table>
 			</div id="divTable">
+
+			<button id="btnCapturar" data-html2canvas-ignore="true" class="btn btn-light">Descargar como imagen</button>
 		</section>
 		
-		<div style="color:white;", align="center">Created by: <a href="https://github.com/luispc111" target="_blank">Luis Alberto Pérez</a> & <a href="https://github.com/albgv1402" target="_blank">Alberto García</a></div>
-
-		<a href="https://github.com/luispc111/PlanesDeEstudio" target="_blank">
-
-			<img src="./img/GitHub-Mark-Light-32px.png" alt="Github link" class="centerImage"/>
-		</a>
+		
+		<section id="credits">
+			<div style="color:white;", align="center">Created by: <a href="https://github.com/luispc111" target="_blank">Luis Alberto Pérez</a> & <a href="https://github.com/albgv1402" target="_blank">Alberto García</a></div>
+			<a href="https://github.com/luispc111/PlanesDeEstudio" target="_blank">
+				<img src="./img/GitHub-Mark-Light-32px.png" alt="Github link" class="centerImage"/>
+			</a>
+		</section>
 		
 		<!-- src files -->
 		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		
+		<!-- testing this -->
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.1/dist/html2canvas.min.js"></script>
 
 		<!-- Local files -->
 		<script src="./src/majorBtns.js"></script>
 		<script src="./src/methods.js"></script>
 		<script src="./src/createTable.js"></script>
 		<script src="./src/selectStudyPlan.js"></script>
+		<script src="./src/downloadPlan.js"></script>
 	</body>
 </html>
