@@ -1,15 +1,15 @@
 # Planes de Estudio ITESM
 
-### How can I try?
+### **How can I try?**
 Visit https://luispc111.github.io/PlanesDeEstudio/
 
-### User description
+### **User description**
 
 Web page that includes the classes of various ITESM study models. It allows you to mark subjects with different colors to visualize the ones you have already taken, the ones you are currently taking and the ones you are planning to take.
 
 More than 1400 users (data by Google Analytics).
 
-### Implented study models
+### **Implented study models**
 
 - ARQ11
 - IBT11
@@ -44,7 +44,7 @@ More than 1400 users (data by Google Analytics).
 - LPO11
 - LRI11
 
-### How to contribute
+### **How to contribute**
 
 You can help the web page by making the JSON files of your study model. The format of the JSON files is:
 
@@ -62,7 +62,18 @@ You can help the web page by making the JSON files of your study model. The form
 
 The list of "requisitoAcreditado" is a list of the classes you need to pass to be able to take the class and "requisitoCursado" is a list of classes you need to take.
 
-### Technical description
+We created a C++ program that reads a text file with the format shown below, based on how courses are presented SAMP from ITESM. 
+
+```bash
+
+Numero Semestre
+Clave	        Nombre de la materia	CL	L	U	CA
+ClaveEjemplo    Nombre ejemplo          1   1   1   1
+1 1 1 1
+
+```
+
+### **Technical description**
 
 HTML and CSS is used for the frontend. Some bootstrap elements are also included. 
 

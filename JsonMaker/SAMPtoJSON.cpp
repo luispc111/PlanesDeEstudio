@@ -90,7 +90,7 @@ int main() {
 
         extra += doble + "nombre" +                 doble + ": " +      doble + materias[i].nombre +                doble + ",\n";
         extra += doble + "clave" +                  doble + ": " +      doble + materias[i].clave +                 doble + ",\n";
-        extra += doble + "semestre" +               doble + ": " + to_string(materias[i].semestre) + ",\n";
+        extra += doble + "semestre" +               doble + ": " +      to_string(materias[i].semestre) +                   ",\n";
         extra += doble + "requisitoAcreditado" +    doble + ": [],\n" + doble + "requisitoCursado" +                doble + ": []\n},\n";
 
         json << extra;
