@@ -1,7 +1,21 @@
 [
 	{
-	"nombre": "Introducción al área de comunicación y producción digital",
-	"clave": "CO1008",
+	"nombre": "Introducción a las carreras de negocios",
+	"clave": "AD1011 ",
+	"semestre": 1,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Información financiera para la toma de decisiones",
+	"clave": "CF1008",
+	"semestre": 1,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Marco legal de los negocios",
+	"clave": "D1021",
 	"semestre": 1,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
@@ -26,31 +40,17 @@
 	"semestre": 1,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
-	},
+	},	
 	{
 	"nombre": "Optativa de exploración del bloque A - II",
-	"clave": "OP1008",
+	"clave": "OP1009",
 	"semestre": 1,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Optativa de exploración del bloque A - III",
-	"clave": "OP1008",
-	"semestre": 1,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Optativa de exploración del bloque A - IV",
-	"clave": "OP1008",
-	"semestre": 1,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Ética, persona y sociedad",
-	"clave": "H1018",
+	"nombre": "Economía de la empresa",
+	"clave": "EC1008",
 	"semestre": 2,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
@@ -63,8 +63,8 @@
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Arte contemporáneo y sociedad",
-	"clave": "H2003",
+	"nombre": "Matemáticas II",
+	"clave": "MA1018",
 	"semestre": 2,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
@@ -78,35 +78,28 @@
 	},
 	{
 	"nombre": "Optativa de exploración del bloque B - II",
-	"clave": "OP1010",
+	"clave": "OP1011",
 	"semestre": 2,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
 	"nombre": "Optativa de exploración del bloque B - III",
-	"clave": "OP1010",
+	"clave": "OP1012",
 	"semestre": 2,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Laboratorio de audio",
-	"clave": "AV1006",
+	"nombre": "Entorno macroeconómico",
+	"clave": "EC1009",
 	"semestre": 3,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Psicología",
-	"clave": "CC1014",
-	"semestre": 3,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Expresión verbal en el ámbito profesional",
-	"clave": "H2001",
+	"nombre": "Ética, persona y sociedad",
+	"clave": "H1018",
 	"semestre": 3,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
@@ -120,63 +113,42 @@
 	},
 	{
 	"nombre": "Optativa de exploración del bloque C - II",
-	"clave": "OP1013",
+	"clave": "OP1014",
 	"semestre": 3,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
 	"nombre": "Optativa de exploración del bloque C - III",
-	"clave": "OP1013",
+	"clave": "OP1015",
 	"semestre": 3,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
 	"nombre": "Tópico de exploración complementaria",
-	"clave": "OP1013",
+	"clave": "VA1000",
 	"semestre": 3,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Laboratorio de video",
-	"clave": "AV1007",
+	"nombre": "Contabilidad administrativa",
+	"clave": "CF1011",
 	"semestre": 4,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Guionismo",
-	"clave": "AV2004",
+	"nombre": "Expresión verbal en el ámbito profesional",
+	"clave": "H2001",
 	"semestre": 4,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Métodos cualitativos de investigación",
-	"clave": "CO2004",
-	"semestre": 4,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Comunicación y estudios de medios",
-	"clave": "CO2008",
-	"semestre": 4,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Emprendimiento",
-	"clave": "EM1005",
-	"semestre": 4,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Estructuras narrativas",
-	"clave": "H1048",
+	"nombre": "Comportamiento del consumidor e investigación de mercados",
+	"clave": "MT2025",
 	"semestre": 4,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
@@ -189,226 +161,177 @@
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Laboratorio de diseño digital",
-	"clave": "AV1005",
+	"nombre": "Optativa de exploración del bloque C - V",
+	"clave": "OP1017",
+	"semestre": 4,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Optativa de exploración del bloque C - VI",
+	"clave": "OP1018",
+	"semestre": 4,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Modelos y procesos de planeación",
+	"clave": "AD3018",
 	"semestre": 5,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Realización cinematográfica",
-	"clave": "AV3010",
+	"nombre": "Pronósticos para la toma de decisiones",
+	"clave": "CD2006",
 	"semestre": 5,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Comunicación y estudios culturales",
-	"clave": "CO2006",
+	"nombre": "Gestión del capital humano por competencias",
+	"clave": "CH2007",
 	"semestre": 5,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Medición y análisis cuantitativo para la investigación social",
-	"clave": "CO2009",
+	"nombre": "Finanzas personales y empresariales",
+	"clave": "FZ1006",
 	"semestre": 5,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Fundamentos de comunicación estratégica",
-	"clave": "CR1000",
+	"nombre": "Evaluación de proyectos y fuentes de financiamiento",
+	"clave": "FZ2016",
 	"semestre": 5,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Ética aplicada",
-	"clave": "HS2006",
+	"nombre": "HS2000 Humanidades y bellas artes",
+	"clave": "3.5",
 	"semestre": 5,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Fundamentos de programación",
-	"clave": "TC1014",
+	"nombre": "18",
+	"clave": "3.5",
 	"semestre": 5,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Diseño y producción de medios interactivos",
-	"clave": "AV3001",
+	"nombre": "Semestre Clave Nombre CL L U CA UDC CD2007 Modelos cuantitativos y de optimización",
+	"clave": "Sexto",
+	"semestre": 5,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "CF2019 Control y desarrollo de negocios",
+	"clave": "3.5",
+	"semestre": 5,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "EM1005 Emprendimiento",
+	"clave": "3.5",
+	"semestre": 5,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "HS2005 Ciudadanía",
+	"clave": "3.5",
+	"semestre": 5,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "HS2006 Ética aplicada",
+	"clave": "3.5",
+	"semestre": 5,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "NI2018 Análisis y administración de la cadena de valor",
+	"clave": "3.5",
+	"semestre": 5,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "18",
+	"clave": "3.5",
+	"semestre": 5,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Semestre Clave Nombre CL L A U CA UDC OP3051 Optativa profesional I",
+	"clave": "Séptimo",
+	"semestre": 5,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "OP3061 Optativa profesional complementaria I",
+	"clave": "UDC",
 	"semestre": 6,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Producción de televisión para multiplataformas",
-	"clave": "AV3009",
-	"semestre": 6,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Comunicación y globalización",
-	"clave": "CO3006",
-	"semestre": 6,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Comunicación estratégica aplicada",
-	"clave": "CR2003",
-	"semestre": 6,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Ciudadanía",
-	"clave": "HS2005",
-	"semestre": 6,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Fundamentos de diseño interactivo",
-	"clave": "TC1015",
-	"semestre": 6,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Optativa profesional I",
-	"clave": "OP3051",
+	"nombre": "AD3025 Introducción a la vida profesional",
+	"clave": "UDC",
 	"semestre": 7,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
-	"nombre": "Optativa profesional II",
-	"clave": "OP3052",
+	"nombre": "VA3101 Tópicos I",
+	"clave": "2.3",
 	"semestre": 7,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Optativa profesional III",
-	"clave": "OP3053",
-	"semestre": 7,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Optativa profesional IV",
-	"clave": "OP3054",
-	"semestre": 7,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Optativa profesional V",
-	"clave": "OP3055",
-	"semestre": 7,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Optativa profesional VI",
-	"clave": "OP3056",
-	"semestre": 7,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Optativa profesional complementaria I",
-	"clave": "OP3061",
-	"semestre": 8,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Optativa profesional complementaria II",
-	"clave": "OP3062",
-	"semestre": 8,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Optativa profesional complementaria III",
-	"clave": "OP3063",
-	"semestre": 8,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Optativa profesional complementaria IV",
-	"clave": "OP3064",
-	"semestre": 8,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Optativa profesional complementaria V",
-	"clave": "OP3065",
-	"semestre": 8,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Optativa profesional complementaria VI",
-	"clave": "OP3066",
-	"semestre": 8,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Introducción a la vida profesional",
-	"clave": "CO3009",
-	"semestre": 9,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Tópicos I",
-	"clave": "VA3101",
-	"semestre": 9,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
 	"nombre": "Tópicos II",
 	"clave": "VA3102",
-	"semestre": 9,
+	"semestre": 7,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
 	"nombre": "Tópicos III",
 	"clave": "VA3103",
-	"semestre": 9,
+	"semestre": 7,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
 	"nombre": "Tópicos IV",
 	"clave": "VA3104",
-	"semestre": 9,
+	"semestre": 7,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
 	"nombre": "Tópicos V",
 	"clave": "VA3105",
-	"semestre": 9,
+	"semestre": 7,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	},
 	{
 	"nombre": "Tópicos VI",
 	"clave": "VA3106",
-	"semestre": 9,
+	"semestre": 7,
 	"requisitoAcreditado": [],
 	"requisitoCursado": []
 	}

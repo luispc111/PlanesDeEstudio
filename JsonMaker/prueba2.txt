@@ -1,86 +1,83 @@
 Primer Semestre 
-Clave	Nombre	CL	L	U	CA
-CO1008	Introducción al área de comunicación y producción digital	3	0	4	1.5
-H1016	Lengua extranjera	5	0	8	3
-MA1016	Matemáticas I	3	0	8	3
-OP1008	Optativa de exploración del bloque A - I	3	0	8	3
-OP1009	Optativa de exploración del bloque A - II	3	0	8	3
-OP1019	Optativa de exploración del bloque A- III	3	0	8	3
-OP1020	Optativa de exploración del bloque A - IV	3	0	8	3
-23	0	52	19.5
+Clave	Nombre	CL	L	U	CA	UDC
+AD1011	Introducción a las carreras de negocios	3	0	4	1.5	3.5
+CF1008	Información financiera para la toma de decisiones	3	0	8	3	3.5
+D1021	Marco legal de los negocios	3	0	8	3	3.5
+H1016	Lengua extranjera	5	0	8	3	3.5
+MA1016	Matemáticas I	3	0	8	3	3.5
+OP1008	Optativa de exploración del bloque A - I	3	0	8	3	0
+OP1009	Optativa de exploración del bloque A - II	3	0	8	3	0
+23	0	52	19.5	17.5
 Segundo Semestre 
-Clave	Nombre	CL	L	U	CA
-H1018	Ética, persona y sociedad	3	0	8	3
-H1040	Análisis y expresión verbal	5	0	8	3
-H2003	Arte contemporáneo y sociedad	3	0	8	3
-OP1010	Optativa de exploración del bloque B - I	3	0	8	3
-OP1011	Optativa de exploración del bloque B - II	3	0	8	3
-OP1012	Optativa de exploración del bloque B - III	3	0	8	3
-20	0	48	18
+Clave	Nombre	CL	L	U	CA	UDC
+EC1008	Economía de la empresa	3	0	8	3	3.5
+H1040	Análisis y expresión verbal	5	0	8	3	5.8
+MA1018	Matemáticas II	3	0	8	3	3.5
+OP1010	Optativa de exploración del bloque B - I	3	0	8	3	0
+OP1011	Optativa de exploración del bloque B - II	3	0	8	3	0
+OP1012	Optativa de exploración del bloque B - III	3	0	8	3	0
+20	0	48	18	12.8
 Tercer Semestre 
-Clave	Nombre	CL	L	U	CA
-AV1006	Laboratorio de audio	0	3	4	1.5
-CC1014	Psicología	3	0	8	3
-H2001	Expresión verbal en el ámbito profesional	3	0	8	3
-OP1013	Optativa de exploración del bloque C - I	3	0	8	3
-OP1014	Optativa de exploración del bloque C - II	3	0	8	3
-OP1015	Optativa de exploración del bloque C - III	3	0	8	3
-VA1000	Tópico de exploración complementaria	3	0	8	3
-18	3	52	19.5
+Clave	Nombre	CL	L	U	CA	UDC
+EC1009	Entorno macroeconómico	3	0	8	3	3.5
+H1018	Ética, persona y sociedad	3	0	8	3	3.5
+OP1013	Optativa de exploración del bloque C - I	3	0	8	3	0
+OP1014	Optativa de exploración del bloque C - II	3	0	8	3	0
+OP1015	Optativa de exploración del bloque C - III	3	0	8	3	0
+VA1000	Tópico de exploración complementaria	3	0	8	3	
+18	0	48	18	7
 Cuarto Semestre 
-Clave	Nombre	CL	L	U	CA
-AV1007	Laboratorio de video	0	3	4	1.5
-AV2004	Guionismo	3	0	8	3
-CO2004	Métodos cualitativos de investigación	3	0	8	3
-CO2008	Comunicación y estudios de medios	3	0	8	3
-EM1005	Emprendimiento	3	0	8	3
-H1048	Estructuras narrativas	3	0	8	3
-OP1016	Optativa de exploración del bloque C - IV	3	0	8	3
-18	3	52	19.5
+Clave	Nombre	CL	L	U	CA	UDC
+CF1011	Contabilidad administrativa	3	0	8	3	3.5
+H2001	Expresión verbal en el ámbito profesional	3	0	8	3	3.5
+MT2025	Comportamiento del consumidor e investigación de mercados	3	0	8	3	3.5
+OP1016	Optativa de exploración del bloque C - IV	3	0	8	3	0
+OP1017	Optativa de exploración del bloque C - V	3	0	8	3	0
+OP1018	Optativa de exploración del bloque C - VI	3	0	8	3	0
+18	0	48	18	10.5
 Quinto Semestre 
-Clave	Nombre	CL	L	U	CA
-AV1005	Laboratorio de diseño digital	0	3	4	1.5
-AV3010	Realización cinematográfica	3	0	8	3
-CO2006	Comunicación y estudios culturales	3	0	8	3
-CO2009	Medición y análisis cuantitativo para la investigación social	3	0	8	3
-CR1000	Fundamentos de comunicación estratégica	3	0	8	3
-HS2006	Ética aplicada	3	0	8	3
-TC1014	Fundamentos de programación	3	0	8	3
-18	3	52	19.5
+Clave	Nombre	CL	L	U	CA	UDC
+AD3018	Modelos y procesos de planeación	3	0	8	3	3.5
+CD2006	Pronósticos para la toma de decisiones	3	0	8	3	3.5
+CH2007	Gestión del capital humano por competencias	3	0	8	3	3.5
+FZ1006	Finanzas personales y empresariales	3	0	8	3	3.5
+FZ2016	Evaluación de proyectos y fuentes de financiamiento	3	0	8	3	3.5
+HS2000	Humanidades y bellas artes	3	0	8	3	3.5
+18	0	48	18	21
 Sexto Semestre 
-Clave	Nombre	CL	L	U	CA
-AV3001	Diseño y producción de medios interactivos	3	0	8	3
-AV3009	Producción de televisión para multiplataformas	3	0	8	3
-CO3006	Comunicación y globalización	3	0	8	3
-CR2003	Comunicación estratégica aplicada	3	0	8	3
-HS2005	Ciudadanía	3	0	8	3
-TC1015	Fundamentos de diseño interactivo	3	0	8	3
-18	0	48	18
+Clave	Nombre	CL	L	U	CA	UDC
+CD2007	Modelos cuantitativos y de optimización	3	0	8	3	3.5
+CF2019	Control y desarrollo de negocios	3	0	8	3	3.5
+EM1005	Emprendimiento	3	0	8	3	3.5
+HS2005	Ciudadanía	3	0	8	3	3.5
+HS2006	Ética aplicada	3	0	8	3	3.5
+NI2018	Análisis y administración de la cadena de valor	3	0	8	3	3.5
+18	0	48	18	21
 Séptimo Semestre 
-Clave	Nombre	CL	L	A	U	CA
-OP3051	Optativa profesional I	3	0	0	8	3
-OP3052	Optativa profesional II	3	0	0	8	3
-OP3053	Optativa profesional III	3	0	0	8	3
-OP3054	Optativa profesional IV	3	0	0	8	3
-OP3055	Optativa profesional V	3	0	0	8	3
-OP3056	Optativa profesional VI	3	0	0	8	3
-18	0	0	48	18
-Octavo Semestre  (1)
-Clave	Nombre	CL	L	U	CA
-OP3061	Optativa profesional complementaria I	3	0	8	3
-OP3062	Optativa profesional complementaria II	3	0	8	3
-OP3063	Optativa profesional complementaria III	3	0	8	3
-OP3064	Optativa profesional complementaria IV	3	0	8	3
-OP3065	Optativa profesional complementaria V	3	0	8	3
-OP3066	Optativa profesional complementaria VI	3	0	8	3
-18	0	48	18
+Clave	Nombre	CL	L	A	U	CA	UDC
+OP3051	Optativa profesional I	3	0	0	8	3	0
+OP3052	Optativa profesional II	3	0	0	8	3	0
+OP3053	Optativa profesional III	3	0	0	8	3	0
+OP3054	Optativa profesional IV	3	0	0	8	3	0
+OP3055	Optativa profesional V	3	0	0	8	3	0
+OP3056	Optativa profesional VI	3	0	0	8	3	0
+18	0	48	18	0
+Octavo Semestre
+Clave	Nombre	CL	L	U	CA	UDC
+OP3061	Optativa profesional complementaria I	3	0	8	3	0
+OP3062	Optativa profesional complementaria II	3	0	8	3	0
+OP3063	Optativa profesional complementaria III	3	0	8	3	0
+OP3064	Optativa profesional complementaria IV	3	0	8	3	0
+OP3065	Optativa profesional complementaria V	3	0	8	3	0
+OP3066	Optativa profesional complementaria VI	3	0	8	3	0
+18	0	48	18	0
 Noveno Semestre 
-Clave	Nombre	CL	L	U	CA
-CO3009	Introducción a la vida profesional	2	0	2	.8
-VA3101	Tópicos I	3	0	8	3
-VA3102	Tópicos II	3	0	8	3
-VA3103	Tópicos III	3	0	8	3
-VA3104	Tópicos IV	3	0	8	3
-VA3105	Tópicos V	3	0	8	3
-VA3106	Tópicos VI	3	0	8	3
-20	0	50	18.8
+Clave	Nombre	CL	L	U	CA	UDC
+AD3025	Introducción a la vida profesional	2	0	2	.8	2.3
+VA3101	Tópicos I	3	0	8	3	
+VA3102	Tópicos II	3	0	8	3	
+VA3103	Tópicos III	3	0	8	3	
+VA3104	Tópicos IV	3	0	8	3	
+VA3105	Tópicos V	3	0	8	3	
+VA3106	Tópicos VI	3	0	8	3	
+20	0	50	18.8	2.3
