@@ -1,429 +1,394 @@
 [
-	{
-	"nombre": "Introducción a la ingeniería civil",
-	"clave": "CV1004",
-	"semestre": 1,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Geología",
-	"clave": "CV2001",
-	"semestre": 1,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Física I",
-	"clave": "F1002",
-	"semestre": 1,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Lengua extranjera",
-	"clave": "H1016",
-	"semestre": 1,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Matemáticas I",
-	"clave": "MA1015",
-	"semestre": 1,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Química",
-	"clave": "Q1001",
-	"semestre": 1,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Solución de problemas con programación",
-	"clave": "TC1017",
-	"semestre": 1,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Dibujo computarizado",
-	"clave": "AR1017",
-	"semestre": 2,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Geomática",
-	"clave": "CV2021",
-	"semestre": 2,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Ciencias naturales y desarrollo sustentable",
-	"clave": "DS1003",
-	"semestre": 2,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Física II",
-	"clave": "F1003",
-	"semestre": 2,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Análisis y expresión verbal",
-	"clave": "H1040",
-	"semestre": 2,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Matemáticas II",
-	"clave": "MA1017",
-	"semestre": 2,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Laboratorio de química",
-	"clave": "Q1004",
-	"semestre": 2,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Laboratorio de geomática",
-	"clave": "CV2022",
-	"semestre": 3,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Materiales y procedimientos de construcción I",
-	"clave": "CV2023",
-	"semestre": 3,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Mecánica de estructuras I",
-	"clave": "CV2024",
-	"semestre": 3,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Electricidad y magnetismo",
-	"clave": "F1005",
-	"semestre": 3,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Ética, persona y sociedad",
-	"clave": "H1018",
-	"semestre": 3,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Matemáticas III",
-	"clave": "MA2009",
-	"semestre": 3,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Ecuaciones diferenciales",
-	"clave": "MA2010",
-	"semestre": 3,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Materiales y procedimientos de construcción II",
-	"clave": "AR2021",
-	"semestre": 4,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Mecánica de estructuras II",
-	"clave": "CV2025",
-	"semestre": 4,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Expresión verbal en el ámbito profesional",
-	"clave": "H2001",
-	"semestre": 4,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Humanidades y bellas artes",
-	"clave": "HS2000",
-	"semestre": 4,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Métodos numéricos en ingeniería",
-	"clave": "M2025",
-	"semestre": 4,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Probabilidad y estadística",
-	"clave": "MA1006",
-	"semestre": 4,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Laboratorio de materiales de construcción",
-	"clave": "CV2006",
-	"semestre": 5,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Laboratorio de mecánica de suelos",
-	"clave": "CV2007",
-	"semestre": 5,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Mecánica de suelos",
-	"clave": "CV2010",
-	"semestre": 5,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Sistemas estructurales",
-	"clave": "CV2026",
-	"semestre": 5,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Emprendimiento",
-	"clave": "EM1005",
-	"semestre": 5,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Mecánica de fluidos",
-	"clave": "M2021",
-	"semestre": 5,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Álgebra lineal",
-	"clave": "MA1019",
-	"semestre": 5,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Hidrología",
-	"clave": "CV2013",
-	"semestre": 6,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Costos de construcción",
-	"clave": "CV2027",
-	"semestre": 6,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Ingeniería de carreteras",
-	"clave": "CV3004",
-	"semestre": 6,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Ingeniería de las cimentaciones",
-	"clave": "CV3005",
-	"semestre": 6,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Laboratorio de hidráulica",
-	"clave": "CV3006",
-	"semestre": 6,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Análisis estructural computacional",
-	"clave": "CV3016",
-	"semestre": 6,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Diseño de estructuras de concreto",
-	"clave": "CV3017",
-	"semestre": 6,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Administración de obras",
-	"clave": "CV2016",
-	"semestre": 7,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Laboratorio de infraestructura vial",
-	"clave": "CV2028",
-	"semestre": 7,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Laboratorio de uso sustentable del agua",
-	"clave": "CV2029",
-	"semestre": 7,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Uso sustentable del agua I",
-	"clave": "CV2030",
-	"semestre": 7,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Diseño de estructuras de acero",
-	"clave": "CV3018",
-	"semestre": 7,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Redes de conducción de agua y drenaje",
-	"clave": "CV3019",
-	"semestre": 7,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Ciudadanía",
-	"clave": "HS2005",
-	"semestre": 7,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Proyectos inmobiliarios",
-	"clave": "AR3019",
-	"semestre": 8,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Uso sustentable del agua II",
-	"clave": "CV2031",
-	"semestre": 8,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Infraestructura del transporte",
-	"clave": "CV3020",
-	"semestre": 8,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Proyecto integrador de diseño estructural",
-	"clave": "CV3021",
-	"semestre": 8,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Tópicos I",
-	"clave": "VA2010",
-	"semestre": 8,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Tópicos II",
-	"clave": "VA2011",
-	"semestre": 8,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Obras hidráulicas",
-	"clave": "CV3007",
-	"semestre": 9,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Gestión empresarial de la industria de la construcción",
-	"clave": "CV3022",
-	"semestre": 9,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Ingeniería de la construcción",
-	"clave": "CV3023",
-	"semestre": 9,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Introducción a la vida profesional",
-	"clave": "CV3024",
-	"semestre": 9,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Ética aplicada",
-	"clave": "HS2006",
-	"semestre": 9,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Tópicos III",
-	"clave": "VA2012",
-	"semestre": 9,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	},
-	{
-	"nombre": "Tópicos IV",
-	"clave": "VA2013",
-	"semestre": 9,
-	"requisitoAcreditado": [],
-	"requisitoCursado": []
-	}
+{
+"nombre": "Administración e innovación en modelos de negocios",
+"clave": "AD1005",
+"semestre": 1,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Información financiera para la toma de decisiones",
+"clave": "CF1008",
+"semestre": 1,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Introducción a la carrera de LCPF",
+"clave": "CF1014",
+"semestre": 1,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Marco legal de los negocios",
+"clave": "D1021",
+"semestre": 1,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Lengua extranjera",
+"clave": "H1016",
+"semestre": 1,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Matemáticas I",
+"clave": "MA1016",
+"semestre": 1,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Tecnologías de información para los negocios",
+"clave": "TI1012",
+"semestre": 1,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Administración de costos y precios",
+"clave": "CF1009",
+"semestre": 2,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Derecho empresarial y propiedad intelectual",
+"clave": "D1022",
+"semestre": 2,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Economía de la empresa",
+"clave": "EC1008",
+"semestre": 2,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Análisis y expresión verbal",
+"clave": "H1040",
+"semestre": 2,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Matemáticas II",
+"clave": "MA1018",
+"semestre": 2,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Empresa, cultura y negocios en el mundo",
+"clave": "NI1001",
+"semestre": 2,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Métodos estadísticos para la toma de decisiones",
+"clave": "CD1003",
+"semestre": 3,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Contabilidad administrativa",
+"clave": "CF1011",
+"semestre": 3,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Entorno macroeconómico",
+"clave": "EC1009",
+"semestre": 3,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Matemáticas financieras",
+"clave": "FZ1005",
+"semestre": 3,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Mercadotecnia y creatividad",
+"clave": "MT1003",
+"semestre": 3,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Comportamiento organizacional y desarrollo del talento humano",
+"clave": "RH1000",
+"semestre": 3,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Pronósticos para la toma de decisiones",
+"clave": "CD2006",
+"semestre": 4,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Análisis de la información financiera",
+"clave": "CF2015",
+"semestre": 4,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Finanzas personales y empresariales",
+"clave": "FZ1006",
+"semestre": 4,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Ética, persona y sociedad",
+"clave": "H1018",
+"semestre": 4,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Expresión verbal en el ámbito profesional",
+"clave": "H2001",
+"semestre": 4,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Técnicas de negociación y comercialización internacional",
+"clave": "NI1002",
+"semestre": 4,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Modelos cuantitativos y de optimización",
+"clave": "CD2007",
+"semestre": 5,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Fundamentos de contabilidad fiscal",
+"clave": "CF1012",
+"semestre": 5,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Contabilidad intermedia: ciclo operativo y de inversión",
+"clave": "CF2006",
+"semestre": 5,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Costeo de actividades de producción y servicios",
+"clave": "CF2016",
+"semestre": 5,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Mercado de dinero y capitales",
+"clave": "FZ2006",
+"semestre": 5,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Humanidades y bellas artes",
+"clave": "HS2000",
+"semestre": 5,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Administración estratégica de proyectos y procesos",
+"clave": "AD2013",
+"semestre": 6,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Contabilidad intermedia: ciclo de financiamiento y actualización de la información",
+"clave": "CF2007",
+"semestre": 6,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Sistemas de información estratégica",
+"clave": "CF2018",
+"semestre": 6,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Impuestos corporativos",
+"clave": "CF3018",
+"semestre": 6,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Emprendimiento",
+"clave": "EM1005",
+"semestre": 6,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Evaluación de proyectos y fuentes de financiamiento",
+"clave": "FZ2016",
+"semestre": 6,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Auditoría de estados financieros",
+"clave": "CF2017",
+"semestre": 7,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Contabilidad corporativa",
+"clave": "CF3019",
+"semestre": 7,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Impuestos personales",
+"clave": "CF3020",
+"semestre": 7,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Estructura financiera y gobierno corporativo",
+"clave": "FZ2015",
+"semestre": 7,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Valuación de instrumentos derivados",
+"clave": "FZ3027",
+"semestre": 7,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Ciudadanía",
+"clave": "HS2005",
+"semestre": 7,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Control y desarrollo de negocios",
+"clave": "CF2019",
+"semestre": 8,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Reportes financieros internacionales",
+"clave": "CF3021",
+"semestre": 8,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Aseguramiento y evaluación de riesgos",
+"clave": "CF3022",
+"semestre": 8,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Administración financiera internacional",
+"clave": "FZ3009",
+"semestre": 8,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Tópicos I",
+"clave": "VA2010",
+"semestre": 8,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "II",
+"clave": "Tópicos",
+"semestre": 8,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Planeación, innovación y sustentabilidad estratégica",
+"clave": "AD3024",
+"semestre": 9,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Impuestos internacionales",
+"clave": "CF3006",
+"semestre": 9,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Contabilidad estratégica",
+"clave": "CF3008",
+"semestre": 9,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Introducción a la vida profesional",
+"clave": "CF3025",
+"semestre": 9,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Ética aplicada",
+"clave": "HS2006",
+"semestre": 9,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "Tópicos III",
+"clave": "VA2012",
+"semestre": 9,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
+{
+"nombre": "IV",
+"clave": "Tópicos",
+"semestre": 9,
+"requisitoAcreditado": [],
+"requisitoCursado": []
+},
 ]

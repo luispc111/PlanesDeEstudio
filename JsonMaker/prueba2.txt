@@ -1,87 +1,82 @@
 Primer Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-CV1004	Introducción a la ingeniería civil	3	0	4	1.5	3.5
-CV2001	Geología	3	0	8	3	3.5
-F1002	Física I	3	1	8	3	4.7
+AD1005	Administración e innovación en modelos de negocios	3	0	8	3	3.5
+CF1008	Información financiera para la toma de decisiones	3	0	8	3	3.5
+CF1014	Introducción a la carrera de LCPF	3	0	4	1.5	3.5
+D1021	Marco legal de los negocios	3	0	8	3	3.5
 H1016	Lengua extranjera	5	0	8	3	3.5
-MA1015	Matemáticas I	3	0	8	3	3.5
-Q1001	Química	3	0	8	3	3.5
-TC1017	Solución de problemas con programación	3	0	8	3	3.5
-23	1	52	19.5	25.7
+MA1016	Matemáticas I	3	0	8	3	3.5
+TI1012	Tecnologías de información para los negocios	3	0	8	3	3.5
+23	0	52	19.5	24.5
 Segundo Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-AR1017	Dibujo computarizado	3	0	8	3	3.5
-CV2021	Geomática	3	0	8	3	3.5
-DS1003	Ciencias naturales y desarrollo sustentable	3	0	8	3	3.5
-F1003	Física II	3	1	8	3	4.7
+CF1009	Administración de costos y precios	3	0	8	3	3.5
+D1022	Derecho empresarial y propiedad intelectual	3	0	8	3	3.5
+EC1008	Economía de la empresa	3	0	8	3	3.5
 H1040	Análisis y expresión verbal	5	0	8	3	5.8
-MA1017	Matemáticas II	3	0	8	3	3.5
-Q1004	Laboratorio de química	0	3	4	1.5	2.6
-20	4	52	19.5	27.1
+MA1018	Matemáticas II	3	0	8	3	3.5
+NI1001	Empresa, cultura y negocios en el mundo	3	0	8	3	3.5
+20	0	48	18	23.3
 Tercer Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-CV2022	Laboratorio de geomática	0	3	4	1.5	2.6
-CV2023	Materiales y procedimientos de construcción I	3	0	8	3	3.5
-CV2024	Mecánica de estructuras I	3	0	8	3	3.5
-F1005	Electricidad y magnetismo	3	1	8	3	4.7
-H1018	Ética, persona y sociedad	3	0	8	3	3.5
-MA2009	Matemáticas III	3	0	8	3	3.5
-MA2010	Ecuaciones diferenciales	3	0	8	3	3.5
-18	4	52	19.5	24.8
+CD1003	Métodos estadísticos para la toma de decisiones	3	0	8	3	3.5
+CF1011	Contabilidad administrativa	3	0	8	3	3.5
+EC1009	Entorno macroeconómico	3	0	8	3	3.5
+FZ1005	Matemáticas financieras	3	0	8	3	3.5
+MT1003	Mercadotecnia y creatividad	3	0	8	3	3.5
+RH1000	Comportamiento organizacional y desarrollo del talento humano	3	0	8	3	3.5
+18	0	48	18	21
 Cuarto Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-AR2021	Materiales y procedimientos de construcción II	3	0	8	3	3.5
-CV2025	Mecánica de estructuras II	3	0	8	3	3.5
+CD2006	Pronósticos para la toma de decisiones	3	0	8	3	3.5
+CF2015	Análisis de la información financiera	3	0	8	3	3.5
+FZ1006	Finanzas personales y empresariales	3	0	8	3	3.5
+H1018	Ética, persona y sociedad	3	0	8	3	3.5
 H2001	Expresión verbal en el ámbito profesional	3	0	8	3	3.5
-HS2000	Humanidades y bellas artes	3	0	8	3	3.5
-M2025	Métodos numéricos en ingeniería	3	0	8	3	3.5
-MA1006	Probabilidad y estadística	3	0	8	3	3.5
+NI1002	Técnicas de negociación y comercialización internacional	3	0	8	3	3.5
 18	0	48	18	21
 Quinto Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-CV2006	Laboratorio de materiales de construcción	0	3	4	1.5	2.6
-CV2007	Laboratorio de mecánica de suelos	0	3	4	1.5	2.6
-CV2010	Mecánica de suelos	3	0	8	3	3.5
-CV2026	Sistemas estructurales	3	0	8	3	3.5
-EM1005	Emprendimiento	3	0	8	3	3.5
-M2021	Mecánica de fluidos	3	0	8	3	3.5
-MA1019	Álgebra lineal	3	0	8	3	3.5
-15	6	48	18	22.7
+CD2007	Modelos cuantitativos y de optimización	3	0	8	3	3.5
+CF1012	Fundamentos de contabilidad fiscal	3	0	8	3	3.5
+CF2006	Contabilidad intermedia: ciclo operativo y de inversión	3	0	8	3	3.5
+CF2016	Costeo de actividades de producción y servicios	3	0	8	3	3.5
+FZ2006	Mercado de dinero y capitales	3	0	8	3	3.5
+HS2000	Humanidades y bellas artes	3	0	8	3	3.5
+18	0	48	18	21
 Sexto Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-CV2013	Hidrología	3	0	8	3	3.5
-CV2027	Costos de construcción	3	0	8	3	3.5
-CV3004	Ingeniería de carreteras	3	0	8	3	3.5
-CV3005	Ingeniería de las cimentaciones	3	0	8	3	3.5
-CV3006	Laboratorio de hidráulica	0	3	4	1.5	2.6
-CV3016	Análisis estructural computacional	3	0	8	3	3.5
-CV3017	Diseño de estructuras de concreto	3	0	8	3	3.5
-18	3	52	19.5	23.6
+AD2013	Administración estratégica de proyectos y procesos	3	0	8	3	3.5
+CF2007	Contabilidad intermedia: ciclo de financiamiento y actualización de la información	3	0	8	3	3.5
+CF2018	Sistemas de información estratégica	3	0	8	3	3.5
+CF3018	Impuestos corporativos	3	0	8	3	3.5
+EM1005	Emprendimiento	3	0	8	3	3.5
+FZ2016	Evaluación de proyectos y fuentes de financiamiento	3	0	8	3	3.5
+18	0	48	18	21
 Séptimo Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-CV2016	Administración de obras	3	0	8	3	3.5
-CV2028	Laboratorio de infraestructura vial	0	3	4	1.5	2.6
-CV2029	Laboratorio de uso sustentable del agua	0	3	4	1.5	2.6
-CV2030	Uso sustentable del agua I	3	0	8	3	3.5
-CV3018	Diseño de estructuras de acero	3	0	8	3	3.5
-CV3019	Redes de conducción de agua y drenaje	3	0	8	3	3.5
+CF2017	Auditoría de estados financieros	3	0	8	3	3.5
+CF3019	Contabilidad corporativa	3	0	8	3	3.5
+CF3020	Impuestos personales	3	0	8	3	3.5
+FZ2015	Estructura financiera y gobierno corporativo	3	0	8	3	3.5
+FZ3027	Valuación de instrumentos derivados	3	0	8	3	3.5
 HS2005	Ciudadanía	3	0	8	3	3.5
-15	6	48	18	22.7
+18	0	48	18	21
 Octavo Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-AR3019	Proyectos inmobiliarios	3	0	8	3	3.5
-CV2031	Uso sustentable del agua II	3	0	8	3	3.5
-CV3020	Infraestructura del transporte	3	0	8	3	3.5
-CV3021	Proyecto integrador de diseño estructural	3	0	8	3	3.5
+CF2019	Control y desarrollo de negocios	3	0	8	3	3.5
+CF3021	Reportes financieros internacionales	3	0	8	3	3.5
+CF3022	Aseguramiento y evaluación de riesgos	3	0	8	3	3.5
+FZ3009	Administración financiera internacional	3	0	8	3	3.5
 VA2010	Tópicos I	3	0	8	3	
 VA2011	Tópicos II	3	0	8	3	
 18	0	48	18	14
 Noveno Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-CV3007	Obras hidráulicas	3	0	8	3	3.5
-CV3022	Gestión empresarial de la industria de la construcción	3	0	8	3	3.5
-CV3023	Ingeniería de la construcción	3	0	8	3	3.5
-CV3024	Introducción a la vida profesional	2	0	2	.8	2.3
+AD3024	Planeación, innovación y sustentabilidad estratégica	3	0	8	3	3.5
+CF3006	Impuestos internacionales	3	0	8	3	3.5
+CF3008	Contabilidad estratégica	3	0	8	3	3.5
+CF3025	Introducción a la vida profesional	2	0	2	.8	2.3
 HS2006	Ética aplicada	3	0	8	3	3.5
 VA2012	Tópicos III	3	0	8	3	
 VA2013	Tópicos IV	3	0	8	3	
