@@ -1,58 +1,61 @@
 Primer Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-AD1011	Introducción a las carreras de negocios	3	0	4	1.5	3.5
-CF1008	Información financiera para la toma de decisiones	3	0	8	3	3.5
-D1021	Marco legal de los negocios	3	0	8	3	3.5
+BT1012	Introducción al área de la bioingeniería y química	3	0	4	1.5	3.5
+F1002	Física I	3	1	8	3	4.7
 H1016	Lengua extranjera	5	0	8	3	3.5
-MA1016	Matemáticas I	3	0	8	3	3.5
+MA1015	Matemáticas I	3	0	8	3	3.5
 OP1008	Optativa de exploración del bloque A - I	3	0	8	3	0
 OP1009	Optativa de exploración del bloque A - II	3	0	8	3	0
-23	0	52	19.5	17.5
+Q1001	Química	3	0	8	3	3.5
+23	1	52	19.5	18.7
 Segundo Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-EC1008	Economía de la empresa	3	0	8	3	3.5
+F1003	Física II	3	1	8	3	4.7
 H1040	Análisis y expresión verbal	5	0	8	3	5.8
-MA1018	Matemáticas II	3	0	8	3	3.5
+MA1017	Matemáticas II	3	0	8	3	3.5
 OP1010	Optativa de exploración del bloque B - I	3	0	8	3	0
 OP1011	Optativa de exploración del bloque B - II	3	0	8	3	0
 OP1012	Optativa de exploración del bloque B - III	3	0	8	3	0
-20	0	48	18	12.8
+20	1	48	18	14
 Tercer Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-EC1009	Entorno macroeconómico	3	0	8	3	3.5
-H1018	Ética, persona y sociedad	3	0	8	3	3.5
+MA2010	Ecuaciones diferenciales	3	0	8	3	3.5
 OP1013	Optativa de exploración del bloque C - I	3	0	8	3	0
 OP1014	Optativa de exploración del bloque C - II	3	0	8	3	0
 OP1015	Optativa de exploración del bloque C - III	3	0	8	3	0
+TC1017	Solución de problemas con programación	3	0	8	3	3.5
 VA1000	Tópico de exploración complementaria	3	0	8	3	
 18	0	48	18	7
 Cuarto Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-CF1011	Contabilidad administrativa	3	0	8	3	3.5
+BT1007	Laboratorio de microbiología	0	3	4	1.5	2.6
+F1005	Electricidad y magnetismo	3	1	8	3	4.7
 H2001	Expresión verbal en el ámbito profesional	3	0	8	3	3.5
-MT2025	Comportamiento del consumidor e investigación de mercados	3	0	8	3	3.5
+M2025	Métodos numéricos en ingeniería	3	0	8	3	3.5
 OP1016	Optativa de exploración del bloque C - IV	3	0	8	3	0
 OP1017	Optativa de exploración del bloque C - V	3	0	8	3	0
 OP1018	Optativa de exploración del bloque C - VI	3	0	8	3	0
-18	0	48	18	10.5
+18	4	52	19.5	14.3
 Quinto Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-AD3018	Modelos y procesos de planeación	3	0	8	3	3.5
-CD2006	Pronósticos para la toma de decisiones	3	0	8	3	3.5
-CH2007	Gestión del capital humano por competencias	3	0	8	3	3.5
-FZ1006	Finanzas personales y empresariales	3	0	8	3	3.5
-FZ2016	Evaluación de proyectos y fuentes de financiamiento	3	0	8	3	3.5
+BT2011	Ingeniería de bioprocesos I	3	0	8	3	3.5
+H1018	Ética, persona y sociedad	3	0	8	3	3.5
 HS2000	Humanidades y bellas artes	3	0	8	3	3.5
-18	0	48	18	21
+IQ2003	Termodinámica del equilibrio	3	0	8	3	3.5
+MA1006	Probabilidad y estadística	3	0	8	3	3.5
+Q1010	Química analítica	3	0	8	3	3.5
+Q2015	Laboratorio de mediciones fisicoquímicas	0	3	4	1.5	2.6
+18	3	52	19.5	23.6
 Sexto Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-CD2007	Modelos cuantitativos y de optimización	3	0	8	3	3.5
-CF2019	Control y desarrollo de negocios	3	0	8	3	3.5
+BT2012	Ingeniería de bioprocesos II	3	0	8	3	3.5
+EC1010	Economía para la creación de negocios	3	0	8	3	3.5
 EM1005	Emprendimiento	3	0	8	3	3.5
 HS2005	Ciudadanía	3	0	8	3	3.5
 HS2006	Ética aplicada	3	0	8	3	3.5
-NI2018	Análisis y administración de la cadena de valor	3	0	8	3	3.5
-18	0	48	18	21
+IN2023	Diseño y análisis de experimentos	3	0	8	3	3.5
+IQ3006	Laboratorio de operaciones térmico-mecánicas	0	3	4	1.5	2.6
+18	3	52	19.5	23.6
 Séptimo Semestre 
 Clave	Nombre	CL	L	A	U	CA	UDC
 OP3051	Optativa profesional I	3	0	0	8	3	0
@@ -61,8 +64,8 @@ OP3053	Optativa profesional III	3	0	0	8	3	0
 OP3054	Optativa profesional IV	3	0	0	8	3	0
 OP3055	Optativa profesional V	3	0	0	8	3	0
 OP3056	Optativa profesional VI	3	0	0	8	3	0
-18	0	48	18	0
-Octavo Semestre
+18	0	0	48	18	0
+Octavo Semestre  (1)
 Clave	Nombre	CL	L	U	CA	UDC
 OP3061	Optativa profesional complementaria I	3	0	8	3	0
 OP3062	Optativa profesional complementaria II	3	0	8	3	0
@@ -73,11 +76,11 @@ OP3066	Optativa profesional complementaria VI	3	0	8	3	0
 18	0	48	18	0
 Noveno Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-AD3025	Introducción a la vida profesional	2	0	2	.8	2.3
+BT3014	Proyecto de diseño en bioingeniería	3	0	8	3	3.5
+BT3025	Introducción a la vida profesional	2	0	2	.8	2.3
 VA3101	Tópicos I	3	0	8	3	
 VA3102	Tópicos II	3	0	8	3	
 VA3103	Tópicos III	3	0	8	3	
 VA3104	Tópicos IV	3	0	8	3	
 VA3105	Tópicos V	3	0	8	3	
-VA3106	Tópicos VI	3	0	8	3	
-20	0	50	18.8	2.3
+20	0	50	18.8	5.8

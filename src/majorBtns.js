@@ -130,6 +130,10 @@ const majors = [
     {
         name: "LAE 16",
         id: "lae_16"
+    },
+    {
+        name: "IBT 17",
+        id: "ibt_17"
     }
 ]
 
