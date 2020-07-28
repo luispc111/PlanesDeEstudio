@@ -150,6 +150,10 @@ const majors = [
     {
         name: "LCPF 11",
         id: "lcpf_11"
+    },
+    {
+        name: "LMI 11",
+        id: "lmi_11"
     }
 ]
 

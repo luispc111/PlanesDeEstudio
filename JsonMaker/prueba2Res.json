@@ -1,394 +1,415 @@
 [
-{
-"nombre": "Administración e innovación en modelos de negocios",
-"clave": "AD1005",
-"semestre": 1,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Información financiera para la toma de decisiones",
-"clave": "CF1008",
-"semestre": 1,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Introducción a la carrera de LCPF",
-"clave": "CF1014",
-"semestre": 1,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Marco legal de los negocios",
-"clave": "D1021",
-"semestre": 1,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Lengua extranjera",
-"clave": "H1016",
-"semestre": 1,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Matemáticas I",
-"clave": "MA1016",
-"semestre": 1,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Tecnologías de información para los negocios",
-"clave": "TI1012",
-"semestre": 1,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Administración de costos y precios",
-"clave": "CF1009",
-"semestre": 2,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Derecho empresarial y propiedad intelectual",
-"clave": "D1022",
-"semestre": 2,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Economía de la empresa",
-"clave": "EC1008",
-"semestre": 2,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Análisis y expresión verbal",
-"clave": "H1040",
-"semestre": 2,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Matemáticas II",
-"clave": "MA1018",
-"semestre": 2,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Empresa, cultura y negocios en el mundo",
-"clave": "NI1001",
-"semestre": 2,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Métodos estadísticos para la toma de decisiones",
-"clave": "CD1003",
-"semestre": 3,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Contabilidad administrativa",
-"clave": "CF1011",
-"semestre": 3,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Entorno macroeconómico",
-"clave": "EC1009",
-"semestre": 3,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Matemáticas financieras",
-"clave": "FZ1005",
-"semestre": 3,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Mercadotecnia y creatividad",
-"clave": "MT1003",
-"semestre": 3,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Comportamiento organizacional y desarrollo del talento humano",
-"clave": "RH1000",
-"semestre": 3,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Pronósticos para la toma de decisiones",
-"clave": "CD2006",
-"semestre": 4,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Análisis de la información financiera",
-"clave": "CF2015",
-"semestre": 4,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Finanzas personales y empresariales",
-"clave": "FZ1006",
-"semestre": 4,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Ética, persona y sociedad",
-"clave": "H1018",
-"semestre": 4,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Expresión verbal en el ámbito profesional",
-"clave": "H2001",
-"semestre": 4,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Técnicas de negociación y comercialización internacional",
-"clave": "NI1002",
-"semestre": 4,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Modelos cuantitativos y de optimización",
-"clave": "CD2007",
-"semestre": 5,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Fundamentos de contabilidad fiscal",
-"clave": "CF1012",
-"semestre": 5,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Contabilidad intermedia: ciclo operativo y de inversión",
-"clave": "CF2006",
-"semestre": 5,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Costeo de actividades de producción y servicios",
-"clave": "CF2016",
-"semestre": 5,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Mercado de dinero y capitales",
-"clave": "FZ2006",
-"semestre": 5,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Humanidades y bellas artes",
-"clave": "HS2000",
-"semestre": 5,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Administración estratégica de proyectos y procesos",
-"clave": "AD2013",
-"semestre": 6,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Contabilidad intermedia: ciclo de financiamiento y actualización de la información",
-"clave": "CF2007",
-"semestre": 6,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Sistemas de información estratégica",
-"clave": "CF2018",
-"semestre": 6,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Impuestos corporativos",
-"clave": "CF3018",
-"semestre": 6,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Emprendimiento",
-"clave": "EM1005",
-"semestre": 6,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Evaluación de proyectos y fuentes de financiamiento",
-"clave": "FZ2016",
-"semestre": 6,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Auditoría de estados financieros",
-"clave": "CF2017",
-"semestre": 7,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Contabilidad corporativa",
-"clave": "CF3019",
-"semestre": 7,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Impuestos personales",
-"clave": "CF3020",
-"semestre": 7,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Estructura financiera y gobierno corporativo",
-"clave": "FZ2015",
-"semestre": 7,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Valuación de instrumentos derivados",
-"clave": "FZ3027",
-"semestre": 7,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Ciudadanía",
-"clave": "HS2005",
-"semestre": 7,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Control y desarrollo de negocios",
-"clave": "CF2019",
-"semestre": 8,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Reportes financieros internacionales",
-"clave": "CF3021",
-"semestre": 8,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Aseguramiento y evaluación de riesgos",
-"clave": "CF3022",
-"semestre": 8,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Administración financiera internacional",
-"clave": "FZ3009",
-"semestre": 8,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Tópicos I",
-"clave": "VA2010",
-"semestre": 8,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "II",
-"clave": "Tópicos",
-"semestre": 8,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Planeación, innovación y sustentabilidad estratégica",
-"clave": "AD3024",
-"semestre": 9,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Impuestos internacionales",
-"clave": "CF3006",
-"semestre": 9,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Contabilidad estratégica",
-"clave": "CF3008",
-"semestre": 9,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Introducción a la vida profesional",
-"clave": "CF3025",
-"semestre": 9,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Ética aplicada",
-"clave": "HS2006",
-"semestre": 9,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "Tópicos III",
-"clave": "VA2012",
-"semestre": 9,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
-{
-"nombre": "IV",
-"clave": "Tópicos",
-"semestre": 9,
-"requisitoAcreditado": [],
-"requisitoCursado": []
-},
+	{
+	"nombre": "Administración e innovación en modelos de negocios",
+	"clave": "AD1005",
+	"semestre": 1,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Lengua extranjera",
+	"clave": "H1016",
+	"semestre": 1,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Literatura y poder en América Latina",
+	"clave": "H1045",
+	"semestre": 1,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Matemáticas I",
+	"clave": "MA1016",
+	"semestre": 1,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Introducción a la carrera de LMI",
+	"clave": "MI1003",
+	"semestre": 1,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Fundamentos de la ciencia política",
+	"clave": "P1002",
+	"semestre": 1,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Historia de México independiente",
+	"clave": "RI2028",
+	"semestre": 1,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Laboratorio de diseño digital",
+	"clave": "AV1005",
+	"semestre": 2,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Economía de la empresa",
+	"clave": "EC1008",
+	"semestre": 2,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Análisis y expresión verbal",
+	"clave": "H1040",
+	"semestre": 2,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Antropología social",
+	"clave": "H2033",
+	"semestre": 2,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Estadística para la investigación en ciencias sociales",
+	"clave": "MA1008",
+	"semestre": 2,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Perspectiva internacional",
+	"clave": "RI1004",
+	"semestre": 2,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Historia de México contemporáneo",
+	"clave": "RI2029",
+	"semestre": 2,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Lenguaje y narrativa audiovisual",
+	"clave": "AV1004",
+	"semestre": 3,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Laboratorio de audio",
+	"clave": "AV1006",
+	"semestre": 3,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Psicología",
+	"clave": "CC1014",
+	"semestre": 3,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Métodos cuantitativos para la investigación social",
+	"clave": "CO2003",
+	"semestre": 3,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Comunicación y estudios de medios",
+	"clave": "CO2008",
+	"semestre": 3,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Arte y cultura contemporánea",
+	"clave": "H1031",
+	"semestre": 3,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Sociología",
+	"clave": "P1000",
+	"semestre": 3,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Laboratorio de video",
+	"clave": "AV1007",
+	"semestre": 4,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Métodos cualitativos de investigación",
+	"clave": "CO2004",
+	"semestre": 4,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Derecho constitucional",
+	"clave": "D1012",
+	"semestre": 4,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Ética, persona y sociedad",
+	"clave": "H1018",
+	"semestre": 4,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Expresión verbal en el ámbito profesional",
+	"clave": "H2001",
+	"semestre": 4,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Fundamentos del periodismo",
+	"clave": "MI1002",
+	"semestre": 4,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Historia mundial de los siglos XX y XXI",
+	"clave": "RI2030",
+	"semestre": 4,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Filosofía y pensamiento contemporáneo",
+	"clave": "H1026",
+	"semestre": 5,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Literatura mundial contemporánea",
+	"clave": "H2019",
+	"semestre": 5,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Humanidades y bellas artes",
+	"clave": "HS2000",
+	"semestre": 5,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Producción periodística informativa",
+	"clave": "MI2005",
+	"semestre": 5,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Política, medios y opinión pública",
+	"clave": "P2010",
+	"semestre": 5,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Escenario regional de América Latina y el Caribe",
+	"clave": "RI2012",
+	"semestre": 5,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Comunicación y globalización",
+	"clave": "CO3006",
+	"semestre": 6,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Producción periodística de opinión",
+	"clave": "MI2006",
+	"semestre": 6,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Fotoperiodismo",
+	"clave": "MI3001",
+	"semestre": 6,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Periodismo para radio",
+	"clave": "MI3008",
+	"semestre": 6,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Escenario regional de Norteamérica",
+	"clave": "RI2008",
+	"semestre": 6,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Tópicos I",
+	"clave": "VA2010",
+	"semestre": 6,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Diseño y producción de publicaciones",
+	"clave": "AV3013",
+	"semestre": 7,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Normatividad de la comunicación",
+	"clave": "D1025",
+	"semestre": 7,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Emprendimiento",
+	"clave": "EM1005",
+	"semestre": 7,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Periodismo para televisión",
+	"clave": "MI3009",
+	"semestre": 7,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Escenario regional de Europa",
+	"clave": "RI2013",
+	"semestre": 7,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Tópicos II",
+	"clave": "VA2011",
+	"semestre": 7,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Ciudadanía",
+	"clave": "HS2005",
+	"semestre": 8,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Periodismo digital",
+	"clave": "MI3004",
+	"semestre": 8,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Producción de publicaciones multimedia",
+	"clave": "MI3010",
+	"semestre": 8,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Escenario regional de Asia",
+	"clave": "RI2016",
+	"semestre": 8,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Tópicos III",
+	"clave": "VA2012",
+	"semestre": 8,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Tópicos IV",
+	"clave": "VA2013",
+	"semestre": 8,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Realización documental",
+	"clave": "AV3008",
+	"semestre": 9,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Ética aplicada",
+	"clave": "HS2006",
+	"semestre": 9,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Periodismo convergente",
+	"clave": "MI3011",
+	"semestre": 9,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Periodismo de investigación y desarrollo",
+	"clave": "MI3012",
+	"semestre": 9,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Introducción a la vida profesional",
+	"clave": "MI3013",
+	"semestre": 9,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Tópicos V",
+	"clave": "VA2014",
+	"semestre": 9,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	},
+	{
+	"nombre": "Tópicos VI",
+	"clave": "VA2015",
+	"semestre": 9,
+	"requisitoAcreditado": [],
+	"requisitoCursado": []
+	}
 ]

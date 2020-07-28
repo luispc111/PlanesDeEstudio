@@ -1,83 +1,86 @@
 Primer Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
 AD1005	Administración e innovación en modelos de negocios	3	0	8	3	3.5
-CF1008	Información financiera para la toma de decisiones	3	0	8	3	3.5
-CF1014	Introducción a la carrera de LCPF	3	0	4	1.5	3.5
-D1021	Marco legal de los negocios	3	0	8	3	3.5
 H1016	Lengua extranjera	5	0	8	3	3.5
+H1045	Literatura y poder en América Latina	3	0	8	3	3.5
 MA1016	Matemáticas I	3	0	8	3	3.5
-TI1012	Tecnologías de información para los negocios	3	0	8	3	3.5
+MI1003	Introducción a la carrera de LMI	3	0	4	1.5	3.5
+P1002	Fundamentos de la ciencia política	3	0	8	3	3.5
+RI2028	Historia de México independiente	3	0	8	3	3.5
 23	0	52	19.5	24.5
 Segundo Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-CF1009	Administración de costos y precios	3	0	8	3	3.5
-D1022	Derecho empresarial y propiedad intelectual	3	0	8	3	3.5
+AV1005	Laboratorio de diseño digital	0	3	4	1.5	2.6
 EC1008	Economía de la empresa	3	0	8	3	3.5
 H1040	Análisis y expresión verbal	5	0	8	3	5.8
-MA1018	Matemáticas II	3	0	8	3	3.5
-NI1001	Empresa, cultura y negocios en el mundo	3	0	8	3	3.5
-20	0	48	18	23.3
+H2033	Antropología social	3	0	8	3	3.5
+MA1008	Estadística para la investigación en ciencias sociales	3	0	8	3	3.5
+RI1004	Perspectiva internacional	3	0	8	3	3.5
+RI2029	Historia de México contemporáneo	3	0	8	3	3.5
+20	3	52	19.5	25.9
 Tercer Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-CD1003	Métodos estadísticos para la toma de decisiones	3	0	8	3	3.5
-CF1011	Contabilidad administrativa	3	0	8	3	3.5
-EC1009	Entorno macroeconómico	3	0	8	3	3.5
-FZ1005	Matemáticas financieras	3	0	8	3	3.5
-MT1003	Mercadotecnia y creatividad	3	0	8	3	3.5
-RH1000	Comportamiento organizacional y desarrollo del talento humano	3	0	8	3	3.5
-18	0	48	18	21
+AV1004	Lenguaje y narrativa audiovisual	3	0	8	3	3.5
+AV1006	Laboratorio de audio	0	3	4	1.5	2.6
+CC1014	Psicología	3	0	8	3	3.5
+CO2003	Métodos cuantitativos para la investigación social	3	0	8	3	3.5
+CO2008	Comunicación y estudios de medios	3	0	8	3	3.5
+H1031	Arte y cultura contemporánea	3	0	8	3	3.5
+P1000	Sociología	3	0	8	3	3.5
+18	3	52	19.5	23.6
 Cuarto Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-CD2006	Pronósticos para la toma de decisiones	3	0	8	3	3.5
-CF2015	Análisis de la información financiera	3	0	8	3	3.5
-FZ1006	Finanzas personales y empresariales	3	0	8	3	3.5
+AV1007	Laboratorio de video	0	3	4	1.5	2.6
+CO2004	Métodos cualitativos de investigación	3	0	8	3	3.5
+D1012	Derecho constitucional	3	0	8	3	3.5
 H1018	Ética, persona y sociedad	3	0	8	3	3.5
 H2001	Expresión verbal en el ámbito profesional	3	0	8	3	3.5
-NI1002	Técnicas de negociación y comercialización internacional	3	0	8	3	3.5
-18	0	48	18	21
+MI1002	Fundamentos del periodismo	3	0	8	3	3.5
+RI2030	Historia mundial de los siglos XX y XXI	3	0	8	3	3.5
+18	3	52	19.5	23.6
 Quinto Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-CD2007	Modelos cuantitativos y de optimización	3	0	8	3	3.5
-CF1012	Fundamentos de contabilidad fiscal	3	0	8	3	3.5
-CF2006	Contabilidad intermedia: ciclo operativo y de inversión	3	0	8	3	3.5
-CF2016	Costeo de actividades de producción y servicios	3	0	8	3	3.5
-FZ2006	Mercado de dinero y capitales	3	0	8	3	3.5
+H1026	Filosofía y pensamiento contemporáneo	3	0	8	3	3.5
+H2019	Literatura mundial contemporánea	3	0	8	3	3.5
 HS2000	Humanidades y bellas artes	3	0	8	3	3.5
+MI2005	Producción periodística informativa	3	0	8	3	3.5
+P2010	Política, medios y opinión pública	3	0	8	3	3.5
+RI2012	Escenario regional de América Latina y el Caribe	3	0	8	3	3.5
 18	0	48	18	21
 Sexto Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-AD2013	Administración estratégica de proyectos y procesos	3	0	8	3	3.5
-CF2007	Contabilidad intermedia: ciclo de financiamiento y actualización de la información	3	0	8	3	3.5
-CF2018	Sistemas de información estratégica	3	0	8	3	3.5
-CF3018	Impuestos corporativos	3	0	8	3	3.5
-EM1005	Emprendimiento	3	0	8	3	3.5
-FZ2016	Evaluación de proyectos y fuentes de financiamiento	3	0	8	3	3.5
-18	0	48	18	21
+CO3006	Comunicación y globalización	3	0	8	3	3.5
+MI2006	Producción periodística de opinión	3	0	8	3	3.5
+MI3001	Fotoperiodismo	3	0	8	3	3.5
+MI3008	Periodismo para radio	3	0	8	3	3.5
+RI2008	Escenario regional de Norteamérica	3	0	8	3	3.5
+VA2010	Tópicos I	3	0	8	3	
+18	0	48	18	17.5
 Séptimo Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-CF2017	Auditoría de estados financieros	3	0	8	3	3.5
-CF3019	Contabilidad corporativa	3	0	8	3	3.5
-CF3020	Impuestos personales	3	0	8	3	3.5
-FZ2015	Estructura financiera y gobierno corporativo	3	0	8	3	3.5
-FZ3027	Valuación de instrumentos derivados	3	0	8	3	3.5
-HS2005	Ciudadanía	3	0	8	3	3.5
-18	0	48	18	21
+AV3013	Diseño y producción de publicaciones	3	0	8	3	3.5
+D1025	Normatividad de la comunicación	3	0	8	3	3.5
+EM1005	Emprendimiento	3	0	8	3	3.5
+MI3009	Periodismo para televisión	3	0	8	3	3.5
+RI2013	Escenario regional de Europa	3	0	8	3	3.5
+VA2011	Tópicos II	3	0	8	3	
+18	0	48	18	17.5
 Octavo Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-CF2019	Control y desarrollo de negocios	3	0	8	3	3.5
-CF3021	Reportes financieros internacionales	3	0	8	3	3.5
-CF3022	Aseguramiento y evaluación de riesgos	3	0	8	3	3.5
-FZ3009	Administración financiera internacional	3	0	8	3	3.5
-VA2010	Tópicos I	3	0	8	3	
-VA2011	Tópicos II	3	0	8	3	
+HS2005	Ciudadanía	3	0	8	3	3.5
+MI3004	Periodismo digital	3	0	8	3	3.5
+MI3010	Producción de publicaciones multimedia	3	0	8	3	3.5
+RI2016	Escenario regional de Asia	3	0	8	3	3.5
+VA2012	Tópicos III	3	0	8	3	
+VA2013	Tópicos IV	3	0	8	3	
 18	0	48	18	14
 Noveno Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-AD3024	Planeación, innovación y sustentabilidad estratégica	3	0	8	3	3.5
-CF3006	Impuestos internacionales	3	0	8	3	3.5
-CF3008	Contabilidad estratégica	3	0	8	3	3.5
-CF3025	Introducción a la vida profesional	2	0	2	.8	2.3
+AV3008	Realización documental	3	0	8	3	3.5
 HS2006	Ética aplicada	3	0	8	3	3.5
-VA2012	Tópicos III	3	0	8	3	
-VA2013	Tópicos IV	3	0	8	3	
+MI3011	Periodismo convergente	3	0	8	3	3.5
+MI3012	Periodismo de investigación y desarrollo	3	0	8	3	3.5
+MI3013	Introducción a la vida profesional	2	0	2	.8	2.3
+VA2014	Tópicos V	3	0	8	3	
+VA2015	Tópicos VI	3	0	8	3	
 20	0	50	18.8	16.3
