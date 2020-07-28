@@ -1,31 +1,88 @@
-Primer Trimestre 
-Clave	Nombre	CL	L	U	CA	HT	UDC
-CC3005	Trastornos de personalidad y de ansiedad	3	0	8	3		3.5
-CC3006	Trastornos psicóticos y del estado de ánimo	3	0	8	3		3.5
-CC3007	Clínica I	0	20	4	1.5		1.8
-CC3008	Entrevista clínica	3	0	8	3		3.5
-MC3093	Bioética	2	0	4	1.5	4	2.3
-11	20	32	12	4	14.6
-Segundo Trimestre 
-Clave	Nombre	CL	L	U	CA	HT	UDC
-CC3009	Trastornos somatomorfos: facticios y de simulación	3	0	8	3		3.5
-CC3010	Psicología del paciente en situaciones de crisis	3	0	8	3		3.5
-CC3011	Psicología de la paciente gineco-obstétrica	3	0	8	3		3.5
-CC3012	Clínica II	0	20	4	1.5		1.8
-MC3096	Bioética clínica	2	0	4	1.5	4	2.3
-11	20	32	12	4	14.6
-Tercer Trimestre 
-Clave	Nombre	CL	L	U	CA	HT	UDC
-OP3024	Optativa profesional I	3	0	8	3	8	0
-OP3025	Optativa profesional II	3	0	8	3	8	0
-OP3026	Optativa profesional III	3	0	8	3	8	0
-OP3027	Optativa profesional IV	3	0	8	3	8	0
-12	0	32	12	32	0
-Cuarto Trimestre 
+Primer Semestre 
 Clave	Nombre	CL	L	U	CA	UDC
-CC3003	Introducción a la vida profesional	2	0	2	.8	2.3
-CC3013	Psicología del paciente crónico y terminal	3	0	8	3	3.5
-CC3014	Psicología de las adicciones y trastornos alimenticios	3	0	8	3	3.5
-CC3015	Promoción de la salud mental	3	0	8	3	3.5
-CC3016	Clínica III	0	20	4	1.5	1.8
-11	20	30	11.3	14.6
+CV1004	Introducción a la ingeniería civil	3	0	4	1.5	3.5
+CV2001	Geología	3	0	8	3	3.5
+F1002	Física I	3	1	8	3	4.7
+H1016	Lengua extranjera	5	0	8	3	3.5
+MA1015	Matemáticas I	3	0	8	3	3.5
+Q1001	Química	3	0	8	3	3.5
+TC1017	Solución de problemas con programación	3	0	8	3	3.5
+23	1	52	19.5	25.7
+Segundo Semestre 
+Clave	Nombre	CL	L	U	CA	UDC
+AR1017	Dibujo computarizado	3	0	8	3	3.5
+CV2021	Geomática	3	0	8	3	3.5
+DS1003	Ciencias naturales y desarrollo sustentable	3	0	8	3	3.5
+F1003	Física II	3	1	8	3	4.7
+H1040	Análisis y expresión verbal	5	0	8	3	5.8
+MA1017	Matemáticas II	3	0	8	3	3.5
+Q1004	Laboratorio de química	0	3	4	1.5	2.6
+20	4	52	19.5	27.1
+Tercer Semestre 
+Clave	Nombre	CL	L	U	CA	UDC
+CV2022	Laboratorio de geomática	0	3	4	1.5	2.6
+CV2023	Materiales y procedimientos de construcción I	3	0	8	3	3.5
+CV2024	Mecánica de estructuras I	3	0	8	3	3.5
+F1005	Electricidad y magnetismo	3	1	8	3	4.7
+H1018	Ética, persona y sociedad	3	0	8	3	3.5
+MA2009	Matemáticas III	3	0	8	3	3.5
+MA2010	Ecuaciones diferenciales	3	0	8	3	3.5
+18	4	52	19.5	24.8
+Cuarto Semestre 
+Clave	Nombre	CL	L	U	CA	UDC
+AR2021	Materiales y procedimientos de construcción II	3	0	8	3	3.5
+CV2025	Mecánica de estructuras II	3	0	8	3	3.5
+H2001	Expresión verbal en el ámbito profesional	3	0	8	3	3.5
+HS2000	Humanidades y bellas artes	3	0	8	3	3.5
+M2025	Métodos numéricos en ingeniería	3	0	8	3	3.5
+MA1006	Probabilidad y estadística	3	0	8	3	3.5
+18	0	48	18	21
+Quinto Semestre 
+Clave	Nombre	CL	L	U	CA	UDC
+CV2006	Laboratorio de materiales de construcción	0	3	4	1.5	2.6
+CV2007	Laboratorio de mecánica de suelos	0	3	4	1.5	2.6
+CV2010	Mecánica de suelos	3	0	8	3	3.5
+CV2026	Sistemas estructurales	3	0	8	3	3.5
+EM1005	Emprendimiento	3	0	8	3	3.5
+M2021	Mecánica de fluidos	3	0	8	3	3.5
+MA1019	Álgebra lineal	3	0	8	3	3.5
+15	6	48	18	22.7
+Sexto Semestre 
+Clave	Nombre	CL	L	U	CA	UDC
+CV2013	Hidrología	3	0	8	3	3.5
+CV2027	Costos de construcción	3	0	8	3	3.5
+CV3004	Ingeniería de carreteras	3	0	8	3	3.5
+CV3005	Ingeniería de las cimentaciones	3	0	8	3	3.5
+CV3006	Laboratorio de hidráulica	0	3	4	1.5	2.6
+CV3016	Análisis estructural computacional	3	0	8	3	3.5
+CV3017	Diseño de estructuras de concreto	3	0	8	3	3.5
+18	3	52	19.5	23.6
+Séptimo Semestre 
+Clave	Nombre	CL	L	U	CA	UDC
+CV2016	Administración de obras	3	0	8	3	3.5
+CV2028	Laboratorio de infraestructura vial	0	3	4	1.5	2.6
+CV2029	Laboratorio de uso sustentable del agua	0	3	4	1.5	2.6
+CV2030	Uso sustentable del agua I	3	0	8	3	3.5
+CV3018	Diseño de estructuras de acero	3	0	8	3	3.5
+CV3019	Redes de conducción de agua y drenaje	3	0	8	3	3.5
+HS2005	Ciudadanía	3	0	8	3	3.5
+15	6	48	18	22.7
+Octavo Semestre 
+Clave	Nombre	CL	L	U	CA	UDC
+AR3019	Proyectos inmobiliarios	3	0	8	3	3.5
+CV2031	Uso sustentable del agua II	3	0	8	3	3.5
+CV3020	Infraestructura del transporte	3	0	8	3	3.5
+CV3021	Proyecto integrador de diseño estructural	3	0	8	3	3.5
+VA2010	Tópicos I	3	0	8	3	
+VA2011	Tópicos II	3	0	8	3	
+18	0	48	18	14
+Noveno Semestre 
+Clave	Nombre	CL	L	U	CA	UDC
+CV3007	Obras hidráulicas	3	0	8	3	3.5
+CV3022	Gestión empresarial de la industria de la construcción	3	0	8	3	3.5
+CV3023	Ingeniería de la construcción	3	0	8	3	3.5
+CV3024	Introducción a la vida profesional	2	0	2	.8	2.3
+HS2006	Ética aplicada	3	0	8	3	3.5
+VA2012	Tópicos III	3	0	8	3	
+VA2013	Tópicos IV	3	0	8	3	
+20	0	50	18.8	16.3
