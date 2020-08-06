@@ -1,5 +1,6 @@
 let materias;
 let maxLength = 0;
+let materiasSem = [];
 
 function createTable(studyPlan) {
 
@@ -11,7 +12,7 @@ function createTable(studyPlan) {
             materias = responseJSON;
 
             // creates array where classes will be stored
-            let materiasSem = [];
+            materiasSem = [];
 
             // stores classes in array seprated by semester
             for (let i = 0; i < materias.length; i++) {
@@ -74,3 +75,17 @@ function createTable(studyPlan) {
 
     $.ajax(settings);
 }
+
+// function requisitosON(a){
+//     // materias requisitos se ponen este contorno
+    
+//     var i;
+//     var j;
+//     for (i = 0; i < materiasSem.length; i++) {
+//         for(j = 0; j < materiasSem[i].length; j++){
+//             // if(materiasSem)
+//         }
+//     }
+//     // alert(a.name);
+//     // alert()
+// }

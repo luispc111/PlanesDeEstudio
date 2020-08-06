@@ -56,14 +56,14 @@ function cleanProgressBars() {
 	progressBarRefresh();
 }
 
-// create buttons to change color
-// console.log(nameColors.length);
+/* THIS CREATES THE BUTTONS THAT USER CAN CLICK AND CHANGE THE SELECTED COLOR */
 for (let i = 0; i < nameColors.length; i++) {
 	$(".colorBtns").append(`
 	<button id="btn${nameColors[i]}" class="colorBtn" value="${nameColors[i]}"><kbd class="key">${i+1}</kbd></button>
 	`);
 }
 
+/* THIS IS TRIGGERED WHEN A "COLOR BUTTON" IS CLICKED */
 $(".colorBtn").on("click", (event) => {
 	event.preventDefault();
 
@@ -129,7 +129,6 @@ function materiasBtns() {
 		event.preventDefault();
 
 		if (event.target.parentNode.className == "materia") {
-
 			colorCourse(event.target.parentNode, true);
 		}
 	});
@@ -138,7 +137,11 @@ function materiasBtns() {
 		event.preventDefault();
 
 		if (event.target.className == "semestre") {
+			// NEWWWWWWW
 			let extra = ((event.target.id.length == 3) ? "s10m" : `s${event.target.id[1]}m`);
+			if(event.target.id[2] == '1'){
+				extra = "s11m";
+			}
 
 			event.target.style.backgroundColor = colorsRGB[nameColors[currentColor]];
 			for (let i = 1; i <= maxLength; i++) {
@@ -153,7 +156,11 @@ function materiasBtns() {
 	$(".labelSemestre").on("click", (event) => {
 		event.preventDefault();
 
+		// NEWWWWWWWWWWWW
 		let extra = ((event.target.parentNode.id.length == 3) ? "s10m" : `s${event.target.parentNode.id[1]}m`);
+		if(event.target.parentNode.id[2] == '1'){
+			extra = "s11m";
+		}
 		event.target.parentNode.style.backgroundColor = colorsRGB[nameColors[currentColor]];
 		for (let i = 1; i <= maxLength; i++) {
 	
@@ -206,16 +213,20 @@ function colorCourse (mat, comesFromIndividualCourse) {
 		} else {
 			// edge case para cuando se pica dos veces
 
-				// barWidthOrange -= (materia);
+				// barWidths.Orange -= (materia);
 				// document.getElementById("myBarOrange").style.width = barWidths.Orange + '%';
-				// event.target.style.backgroundColor = orange;
+				// // add barWidths.COLOR += (materia);
+				// event.target.style.backgroundColor = colorsRGB.Orange;
 		}
 
 		if (comesFromIndividualCourse) {
 			let bcheck = true;
 			let extra = ((mat.id.length == 5) ? "s10" : `s${mat.id[1]}`);
+			if(mat.id[2] == '1'){
+				extra = "s11";
+			}
 
-			for(let i = 1; bcheck && i <= 10; i++){
+			for(let i = 1; bcheck && i <= 11; i++){
 				if(document.getElementById(extra + "m" + i) != null && document.getElementById(extra + "m" + i).style.backgroundColor != colorsRGB[nameColors[currentColor]]){
 					bcheck = false;
 				}
@@ -237,3 +248,18 @@ document.addEventListener("keypress", function onEvent(event) {
 		changeColor(document.querySelector("#btn" + nameColors[event.key - 1]).childNodes[0]);
 	}
 });
+
+
+/* CHECAR REQUISITOS PARA ESA MATERIA */
+
+// function requisitosON(a){
+// 	// materias requisitos se ponen este contorno
+// 	// a.style.border = 'white 5px solid';
+// 	alert(materiasSem)
+// }
+
+// function requisitosOFF(a){
+// 	// regresar todo a la normalidad
+// 	// a.style.border = 'black 1px solid';
+// 	console.log('out');
+// }
