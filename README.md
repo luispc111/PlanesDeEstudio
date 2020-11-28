@@ -80,3 +80,7 @@ HTML and CSS is used for the frontend. Some bootstrap elements are also included
 Javascript is used for the modification of tables, changes in the progress bar, and creation of buttons to choose the study model.
 
 JSON is used to have the information of the courses, as well as their semester and the requirements to register it. We use HTTP requests to access the JSON files, so to run locally the app you'll need to set up a server.
+
+html2canvas library was used to generate the dowloadable png file of the modifications users create on their study plans.
+- github repo: https://github.com/niklasvh/html2canvas
+- documentation: https://html2canvas.hertzen.com/

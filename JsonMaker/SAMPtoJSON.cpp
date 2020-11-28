@@ -42,7 +42,7 @@ int main() {
     while (txt >> extra) {
         if (extra == "Semestre") {
             semestre++;
-            for (int i = 0; i < 6; i++) {
+            for (int i = 0; i < 7; i++) {
                 txt >> extra;
             }
 
@@ -62,7 +62,7 @@ int main() {
                     txt >> nomMateria;
                     //cout << "nomMateria2: " << nomMateria << "\nmateria.nombre: " << materia.nombre << "\n\n";
                 }
-                for (int i = 0; i < 3; i++) {
+                for (int i = 0; i < 4; i++) {
                     txt >> extra;
                 }
                 materias.push_back(materia);

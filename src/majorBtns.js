@@ -126,6 +126,42 @@ const majors = [
     {
         name: "LCMD 17",
         id: "lcmd_17"
+    },
+    {
+        name: "LAE 16",
+        id: "lae_16"
+    },
+    {
+        name: "IBT 17",
+        id: "ibt_17"
+    },
+    {
+        name: "IDA 11",
+        id: "ida_11"
+    },
+    {
+        name: "LPS 11",
+        id: "lps_11"
+    },
+    {
+        name: "IC 11",
+        id: "ic_11"
+    },
+    {
+        name: "LCPF 11",
+        id: "lcpf_11"
+    },
+    {
+        name: "LMI 11",
+        id: "lmi_11"
+    },
+    {
+        name: "LMC 11",
+        id: "lmc_11"
+    },
+    {
+        name: "BCT 11",
+        id: "bct_11"
     }
 ]
 
