@@ -16,8 +16,12 @@ button {
     font-size: 25px;
 }
 
-#btnGreen {
+.selected {
     border: 3px solid;
+}
+
+#btnGreen {
+    
     background-color: #439630;
 }
 

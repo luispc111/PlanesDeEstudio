@@ -1,16 +1,17 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 export default function MajorTable(props) {
 
-    const {list} = props;
+    const {list, selectedColor} = props;
 
     return (
-        <div id="divTable">
+        <div id="divTable" className="majorTable">
             {list.map((sem, i) => (
                 <Semester
                     key={i}
                     sem={sem}
                     semNum={i}
+                    selectedColor={selectedColor}
                 />
             ))}
             {/* <table id="my-table", style="width:100%; -webkit-user-select: none; webkit (safari, chrome) browsers> */}
@@ -29,15 +30,19 @@ export default function MajorTable(props) {
 }
 
 function Semester(props) {
-    const {sem, semNum} = props;
+    const {sem, semNum, selectedColor} = props;
+
+    const [color, setColor] = useState('Orange');
     
     return (
         <div className="semester">
-            <h1>Semestre {semNum + 1}</h1>
+            <div className={`semestre ${color}`} onClick={() => setColor(selectedColor)}>Semestre {semNum + 1}</div>
             {sem.map((course, i) => (
                 <Course
                     key={i}
                     course={course}
+                    selectedColor={selectedColor}
+                    parent={color}
                 />
             ))}
         </div>
@@ -45,10 +50,18 @@ function Semester(props) {
 }
 
 function Course(props) {
-    const {course} = props;
+    const {course, selectedColor, parent} = props;
+
+    const [color, setColor] = useState('Orange');
+    const [parentColor, setParentColor] = useState(parent);
+
+    useEffect(() => {
+        setColor(parent);
+    }, [parent]);
+
+    const {nombre, clave, semestre, requisitoAcreditado, requisitoCursado} = course;
+
     return(
-        <div>
-            aaaaaa
-        </div>
+        <div className={`materia labelMateria ${color}`} onClick={() => setColor(selectedColor)}>{nombre}</div>
     )
 }

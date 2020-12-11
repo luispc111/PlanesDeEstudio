@@ -1,3 +1,21 @@
+:root {
+    --green: #439630;
+    --pink: #C14B4C;
+    --blue: #2653AD;
+    --orange: #BF7913;
+    --purple: #633B8D;
+    --red: #B02828;
+    --teal: #008080;
+}
+
+.Green {background-color: var(--green);}
+.Pink {background-color: var(--pink);}
+.Blue {background-color: var(--blue);}
+.Orange {background-color: var(--orange);}
+.Purple {background-color: var(--purple);}
+.Red {background-color: var(--red);}
+.Teal {background-color: var(--teal);}
+
 body {
     background-color: #191C25;
     margin: 20px;
@@ -38,6 +56,10 @@ label {
     color: white;
 }
 
+button {
+    color: white;
+}
+
 #my-table{
     table-layout: fixed;
     width: 100%;
@@ -69,10 +91,24 @@ label {
     margin-left: auto;
     margin-right: auto;
     /* width: 50%; */
-  }
+}
+
+.materia {
+    height: 15%;
+    /* justify-content: center; */
+    /* align-self: center; */
+    /* vertical-align: middle; */
+}
 
 .materia, .semestre {
-    background-color: #BF7913;
+    /* background-color: #BF7913; */
+    width: 100%;
+    margin: 0;
+    border: #222222 1px solid;
+    text-align: center;
+    font-size: 1.5vh;
+    padding: 0 0.9vw;
+    
 }
 
 .button {
@@ -95,16 +131,15 @@ label {
     /*background-color: white;*/
     text-align: center;
     /*border: white; */
-    padding: 5px;
-    margin: 5px;
-    
+    width: 100%;
+    margin: 0;
     /* text-align: center;
     border: ridge white; */
 }
 
 .semester > div {
     /* display: flex; */
-    border-color: #191C25;
+    /* border-color: #191C25; */
     /*background-color: #BF7913;*/
     
     /*flex-direction: column*/
@@ -112,6 +147,25 @@ label {
 
 #searchStudyPlan {
     margin: 10px 0px;
+}
+
+.majorTable {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* flex-flow: column; */
+    height: 50vh;
+}
+
+@media (max-width:1200px){
+    .materia, .semestre {
+        font-size: 1.2vh;
+    }
+
+    .majorTable {
+        height: 60vh;
+    }
+    
 }
 
 $themes: (
