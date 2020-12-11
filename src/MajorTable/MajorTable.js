@@ -34,15 +34,28 @@ function Semester(props) {
     const {sem, semNum, selectedColor, updateColorProgress} = props;
 
     const [color, setColor] = useState('Orange');
+    const [clicked, setClicked] = useState(false);
 
     const changeColor = () => {
         updateColorProgress(color, selectedColor, sem.length);
         setColor(selectedColor)
     }
+
+    const courseChangedColor = () => {
+        setColor('Orange')
+    }
+
+    useEffect(() => {
+        if (clicked) {
+            updateColorProgress(color, selectedColor, sem.length);
+            setColor(selectedColor)
+            setClicked(false)
+        }
+    }, [clicked]);
     
     return (
         <div className="semester">
-            <div className={`semestre ${color}`} onClick={() => changeColor()}> <strong> Semestre {semNum + 1} </strong></div>
+            <div className={`semestre ${color}`} onClick={() => setClicked(true)}> <strong> Semestre {semNum + 1} </strong></div>
             {sem.map((course, i) => (
                 <Course
                     key={i}
@@ -50,6 +63,8 @@ function Semester(props) {
                     selectedColor={selectedColor}
                     parent={color}
                     updateColorProgress={updateColorProgress}
+                    courseChangedColor={courseChangedColor}
+                    parentClicked={clicked}
                 />
             ))}
         </div>
@@ -57,23 +72,36 @@ function Semester(props) {
 }
 
 function Course(props) {
-    const {course, selectedColor, parent, updateColorProgress} = props;
+    const {course, selectedColor, parent, updateColorProgress, courseChangedColor, parentClicked} = props;
 
     const [color, setColor] = useState('Orange');
     const [parentColor, setParentColor] = useState(parent);
+    const [clicked, setClicked] = useState(false);
 
     useEffect(() => {
-        setColor(parent);
-    }, [parent]);
+        // if (clicked) {
+            setColor(parent);
+        // }
+    }, [parentClicked]);
 
     const {nombre, clave, semestre, requisitoAcreditado, requisitoCursado} = course;
 
     const changeColor = () => {
+        if (parent != color) {
+            courseChangedColor()
+        }
         updateColorProgress(color, selectedColor, 1);
         setColor(selectedColor)
     }
 
+    useEffect(() => {
+        if (clicked) {
+            changeColor()
+            setClicked(false)
+        }
+    }, [clicked]);
+
     return(
-        <div className={`materia labelMateria ${color}`} onClick={() => changeColor()}><label>{nombre}</label></div>
+        <div className={`materia labelMateria ${color}`} onClick={() => setClicked(true)}><label>{nombre}</label></div>
     )
 }

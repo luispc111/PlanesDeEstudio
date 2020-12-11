@@ -32,11 +32,20 @@ export default function Major(props) {
         let progress = colorProgress;
 
         colorList.forEach(color => {
-            progress[color] = colorCounter[color] / cantMaterias * 100;
+            progress[color] = (colorCounter[color] / cantMaterias * 100).toFixed(2);
         });
 
         setColorProgress(progress);
     }, [colorCounter])
+
+    useEffect(() => {
+        let colors = {};
+        colorList.forEach((color) => {
+            colors[color] = ((color === 'Orange') ?  cantMaterias : 0);
+        });
+
+        setColorCounter(colors); 
+    }, [cantMaterias])
 
     useEffect(() => {
         Axios.get(`json/${params.major_id}.json`)
@@ -55,20 +64,7 @@ export default function Major(props) {
                 materiasSemExtra[materias[i].semestre - 1].push(materias[i]);
             }
 
-            let colors = {};
-            colorList.forEach((color) => {
-                colors[color] = ((color === 'Orange') ?  materias.length : 0);
-            });
-
-            let progress = colorProgress;
-            colorList.forEach(color => {
-                console.log(colors[color] /  materias.length * 100);
-                progress[color] = colors[color] /  materias.length * 100;
-            });
-
             setMateriasSem(materiasSemExtra);
-            setColorCounter(colors);   
-            setColorProgress(progress);
             setCantMaterias(materias.length);
         })
     }, [0]);
