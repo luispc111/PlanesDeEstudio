@@ -18,13 +18,11 @@ let colorsHex = {
 
 export default function ColorBtns(props) {
 
-    const {changeColor, selectedColor} = props
-
-    const [colors, setColors] = useState(["Orange", "Green", "Blue", "Purple", "Pink", "Red", "Teal"]);
+    const {changeColor, selectedColor, colorList} = props
 
     return (
         <div className="colorBtns">
-            {colors.map((color, i) => (
+            {colorList.map((color, i) => (
                 <ColorBtn 
                     key={i}
                     colorName={color}
@@ -41,6 +39,6 @@ function ColorBtn(props) {
     const {colorName, index, changeColor, selected} = props;
 
     return (
-        <button onClick={(e) => changeColor(colorName)} className={`colorBtn ${colorName} ${(selected) ? 'selected' : ''}`} value={colorName}><kbd class="key">{index}</kbd></button>
+        <button onClick={(e) => changeColor(colorName)} className={`colorBtn ${colorName} ${(selected) ? 'selected' : ''}`} value={colorName}><kbd className="key">{index}</kbd></button>
     )
 }

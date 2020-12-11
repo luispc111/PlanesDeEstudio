@@ -24,27 +24,13 @@ function App() {
     //     </a>
     //   </header>
     // </div>
-    <Router>
-            {/* <div className="App">
-                <div className="container">
-                    <Header/>
-                    <Route exact path="/" render={props => (
-                        <React.Fragment>
-                            <AddTodo addTodo={this.addTodo}/>
-                            <Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo}/>
-                        </React.Fragment>
-                    )} />
-                    <Route path="/about" component={About}/>
-                </div>
-            </div> */}
-            <Route exact path="/" render={props => (
-                <React.Fragment>
-                    <CareersButtons />
-                    <Footer/>
-                </React.Fragment>
-            )} />
+    <div>
+        <Router> 
+            <Route exact path="/" component={CareersButtons}/>
             <Route path="/major" component={Major}/>
-		</Router>
+        </Router>
+        <Footer/>
+    </div>
   );
 }
 

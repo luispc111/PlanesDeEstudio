@@ -1,20 +1,34 @@
 :root {
     --green: #439630;
+    --green-hover: #428233;
     --pink: #C14B4C;
+    --pink-hover: #9e494b;
     --blue: #2653AD;
+    --blue-hover: #2a4987;
     --orange: #BF7913;
+    --orange-hover: #a06b1d;
     --purple: #633B8D;
+    --purple-hover: #563974;
     --red: #B02828;
+    --red-hover: #8f2828;
     --teal: #008080;
+    --teal-hover: #087272;
 }
 
 .Green {background-color: var(--green);}
+.Green:hover {background-color: var(--green-hover);}
 .Pink {background-color: var(--pink);}
+.Pink:hover {background-color: var(--pink-hover);}
 .Blue {background-color: var(--blue);}
+.Blue:hover {background-color: var(--blue-hover);}
 .Orange {background-color: var(--orange);}
+.Orange:hover {background-color: var(--orange-hover);}
 .Purple {background-color: var(--purple);}
+.Purple:hover {background-color: var(--purple-hover);}
 .Red {background-color: var(--red);}
+.Red:hover {background-color: var(--red-hover);}
 .Teal {background-color: var(--teal);}
+.Teal:hover {background-color: var(--teal-hover);}
 
 body {
     background-color: #191C25;
@@ -67,13 +81,10 @@ button {
     /*border-color: #BF7913;*/
 }
 
-
 #myProgress {
    display: flex;
-}
-
-#divTable {
-    margin: 5px 0px;
+   margin: 0.5vh 0px;
+   pointer-events:none;
 }
 
 #tituloTabla {
@@ -93,22 +104,26 @@ button {
     /* width: 50%; */
 }
 
-.materia {
-    height: 15%;
-    /* justify-content: center; */
-    /* align-self: center; */
-    /* vertical-align: middle; */
-}
-
 .materia, .semestre {
     /* background-color: #BF7913; */
     width: 100%;
     margin: 0;
     border: #222222 1px solid;
     text-align: center;
+    font-size: 1.4vh;
+    padding: 0.5vh 0.9vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.materia {
+    height: 15%;
+}
+
+.semestre {
+    padding: 1vh 0px;
     font-size: 1.5vh;
-    padding: 0 0.9vw;
-    
 }
 
 .button {
@@ -154,38 +169,44 @@ button {
     flex-direction: row;
     justify-content: space-evenly;
     /* flex-flow: column; */
-    height: 50vh;
-}
-
-@media (max-width:1200px){
-    .materia, .semestre {
-        font-size: 1.2vh;
-    }
-
-    .majorTable {
-        height: 60vh;
-    }
+    height: 60vh;
+    /* height: fit-content; */
+    margin-top: 1vh;
+    margin-bottom: 10vh;
     
 }
 
-$themes: (
+@media (max-width:1461px){
+    .materia {
+        font-size: 1.3vh;
+    }
+}
+
+@media (max-width:1220px){
+    .materia {
+        font-size: 1.2vh;
+    }
+}
+
+
+/* $themes: (
   default-theme: (
     white: #fff,
-    gray-5: #fbfbfb, /*Background*/
-    gray-10: #e0e0e0, /*Border*/ 
+    gray-5: #fbfbfb, Background
+    gray-10: #e0e0e0, Border 
     gray-20: #dee0e1,
-    gray-30: #b1b6b8, /*Disabled*/
-    gray-50: #858d90, /*Secondary*/ 
+    gray-30: #b1b6b8, Disabled
+    gray-50: #858d90, Secondary 
     gray-60: #76888c,
     gray-70: #344146,
-    gray-80: #253338, /*Text*/ 
+    gray-80: #253338, Text 
     black: #000,
     blue-links: #059ADB,
     
-    clover-green: #43b02a, /*Primary*/ 
-    clover-blue: #059adb, /*Secondary / Links*/ 
-    clover-red: #ff5555, /*Error*/ 
-    clover-yellow: #edce3a  /*Warning*/  
+    clover-green: #43b02a, Primary 
+    clover-blue: #059adb, Secondary / Links 
+    clover-red: #ff5555, Error 
+    clover-yellow: #edce3a  Warning  
   ),
   
   high-contrast-theme: (
@@ -197,7 +218,7 @@ $themes: (
     gray-50: #617587,
     gray-60: #617587,
     gray-70: #344146,
-    gray-80: #253338, /*Text*/ 
+    gray-80: #253338, Text 
     black: #000,
     blue-links: #0374A5,
     
@@ -206,4 +227,4 @@ $themes: (
     clover-red: #E60000,
     clover-yellow: #edce3a
   )  
-);
+); */
