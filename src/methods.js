@@ -210,12 +210,17 @@ function colorCourse (mat, comesFromIndividualCourse) {
 			document.querySelector("#myBar" + nameColors[pos]).style.width = barWidths[nameColors[pos]] + '%';
 
 			mat.style.backgroundColor = colorsRGB[nameColors[currentColor]];
-		} else {
-			// edge case para cuando se pica dos veces
+		} 
+		else {
+			// edge case para cuando se pica con el mismo color seleccionado
 
-				// barWidths.Orange -= (materia);
-				// document.getElementById("myBarOrange").style.width = barWidths.Orange + '%';
+				// barWidths.Orange += (materia);
+				// // document.getElementById("myBarOrange").style.width = barWidths.Orange + '%';
 				// // add barWidths.COLOR += (materia);
+				// console.log(event.target.style.backgroundColor);
+				// if(event.target.style.backgroundColor === colorsRGB.Green){
+				// 	barWidths.Green -= (materia);
+				// }
 				// event.target.style.backgroundColor = colorsRGB.Orange;
 		}
 

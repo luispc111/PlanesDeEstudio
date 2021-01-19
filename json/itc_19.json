@@ -1,0 +1,289 @@
+[
+    {
+        "nombre": "Optativa de matemáticas y ciencias",
+        "clave": "",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Modelación de la ingeniería y ciencias",
+        "clave": "",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Modelación computacional del movimiento",
+        "clave": "",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Modelación computacional aplicando leyes de conservación",
+        "clave": "",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Modelación matemática fundamental",
+        "clave": "",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Análisis de la estructura y propiedades de la materia",
+        "clave": "",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Pensamiento computacional y programación",
+        "clave": "",
+        "semestre": 1,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Análisis de biología computacional",
+        "clave": "",
+        "semestre": 2,
+        "requisitoAcreditado": [""],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Optativa de humanidades y bellas artes",
+        "clave": "",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Experimentación física y pensamiento estadístico",
+        "clave": "",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Modelación computacional de sistemas eléctricos",
+        "clave": "",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Modelación computacional de sistemas electromagnéticos",
+        "clave": "",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Modelación matemática intermedia",
+        "clave": "",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Análisis estadístico",
+        "clave": "",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Modelación de la ingeniería con matemática computacional",
+        "clave": "",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Programación orientada a objetos",
+        "clave": "",
+        "semestre": 2,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Optativa de ciencias sociales y del comportamiento",
+        "clave": "",
+        "semestre": 3,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Análisis de ecuaciones diferenciales",
+        "clave": "",
+        "semestre": 3,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Implementación de internet de las cosas",
+        "clave": "",
+        "semestre": 3,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Programación de estructuras de datos y algoritmos fundamentales",
+        "clave": "",
+        "semestre": 3,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Modelación de sistemas mínimos y arquitecturas computacionales",
+        "clave": "",
+        "semestre": 3,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Análisis de requerimientos de software",
+        "clave": "",
+        "semestre": 3,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Tópico de exploración",
+        "clave": "",
+        "semestre": 3,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Optativa de liderazgo, emprendimiento e innovación",
+        "clave": "",
+        "semestre": 4,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Construcción de software y toma de decisiones",
+        "clave": "",
+        "semestre": 4,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Interconexión de dispositivos",
+        "clave": "",
+        "semestre": 4,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Implementación de métodos computacionales",
+        "clave": "",
+        "semestre": 4,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Optativa de ética y ciudadanía",
+        "clave": "",
+        "semestre": 5,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Integración de seguridad informática en redes y sistemas de software",
+        "clave": "",
+        "semestre": 5,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Modelación de sistemas multiagentes con gráficas computacionales",
+        "clave": "",
+        "semestre": 5,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Análisis y diseño de algoritmos avanzados",
+        "clave": "",
+        "semestre": 5,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Desarrollo de software",
+        "clave": "",
+        "semestre": 6,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Optativa Profesional I",
+        "clave": "",
+        "semestre": 7,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Optativa Profesional II",
+        "clave": "",
+        "semestre": 7,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Optativa Profesional III",
+        "clave": "",
+        "semestre": 7,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Optativa Profesional IV",
+        "clave": "",
+        "semestre": 7,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Optativa Profesional V",
+        "clave": "",
+        "semestre": 7,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Optativa Profesional VI",
+        "clave": "",
+        "semestre": 7,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Optativa profesional multidisciplinaria",
+        "clave": "",
+        "semestre": 8,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Desarrollo de aplicaciones avanzadas de ciencias computacionales",
+        "clave": "",
+        "semestre": 8,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    },
+    {
+        "nombre": "Implementación de redes de área amplia y servicios distribuidos",
+        "clave": "",
+        "semestre": 8,
+        "requisitoAcreditado": [],
+        "requisitoCursado": []
+    }
+]

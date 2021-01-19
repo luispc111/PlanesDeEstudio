@@ -162,6 +162,10 @@ const majors = [
     {
         name: "BCT 11",
         id: "bct_11"
+    },
+    {
+        name: "ITC 19",
+        id: "itc_19"
     }
 ]
 
