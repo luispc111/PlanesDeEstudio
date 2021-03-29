@@ -1,16 +1,16 @@
 // import React, { useState, useEffect, useCallback } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Footer from './components/shared/Footer';
 
 function App() {
   return (
     <div className="App">
-      <Switch>
+      <Router>
         <Route
           path="/"
         />
-      </Switch>
+      </Router>
       <Footer />
     </div>
   );
