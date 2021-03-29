@@ -1,16 +1,18 @@
 // import React, { useState, useEffect, useCallback } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Footer from './components/shared/Footer';
+import PlanesDeEstudio from './components/PlanesDeEstudio/PlanesDeEstudio';
 
 function App() {
   return (
     <div className="App">
-      <Switch>
+      <Router>
         <Route
           path="/"
+          component={PlanesDeEstudio}
         />
-      </Switch>
+      </Router>
       <Footer />
     </div>
   );
