@@ -1,7 +1,24 @@
-import React from 'react'
+import React, { useState, useEffect, useCallback } from 'react';
 import BotonCarrera from './BotonCarrera';
 
 export default function PlanesDeEstudio() {
+    const [planesDeEstudio, setPlanesDeEstudio] = useState([]);
+
+    useEffect(() => {
+        let planes = [
+            {
+                nombre: 'ITC 11',
+                clave: 'itc_11',
+            },
+            {
+                nombre: 'LAD 11',
+                clave: 'lad_11',
+            }
+        ];
+
+        setPlanesDeEstudio(planes);
+    }, []);
+
     return (
         <div>
             <h1 className="titulo">Planes de estudio</h1>
@@ -23,12 +40,27 @@ export default function PlanesDeEstudio() {
                         />
 					</div>
 				</form>
-				<div id="majorBtns">
-                    <BotonCarrera
-                        boton={{nombre: 'a', id: 'a'}}
-                    />
-				</div>
+				<BotonesCarreras
+                    listaCarreras={planesDeEstudio}
+                />
 			</div>
+        </div>
+    )
+}
+
+function BotonesCarreras(props) {
+    const { listaCarreras } = props;
+
+    return (
+        <div id="majorBtns">
+            {
+                listaCarreras.map((carrera, indice) => (
+                    <BotonCarrera
+                        key={indice}
+                        carrera={carrera}
+                    />
+                ))
+            }
         </div>
     )
 }
