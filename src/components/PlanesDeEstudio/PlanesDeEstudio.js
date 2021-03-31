@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Button } from 'react-bootstrap';
 
-import BotonCarrera from './BotonCarrera';
-
-
 export default function PlanesDeEstudio() {
   const [planesDeEstudio, setPlanesDeEstudio] = useState([]);
 
