@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Button } from 'react-bootstrap';
 
-export default function PlanesDeEstudio() {
+const PlanesDeEstudio = () => {
   const [planesDeEstudio, setPlanesDeEstudio] = useState([]);
 
   useEffect(() => {
@@ -67,3 +67,5 @@ export default function PlanesDeEstudio() {
     </div>
   )
 }
+
+export default PlanesDeEstudio;
