@@ -8,7 +8,7 @@ export default function BotonCarrera(props) {
         <div>
             <button
                 type="button"
-                className="btn btn-primary btn-lg selectStudyPlan"
+                className="bg-blue-400 hover:bg-blue-500 text-white py-2 px-4 rounded text-sm md:text-base selectStudyPlan"
                 value={clave}
             >
                 {nombre}

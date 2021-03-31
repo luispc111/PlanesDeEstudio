@@ -6,14 +6,24 @@ export default function PlanesDeEstudio() {
 
     useEffect(() => {
         let planes = [
-            {
-                nombre: 'ITC 11',
-                clave: 'itc_11',
-            },
-            {
-                nombre: 'LAD 11',
-                clave: 'lad_11',
-            }
+            {nombre: 'ITC 11', clave: 'itc_11',},
+            {nombre: 'LAD 11', clave: 'lad_11',},
+            {nombre: 'LAD 11', clave: 'lad_11',},
+            {nombre: 'LAD 11', clave: 'lad_11',},
+            {nombre: 'LAD 11', clave: 'lad_11',},
+            {nombre: 'LAD 11', clave: 'lad_11',},
+            {nombre: 'LAD 11', clave: 'lad_11',},
+            {nombre: 'LAD 11', clave: 'lad_11',},
+            {nombre: 'LAD 11', clave: 'lad_11',},
+            {nombre: 'LAD 11', clave: 'lad_11',},
+            {nombre: 'LAD 11', clave: 'lad_11',},
+            {nombre: 'LAD 11', clave: 'lad_11',},
+            {nombre: 'LAD 11', clave: 'lad_11',},
+            {nombre: 'LAD 11', clave: 'lad_11',},
+            {nombre: 'LAD 11', clave: 'lad_11',},
+            {nombre: 'LAD 11', clave: 'lad_11',},
+            {nombre: 'LAD 11', clave: 'lad_11',},
+            {nombre: 'LAD 11', clave: 'lad_11',},
         ];
 
         setPlanesDeEstudio(planes);
@@ -27,13 +37,13 @@ export default function PlanesDeEstudio() {
 					<div className="input-group">
 				        <h2
                             htmlFor="studyPlanSelected"
-                            color="white;"
+                            className="block text-sm font-bold mb-2 text-white"
                         >
                             Selecciona tu plan de estudios:
                         </h2>
 					  	<input
                           type="text"
-                          className="form-control"
+                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline form-control"
                           id="searchStudyPlan"
                           placeholder="Search"
                           autoComplete="off"
@@ -52,7 +62,7 @@ function BotonesCarreras(props) {
     const { listaCarreras } = props;
 
     return (
-        <div id="majorBtns">
+        <div className="grid grid-cols-12 auto-rows-min gap-y-5" id="majorBtns">
             {
                 listaCarreras.map((carrera, indice) => (
                     <BotonCarrera
