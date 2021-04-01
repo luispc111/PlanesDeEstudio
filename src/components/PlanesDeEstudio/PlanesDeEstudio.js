@@ -31,41 +31,34 @@ const PlanesDeEstudio = () => {
 
   return (
     <Container fluid>
-      <Row>
+      <Row className="mb-3" width ="100%">
         <Col>
           <h1 className="titulo">Planes de estudio</h1>
         </Col>
       </Row>
-      <Row>
-        <Container fluid>
-              <h2
-                htmlFor="studyPlanSelected"
-                className="block text-sm font-bold mb-2 text-white"
-              >
-                  Selecciona tu plan de estudios:
-              </h2>
-              <InputGroup>
-                <FormControl
-                  placeholder="Ingresa tu carrera"
-                  aria-label="Clave del plan de estudio"
-                />
-              </InputGroup>
-        </Container>
+      <Row className="mb-3" width ="100%">
+        <h2 className="mb-4">
+          Selecciona tu plan de estudios:
+        </h2>
+        <InputGroup>
+          <FormControl
+            placeholder="Ingresa tu carrera"
+            aria-label="Clave del plan de estudio"
+          />
+        </InputGroup>
       </Row>
-      <Row>
-        <Col>
-          {
-            planesDeEstudio.map(({clave, nombre}, indice) => (
-              <Button 
-                key={indice}
-                variant="primary"
-                value={clave}
-              >
-                {nombre}    
-              </Button>
-            ))
-          }
-        </Col>
+      <Row className="mb-3" width ="100%">
+        {planesDeEstudio.sort((a, b) => (a.nombre).localeCompare(b.nombre)).map(({clave, nombre}, indice) => (
+          <Button
+            className="m-2 boton-carrera"
+            key={indice}
+            variant="primary"
+            value={clave}
+            href={`/plan/${clave}`}
+          >
+            {nombre}    
+          </Button>
+        ))}
       </Row>
     </Container>
   )
