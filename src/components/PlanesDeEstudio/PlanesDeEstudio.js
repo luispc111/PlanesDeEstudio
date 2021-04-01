@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Col, Container, Row, FormControl, InputGroup } from 'react-bootstrap';
 
 const PlanesDeEstudio = () => {
   const [planesDeEstudio, setPlanesDeEstudio] = useState([]);
@@ -30,27 +30,30 @@ const PlanesDeEstudio = () => {
   }, []);
 
   return (
-    <div>
-      <h1 className="titulo">Planes de estudio</h1>
-      <div className="form-group">
-        <form onSubmit={() => false}>
-          <div className="input-group">
-            <h2
-              htmlFor="studyPlanSelected"
-              className="block text-sm font-bold mb-2 text-white"
-            >
-                Selecciona tu plan de estudios:
-            </h2>
-            <input
-              type="text"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline form-control"
-              id="searchStudyPlan"
-              placeholder="Search"
-              autoComplete="off"
-            />
-          </div>
-        </form>
-        <div>
+    <Container fluid>
+      <Row>
+        <Col>
+          <h1 className="titulo">Planes de estudio</h1>
+        </Col>
+      </Row>
+      <Row>
+        <Container fluid>
+              <h2
+                htmlFor="studyPlanSelected"
+                className="block text-sm font-bold mb-2 text-white"
+              >
+                  Selecciona tu plan de estudios:
+              </h2>
+              <InputGroup>
+                <FormControl
+                  placeholder="Ingresa tu carrera"
+                  aria-label="Clave del plan de estudio"
+                />
+              </InputGroup>
+        </Container>
+      </Row>
+      <Row>
+        <Col>
           {
             planesDeEstudio.map(({clave, nombre}, indice) => (
               <Button 
@@ -62,9 +65,9 @@ const PlanesDeEstudio = () => {
               </Button>
             ))
           }
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
   )
 }
 
