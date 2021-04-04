@@ -7,10 +7,8 @@ import PlanesDeEstudio from "./PlanesDeEstudio";
 it("renderea texto estatico", () => {
   render(<PlanesDeEstudio />);
 
-  const header = screen.getByText("Planes de estudio");
-  const input_header = screen.getByText("Planes de estudio");
+  const input_header = screen.getByText("Selecciona tu plan de estudios:");
 
-  expect(header).toBeInTheDocument();
   expect(input_header).toBeInTheDocument();
 });
 

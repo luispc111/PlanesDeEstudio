@@ -35,11 +35,6 @@ const PlanesDeEstudio = () => {
   return (
     <Container fluid>
       <Row className="mb-3" width ="100%">
-        <Col>
-          <h1 className="titulo">Planes de estudio</h1>
-        </Col>
-      </Row>
-      <Row className="mb-3" width ="100%">
         <h2 className="mb-4">
           Selecciona tu plan de estudios:
         </h2>
