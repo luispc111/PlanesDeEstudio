@@ -7,6 +7,7 @@ const PlanesDeEstudio = () => {
   const [filtroCarreras, setFiltroCarreras] = useState('');
 
   useEffect(() => {
+    // TODO: Cambiar a un request al back cuando esté funcionando
     let planes = [
       {nombre: 'ITC 11', clave: 'itc_11',},
       {nombre: 'LAD 11', clave: 'lad_11',},
