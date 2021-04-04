@@ -3,7 +3,6 @@ import { Button, Col, Container, Row, FormControl, InputGroup } from 'react-boot
 
 const PlanesDeEstudio = () => {
   const [planesDeEstudio, setPlanesDeEstudio] = useState([]);
-  // const [listaFiltrada, setListaFiltrada] = useState([]);
 
   const [filtroCarreras, setFiltroCarreras] = useState('');
 
@@ -30,13 +29,7 @@ const PlanesDeEstudio = () => {
     ];
 
     setPlanesDeEstudio(planes);
-    // setListaFiltrada(planes);
   }, []);
-
-  // useEffect(() => {
-  //   // setFiltroCarreras(planesDeEstudio.filter(carrera => carrera.nombre.includes(filtroCarreras)))
-  //   // console.log(planesDeEstudio.map(val => val.nombre))
-  // }, [filtroCarreras]);
 
   return (
     <Container fluid>
