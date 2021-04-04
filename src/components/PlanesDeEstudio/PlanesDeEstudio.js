@@ -3,17 +3,20 @@ import { Button, Col, Container, Row, FormControl, InputGroup } from 'react-boot
 
 const PlanesDeEstudio = () => {
   const [planesDeEstudio, setPlanesDeEstudio] = useState([]);
+  // const [listaFiltrada, setListaFiltrada] = useState([]);
+
+  const [filtroCarreras, setFiltroCarreras] = useState('');
 
   useEffect(() => {
     let planes = [
       {nombre: 'ITC 11', clave: 'itc_11',},
       {nombre: 'LAD 11', clave: 'lad_11',},
+      {nombre: 'LAD 17', clave: 'lad_17',},
       {nombre: 'LAD 11', clave: 'lad_11',},
       {nombre: 'LAD 11', clave: 'lad_11',},
       {nombre: 'LAD 11', clave: 'lad_11',},
       {nombre: 'LAD 11', clave: 'lad_11',},
-      {nombre: 'LAD 11', clave: 'lad_11',},
-      {nombre: 'LAD 11', clave: 'lad_11',},
+      {nombre: 'LAF 11', clave: 'laf_11',},
       {nombre: 'LAD 11', clave: 'lad_11',},
       {nombre: 'LAD 11', clave: 'lad_11',},
       {nombre: 'LAD 11', clave: 'lad_11',},
@@ -27,7 +30,13 @@ const PlanesDeEstudio = () => {
     ];
 
     setPlanesDeEstudio(planes);
+    // setListaFiltrada(planes);
   }, []);
+
+  // useEffect(() => {
+  //   // setFiltroCarreras(planesDeEstudio.filter(carrera => carrera.nombre.includes(filtroCarreras)))
+  //   // console.log(planesDeEstudio.map(val => val.nombre))
+  // }, [filtroCarreras]);
 
   return (
     <Container fluid>
@@ -44,11 +53,12 @@ const PlanesDeEstudio = () => {
           <FormControl
             placeholder="Ingresa tu carrera"
             aria-label="Clave del plan de estudio"
+            onChange={(event) => {setFiltroCarreras(event.target.value.toUpperCase())}}
           />
         </InputGroup>
       </Row>
       <Row className="mb-3" width ="100%">
-        {planesDeEstudio.sort((a, b) => (a.nombre).localeCompare(b.nombre)).map(({clave, nombre}, indice) => (
+        {planesDeEstudio.filter(carrera => carrera.nombre.includes(filtroCarreras)).sort((a, b) => (a.nombre).localeCompare(b.nombre)).map(({clave, nombre}, indice) => (
           <Button
             className="m-2 boton-carrera"
             key={indice}
