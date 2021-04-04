@@ -10,17 +10,17 @@ export default function Footer() {
                         <Col>
                             <p>
                                 Creada por:
-                                <a href="https://github.com/Adrian-Garcia" target="_blank"> Adrián García</a>,
-                                <a href="https://github.com/alegayndra" target="_blank"> Alejandra García</a>,
-                                <a href="https://github.com/EstradaDiego99" target="_blank"> Diego Estrada</a>,
+                                <a rel="noreferrer" href="https://github.com/Adrian-Garcia" target="_blank"> Adrián García</a>,
+                                <a rel="noreferrer" href="https://github.com/alegayndra" target="_blank"> Alejandra García</a>,
+                                <a rel="noreferrer" href="https://github.com/EstradaDiego99" target="_blank"> Diego Estrada</a>,
                                 &
-                                <a href="https://github.com/luispc111" target="_blank"> Luis Alberto Pérez </a>
+                                <a rel="noreferrer" href="https://github.com/luispc111" target="_blank"> Luis Alberto Pérez </a>
                             </p>
                         </Col>
                     </Row>
                     <Row className="p-2">
                         <Col>
-                            <a href="https://github.com/luispc111/PlanesDeEstudio" target="_blank">
+                            <a rel="noreferrer" href="https://github.com/luispc111/PlanesDeEstudio" target="_blank">
                                 <Image src="./GitHub-Mark-Light-32px.png" alt="Github link"/>
                             </a>
                         </Col>
