@@ -14,15 +14,37 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  padding: 20px 10px;
+  height: auto;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
+
+.header-left {
+  float: left;
+
+  .element {
+    color: white;
+    font-family: 'helvetica';
+    font-size: 2.5rem;
+    text-decoration: none;
+  }
+}
+
+.header-right {
+  display: flex;
+  float: right;
+
+  .element {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    font-family: 'helvetica';
+    text-decoration: none;
+  }  
+}
+
 
 .App-link {
   color: #61dafb;
