@@ -1,4 +1,5 @@
 @import './App.scss';
+@import './variables';
 
 body {
   background-color: #191C25;
@@ -179,33 +180,36 @@ width: 50px;
   font-size: 25px;
 }
 
-#btnGreen {
+.selected-button {
   border: 3px solid;
-  background-color: #439630;
 }
 
-#btnPink {
-  background-color: #C14B4C;
+.bg-orange {
+  background-color: $bg-orange;
 }
 
-#btnBlue {
-  background-color: #2653AD;
+.bg-green {
+  background-color: $bg-green;
 }
 
-#btnOrange {
-  background-color: #BF7913;
+.bg-pink {
+  background-color: $bg-pink;
 }
 
-#btnPurple {
-  background-color: #633B8D;
+.bg-blue {
+  background-color: $bg-blue;
 }
 
-#btnRed {
-  background-color: #B02828;
+.bg-purple {
+  background-color: $bg-purple;
 }
 
-#btnTeal {
-  background-color: #008080;
+.bg-red {
+  background-color: $bg-red;
+}
+
+.bg-teal {
+  background-color: $bg-teal;
 }
 
 .progressBar {
@@ -219,30 +223,14 @@ width: 50px;
   color: white;
 }
 
-#myBarGreen {
-  background-color: #439630;
+@media (max-width:1461px){
+  .materia {
+      font-size: 1.3vh;
+  }
 }
 
-#myBarBlue {
-  background-color: #2653AD;
-}
-
-#myBarOrange {
-  background-color: #BF7913;
-}
-
-#myBarPurple {
-  background-color: #633B8D;
-}
-
-#myBarPink {
-  background-color: #C14B4C;
-}
-
-#myBarRed {
-  background-color: #B02828;
-}
-
-#myBarTeal {
-  background-color: #008080;
+@media (max-width:1220px){
+  .materia {
+      font-size: 1.2vh;
+  }
 }
