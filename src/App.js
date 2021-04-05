@@ -12,7 +12,7 @@ function App() {
           path="/"
         />
         <Route
-          path="/carrera/:clave"
+          path="/plan/:clave"
           component={PlanDeEstudio}
         />
       </Router>
