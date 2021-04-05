@@ -1,6 +1,6 @@
 # Planes de Estudio ITESM
 
-Página web dónde puedes ver los diferentes planes de estudio del Tec de Monterrey. Te muestra las materias de cada plan de estudios en una tabla y te deja utilizar diferentes colores para marcarlas, ayudandote a planear tus siguientes semestres y ver tu progreso en la carrera. Puedes probarla [en este link](https://luispc111.github.io/PlanesDeEstudio/)
+Página web dónde puedes ver los diferentes planes de estudio del Tec de Monterrey. Te muestra las materias de cada plan de estudios en una tabla y te deja utilizar diferentes colores para marcarlas, ayudandote a planear tus siguientes semestres y ver tu progreso en la carrera. Puedes probarla [en este link](https://luispc111.github.io/PlanesDeEstudio/).
 
 La página usa la libreria de `html2canvas` para generar una imagen de la tabla del usuario.
 - [Repositorio de Github](https://github.com/niklasvh/html2canvas)
