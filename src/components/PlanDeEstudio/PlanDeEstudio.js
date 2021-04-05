@@ -4,6 +4,14 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 // import Materia from './Materias/Materia';
 
+const BotonDeColor = ({ color, cambiarColorSeleccionado }) => {
+  return (
+    <div className={`bg-${color}`} onClick={() => cambiarColorSeleccionado(color)}>
+      aaaaaaaaaaaaaaaaaaa
+    </div>
+  )
+}
+
 const Materia = ({ nombre, tec21, colorSeleccionado, colorSemestre }) => {
 
   const [colorDeFondo, setColorDeFondo] = useState('orange');
@@ -48,6 +56,8 @@ export default function PlanDeEstudio() {
   const { clave } = useParams();
 
   const [planDeEstudios, setPlanDeEstudios] = useState({materias: []});
+
+  const [colores, setColores] = useState(["orange", "green", "blue", "purple", "pink", "red", "teal"]);
 
   const [colorSeleccionado, setColorSeleccionado] = useState('green')
 
@@ -96,6 +106,15 @@ export default function PlanDeEstudio() {
         <h2 className="titulo-tabla">
           Plan de estudios {planDeEstudios.nombre}
         </h2>
+      </Row>
+      <Row>
+        {colores.map((color, indice) => (
+          <BotonDeColor
+            key={indice}
+            color={color}
+            cambiarColorSeleccionado={setColorSeleccionado}
+          />
+        ))}
       </Row>
       <Row className="table">
         {planDeEstudios.materias.map((semestre, indice) => (
