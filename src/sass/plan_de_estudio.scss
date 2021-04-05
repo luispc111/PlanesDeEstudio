@@ -1,0 +1,110 @@
+.table {
+  margin: 5px 0px;
+}
+
+.titulo-tabla {
+  display: flex;
+  /* float: none; */
+  /* float: right; */
+  float: right;
+  /* justify-content: center; */
+  /* align-self: center  */
+  /* align-self: center; */
+}
+
+.semester {
+  /* display: flex; */
+  /* width: 100/9%; */
+  color: white;
+  /* padding: 10px; */
+  /* margin: 5px; */
+  /*background-color: white;*/
+  text-align: center;
+  /*border: white; */
+  // padding: 1rem;
+  // margin: 5px;
+  
+  /* text-align: center;
+  border: ridge white; */
+}
+
+.selected-button {
+  border: 3px solid;
+}
+
+.bg-orange {
+  background-color: $bg-orange;
+  &:hover{
+    background-color: $bg-orange-hover;
+  }
+}
+
+.bg-green {
+  background-color: $bg-green;
+  &:hover{
+    background-color: $bg-green-hover;
+  }
+}
+
+.bg-pink {
+  background-color: $bg-pink;
+  &:hover{
+    background-color: $bg-pink-hover;
+  }
+}
+
+.bg-blue {
+  background-color: $bg-blue;
+  &:hover{
+    background-color: $bg-blue-hover;
+  }
+}
+
+.bg-purple {
+  background-color: $bg-purple;
+  &:hover{
+    background-color: $bg-purple-hover;
+  }
+}
+
+.bg-red {
+  background-color: $bg-red;
+  &:hover{
+    background-color: $bg-red-hover;
+  }
+}
+
+.bg-teal {
+  background-color: $bg-teal;
+  &:hover{
+    background-color: $bg-teal-hover;
+  }
+}
+
+.progressBar {
+  width: 0%;
+  height: 30px;
+  /*background-color: #4CAF50;*/
+  background-color: #439630;
+  text-align: center;  
+  /*To center it horizontally (if you want) */
+  line-height: 30px; /* To center it vertically */
+  color: white;
+}
+
+.materia {
+  border: solid 1px #191C25;
+  width: 100%;
+}
+
+@media (max-width:1461px){
+  .materia {
+      font-size: 1.3vh;
+  }
+}
+
+@media (max-width:1220px){
+  .materia {
+      font-size: 1.2vh;
+  }
+}

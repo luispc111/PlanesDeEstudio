@@ -1,31 +1,80 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
-import Materia from './Materias/Materia';
+// import Materia from './Materias/Materia';
+
+const Materia = ({ nombre, tec21, colorSeleccionado, colorSemestre }) => {
+
+  const [colorDeFondo, setColorDeFondo] = useState('orange');
+
+  useEffect(() => {
+    setColorDeFondo(colorSemestre)
+  }, [colorSemestre])
+
+  return (
+    <div className={`materia labelMateria bg-${colorDeFondo}`} onClick={() => setColorDeFondo(colorSeleccionado)}>
+      <label>{nombre}</label>
+      {tec21 && (
+        <div>
+          aaaaaaaaa
+        </div>
+      )}
+    </div>
+  )
+}
+
+const Semestre = ({ materias, numSemestre, tec21, colorSeleccionado }) => {
+  const [colorDeFondo, setColorDeFondo] = useState('orange');
+
+  return (
+    <Col className="semestre">
+      <div className={`materia labelMateria bg-${colorDeFondo}`} onClick={() => setColorDeFondo(colorSeleccionado)}><label>Semestre {numSemestre}</label></div>
+      {materias.map((materia, indice) => (
+        <Materia
+          key={indice}
+          nombre={materia.nombre}
+          tec21={tec21}
+          colorSeleccionado={colorSeleccionado}
+          colorSemestre={colorDeFondo}
+        />
+      ))}
+    </Col>
+  )
+}
 
 export default function PlanDeEstudio() {
 
   const { clave } = useParams();
 
-  const [planDeEstudios, setPlanDeEstudios] = useState({});
+  const [planDeEstudios, setPlanDeEstudios] = useState({materias: []});
+
+  const [colorSeleccionado, setColorSeleccionado] = useState('green')
 
   useEffect(() => {
     // TODO: request a la base de datos
 
-    let materia = {
-      nombre: 'Fundamentos de programación'
-    }
-
-    let semestre = [];
-
-    for (let i = 0; i < 6; i++) {
-      semestre.push(materia);
-    }
+    let materias = [
+      {
+        nombre: 'Fundamentos de programación',
+      },
+      {
+        nombre: 'Programación Orientada a Objetos',
+      },
+      {
+        nombre: 'Estructura de Datos',
+      }
+    ]
 
     let carrera = [];
 
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 9; i++) {
+      let semestre = [];
+
+      for (let i = 0; i < 7; i++) {
+        semestre.push(materias[Math.floor(Math.random() * 3)]);
+      }
+
       carrera.push(semestre);
     }
 
@@ -44,14 +93,20 @@ export default function PlanDeEstudio() {
   return (
     <Container style={{color: "white"}} fluid>
       <Row>
-        <h2>
+        <h2 className="titulo-tabla">
           Plan de estudios {planDeEstudios.nombre}
         </h2>
       </Row>
-      <Row>
-        <Materia 
-          nombre="Nombre Materia"
-        />
+      <Row className="table">
+        {planDeEstudios.materias.map((semestre, indice) => (
+          <Semestre
+            key={indice}
+            materias={semestre}
+            numSemestre={indice + 1}
+            tec21={planDeEstudios.tec21}
+            colorSeleccionado={colorSeleccionado}
+          />
+        ))}
       </Row>
     </Container>
   )

@@ -1,5 +1,6 @@
 @import './App.scss';
 @import './variables';
+@import './plan_de_estudio.scss';
 
 body {
   background-color: #191C25;
@@ -53,23 +54,8 @@ label {
   /*border-color: #BF7913;*/
 }
 
-
 #myProgress {
  display: flex;
-}
-
-#divTable {
-  margin: 5px 0px;
-}
-
-#tituloTabla {
-  display: flex;
-  /* float: none; */
-  /* float: right; */
-  float: right;
-  /* justify-content: center; */
-  /* align-self: center  */
-  /* align-self: center; */
 }
 
 .centerImage {
@@ -77,10 +63,6 @@ label {
   margin-left: auto;
   margin-right: auto;
   /* width: 50%; */
-}
-
-.materia, .semestre {
-  background-color: #BF7913;
 }
 
 .button {
@@ -92,30 +74,6 @@ label {
   /*display: inline-block;*/
   /* font-size: 16px; */
   /* font-size: 75%; */
-}
-
-.semester {
-  /* display: flex; */
-  /* width: 100/9%; */
-  color: white;
-  /* padding: 10px; */
-  /* margin: 5px; */
-  /*background-color: white;*/
-  text-align: center;
-  /*border: white; */
-  padding: 5px;
-  margin: 5px;
-  
-  /* text-align: center;
-  border: ridge white; */
-}
-
-.semester > div {
-  /* display: flex; */
-  border-color: #191C25;
-  /*background-color: #BF7913;*/
-  
-  /*flex-direction: column*/
 }
 
 #searchStudyPlan {
@@ -168,9 +126,9 @@ button {
 
 .colorBtn {
   border: 1px solid;
-color: white;;
-height: 50px; 
-width: 50px;
+  color: white;
+  height: 50px; 
+  width: 50px;
 }
 
 .selectStudyPlan {
@@ -178,80 +136,4 @@ width: 50px;
   width: 140px;
   height: 55px;
   font-size: 25px;
-}
-
-.selected-button {
-  border: 3px solid;
-}
-
-.bg-orange {
-  background-color: $bg-orange;
-  &-hover{
-    background-color: $bg-orange-hover;
-  }
-}
-
-.bg-green {
-  background-color: $bg-green;
-  &-hover{
-    background-color: $bg-green-hover;
-  }
-}
-
-.bg-pink {
-  background-color: $bg-pink;
-  &-hover{
-    background-color: $bg-pink-hover;
-  }
-}
-
-.bg-blue {
-  background-color: $bg-blue;
-  &-hover{
-    background-color: $bg-blue-hover;
-  }
-}
-
-.bg-purple {
-  background-color: $bg-purple;
-  &-hover{
-    background-color: $bg-purple-hover;
-  }
-}
-
-.bg-red {
-  background-color: $bg-red;
-  &-hover{
-    background-color: $bg-red-hover;
-  }
-}
-
-.bg-teal {
-  background-color: $bg-teal;
-  &-hover{
-    background-color: $bg-teal-hover;
-  }
-}
-
-.progressBar {
-  width: 0%;
-  height: 30px;
-  /*background-color: #4CAF50;*/
-  background-color: #439630;
-  text-align: center;  
-  /*To center it horizontally (if you want) */
-  line-height: 30px; /* To center it vertically */
-  color: white;
-}
-
-@media (max-width:1461px){
-  .materia {
-      font-size: 1.3vh;
-  }
-}
-
-@media (max-width:1220px){
-  .materia {
-      font-size: 1.2vh;
-  }
 }

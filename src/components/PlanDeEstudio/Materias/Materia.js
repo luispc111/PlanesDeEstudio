@@ -1,10 +1,6 @@
 import React from 'react'
 
-export default function Materia({ nombre }) {
-  return (
-    <div className={`materia labelMateria bg-orange`}><label>{nombre}</label></div>
-  )
-}
+
 
 // function Course(props) {
 //   const {course, selectedColor, parent, updateColorProgress, courseChangedColor, parentClicked} = props;
