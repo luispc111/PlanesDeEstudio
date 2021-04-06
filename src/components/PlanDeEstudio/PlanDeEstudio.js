@@ -11,16 +11,23 @@ const BotonDeColor = ({ color, cambiarColorSeleccionado, colorSeleccionado }) =>
   )
 }
 
-const Materia = ({ nombre, tec21, colorSeleccionado, colorSemestre }) => {
+const Materia = ({ nombre, tec21, colorSeleccionado, colorSemestre, cambiarColorSemestre, semestreClickeado }) => {
 
   const [colorDeFondo, setColorDeFondo] = useState('orange');
 
   useEffect(() => {
-    setColorDeFondo(colorSemestre)
+    if (semestreClickeado) {
+      setColorDeFondo(colorSemestre);
+    }
   }, [colorSemestre])
 
+  const click = () => {
+    setColorDeFondo(colorSeleccionado);
+    cambiarColorSemestre('orange');
+  }
+
   return (
-    <div className={`materia labelMateria bg-${colorDeFondo}`} onClick={() => setColorDeFondo(colorSeleccionado)}>
+    <div className={`materia labelMateria bg-${colorDeFondo}`} onClick={() => click()}>
       <label>{nombre}</label>
       {tec21 && (
         <div>
@@ -33,10 +40,20 @@ const Materia = ({ nombre, tec21, colorSeleccionado, colorSemestre }) => {
 
 const Semestre = ({ materias, numSemestre, tec21, colorSeleccionado }) => {
   const [colorDeFondo, setColorDeFondo] = useState('orange');
+  const [clickeado, setClickeado] = useState(false);
+
+  useEffect(() => {
+    setClickeado(false);
+  }, [clickeado])
+
+  const botonClickeado = () => {
+    setColorDeFondo(colorSeleccionado)
+    setClickeado(true);
+  }
 
   return (
     <Col className="semestre">
-      <div className={`materia labelMateria bg-${colorDeFondo}`} onClick={() => setColorDeFondo(colorSeleccionado)}><label>Semestre {numSemestre}</label></div>
+      <div className={`materia labelMateria bg-${colorDeFondo}`} onClick={() => botonClickeado()}><label>Semestre {numSemestre}</label></div>
       {materias.map((materia, indice) => (
         <Materia
           key={indice}
@@ -44,6 +61,8 @@ const Semestre = ({ materias, numSemestre, tec21, colorSeleccionado }) => {
           tec21={tec21}
           colorSeleccionado={colorSeleccionado}
           colorSemestre={colorDeFondo}
+          cambiarColorSemestre={setColorDeFondo}
+          semestreClickeado={clickeado}
         />
       ))}
     </Col>
