@@ -12,6 +12,13 @@
   /* align-self: center; */
 }
 
+.boton-color {
+  border: 1px solid;
+  color: white;
+  height: 50px; 
+  width: 50px;
+}
+
 .semester {
   /* display: flex; */
   /* width: 100/9%; */
@@ -28,7 +35,7 @@
   border: ridge white; */
 }
 
-.selected-button {
+.boton-seleccionado {
   border: 3px solid;
 }
 

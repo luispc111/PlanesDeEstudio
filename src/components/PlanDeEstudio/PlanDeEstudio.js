@@ -4,10 +4,9 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 // import Materia from './Materias/Materia';
 
-const BotonDeColor = ({ color, cambiarColorSeleccionado }) => {
+const BotonDeColor = ({ color, cambiarColorSeleccionado, colorSeleccionado }) => {
   return (
-    <div className={`bg-${color}`} onClick={() => cambiarColorSeleccionado(color)}>
-      aaaaaaaaaaaaaaaaaaa
+    <div className={`boton-color bg-${color} ${(color === colorSeleccionado) ? 'boton-seleccionado' : ''}`} onClick={() => cambiarColorSeleccionado(color)}>
     </div>
   )
 }
@@ -107,12 +106,13 @@ export default function PlanDeEstudio() {
           Plan de estudios {planDeEstudios.nombre}
         </h2>
       </Row>
-      <Row>
+      <Row className="colorBtns">
         {colores.map((color, indice) => (
           <BotonDeColor
             key={indice}
             color={color}
             cambiarColorSeleccionado={setColorSeleccionado}
+            colorSeleccionado={colorSeleccionado}
           />
         ))}
       </Row>
