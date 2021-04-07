@@ -1,15 +1,12 @@
 import React from "react";
-import { render, screen } from '@testing-library/react';
-// import { act } from "react-dom/test-utils";
+import { render } from '@testing-library/react';
 
 import PlanesDeEstudio from "./PlanesDeEstudio";
 
 it("renderiza texto estático.", () => {
-  render(<PlanesDeEstudio />);
+  const { getByText } = render(<PlanesDeEstudio />);
 
-  const input_header = screen.getByText("Selecciona tu plan de estudios:");
-
-  expect(input_header).toBeInTheDocument();
+  expect(getByText("Selecciona tu plan de estudios:")).toBeInTheDocument();
 });
 
 // TODO: Hacer mocks de los requests al back
