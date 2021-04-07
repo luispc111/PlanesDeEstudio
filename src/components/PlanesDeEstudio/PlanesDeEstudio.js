@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { Button, Col, Container, Row, FormControl, InputGroup } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Button, Container, Row, FormControl, InputGroup } from 'react-bootstrap';
 
 const PlanesDeEstudio = () => {
   const [planesDeEstudio, setPlanesDeEstudio] = useState([]);
