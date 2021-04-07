@@ -10,7 +10,7 @@ import { PUBLIC_URL } from './components/shared/utils';
 function App() {
   return (
     <div className="App">
-      <Header sesionIniciada={false}/>
+      <Header sesionIniciada={true}/>
       <Router>
         <Route
           exact path={PUBLIC_URL + '/'}
