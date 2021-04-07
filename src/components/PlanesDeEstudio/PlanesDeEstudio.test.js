@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react';
 
 import PlanesDeEstudio from "./PlanesDeEstudio";
 
-it("renderea texto estatico", () => {
+it("renderiza texto estático.", () => {
   render(<PlanesDeEstudio />);
 
   const input_header = screen.getByText("Selecciona tu plan de estudios:");
