@@ -6,13 +6,14 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const BotonDeColor = ({ color, cambiarColorSeleccionado, colorSeleccionado }) => {
   return (
-    <div className={`boton-color bg-${color} ${(color === colorSeleccionado) ? 'boton-seleccionado' : ''}`} onClick={() => cambiarColorSeleccionado(color)}>
-    </div>
+    <div
+      className={`boton-color bg-${color} ${(color === colorSeleccionado) ? 'boton-seleccionado' : ''}`}
+      onClick={() => cambiarColorSeleccionado(color)}
+    />
   )
 }
 
 const Materia = ({ nombre, tec21, colorSeleccionado, colorSemestre, cambiarColorSemestre, semestreClickeado }) => {
-
   const [colorDeFondo, setColorDeFondo] = useState('orange');
 
   useEffect(() => {
