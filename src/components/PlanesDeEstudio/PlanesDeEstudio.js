@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Button, Col, Container, Row, FormControl, InputGroup } from 'react-bootstrap';
 
+/** Vista de lista de todos los planes de estudio */
 const PlanesDeEstudio = () => {
   const [planesDeEstudio, setPlanesDeEstudio] = useState([]);
 
