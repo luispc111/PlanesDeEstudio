@@ -7,7 +7,7 @@ import Footer from './components/shared/Footer';
 function App() {
   return (
     <div className="App">
-      <Header sesionIniciada={false}/>
+      <Header sesionIniciada={true}/>
       <Router>
         <Route
           path="/"
