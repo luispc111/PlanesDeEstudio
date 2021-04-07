@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Container, Row, FormControl, InputGroup } from 'react-bootstrap';
 
-const PlanesDeEstudio = () => {
+export default function PlanesDeEstudio() {
   const [planesDeEstudio, setPlanesDeEstudio] = useState([]);
 
   const [filtroCarreras, setFiltroCarreras] = useState('');
@@ -64,5 +64,3 @@ const PlanesDeEstudio = () => {
     </Container>
   )
 }
-
-export default PlanesDeEstudio;
