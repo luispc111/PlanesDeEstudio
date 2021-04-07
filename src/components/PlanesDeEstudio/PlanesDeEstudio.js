@@ -32,6 +32,8 @@ const PlanesDeEstudio = () => {
     setPlanesDeEstudio(planes);
   }, []);
 
+  const planesFiltrados = planesDeEstudio.filter(carrera => carrera.nombre.includes(filtroCarreras)).sort((a, b) => (a.nombre).localeCompare(b.nombre));
+
   return (
     <Container fluid>
       <Row className="mb-3" width ="100%">
@@ -47,7 +49,7 @@ const PlanesDeEstudio = () => {
         </InputGroup>
       </Row>
       <Row className="mb-3" width ="100%">
-        {planesDeEstudio.filter(carrera => carrera.nombre.includes(filtroCarreras)).sort((a, b) => (a.nombre).localeCompare(b.nombre)).map(({clave, nombre}, indice) => (
+        {planesFiltrados.map(({clave, nombre}, indice) => (
           <Button
             className="m-2 boton-carrera"
             key={indice}
