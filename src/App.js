@@ -1,4 +1,5 @@
 // import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Header from './components/shared/Header';
@@ -9,9 +10,11 @@ import PlanesDeEstudio from './components/PlanesDeEstudio/PlanesDeEstudio';
 import { PUBLIC_URL } from './components/utils'; 
 
 function App() {
+  const [loggedUser, setLoggedUser] = useState(undefined);
+  
   return (
     <div className="App">
-      <Header sesionIniciada={true}/>
+      <Header loggedUser={loggedUser} setLoggedUser={setLoggedUser} />
       <Router>
         <Route
           exact path={PUBLIC_URL + '/'}
