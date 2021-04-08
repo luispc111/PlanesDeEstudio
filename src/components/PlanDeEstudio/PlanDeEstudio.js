@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from 'react-bootstrap';
 
-// import Materia from './Materias/Materia';
-
+/** Boton individual de la lista de colores **/
 const BotonDeColor = ({ color, cambiarColorSeleccionado, colorSeleccionado }) => {
   return (
     <div
@@ -12,8 +11,8 @@ const BotonDeColor = ({ color, cambiarColorSeleccionado, colorSeleccionado }) =>
     />
   )
 }
-
-const Materia = ({ nombre, tec21, colorSeleccionado, colorSemestre, cambiarColorSemestre, semestreClickeado }) => {
+/** Bloque de una materia individual **/
+const Materia = ({ nombre, tec21, colorSeleccionado, colorSemestre, cambiarColorSemestre, semestreClickeado, cambiarCantMaterias }) => {
   const [colorDeFondo, setColorDeFondo] = useState('orange');
 
   useEffect(() => {
@@ -23,6 +22,7 @@ const Materia = ({ nombre, tec21, colorSeleccionado, colorSemestre, cambiarColor
   }, [colorSemestre])
 
   const click = () => {
+    cambiarCantMaterias(colorDeFondo, colorSeleccionado);
     setColorDeFondo(colorSeleccionado);
     cambiarColorSemestre('orange');
   }
@@ -39,17 +39,47 @@ const Materia = ({ nombre, tec21, colorSeleccionado, colorSemestre, cambiarColor
   )
 }
 
-const Semestre = ({ materias, numSemestre, tec21, colorSeleccionado }) => {
+/** Lista de materias con bloque que define qué semestre es **/
+const Semestre = ({ materias, numSemestre, tec21, colorSeleccionado, listaColores }) => {
   const [colorDeFondo, setColorDeFondo] = useState('orange');
   const [clickeado, setClickeado] = useState(false);
+  const [cantMateriasPorColor, setCantMateriasPorColor] = useState([]);
+
+  useEffect(() => {
+    let colores = {};
+
+    listaColores.forEach(color => {
+      colores[color] = 0
+    });
+
+    colores['orange'] = materias.length;
+
+    setCantMateriasPorColor(colores);
+  }, []);
 
   useEffect(() => {
     setClickeado(false);
   }, [clickeado])
 
+  useEffect(() => {
+    Object.keys(cantMateriasPorColor).forEach(color => {
+      if (cantMateriasPorColor[color] == materias.length) {
+        setColorDeFondo(color);
+      }
+    });
+  }, [cantMateriasPorColor])
+
   const botonClickeado = () => {
     setColorDeFondo(colorSeleccionado)
     setClickeado(true);
+  }
+
+  const cambiarCantMaterias = (colorPasado, colorNuevo) => {
+    console.log('aaaaaa')
+    let colores = cantMateriasPorColor;
+    cantMateriasPorColor[colorPasado] -= 1;
+    cantMateriasPorColor[colorNuevo] += 1;
+    setCantMateriasPorColor(colores);
   }
 
   return (
@@ -64,19 +94,21 @@ const Semestre = ({ materias, numSemestre, tec21, colorSeleccionado }) => {
           colorSemestre={colorDeFondo}
           cambiarColorSemestre={setColorDeFondo}
           semestreClickeado={clickeado}
+          cambiarCantMaterias={cambiarCantMaterias}
         />
       ))}
     </Col>
   )
 }
 
+/** Vista de la tabla de un plan de estudio individual, junto con una lista de colores y barras de progreso **/
 export default function PlanDeEstudio() {
 
   const { clave } = useParams();
 
   const [planDeEstudios, setPlanDeEstudios] = useState({materias: []});
 
-  const [colores, setColores] = useState(["orange", "green", "blue", "purple", "pink", "red", "teal"]);
+  const colores = ["orange", "green", "blue", "purple", "pink", "red", "teal"];
 
   const [colorSeleccionado, setColorSeleccionado] = useState('green')
 
@@ -144,6 +176,7 @@ export default function PlanDeEstudio() {
             numSemestre={indice + 1}
             tec21={planDeEstudios.tec21}
             colorSeleccionado={colorSeleccionado}
+            listaColores={colores}
           />
         ))}
       </Row>
