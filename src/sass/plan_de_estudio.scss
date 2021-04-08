@@ -1,7 +1,3 @@
-.table {
-  margin: 5px 0px;
-}
-
 .titulo-tabla {
   display: flex;
   /* float: none; */
@@ -102,6 +98,8 @@
 .materia {
   border: solid 1px #191C25;
   width: 100%;
+  height: 7vh;
+  text-align: center;
 }
 
 @media (max-width:1461px){

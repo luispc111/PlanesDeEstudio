@@ -83,7 +83,7 @@ const Semestre = ({ materias, numSemestre, tec21, colorSeleccionado, listaColore
   }
 
   return (
-    <Col className="semestre">
+    <Col className="semestre m-0 p-0">
       <div className={`materia labelMateria bg-${colorDeFondo}`} onClick={() => botonClickeado()}><label>Semestre {numSemestre}</label></div>
       {materias.map((materia, indice) => (
         <Materia
@@ -152,13 +152,13 @@ export default function PlanDeEstudio() {
   document.title = planDeEstudios.nombre
 
   return (
-    <Container style={{color: "white"}} fluid>
+    <Container fluid>
       <Row>
         <h2 className="titulo-tabla">
           Plan de estudios {planDeEstudios.nombre}
         </h2>
       </Row>
-      <Row className="colorBtns">
+      <Row className="colorBtns mt-4">
         {colores.map((color, indice) => (
           <BotonDeColor
             key={indice}
@@ -168,7 +168,7 @@ export default function PlanDeEstudio() {
           />
         ))}
       </Row>
-      <Row className="table">
+      <Row className="mt-4">
         {planDeEstudios.materias.map((semestre, indice) => (
           <Semestre
             key={indice}
