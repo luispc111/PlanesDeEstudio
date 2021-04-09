@@ -1,10 +1,11 @@
 import React from 'react'
 import { Col, Container, Navbar, Row, Image } from 'react-bootstrap';
+import githubIcon from './../../assets/GitHub-Mark-Light-32px.png';
 
 export default function Footer() {
     return (
-        <Navbar fixed="bottom">
-            <Container style={{color: "white"}} id="credits">
+        <Navbar fixed="bottom" className="footer">
+            <Container>
                 <Col>
                     <Row>
                         <Col>
@@ -21,7 +22,7 @@ export default function Footer() {
                     <Row className="p-2">
                         <Col>
                             <a rel="noreferrer" href="https://github.com/luispc111/PlanesDeEstudio" target="_blank">
-                                <Image src="./GitHub-Mark-Light-32px.png" alt="Github link"/>
+                                <Image src={githubIcon} alt="Github link"/>
                             </a>
                         </Col>
                     </Row>
