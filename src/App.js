@@ -2,6 +2,7 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Footer from './components/shared/Footer';
+import PlanesDeEstudio from './components/PlanesDeEstudio/PlanesDeEstudio';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Router>
         <Route
           path="/"
+          component={PlanesDeEstudio}
         />
       </Router>
       <Footer />
