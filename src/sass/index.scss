@@ -1,5 +1,6 @@
 @import './variables';
 @import './plan_de_estudio.scss';
+@import './shared.scss';
 
 * {
   color: white;
@@ -28,4 +29,9 @@ body {
   width: 140px;
   height: 55px;
   font-size: 25px;
+}
+
+.boton-carrera {
+  width: 8.5rem;
+  font-size: 1.5rem;
 }

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Footer from './components/shared/Footer';
 import PlanDeEstudio from './components/PlanDeEstudio/PlanDeEstudio';
+import PlanesDeEstudio from './components/PlanesDeEstudio/PlanesDeEstudio';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Router>
         <Route
           path="/"
+          component={PlanesDeEstudio}
         />
         <Route
           path="/plan/:clave"
