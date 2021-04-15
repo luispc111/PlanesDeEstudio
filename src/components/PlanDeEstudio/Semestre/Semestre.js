@@ -47,7 +47,7 @@ export default function Semestre ({ materias, numSemestre, tec21, colorSeleccion
   }
 
   return (
-    <Col md className="semestre m-0 p-0 mb-4">
+    <Col xs={4} md className="semestre m-0 p-0 mb-4">
       <div className={`materia labelMateria bg-${colorDeFondo}`} onClick={() => botonClickeado()}><label>Semestre {numSemestre}</label></div>
       {materias.map((materia, indice) => (
         <Materia
