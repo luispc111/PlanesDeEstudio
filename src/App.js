@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Router>
         <Route
-          path="/"
+          exact path="/"
           component={PlanesDeEstudio}
         />
         <Route
