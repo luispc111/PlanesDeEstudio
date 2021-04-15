@@ -1,6 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from 'react-bootstrap';
+
+import BarrasDeProgreso from './BarrasDeProgreso/BarrasDeProgreso';
+import Semestre from './Semestre/Semestre';
 
 /** Boton individual de la lista de colores **/
 const BotonDeColor = ({ color, cambiarColorSeleccionado, colorSeleccionado }) => {
@@ -9,95 +12,6 @@ const BotonDeColor = ({ color, cambiarColorSeleccionado, colorSeleccionado }) =>
       className={`boton-color bg-${color} ${(color === colorSeleccionado) ? 'boton-seleccionado' : ''}`}
       onClick={() => cambiarColorSeleccionado(color)}
     />
-  )
-}
-/** Bloque de una materia individual **/
-const Materia = ({ nombre, tec21, colorSeleccionado, colorSemestre, cambiarColorSemestre, semestreClickeado, cambiarCantMaterias }) => {
-  const [colorDeFondo, setColorDeFondo] = useState('orange');
-
-  useEffect(() => {
-    if (semestreClickeado) {
-      setColorDeFondo(colorSemestre);
-    }
-  }, [colorSemestre])
-
-  const click = () => {
-    cambiarCantMaterias(colorDeFondo, colorSeleccionado);
-    setColorDeFondo(colorSeleccionado);
-    cambiarColorSemestre('orange');
-  }
-
-  return (
-    <div className={`materia labelMateria bg-${colorDeFondo}`} onClick={() => click()}>
-      <label>{nombre}</label>
-      {tec21 && (
-        <div>
-          aaaaaaaaa
-        </div>
-      )}
-    </div>
-  )
-}
-
-/** Lista de materias con bloque que define qué semestre es **/
-const Semestre = ({ materias, numSemestre, tec21, colorSeleccionado, listaColores }) => {
-  const [colorDeFondo, setColorDeFondo] = useState('orange');
-  const [clickeado, setClickeado] = useState(false);
-  const [cantMateriasPorColor, setCantMateriasPorColor] = useState([]);
-
-  useEffect(() => {
-    let colores = {};
-
-    listaColores.forEach(color => {
-      colores[color] = 0
-    });
-
-    colores['orange'] = materias.length;
-
-    setCantMateriasPorColor(colores);
-  }, []);
-
-  useEffect(() => {
-    setClickeado(false);
-  }, [clickeado])
-
-  useEffect(() => {
-    Object.keys(cantMateriasPorColor).forEach(color => {
-      if (cantMateriasPorColor[color] == materias.length) {
-        setColorDeFondo(color);
-      }
-    });
-  }, [cantMateriasPorColor])
-
-  const botonClickeado = () => {
-    setColorDeFondo(colorSeleccionado)
-    setClickeado(true);
-  }
-
-  const cambiarCantMaterias = (colorPasado, colorNuevo) => {
-    console.log('aaaaaa')
-    let colores = cantMateriasPorColor;
-    cantMateriasPorColor[colorPasado] -= 1;
-    cantMateriasPorColor[colorNuevo] += 1;
-    setCantMateriasPorColor(colores);
-  }
-
-  return (
-    <Col className="semestre m-0 p-0">
-      <div className={`materia labelMateria bg-${colorDeFondo}`} onClick={() => botonClickeado()}><label>Semestre {numSemestre}</label></div>
-      {materias.map((materia, indice) => (
-        <Materia
-          key={indice}
-          nombre={materia.nombre}
-          tec21={tec21}
-          colorSeleccionado={colorSeleccionado}
-          colorSemestre={colorDeFondo}
-          cambiarColorSemestre={setColorDeFondo}
-          semestreClickeado={clickeado}
-          cambiarCantMaterias={cambiarCantMaterias}
-        />
-      ))}
-    </Col>
   )
 }
 
@@ -154,9 +68,16 @@ export default function PlanDeEstudio() {
   return (
     <Container fluid>
       <Row>
-        <h2 className="titulo-tabla">
-          Plan de estudios {planDeEstudios.nombre}
-        </h2>
+        <Col>
+          <h2 className="titulo-tabla">
+            Plan de estudios {planDeEstudios.nombre}
+          </h2>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <BarrasDeProgreso />
+        </Col>
       </Row>
       <Row className="colorBtns mt-4">
         {colores.map((color, indice) => (
