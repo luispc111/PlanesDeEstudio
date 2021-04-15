@@ -74,11 +74,6 @@ export default function PlanDeEstudio() {
           </h2>
         </Col>
       </Row>
-      <Row>
-        <Col>
-          <BarrasDeProgreso />
-        </Col>
-      </Row>
       <Row className="colorBtns mt-4">
         {colores.map((color, indice) => (
           <BotonDeColor
@@ -88,6 +83,13 @@ export default function PlanDeEstudio() {
             colorSeleccionado={colorSeleccionado}
           />
         ))}
+      </Row>
+      <Row>
+        <Col className="m-0 p-0 mt-4">
+          <BarrasDeProgreso 
+            listaColores={colores}
+          />
+        </Col>
       </Row>
       <Row className="mt-4">
         {planDeEstudios.materias.map((semestre, indice) => (
