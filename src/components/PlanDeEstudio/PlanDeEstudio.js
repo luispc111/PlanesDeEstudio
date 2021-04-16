@@ -18,28 +18,24 @@ const BotonDeColor = ({ color, cambiarColorSeleccionado, colorSeleccionado }) =>
 /** Vista de la tabla de un plan de estudio individual, junto con una lista de colores y barras de progreso **/
 export default function PlanDeEstudio() {
 
-  const { clave } = useParams();
+  // const { clave } = useParams();
 
   const [planDeEstudios, setPlanDeEstudios] = useState({materias: []});
-
-  const colores = ["orange", "green", "blue", "purple", "pink", "red", "teal"];
-
+  const [colores, setColores] = useState(["orange", "green", "blue", "purple", "pink", "red", "teal"])
   const [colorSeleccionado, setColorSeleccionado] = useState('green')
+  const [cantMateriasPorColor, setCantMateriasPorColor] = useState({})
+  const [cantMaterias, setCantMaterias] = useState(0);
 
   useEffect(() => {
     // TODO: request a la base de datos
 
     let materias = [
-      {
-        nombre: 'Fundamentos de programación',
-      },
-      {
-        nombre: 'Programación Orientada a Objetos',
-      },
-      {
-        nombre: 'Estructura de Datos',
-      }
+      {nombre: 'Fundamentos de programación',},
+      {nombre: 'Programación Orientada a Objetos',},
+      {nombre: 'Estructura de Datos',}
     ]
+
+    let cant = 0;
 
     let carrera = [];
 
@@ -48,22 +44,28 @@ export default function PlanDeEstudio() {
 
       for (let i = 0; i < 7; i++) {
         semestre.push(materias[Math.floor(Math.random() * 3)]);
+        cant++;
       }
 
       carrera.push(semestre);
     }
 
-    let plan = {
-      nombre: 'ITC 11',
-      tec21: false,
-      materias: carrera
-    }
+    let plan = { nombre: 'ITC 11', tec21: false, materias: carrera };
 
-    setPlanDeEstudios(plan)
+    let cantMaterias = {}
 
+    colores.forEach(color => {
+      cantMaterias[color] = 0;
+    })
+
+    cantMaterias['orange'] = cant;
+
+    setPlanDeEstudios(plan);
+    setCantMaterias(cant);
+    setCantMateriasPorColor(cantMaterias);
+    document.title = planDeEstudios.nombre
   }, [])
 
-  document.title = planDeEstudios.nombre
 
   return (
     <Container fluid>
@@ -88,6 +90,8 @@ export default function PlanDeEstudio() {
         <Col className="m-0 p-0 mt-4">
           <BarrasDeProgreso 
             listaColores={colores}
+            cantMateriasPorColor={cantMateriasPorColor}
+            totalMaterias={cantMaterias}
           />
         </Col>
       </Row>
@@ -97,7 +101,7 @@ export default function PlanDeEstudio() {
             key={indice}
             materias={semestre}
             numSemestre={indice + 1}
-            tec21={planDeEstudios.tec21}
+            tec21={planDeEstudios?.tec21}
             colorSeleccionado={colorSeleccionado}
             listaColores={colores}
           />
