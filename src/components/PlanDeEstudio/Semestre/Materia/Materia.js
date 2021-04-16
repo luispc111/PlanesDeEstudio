@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 /** Bloque de una materia individual **/
-export default function Materia ({ nombre, tec21, colorSeleccionado, colorSemestre, cambiarColorSemestre, semestreClickeado, cambiarCantMaterias }) {
+export default function Materia ({ nombre, tec21, colorSeleccionado, colorSemestre, cambiarColorSemestre, semestreClickeado, cambiarCantMaterias, actualizarCantMaterias }) {
   const [colorDeFondo, setColorDeFondo] = useState('orange');
 
   useEffect(() => {
@@ -11,7 +11,8 @@ export default function Materia ({ nombre, tec21, colorSeleccionado, colorSemest
   }, [colorSemestre])
 
   const click = () => {
-    cambiarCantMaterias(colorDeFondo, colorSeleccionado);
+    // cambiarCantMaterias(colorDeFondo, colorSeleccionado);
+    actualizarCantMaterias(colorDeFondo, colorSeleccionado)
     setColorDeFondo(colorSeleccionado);
     cambiarColorSemestre('orange');
   }

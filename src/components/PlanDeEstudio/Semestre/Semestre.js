@@ -4,7 +4,7 @@ import { Col } from 'react-bootstrap';
 import Materia from './Materia/Materia';
 
 /** Lista de materias con bloque que define qué semestre es **/
-export default function Semestre ({ materias, numSemestre, tec21, colorSeleccionado, listaColores }) {
+export default function Semestre ({ materias, numSemestre, tec21, colorSeleccionado, listaColores, actualizarCantMaterias }) {
   const [colorDeFondo, setColorDeFondo] = useState('orange');
   const [clickeado, setClickeado] = useState(false);
   const [cantMateriasPorColor, setCantMateriasPorColor] = useState([]);
@@ -59,6 +59,7 @@ export default function Semestre ({ materias, numSemestre, tec21, colorSeleccion
           cambiarColorSemestre={setColorDeFondo}
           semestreClickeado={clickeado}
           cambiarCantMaterias={cambiarCantMaterias}
+          actualizarCantMaterias={actualizarCantMaterias}
         />
       ))}
     </Col>

@@ -58,14 +58,26 @@ export default function PlanDeEstudio() {
       cantMaterias[color] = 0;
     })
 
-    cantMaterias['orange'] = cant;
+    cantMaterias['orange'] = cant - 10;
+    cantMaterias['green'] = 10;
 
     setPlanDeEstudios(plan);
     setCantMaterias(cant);
     setCantMateriasPorColor(cantMaterias);
-    document.title = planDeEstudios.nombre
   }, [])
+  
+  document.title = planDeEstudios.nombre
 
+  const actualizarCantMaterias = (colorViejo, colorNuevo) => {
+    console.log("a");
+    let cantMaterias = cantMateriasPorColor;
+    cantMateriasPorColor[colorViejo] -= 1;
+    cantMateriasPorColor[colorNuevo] += 1;
+    console.log(cantMateriasPorColor);
+    console.log(cantMateriasPorColor[colorViejo]);
+    console.log(cantMateriasPorColor[colorNuevo]);
+    setCantMateriasPorColor(cantMaterias);
+  }
 
   return (
     <Container fluid>
@@ -104,6 +116,7 @@ export default function PlanDeEstudio() {
             tec21={planDeEstudios?.tec21}
             colorSeleccionado={colorSeleccionado}
             listaColores={colores}
+            actualizarCantMaterias={actualizarCantMaterias}
           />
         ))}
       </Row>
