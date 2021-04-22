@@ -46,23 +46,11 @@ export default function PlanDeEstudio() {
   const { clave } = useParams();
 
   const [planDeEstudios, setPlanDeEstudios] = useState({materias: []});
+  // eslint-disable-next-line
   const [colores, setColores] = useState(["orange", "green", "blue", "purple", "pink", "red", "teal"])
   const [colorSeleccionado, setColorSeleccionado] = useState('green')
   const [cantMateriasPorColor, setCantMateriasPorColor] = useState({ orange: 1, green: 0, blue: 0, purple: 0, pink: 0, red: 0, teal: 0 })
   const [cantMaterias, setCantMaterias] = useState(1);
-
-  const actualizarCantMaterias = () => {
-    let plan = JSON.parse(JSON.stringify(planDeEstudios));
-    let colorMaterias = { orange: 0, green: 0, blue: 0, purple: 0, pink: 0, red: 0, teal: 0 };
-
-    plan.materias.forEach((semestre) => {
-      semestre.forEach(materia => {
-        colorMaterias[materia.color] += 1;
-      });
-    });
-
-    setCantMateriasPorColor(colorMaterias);
-  }
 
   const clickMateria = (sem, materia) => {
     let plan = JSON.parse(JSON.stringify(planDeEstudios));
@@ -88,10 +76,19 @@ export default function PlanDeEstudio() {
     setPlanDeEstudios(plan);
     setCantMaterias(cant);
     setCantMateriasPorColor(colorMaterias);
-  }, [])
+  }, [clave])
 
   useEffect(() => {
-    actualizarCantMaterias();
+    let plan = JSON.parse(JSON.stringify(planDeEstudios));
+    let colorMaterias = { orange: 0, green: 0, blue: 0, purple: 0, pink: 0, red: 0, teal: 0 };
+
+    plan.materias.forEach((semestre) => {
+      semestre.forEach(materia => {
+        colorMaterias[materia.color] += 1;
+      });
+    });
+
+    setCantMateriasPorColor(colorMaterias);
   }, [planDeEstudios])
   
   document.title = planDeEstudios.nombre

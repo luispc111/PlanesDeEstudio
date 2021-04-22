@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 /** Bloque de una materia individual **/
 export default function Materia ({ nums, materia, tec21, clickMateria }) {
