@@ -4,16 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import BarrasDeProgreso from './BarrasDeProgreso/BarrasDeProgreso';
 import Semestre from './Semestre/Semestre';
-
-/** Boton individual de la lista de colores **/
-const BotonDeColor = ({ color, cambiarColorSeleccionado, colorSeleccionado }) => {
-  return (
-    <div
-      className={`boton-color bg-${color} ${(color === colorSeleccionado) ? 'boton-seleccionado' : ''}`}
-      onClick={() => cambiarColorSeleccionado(color)}
-    />
-  )
-}
+import BotonesDeColor from './BotonesDeColor/BotonesDeColor';
 
 const crearPlanDeEstudios = (clave) => {
   let materias = [
@@ -100,16 +91,11 @@ export default function PlanDeEstudio() {
           <h2 className="titulo-tabla"> Plan de estudios {planDeEstudios.nombre} </h2>
         </Col>
       </Row>
-      <Row className="colorBtns mt-4">
-        {colores.map((color, indice) => (
-          <BotonDeColor
-            key={indice}
-            color={color}
-            cambiarColorSeleccionado={setColorSeleccionado}
-            colorSeleccionado={colorSeleccionado}
-          />
-        ))}
-      </Row>
+      <BotonesDeColor
+        colores={colores}
+        cambiarColorSeleccionado={setColorSeleccionado}
+        colorSeleccionado={colorSeleccionado}
+      />
       <Row>
         <Col className="m-0 p-0 mt-4">
           <BarrasDeProgreso 
