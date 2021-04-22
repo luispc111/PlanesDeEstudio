@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 /** Bloque de una materia individual **/
-export default function Materia ({ nombre, tec21, colorSeleccionado, colorSemestre, cambiarColorSemestre, semestreClickeado, cambiarCantMaterias, actualizarCantMaterias }) {
+export default function Materia ({ nombre, tec21, colorSeleccionado, colorSemestre, cambiarColorSemestre, semestreClickeado, cosasColores }) {
   const [colorDeFondo, setColorDeFondo] = useState('orange');
+  const {colores, cantMateriasPorColor, setCantMateriasPorColor, cantMaterias} = cosasColores;
 
   useEffect(() => {
     if (semestreClickeado) {
@@ -10,9 +11,15 @@ export default function Materia ({ nombre, tec21, colorSeleccionado, colorSemest
     }
   }, [colorSemestre])
 
+  const actualizarCantMaterias = () => {
+    let cantMaterias = JSON.parse(JSON.stringify(cantMateriasPorColor));
+    cantMaterias[colorDeFondo] -= 1;
+    cantMaterias[colorSeleccionado] += 1;
+    setCantMateriasPorColor(cantMaterias);
+  }
+
   const click = () => {
-    // cambiarCantMaterias(colorDeFondo, colorSeleccionado);
-    actualizarCantMaterias(colorDeFondo, colorSeleccionado)
+    actualizarCantMaterias();
     setColorDeFondo(colorSeleccionado);
     cambiarColorSemestre('orange');
   }
