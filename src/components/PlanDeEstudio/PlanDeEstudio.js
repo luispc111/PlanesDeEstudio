@@ -15,7 +15,7 @@ const BotonDeColor = ({ color, cambiarColorSeleccionado, colorSeleccionado }) =>
   )
 }
 
-const crearPlanDeEstudios = () => {
+const crearPlanDeEstudios = (clave) => {
   let materias = [
     {nombre: 'Fundamentos de programación',},
     {nombre: 'Programación Orientada a Objetos',},
@@ -37,13 +37,13 @@ const crearPlanDeEstudios = () => {
     carrera.push(semestre);
   }
 
-  return { plan: { nombre: 'ITC 11', tec21: false, materias: carrera }, cant }
+  return { plan: { nombre: 'ITC 11', tec21: false, materias: carrera, clave }, cant }
 }
 
 /** Vista de la tabla de un plan de estudio individual, junto con una lista de colores y barras de progreso **/
 export default function PlanDeEstudio() {
 
-  // const { clave } = useParams();
+  const { clave } = useParams();
 
   const [planDeEstudios, setPlanDeEstudios] = useState({materias: []});
   const [colores, setColores] = useState(["orange", "green", "blue", "purple", "pink", "red", "teal"])
@@ -62,7 +62,7 @@ export default function PlanDeEstudio() {
   useEffect(() => {
     // TODO: request a la base de datos
 
-    let { plan, cant } = crearPlanDeEstudios();
+    let { plan, cant } = crearPlanDeEstudios(clave);
 
     let colorMaterias = JSON.parse(JSON.stringify(cantMateriasPorColor));
 
