@@ -48,28 +48,12 @@ export default function PlanDeEstudio() {
   const [planDeEstudios, setPlanDeEstudios] = useState({materias: []});
   const [colores, setColores] = useState(["orange", "green", "blue", "purple", "pink", "red", "teal"])
   const [colorSeleccionado, setColorSeleccionado] = useState('green')
-  const [cantMateriasPorColor, setCantMateriasPorColor] = useState({
-    orange: 0,
-    green: 0,
-    blue: 0,
-    purple: 0,
-    pink: 0,
-    red: 0,
-    teal: 0
-  })
-  const [cantMaterias, setCantMaterias] = useState(0);
+  const [cantMateriasPorColor, setCantMateriasPorColor] = useState({ orange: 1, green: 0, blue: 0, purple: 0, pink: 0, red: 0, teal: 0 })
+  const [cantMaterias, setCantMaterias] = useState(1);
 
   const actualizarCantMaterias = () => {
     let plan = JSON.parse(JSON.stringify(planDeEstudios));
-    let colorMaterias = {
-      orange: 0,
-      green: 0,
-      blue: 0,
-      purple: 0,
-      pink: 0,
-      red: 0,
-      teal: 0
-    }
+    let colorMaterias = { orange: 0, green: 0, blue: 0, purple: 0, pink: 0, red: 0, teal: 0 };
 
     plan.materias.forEach((semestre) => {
       semestre.forEach(materia => {
@@ -97,7 +81,7 @@ export default function PlanDeEstudio() {
 
     let { plan, cant } = crearPlanDeEstudios(clave);
 
-    let colorMaterias = JSON.parse(JSON.stringify(cantMateriasPorColor));
+    let colorMaterias = { orange: 0, green: 0, blue: 0, purple: 0, pink: 0, red: 0, teal: 0 };
 
     colorMaterias.orange = cant;
 
