@@ -4,53 +4,26 @@ import { Col } from 'react-bootstrap';
 import Materia from './Materia/Materia';
 
 /** Lista de materias con bloque que define qué semestre es **/
-export default function Semestre ({ materias, numSemestre, tec21, colorSeleccionado, listaColores, cosasColores }) {
+export default function Semestre ({ numSemestre, materias, tec21, colorSeleccionado, clicks }) {
   const [colorDeFondo, setColorDeFondo] = useState('orange');
-  const [clickeado, setClickeado] = useState(false);
-  const [cantMateriasPorColor, setCantMateriasPorColor] = useState([]);
 
-  useEffect(() => {
-    let colores = {};
-
-    listaColores.forEach(color => {
-      colores[color] = 0
-    });
-
-    colores['orange'] = materias.length;
-
-    setCantMateriasPorColor(colores);
-  }, []);
-
-  useEffect(() => {
-    setClickeado(false);
-  }, [clickeado])
-
-  useEffect(() => {
-    Object.keys(cantMateriasPorColor).forEach(color => {
-      if (cantMateriasPorColor[color] == materias.length) {
-        setColorDeFondo(color);
-      }
-    });
-  }, [cantMateriasPorColor])
+  const { clickSemestre, clickMateria } = clicks;
 
   const botonClickeado = () => {
+    clickSemestre(numSemestre)
     setColorDeFondo(colorSeleccionado)
-    setClickeado(true);
   }
 
   return (
     <Col xs={4} md className="semestre m-0 p-0 mb-4">
-      <div className={`materia labelMateria bg-${colorDeFondo}`} onClick={() => botonClickeado()}><label>Semestre {numSemestre}</label></div>
+      <div className={`materia labelMateria bg-${colorDeFondo}`} onClick={() => botonClickeado()}><label>Semestre {numSemestre + 1}</label></div>
       {materias.map((materia, indice) => (
         <Materia
           key={indice}
-          nombre={materia.nombre}
+          nums={{numSemestre, numMateria: indice}}
+          materia={materia}
           tec21={tec21}
-          colorSeleccionado={colorSeleccionado}
-          colorSemestre={colorDeFondo}
-          cambiarColorSemestre={setColorDeFondo}
-          semestreClickeado={clickeado}
-          cosasColores={cosasColores}
+          clickMateria={clickMateria}
         />
       ))}
     </Col>

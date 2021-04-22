@@ -17,9 +17,9 @@ const BotonDeColor = ({ color, cambiarColorSeleccionado, colorSeleccionado }) =>
 
 const crearPlanDeEstudios = (clave) => {
   let materias = [
-    {nombre: 'Fundamentos de programación',},
-    {nombre: 'Programación Orientada a Objetos',},
-    {nombre: 'Estructura de Datos',}
+    {color: 'orange', nombre: 'Fundamentos de programación',},
+    {color: 'orange', nombre: 'Programación Orientada a Objetos',},
+    {color: 'orange', nombre: 'Estructura de Datos',}
   ]
 
   let cant = 0;
@@ -59,6 +59,39 @@ export default function PlanDeEstudio() {
   })
   const [cantMaterias, setCantMaterias] = useState(0);
 
+  const actualizarCantMaterias = () => {
+    let plan = JSON.parse(JSON.stringify(planDeEstudios));
+    let colorMaterias = {
+      orange: 0,
+      green: 0,
+      blue: 0,
+      purple: 0,
+      pink: 0,
+      red: 0,
+      teal: 0
+    }
+
+    plan.materias.forEach((semestre) => {
+      semestre.forEach(materia => {
+        colorMaterias[materia.color] += 1;
+      });
+    });
+
+    setCantMateriasPorColor(colorMaterias);
+  }
+
+  const clickMateria = (sem, materia) => {
+    let plan = JSON.parse(JSON.stringify(planDeEstudios));
+    plan.materias[sem][materia].color = colorSeleccionado;
+    setPlanDeEstudios(plan);
+  }
+
+  const clickSemestre = (sem) => {
+    let plan = JSON.parse(JSON.stringify(planDeEstudios));
+    plan.materias[sem].forEach(materia => materia.color = colorSeleccionado);
+    setPlanDeEstudios(plan);
+  }
+
   useEffect(() => {
     // TODO: request a la base de datos
 
@@ -72,6 +105,10 @@ export default function PlanDeEstudio() {
     setCantMaterias(cant);
     setCantMateriasPorColor(colorMaterias);
   }, [])
+
+  useEffect(() => {
+    actualizarCantMaterias();
+  }, [planDeEstudios])
   
   document.title = planDeEstudios.nombre
 
@@ -79,9 +116,7 @@ export default function PlanDeEstudio() {
     <Container fluid>
       <Row>
         <Col>
-          <h2 className="titulo-tabla">
-            Plan de estudios {planDeEstudios.nombre}
-          </h2>
+          <h2 className="titulo-tabla"> Plan de estudios {planDeEstudios.nombre} </h2>
         </Col>
       </Row>
       <Row className="colorBtns mt-4">
@@ -107,12 +142,11 @@ export default function PlanDeEstudio() {
         {planDeEstudios.materias.map((semestre, indice) => (
           <Semestre
             key={indice}
+            numSemestre={indice}
             materias={semestre}
-            numSemestre={indice + 1}
             tec21={planDeEstudios?.tec21}
             colorSeleccionado={colorSeleccionado}
-            listaColores={colores}
-            cosasColores={{colores, cantMateriasPorColor, setCantMateriasPorColor, cantMaterias}}
+            clicks={{clickSemestre, clickMateria}}
           />
         ))}
       </Row>
