@@ -1,6 +1,8 @@
 import React from 'react'
 import { Navbar, Image, Nav } from 'react-bootstrap'
-import GoogleLogin from "react-google-login";
+import { GoogleLogin, GoogleLogout } from "react-google-login";
+import { backendURL } from "../utils";
+import axios from "axios";
 
 import { PUBLIC_URL } from './../utils'; 
 
@@ -14,11 +16,18 @@ function extraerMatricula({ email }) {
  * @param {Boolean} sesionIniciada Indica si el usuario ingresa como previamente registrado.
  */
 export default function Header({ loggedUser, setLoggedUser }) {
-  function successResponse({ profileObj }) {
-    setLoggedUser(profileObj);
-  }
   function failureResponse(response) {
     console.log(response);
+  }
+  async function successResponse({ profileObj }) {
+    const resLogin = await axios.post(`${backendURL}/login/`, profileObj).catch((err) => err);
+    if (resLogin instanceof Error) {
+      console.log(resLogin);
+    }
+    setLoggedUser(profileObj);
+  }
+  function logout() {
+    setLoggedUser(undefined);
   }
   
   const matricula = loggedUser ? extraerMatricula(loggedUser) : "";
@@ -31,18 +40,25 @@ export default function Header({ loggedUser, setLoggedUser }) {
       <Navbar.Collapse className="justify-content-end">
         <Nav className="element">
           {loggedUser && (
-            <Nav.Link href={`${PUBLIC_URL}/perfil/${matricula}`} className="element">
-              <Image
-                className="ml-4" 
-                width={48}
-                height={48}
-                src={loggedUser.imageUrl}
-                roundedCircle
+            <>
+              <Nav.Link href={`${PUBLIC_URL}/perfil/${matricula}`} className="element">
+                <Image
+                  className="ml-4" 
+                  width={48}
+                  height={48}
+                  src={loggedUser.imageUrl}
+                  roundedCircle
+                />
+              </Nav.Link>
+              <GoogleLogout
+                clientId="78830882271-iabhrh1kgh03rbb0js65vh0iftf6jkjh.apps.googleusercontent.com"
+                buttonText="Salir de la cuenta"
+                onSuccess={logout}
               />
-            </Nav.Link>
+            </>
           )}
           {!loggedUser && (
-            <Nav.Link href={`${PUBLIC_URL}/`} className="login">
+            <Nav.Link href={`${PUBLIC_URL}/`}>
               <GoogleLogin
                 clientId="78830882271-iabhrh1kgh03rbb0js65vh0iftf6jkjh.apps.googleusercontent.com"
                 buttonText="Iniciar sesión"
