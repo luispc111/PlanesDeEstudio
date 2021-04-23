@@ -27,6 +27,4 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm install -g serve
-    - run: serve build -l 5035
     - run: npm test
