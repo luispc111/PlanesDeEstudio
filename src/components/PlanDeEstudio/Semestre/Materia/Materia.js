@@ -8,7 +8,7 @@ export default function Materia ({ nums, materia, tec21, clickMateria }) {
     <div className={`materia labelMateria bg-${materia.color}`} onClick={() => clickMateria(numSemestre, numMateria)}>
       <label>{materia.nombre}</label>
       {tec21 && (
-        <div>
+        <div className="tec21">
           aaaaaaaaa
         </div>
       )}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 /** Boton individual de la lista de colores **/
 const BotonDeColor = ({ color, cambiarColorSeleccionado, colorSeleccionado }) => {
