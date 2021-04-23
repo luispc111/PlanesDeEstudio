@@ -9,7 +9,7 @@ export default function BarrasDeProgreso({ listaColores, cantMateriasPorColor, t
         return (
           <ProgressBar
             // striped
-            className={`bg-${color}`}
+            className={`bg-${color} barra`}
             now={cant}
             label={`${cant}%`}
             key={indice}
