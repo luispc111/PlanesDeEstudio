@@ -28,5 +28,5 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm install -g serve
-    - run: serve -s build
+    - run: serve build -l 5035
     - run: npm test
