@@ -46,8 +46,14 @@
 .profile-image {
   width: 35px;
   height: 35px;
+  margin: 0px 8px;
+}
+
+.logout-button {
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .element span {
-  color: inherit;
+ color: inherit;
 }
