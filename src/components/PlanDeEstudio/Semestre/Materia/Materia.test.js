@@ -24,9 +24,6 @@ it("renderiza una materia", () => {
                                             clickMateria={props.clickMateria}
                                           />);
 
-  // const credits = screen.getByText(/Creada por:/);
-
-  // expect(luisito).toBeInTheDocument();
   expect(getByText(/Progra 1/)).toBeInTheDocument();
 
   const materia = container.querySelector('.bg-orange');
