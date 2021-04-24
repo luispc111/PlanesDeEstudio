@@ -5,12 +5,14 @@ import Footer from './components/shared/Footer';
 import PlanDeEstudio from './components/PlanDeEstudio/PlanDeEstudio';
 import PlanesDeEstudio from './components/PlanesDeEstudio/PlanesDeEstudio';
 
+import { PUBLIC_URL } from './components/shared/utils'; 
+
 function App() {
   return (
     <div className="App">
       <Router>
         <Route
-          exact path="/"
+          exact path={PUBLIC_URL + '/'}
           component={PlanesDeEstudio}
         />
         <Route
