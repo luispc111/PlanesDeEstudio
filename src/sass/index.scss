@@ -1,8 +1,8 @@
-@import './variables';
-@import './plan-de-estudio.scss';
-@import './barra-progreso.scss';
+@import './_variables';
+@import './_plan-de-estudio.scss';
+@import './_barra-progreso.scss';
 @import './shared.scss';
-@import './fondos.scss';
+@import './_fondos';
 
 * {
   color: white;
