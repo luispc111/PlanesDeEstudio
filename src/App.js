@@ -16,7 +16,7 @@ function App() {
           component={PlanesDeEstudio}
         />
         <Route
-          path="/plan/:clave"
+          path={PUBLIC_URL + '/plan/:clave'}
           component={PlanDeEstudio}
         />
       </Router>
