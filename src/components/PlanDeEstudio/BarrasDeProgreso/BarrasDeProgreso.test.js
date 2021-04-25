@@ -17,26 +17,26 @@ it("renderiza las barras de progreso", () => {
                                             totalMaterias={10}
                                           />);
 
-  const orange = container.querySelector('.bg-orange');
+  const orange = container.querySelector('.barra.bg-orange');
   expect(orange).toBeInTheDocument();
   expect(getByText(/100.00%/i)).toBeInTheDocument();
 
-  const green = container.querySelector('.bg-green');
+  const green = container.querySelector('.barra.bg-green');
   expect(green).toBeInTheDocument();
 
-  const blue = container.querySelector('.bg-blue');
+  const blue = container.querySelector('.barra.bg-blue');
   expect(blue).toBeInTheDocument();
 
-  const purple = container.querySelector('.bg-purple');
+  const purple = container.querySelector('.barra.bg-purple');
   expect(purple).toBeInTheDocument();
 
-  const pink = container.querySelector('.bg-pink');
+  const pink = container.querySelector('.barra.bg-pink');
   expect(pink).toBeInTheDocument();
 
-  const red = container.querySelector('.bg-red');
+  const red = container.querySelector('.barra.bg-red');
   expect(red).toBeInTheDocument();
 
-  const teal = container.querySelector('.bg-teal');
+  const teal = container.querySelector('.barra.bg-teal');
   expect(teal).toBeInTheDocument();
 });
 
@@ -48,28 +48,28 @@ it("renderiza las barras de progreso con porcentajes diferentes", () => {
                                             totalMaterias={10}
                                           />);
 
-  const orange = container.querySelector('.bg-orange');
+  const orange = container.querySelector('.barra.bg-orange');
   expect(orange).toBeInTheDocument();
   expect(getByText(/20.00%/i)).toBeInTheDocument();
 
-  const green = container.querySelector('.bg-green');
+  const green = container.querySelector('.barra.bg-green');
   expect(green).toBeInTheDocument();
   expect(getByText(/30.00%/i)).toBeInTheDocument();
 
-  const blue = container.querySelector('.bg-blue');
+  const blue = container.querySelector('.barra.bg-blue');
   expect(blue).toBeInTheDocument();
   expect(getByText(/40.00%/i)).toBeInTheDocument();
 
-  const purple = container.querySelector('.bg-purple');
+  const purple = container.querySelector('.barra.bg-purple');
   expect(purple).toBeInTheDocument();
   expect(getByText(/10.00%/i)).toBeInTheDocument();
 
-  const pink = container.querySelector('.bg-pink');
+  const pink = container.querySelector('.barra.bg-pink');
   expect(pink).toBeInTheDocument();
 
-  const red = container.querySelector('.bg-red');
+  const red = container.querySelector('.barra.bg-red');
   expect(red).toBeInTheDocument();
 
-  const teal = container.querySelector('.bg-teal');
+  const teal = container.querySelector('.barra.bg-teal');
   expect(teal).toBeInTheDocument();
 });
