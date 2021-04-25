@@ -1,6 +1,34 @@
 # Planes de Estudio ITESM
 
+Página web dónde puedes ver los diferentes planes de estudio del Tec de Monterrey. Te muestra las materias de cada plan de estudios en una tabla y te deja utilizar diferentes colores para marcarlas, ayudandote a planear tus siguientes semestres y ver tu progreso en la carrera. Puedes probarla [en este link](https://luispc111.github.io/PlanesDeEstudio/).
+
+La página usa la libreria de `html2canvas` para generar una imagen de la tabla del usuario.
+- [Repositorio de Github](https://github.com/niklasvh/html2canvas)
+- [Documentación](https://html2canvas.hertzen.com/)
+
+## Instrucciones de la aplicación
+---
+
+La página está desarrollada en React, entonces si te sabes los scripts básicos del framework, no tendrás problema corriendo la aplicación.
+
+### __Cómo instalarla__
+
+Clona o descarga el repo, desde una terminal vete a la carpeta donde lo tengas y escribe `npm install` para instalar todas las dependencias de Node.
+
+### __Cómo correrla__
+
+Desde la terminal, escribe `npm start` estando en la carpeta del repo y la aplicación empezará a correr, abriendo automaticamente una pestaña en tu navegador de preferencia. Como estamos utilizando React, el servidor tiene '_hot reload_', por lo que se actualizará solo cada que guardes cambios.
+
+### __Cómo correr las pruebas__
+
+Desde la terminal, escribe `npm test` estando en la carpeta del repo y se empezarán las pruebas solas. Al igual que al correr la aplicación, cada vez que guardes cambios, las pruebas se correran solas de nuevo.
+
 ## Guía de contribución
+---
+
+### __Código__
+
+Si quieres contribuir al código, crea un pull request con tu aportación. Al crear un pull request, asegurate que `proyecto-web` sea la branch objetivo e incluye el siguiente formato en la descripción del PR:
 
 ```
 ## Descripción
@@ -21,17 +49,35 @@ Pequeña descripción de la tarea
 * [ ] Luisito
 ```
 
-### **How can I try?**
-Visit https://luispc111.github.io/PlanesDeEstudio/
+### __Plan de Estudio__
 
-### **User description**
+Si quieres aportar con la información de tu plan de estudios, mandanos la información de las materias con este formato:
 
-Web page that includes the classes of various ITESM study models. It allows you to mark subjects with different colors to visualize the ones you have already taken, the ones you are currently taking and the ones you are planning to take.
+```json
+[
+    {
+        "nombre": "Nombre",
+        "clave": "Clave tipo TI2011",
+        "semestre": 0,
+        "requisitos": ["Clave de la materia"]
+    },
+]
+```
 
-More than 1500 users (data by Google Analytics).
+Ejemplo:
+```json
+[
+    {
+        "nombre": "Desarrollo de aplicaciones web",
+        "clave": "TC2026",
+        "semestre": 7,
+        "requisitos": ["TC1020", "TC2022"]
+    },
+]
+```
 
-### **Implented study models**
-
+## Planes de estudios implementados
+---
 - ARQ11
 - IBT11
 - IDS11
@@ -64,44 +110,3 @@ More than 1500 users (data by Google Analytics).
 - LPM12
 - LPO11
 - LRI11
-
-### **How to contribute**
-
-You can help the web page by making the JSON files of your study model. The format of the JSON files is:
-
-```bash
-[
-    {
-        "nombre": "subject name",
-        "clave": "subject key",
-        "semestre": 0,
-        "requisitoAcreditado": ["subject key"],
-        "requisitoCursado": ["subject key"]
-    },
-]
-```
-
-The list of "requisitoAcreditado" is a list of the classes you need to pass to be able to take the class and "requisitoCursado" is a list of classes you need to take.
-
-We created a C++ program that reads a text file with the format shown below, based on how courses are presented SAMP from ITESM. 
-
-```bash
-
-Numero Semestre
-Clave	        Nombre de la materia	CL	L	U	CA
-ClaveEjemplo    Nombre ejemplo          1   1   1   1
-1 1 1 1
-
-```
-
-### **Technical description**
-
-HTML and CSS is used for the frontend. Some bootstrap elements are also included. 
-
-Javascript is used for the modification of tables, changes in the progress bar, and creation of buttons to choose the study model.
-
-JSON is used to have the information of the courses, as well as their semester and the requirements to register it. We use HTTP requests to access the JSON files, so to run locally the app you'll need to set up a server.
-
-html2canvas library was used to generate the dowloadable png file of the modifications users create on their study plans.
-- github repo: https://github.com/niklasvh/html2canvas
-- documentation: https://html2canvas.hertzen.com/

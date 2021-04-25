@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Header from './components/shared/Header';
 import Footer from './components/shared/Footer';
+import PlanesDeEstudio from './components/PlanesDeEstudio/PlanesDeEstudio';
+
+import { PUBLIC_URL } from './components/shared/utils'; 
 
 function App() {
   return (
@@ -10,7 +13,8 @@ function App() {
       <Header sesionIniciada={true}/>
       <Router>
         <Route
-          path="/"
+          exact path={PUBLIC_URL + '/'}
+          component={PlanesDeEstudio}
         />
       </Router>
       <Footer />
