@@ -20,7 +20,7 @@ export default function Header({ sesionIniciada }) {
             <Nav.Link href={`${PUBLIC_URL}/perfil/`}>
               Ver perfil
               <Image
-                className="ml-4" 
+                className="ml-4 imagen-perfil" 
                 width={48}
                 height={48}
                 src="https://i.stack.imgur.com/dr5qp.jpg"

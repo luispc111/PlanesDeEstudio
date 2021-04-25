@@ -1,14 +1,21 @@
 import React from "react";
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import Header from "./Header";
 
-it("renderiza texto del header cuando sesionIniciada es false", () => {
-  render(<Header sesionIniciada={false}/>);
+it("renderiza header cuando no se ha iniciado sesión", () => {
+  const { getByText } = render(<Header sesionIniciada={false}/>);
 
-  const header_title = screen.getByText("Planes de Estudio");
-  const header_log_in = screen.getByText("Iniciar sesión");
+  expect(getByText("Planes de Estudio")).toBeInTheDocument();
+  expect(getByText("Iniciar sesión")).toBeInTheDocument();
+});
 
-  expect(header_title).toBeInTheDocument();
-  expect(header_log_in).toBeInTheDocument();
+it("renderiza header cuando se ha iniciado sesión", () => {
+  const { getByText, container } = render(<Header sesionIniciada={true}/>);
+
+  expect(getByText("Planes de Estudio")).toBeInTheDocument();
+  expect(getByText(/Ver perfil/)).toBeInTheDocument();
+
+  const imagenPerfil = container.querySelector('.imagen-perfil');
+  expect(imagenPerfil).toBeInTheDocument();
 });
