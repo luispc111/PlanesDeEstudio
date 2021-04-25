@@ -1,6 +1,8 @@
 import React from 'react'
 import { Navbar, Image, Nav } from 'react-bootstrap'
 
+import { PUBLIC_URL } from './../utils'; 
+
 /**
  * Parte superior, contiene controles de manejo de sesión y perfil
  * 
@@ -9,11 +11,13 @@ import { Navbar, Image, Nav } from 'react-bootstrap'
 export default function Header({ sesionIniciada }) {
   return (
     <Navbar sticky="top" variant="dark" className="p-0 pb-4">
-      <h1> Planes de Estudio </h1>
+      <Navbar.Brand href={`${PUBLIC_URL}/`}>
+        <h1> Planes de Estudio </h1>
+      </Navbar.Brand>
       <Navbar.Collapse className="justify-content-end">
-        <Nav className="justify-content-end element">
+        <Nav className="element">
           {sesionIniciada && (
-            <Nav.Link href="/">
+            <Nav.Link href={`${PUBLIC_URL}/perfil/`}>
               Ver perfil
               <Image
                 className="ml-4" 
@@ -22,9 +26,9 @@ export default function Header({ sesionIniciada }) {
                 src="https://i.stack.imgur.com/dr5qp.jpg"
                 roundedCircle
               />
-            </Nav.Link>)
-          }
-          {!sesionIniciada && (<Nav.Link href="/"> Iniciar sesión </Nav.Link>)}
+            </Nav.Link>
+          )}
+          {!sesionIniciada && (<Nav.Link href={`${PUBLIC_URL}/`}> Iniciar sesión </Nav.Link>)}
         </Nav>
       </Navbar.Collapse>
     </Navbar>
