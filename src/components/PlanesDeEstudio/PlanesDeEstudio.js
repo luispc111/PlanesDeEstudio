@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Container, Row, FormControl, InputGroup } from 'react-bootstrap';
 
-import { PUBLIC_URL } from './../shared/utils'; 
+import { PUBLIC_URL } from '../utils'; 
 
 /** Vista de lista de todos los planes de estudio */
 export default function PlanesDeEstudio() {
