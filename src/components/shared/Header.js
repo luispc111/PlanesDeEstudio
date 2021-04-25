@@ -1,5 +1,10 @@
 import React from 'react'
 
+/**
+ * Parte superior, contiene controles de manejo de sesión y perfil
+ * 
+ * @param {Boolean} sesionIniciada Indica si el usuario ingresa como previamente registrado.
+ */
 export default function Header({ sesionIniciada }) {
     return (
         <div class="header">
