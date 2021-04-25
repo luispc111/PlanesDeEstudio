@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 
 import Header from "./Header";
 
-it("renderea texto del header cuando sesionIniciada es false", () => {
+it("renderiza texto del header cuando sesionIniciada es false", () => {
   render(<Header sesionIniciada={false}/>);
 
   const header_title = screen.getByText("Planes de Estudio");
