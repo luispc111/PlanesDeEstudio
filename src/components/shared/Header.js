@@ -1,7 +1,10 @@
 import React from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Navbar, Image, Nav } from 'react-bootstrap'
 
-import { PUBLIC_URL } from './../utils'; 
+import Profile from './../Profile/Profile';
+
+import { PUBLIC_URL } from './../utils';
 
 /**
  * Parte superior, contiene controles de manejo de sesión y perfil
