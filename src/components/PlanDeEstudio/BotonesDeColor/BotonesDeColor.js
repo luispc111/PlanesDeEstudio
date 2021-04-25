@@ -11,7 +11,7 @@ const BotonDeColor = ({ color, cambiarColorSeleccionado, colorSeleccionado }) =>
   )
 }
 
-/** Lista de colores **/
+/** Lista de colores que se pueden colocar en cada materia del plan de estudios **/
 export default function BotonesDeColor({ colores, cambiarColorSeleccionado, colorSeleccionado }) {
   return (
     <Row className="mt-4">
