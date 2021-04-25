@@ -36,11 +36,14 @@
   .element {
     margin-left: 10px;
     margin-right: 10px;
-    color: white;
     font-family: 'helvetica';
     font-size: 1.5rem;
     text-decoration: none;
-  }  
+  }
+
+  span {
+    color: inherit;
+  }
 }
 
 .profile-image {
