@@ -1,7 +1,7 @@
 import React from 'react'
 import { ProgressBar } from 'react-bootstrap';
 
-/** Barras de progreso **/
+/** Barra para indicar el porcentaje de los distintos colores en el plan de estudios. **/
 export default function BarrasDeProgreso({ listaColores, cantMateriasPorColor, totalMaterias }) {
   return (
     <ProgressBar className="m-0 barra-progreso">
