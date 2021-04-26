@@ -26,17 +26,23 @@ export default function Header() {
           {loggedUser && (
             <>
               <Nav.Link href={`${PUBLIC_URL}/perfil/${matricula}`} className="element">
-                <Image
-                  className="ml-4 imagen-perfil" 
-                  width={48}
-                  height={48}
-                  src={loggedUser.urlFoto}
-                  roundedCircle
-                />
+                <Button className="d-flex">
+                  <div>Ver<br/>Perfil</div>
+                  <Image
+                    className="ml-4 imagen-perfil" 
+                    width={48}
+                    height={48}
+                    src={loggedUser.urlFoto}
+                    roundedCircle
+                  />
+                </Button>
               </Nav.Link>
-              <Button onClick={logout} className="logout-button">
-                <Image src={logoutIcon} alt="Cerrar sesión" />
-              </Button>
+              <Nav.Link href={`${PUBLIC_URL}/perfil/${matricula}`} className="element">
+                <Button onClick={logout} variant="danger" className="d-flex">
+                  <div>Cerrar<br/>Sesión</div>
+                  <Image src={logoutIcon} width={48} height={48} alt="Cerrar sesión" className="ml-3" />
+                </Button>
+              </Nav.Link>
             </>
           )}
           {!loggedUser && (
