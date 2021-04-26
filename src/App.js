@@ -1,15 +1,17 @@
 // import React, { useState, useEffect, useCallback } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
+import Header from './components/shared/Header';
 import Footer from './components/shared/Footer';
 import PlanDeEstudio from './components/PlanDeEstudio/PlanDeEstudio';
 import PlanesDeEstudio from './components/PlanesDeEstudio/PlanesDeEstudio';
 
-import { PUBLIC_URL } from './components/shared/utils'; 
+import { PUBLIC_URL } from './components/utils'; 
 
 function App() {
   return (
     <div className="App">
+      <Header sesionIniciada={true}/>
       <Router>
         <Route
           exact path={PUBLIC_URL + '/'}
