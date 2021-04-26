@@ -27,6 +27,22 @@
   }
 }
 
+.tec21 {
+  height: 0.6rem;
+}
+
+.bloque-tec21 {
+  &-coloreado {
+    border: 0.1rem solid $border-tec21;
+    background-color: $bg-green;
+  }
+
+  &-no-coloreado {
+    border: 1px solid $border-tec21;
+    background-color: $fondo-tec21;
+  }
+}
+
 @media (max-width:1461px){
   .materia {
       font-size: 1.3vh;
