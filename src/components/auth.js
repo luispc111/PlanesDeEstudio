@@ -41,13 +41,13 @@ async function login({ profileObj }) {
     return;
   }
   Cookies.set(TOKEN_NAME, resLogin.data.token, { expires: 365 });
-  window.location = `${PUBLIC_URL}`;
+  window.location = `${PUBLIC_URL}/#/`;
 }
 
 /** Remover cookie de la sesión. */
 function logout() {
   Cookies.remove(TOKEN_NAME);
-  window.location = `${PUBLIC_URL}`;
+  window.location = `${PUBLIC_URL}/#/`;
 };
 
 export { G_CLIENT_ID, TOKEN_NAME, authenticate, login, logout };
