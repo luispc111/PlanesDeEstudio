@@ -27,6 +27,24 @@
   }
 }
 
+.nombre-materia {
+  height: 90%;
+}
+
+.tec21 {
+  height: 10%;
+}
+
+.bloque-tec21 {
+  &-seleccionado {
+    background-color: $fondo-tec21-seleccionado;
+  }
+
+  &-no-seleccionado {
+    background-color: $fondo-tec21-no-seleccionado;
+  }
+}
+
 @media (max-width:1461px){
   .materia {
       font-size: 1.3vh;
