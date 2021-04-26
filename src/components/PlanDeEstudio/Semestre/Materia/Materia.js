@@ -15,9 +15,9 @@ export default function Materia ({ nums, materia, tec21, clickMateria }) {
         </Row>
         {tec21 && (
           <Row className="tec21 p-0 m-0">
-            <Col className={`bloque-tec21-${(materia?.periodos[0]) ? '' : 'no-'}seleccionado p-0 m-0`}></Col>
-            <Col className={`bloque-tec21-${(materia?.periodos[1]) ? '' : 'no-'}seleccionado p-0 m-0`}></Col>
-            <Col className={`bloque-tec21-${(materia?.periodos[2]) ? '' : 'no-'}seleccionado p-0 m-0`}></Col>
+            <Col className={`bloque-tec21 ${(materia?.periodos[0]) ? '' : 'no-'}activo p-0 m-0`}></Col>
+            <Col className={`bloque-tec21 ${(materia?.periodos[1]) ? '' : 'no-'}activo p-0 m-0`}></Col>
+            <Col className={`bloque-tec21 ${(materia?.periodos[2]) ? '' : 'no-'}activo p-0 m-0`}></Col>
           </Row>
         )}
       </Col>
