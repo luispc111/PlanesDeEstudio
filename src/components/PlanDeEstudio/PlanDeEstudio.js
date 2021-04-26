@@ -8,9 +8,9 @@ import BotonesDeColor from './BotonesDeColor/BotonesDeColor';
 
 const crearPlanDeEstudios = (clave) => {
   let materias = [
-    {color: 'orange', nombre: 'Fundamentos de programación',},
-    {color: 'orange', nombre: 'Programación Orientada a Objetos',},
-    {color: 'orange', nombre: 'Estructura de Datos',}
+    {color: 'orange', periodos: [true, false, false], nombre: 'Fundamentos de programación',},
+    {color: 'orange', periodos: [false, true, false], nombre: 'Programación Orientada a Objetos',},
+    {color: 'orange', periodos: [true, false, true], nombre: 'Estructura de Datos',}
   ]
 
   let cant = 0;
@@ -28,7 +28,7 @@ const crearPlanDeEstudios = (clave) => {
     carrera.push(semestre);
   }
 
-  return { plan: { nombre: 'ITC 11', tec21: false, materias: carrera, clave }, cant }
+  return { plan: { nombre: 'ITC 11', tec21: true, materias: carrera, clave }, cant }
 }
 
 /** Vista de la tabla de un plan de estudio individual, junto con una lista de colores y barras de progreso **/
