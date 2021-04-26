@@ -17,7 +17,6 @@ const props = {
 };
 
 it("renderiza una materia", () => {
-
   const { container, getByText } = render(<Materia
                                             nums={props.nums}
                                             materia={props.materia}
@@ -32,7 +31,6 @@ it("renderiza una materia", () => {
 });
 
 it("renderiza una materia de tec21", () => {
-
   const { container, getByText } = render(<Materia
                                             nums={props.nums}
                                             materia={props.materia}
@@ -52,5 +50,6 @@ it("renderiza una materia de tec21", () => {
   expect(periodoActivo).toBeInTheDocument();
 
   const periodosNoActivo = container.querySelectorAll('.bloque-tec21.no-activo');
-  expect(periodoActivo).toBeInTheDocument();
+  expect(periodosNoActivo[0]).toBeInTheDocument();
+  expect(periodosNoActivo[1]).toBeInTheDocument();
 });
