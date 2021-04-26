@@ -5,8 +5,8 @@ import { Row } from 'react-bootstrap';
 const BotonDeColor = ({ color, cambiarColorSeleccionado, colorSeleccionado }) => {
   return (
     <div
-      className={`m-1 bg-${color} boton-color${(color === colorSeleccionado) ? '-seleccionado' : ''}`}
-      onClick={() => cambiarColorSeleccionado(color)}
+      className={`m-1 bg-${color.nombre} boton-color${(color.nombre === colorSeleccionado) ? '-seleccionado' : ''}`}
+      onClick={() => cambiarColorSeleccionado(color.nombre)}
     />
   )
 }

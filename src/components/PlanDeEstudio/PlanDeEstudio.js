@@ -38,7 +38,15 @@ export default function PlanDeEstudio() {
 
   const [planDeEstudios, setPlanDeEstudios] = useState({materias: []});
   // eslint-disable-next-line
-  const [colores, setColores] = useState(["orange", "green", "blue", "purple", "pink", "red", "teal"])
+  const [colores, setColores] = useState([
+    { nombre: "orange", tag: '' }, 
+    { nombre: "green", tag: '' }, 
+    { nombre: "blue", tag: '' }, 
+    { nombre: "purple", tag: '' }, 
+    { nombre: "pink", tag: '' }, 
+    { nombre: "red", tag: '' }, 
+    { nombre: "teal", tag: '' }
+  ]);
   const [colorSeleccionado, setColorSeleccionado] = useState('green')
   const [cantMateriasPorColor, setCantMateriasPorColor] = useState({ orange: 1, green: 0, blue: 0, purple: 0, pink: 0, red: 0, teal: 0 })
   const [cantMaterias, setCantMaterias] = useState(1);
