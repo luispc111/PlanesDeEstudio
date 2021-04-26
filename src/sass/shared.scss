@@ -1,9 +1,21 @@
-.footer {
-  text-align: center;
+@import './_variables';
+
+.navbar {
+  background-color: $fondo-app;
+}
+
+.header-navbar {
+  min-height: 78px;
+
+  > div {
+    background-color: $fondo-app;
+  }
 }
 
 .element {
   font-size: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
 
   span {
     color: inherit;

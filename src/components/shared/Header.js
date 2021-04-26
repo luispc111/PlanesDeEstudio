@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Navbar, Image, Nav, Button } from 'react-bootstrap'
+import { Navbar, Image, Nav, Button, Container } from 'react-bootstrap'
 import { GoogleLogin } from "react-google-login";
 
 import { PUBLIC_URL } from './../utils';
@@ -17,12 +17,13 @@ export default function Header() {
   const { matricula } = loggedUser || {};
 
   return (
-    <Navbar sticky="top" variant="dark" className="p-0 pb-4">
-      <Navbar.Brand href={`${PUBLIC_URL}/`}>
-        <h1> Planes de Estudio </h1>
-      </Navbar.Brand>
-      <Navbar.Collapse className="justify-content-end">
-        <Nav className="element">
+    <Navbar variant="dark" className="header-navbar p-0 pb-4" expand="md" height={66}>
+      <Container fluid className="fixed-top pr-3 pl-3">
+        <Navbar.Brand href={`${PUBLIC_URL}/`}>
+          <h1> Planes de Estudio </h1>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="header-collapse" />
+        <Navbar.Collapse id="header-collapse" className="justify-content-end">
           {loggedUser && (
             <>
               <Nav.Link href={`${PUBLIC_URL}/perfil/${matricula}`} className="element">
@@ -37,7 +38,7 @@ export default function Header() {
                   />
                 </Button>
               </Nav.Link>
-              <Nav.Link href={`${PUBLIC_URL}/perfil/${matricula}`} className="element">
+              <Nav.Link href={`${PUBLIC_URL}/`} className="element">
                 <Button onClick={logout} variant="danger" className="d-flex">
                   <div>Cerrar<br/>Sesión</div>
                   <Image src={logoutIcon} width={48} height={48} alt="Cerrar sesión" className="ml-3" />
@@ -46,17 +47,19 @@ export default function Header() {
             </>
           )}
           {!loggedUser && (
-            <GoogleLogin
-              clientId={G_CLIENT_ID}
-              buttonText="Iniciar sesión"
-              onSuccess={login}
-              onFailure={(res) => console.log(res)}
-              cookiePolicy={"single_host_origin"}
-              prompt="select_account"
-            />
+            <div className="element">
+              <GoogleLogin
+                clientId={G_CLIENT_ID}
+                buttonText="Iniciar sesión"
+                onSuccess={login}
+                onFailure={(res) => console.log(res)}
+                cookiePolicy={"single_host_origin"}
+                prompt="select_account"
+              />
+            </div>
           )}
-        </Nav>
-      </Navbar.Collapse>
+        </Navbar.Collapse>
+      </Container>
     </Navbar>
   )
 }

@@ -6,10 +6,9 @@ import Header from './components/shared/Header';
 import Footer from './components/shared/Footer';
 import PlanDeEstudio from './components/PlanDeEstudio/PlanDeEstudio';
 import PlanesDeEstudio from './components/PlanesDeEstudio/PlanesDeEstudio';
+
 import { UserContext } from "./context";
-
 import { PUBLIC_URL } from './components/utils'; 
-
 import { authenticate } from "./components/auth";
 
 /** Función que verifica si la sesión está iniciada y cambia el loggedUser correspondientemente. */
@@ -48,6 +47,7 @@ function App() {
             component={PlanDeEstudio}
           />
         </Router>
+        <div className="flex-grow-1"></div>
         <Footer />
       </UserContext.Provider>
     </div>
