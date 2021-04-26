@@ -27,7 +27,7 @@ export default function Header() {
             <>
               <Nav.Link href={`${PUBLIC_URL}/perfil/${matricula}`} className="element">
                 <Image
-                  className="ml-4" 
+                  className="ml-4 imagen-perfil" 
                   width={48}
                   height={48}
                   src={loggedUser.urlFoto}
