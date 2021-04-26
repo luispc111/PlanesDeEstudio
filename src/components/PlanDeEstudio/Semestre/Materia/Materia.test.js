@@ -11,6 +11,7 @@ const props = {
   materia: {
     nombre: 'Progra 1',
     color: 'orange',
+    periodos: [true, false, false]
   },
   clickMateria: jest.fn()
 };
@@ -46,4 +47,10 @@ it("renderiza una materia de tec21", () => {
 
   const seccionTec21 = container.querySelector('.tec21');
   expect(seccionTec21).toBeInTheDocument();
+
+  const periodoActivo = container.querySelector('.bloque-tec21.activo');
+  expect(periodoActivo).toBeInTheDocument();
+
+  const periodosNoActivo = container.querySelectorAll('.bloque-tec21.no-activo');
+  expect(periodoActivo).toBeInTheDocument();
 });

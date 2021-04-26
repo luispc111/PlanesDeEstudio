@@ -33,15 +33,12 @@
 
 .tec21 {
   height: 10%;
-}
-
-.bloque-tec21 {
-  &-seleccionado {
-    background-color: $fondo-tec21-seleccionado;
+  .activo {
+    background-color: $fondo-tec21-activo;
   }
 
-  &-no-seleccionado {
-    background-color: $fondo-tec21-no-seleccionado;
+  .no-activo {
+    background-color: $fondo-tec21-no-activo;
   }
 }
 
