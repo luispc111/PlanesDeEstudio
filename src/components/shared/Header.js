@@ -1,17 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Navbar, Image, Nav, Button } from 'react-bootstrap'
 import { GoogleLogin } from "react-google-login";
 
 import { PUBLIC_URL } from './../utils';
 import { login, logout, G_CLIENT_ID } from "../auth";
 import logoutIcon from "./logout_white_24dp.svg";
+import { UserContext } from "../../context";
 
 /**
  * Parte superior, contiene controles de manejo de sesión y perfil
  * 
  * @param {Boolean} loggedUser Indica el usuario de la sesión.
  */
-export default function Header({ loggedUser }) {
+export default function Header() {
+  const loggedUser = useContext(UserContext);
   const { matricula } = loggedUser || {};
 
   return (

@@ -6,6 +6,7 @@ import Header from './components/shared/Header';
 import Footer from './components/shared/Footer';
 import PlanDeEstudio from './components/PlanDeEstudio/PlanDeEstudio';
 import PlanesDeEstudio from './components/PlanesDeEstudio/PlanesDeEstudio';
+import { UserContext } from "./context";
 
 import { PUBLIC_URL } from './components/utils'; 
 
@@ -35,18 +36,20 @@ function App() {
   
   return (
     <div className="App">
-      <Header loggedUser={loggedUser} />
-      <Router>
-        <Route
-          exact path={PUBLIC_URL + '/'}
-          component={PlanesDeEstudio}
-        />
-        <Route
-          path={PUBLIC_URL + '/plan/:clave'}
-          component={PlanDeEstudio}
-        />
-      </Router>
-      <Footer />
+      <UserContext.Provider value={loggedUser}>
+        <Header/>
+        <Router>
+          <Route
+            exact path={PUBLIC_URL + '/'}
+            component={PlanesDeEstudio}
+          />
+          <Route
+            path={PUBLIC_URL + '/plan/:clave'}
+            component={PlanDeEstudio}
+          />
+        </Router>
+        <Footer />
+      </UserContext.Provider>
     </div>
   );
 }
