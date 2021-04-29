@@ -5,7 +5,7 @@ const PUBLIC_URL =  process.env.PUBLIC_URL;
  */
 const backendURL =
   process.env.NODE_ENV === "production"
-    ? "https://planes-estudio.herokuapp.com/api"
+    ? "https://planes-de-estudio-backend.herokuapp.com/"
     : "http://localhost:5000/api";
 
 export { PUBLIC_URL, backendURL };
