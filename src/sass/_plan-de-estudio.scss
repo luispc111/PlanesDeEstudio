@@ -1,0 +1,55 @@
+.titulo-tabla {
+  display: flex;
+  float: right;
+}
+
+.semester {
+  color: white;
+  text-align: center;
+}
+
+.materia {
+  border: solid 1px #191C25;
+  width: 100%;
+  height: 7vh;
+  text-align: center;
+}
+
+.boton-color {
+  border: 1px solid;
+  color: #DDDDDD;
+  height: 2.5rem;
+  width: 2.5rem;
+  &-seleccionado{
+    border: 3px solid;
+    color: white;
+    width: 2.5rem;
+  }
+}
+
+.nombre-materia {
+  height: 90%;
+}
+
+.tec21 {
+  height: 10%;
+  .activo {
+    background-color: $fondo-tec21-activo;
+  }
+
+  .no-activo {
+    background-color: $fondo-tec21-no-activo;
+  }
+}
+
+@media (max-width:1461px){
+  .materia {
+      font-size: 1.3vh;
+  }
+}
+
+@media (max-width:1220px){
+  .materia {
+      font-size: 1.2vh;
+  }
+}
