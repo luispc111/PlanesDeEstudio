@@ -1,16 +1,28 @@
-// import React, { useState, useEffect, useCallback } from 'react';
+import React, { useContext } from 'react';
+import { Image, Col, Container, Row } from 'react-bootstrap' 
 
-import Header from './../shared/Header';
-import Footer from './../shared/Footer';
-
-//import { PUBLIC_URL } from './components/utils'; 
+import { UserContext } from "../../context";
 
 export default function Profile() {
+  const loggedUser = useContext(UserContext);
+
+  console.log(loggedUser)
   return (
-    <div className="Profile">
-      <Header sesionIniciada={true}/>
-      <h1>Hola</h1>
-      <Footer />
-    </div>
+    <Container className="text-center">
+      <Row>
+        <Col className="Profile">
+          <Image
+            className="imagen-perfil mb-4" 
+            width={128}
+            height={128}
+            src={loggedUser?.urlFoto}
+            roundedCircle
+          />
+          <h2>{`${loggedUser?.nombre} ${loggedUser?.apellido}`}</h2>
+          <h2>{loggedUser?.matricula}</h2>
+        </Col>
+        
+      </Row>
+    </Container>
   );
 }
