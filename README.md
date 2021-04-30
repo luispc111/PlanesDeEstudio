@@ -2,12 +2,13 @@
 
 Página web dónde puedes ver los diferentes planes de estudio del Tec de Monterrey. Te muestra las materias de cada plan de estudios en una tabla y te deja utilizar diferentes colores para marcarlas, ayudandote a planear tus siguientes semestres y ver tu progreso en la carrera. Puedes probarla [en este link](https://luispc111.github.io/PlanesDeEstudio/).
 
+([Link del deploy de pruebas](https://dino-4-fantasticos.github.io/PlanesDeEstudio/#/))
+
 La página usa la libreria de `html2canvas` para generar una imagen de la tabla del usuario.
 - [Repositorio de Github](https://github.com/niklasvh/html2canvas)
 - [Documentación](https://html2canvas.hertzen.com/)
 
 ## Instrucciones de la aplicación
----
 
 La página está desarrollada en React, entonces si te sabes los scripts básicos del framework, no tendrás problema corriendo la aplicación.
 
@@ -24,7 +25,6 @@ Desde la terminal, escribe `npm start` estando en la carpeta del repo y la aplic
 Desde la terminal, escribe `npm test` estando en la carpeta del repo y se empezarán las pruebas solas. Al igual que al correr la aplicación, cada vez que guardes cambios, las pruebas se correran solas de nuevo.
 
 ## Guía de contribución
----
 
 ### __Código__
 
@@ -77,7 +77,6 @@ Ejemplo:
 ```
 
 ## Planes de estudios implementados
----
 - ARQ11
 - IBT11
 - IDS11

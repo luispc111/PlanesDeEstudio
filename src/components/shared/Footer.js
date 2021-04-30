@@ -12,7 +12,7 @@ export default function Footer() {
                             Creada por:
                             <a rel="noreferrer" href="https://github.com/Adrian-Garcia" target="_blank"> Adrián García</a>,
                             <a rel="noreferrer" href="https://github.com/alegayndra" target="_blank"> Alejandra García</a>,
-                            <a rel="noreferrer" href="https://github.com/EstradaDiego99" target="_blank"> Diego Estrada</a>,
+                            <a rel="noreferrer" href="https://github.com/EstradaDiego99" target="_blank"> Diego Estrada</a>
                             &
                             <a rel="noreferrer" href="https://github.com/luispc111" target="_blank"> Luis Alberto Pérez </a>
                         </p>
