@@ -12,7 +12,7 @@ export default function Materia ({ nums, materia, tec21, clickMateria }) {
           <Col className="p-0 m-0">
             <label>{materia.nombre}</label>
             <br></br>
-            <label>Unidades: {materia.unidades}</label>
+            <label className="unidades">Unidades: {materia.unidades}</label>
           </Col>
         </Row>
         {tec21 && (
