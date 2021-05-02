@@ -8,9 +8,9 @@ import BotonesDeColor from './BotonesDeColor/BotonesDeColor';
 
 const crearPlanDeEstudios = (clave) => {
   let materias = [
-    {color: 'orange', periodos: [true, false, false], nombre: 'Fundamentos de programación',},
-    {color: 'orange', periodos: [false, true, false], nombre: 'Programación Orientada a Objetos',},
-    {color: 'orange', periodos: [true, false, true], nombre: 'Estructura de Datos',}
+    {unidades: '4', color: 'orange', periodos: [true, false, false], nombre: 'Fundamentos de programación',},
+    {unidades: '8', color: 'orange', periodos: [false, true, false], nombre: 'Programación Orientada a Objetos',},
+    {unidades: '8', color: 'orange', periodos: [true, false, true], nombre: 'Estructura de Datos',}
   ]
 
   let cant = 0;

@@ -11,6 +11,8 @@ export default function Materia ({ nums, materia, tec21, clickMateria }) {
         <Row className="nombre-materia p-0 m-0">
           <Col className="p-0 m-0">
             <label>{materia.nombre}</label>
+            <br></br>
+            <label>Unidades: {materia.unidades}</label>
           </Col>
         </Row>
         {tec21 && (
