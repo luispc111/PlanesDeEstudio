@@ -58,7 +58,7 @@ export default function PlanesDeEstudio() {
             key={indice}
             variant="primary"
             value={clave}
-            href={PUBLIC_URL + `/plan/${clave}`}
+            href={`${PUBLIC_URL}/#/plan/${clave}`}
           >
             {nombre}    
           </Button>

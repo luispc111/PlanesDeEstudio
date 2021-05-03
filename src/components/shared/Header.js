@@ -19,14 +19,14 @@ export default function Header() {
   return (
     <Navbar variant="dark" className="header-navbar p-0 pb-4" expand="md" height={66}>
       <Container fluid className="fixed-top pr-3 pl-3">
-        <Navbar.Brand href={`${PUBLIC_URL}/`}>
+        <Navbar.Brand href={`${PUBLIC_URL}/#/`}>
           <h1> Planes de Estudio </h1>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="header-collapse" />
         <Navbar.Collapse id="header-collapse" className="justify-content-end">
           {loggedUser && (
             <>
-              <Nav.Link href={`${PUBLIC_URL}/perfil/${matricula}`} className="element">
+              <Nav.Link href={`${PUBLIC_URL}/#/perfil/${matricula}`} className="element">
                 <Button className="d-flex">
                   <div>Ver<br/>Perfil</div>
                   <Image
@@ -38,7 +38,7 @@ export default function Header() {
                   />
                 </Button>
               </Nav.Link>
-              <Nav.Link href={`${PUBLIC_URL}/`} className="element">
+              <Nav.Link href={`${PUBLIC_URL}/#/`} className="element">
                 <Button onClick={logout} variant="danger" className="d-flex">
                   <div>Cerrar<br/>Sesión</div>
                   <Image src={logoutIcon} width={48} height={48} alt="Cerrar sesión" className="ml-3" />

@@ -1,6 +1,6 @@
 // import React, { useState, useEffect, useCallback } from 'react';
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 
 import Header from './components/shared/Header';
 import Footer from './components/shared/Footer';
@@ -34,23 +34,23 @@ function App() {
   }, []);
   
   return (
-    <div className="App">
-      <UserContext.Provider value={loggedUser}>
-        <Header/>
-        <Router>
-          <Route
-            exact path={PUBLIC_URL + '/'}
-            component={PlanesDeEstudio}
-          />
-          <Route
-            path={PUBLIC_URL + '/plan/:clave'}
-            component={PlanDeEstudio}
-          />
-        </Router>
-        <div className="flex-grow-1"></div>
-        <Footer />
-      </UserContext.Provider>
-    </div>
+    <Router basename={PUBLIC_URL}>
+      <div className="App">
+        <UserContext.Provider value={loggedUser}>
+          <Header/>
+            <Route
+              exact path="/"
+              component={PlanesDeEstudio}
+            />
+            <Route
+              path="/plan/:clave"
+              component={PlanDeEstudio}
+            />
+          <div className="flex-grow-1"></div>
+          <Footer />
+        </UserContext.Provider>
+      </div>
+    </Router>
   );
 }
 
