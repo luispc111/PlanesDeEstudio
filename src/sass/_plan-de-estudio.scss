@@ -26,6 +26,12 @@
   }
 }
 
+.cuadrado-color {
+  border: 1px solid;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
 .nombre-materia {
   height: 90%;
 }
@@ -39,6 +45,10 @@
   .no-activo {
     background-color: $fondo-tec21-no-activo;
   }
+}
+
+.modal-bg {
+  background-color: $fondo-app;
 }
 
 @media (max-width:1461px){

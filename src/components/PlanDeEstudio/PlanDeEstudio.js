@@ -101,6 +101,7 @@ export default function PlanDeEstudio() {
       </Row>
       <BotonesDeColor
         colores={colores}
+        cambiarColores={setColores}
         cambiarColorSeleccionado={setColorSeleccionado}
         colorSeleccionado={colorSeleccionado}
       />
