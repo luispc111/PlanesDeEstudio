@@ -1,6 +1,6 @@
 import axios from "axios";
 import Cookies from "js-cookie";
-import { PUBLIC_URL, backendURL } from "./utils";
+import { PUBLIC_URL, BACKEND_URL } from "./utils";
 
 /** ID de cliente de Google Cloud Platform para inicio de sesión con Google. */
 const G_CLIENT_ID = "78830882271-iabhrh1kgh03rbb0js65vh0iftf6jkjh.apps.googleusercontent.com";
@@ -17,13 +17,13 @@ async function authenticate() {
   if (!Cookies.get(TOKEN_NAME)) return null;
   
   const resAuth = await axios
-    .post(`${backendURL}/login/auth`, { token: Cookies.get(TOKEN_NAME) })
+    .post(`${BACKEND_URL}/login/auth`, { token: Cookies.get(TOKEN_NAME) })
     .catch((err) => err);
   if (resAuth instanceof Error) return resAuth;
 
   const { matricula } = resAuth.data.verification;
   const resUserGet = await axios
-    .get(`${backendURL}/users/${matricula}`)
+    .get(`${BACKEND_URL}/users/${matricula}`)
     .catch((err) => err);
   if (resUserGet instanceof Error) return resUserGet;
 
@@ -32,7 +32,7 @@ async function authenticate() {
 
 /** Guardar la sesión en una cookie y refrescar la página. */
 async function login({ profileObj }) {
-  const resLogin = await axios.post(`${backendURL}/login/`, profileObj).catch((err) => err);
+  const resLogin = await axios.post(`${BACKEND_URL}/login/`, profileObj).catch((err) => err);
   if (resLogin instanceof Error) {
     const errMsg = resLogin.response
       ? resLogin.response.data.msg
