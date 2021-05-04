@@ -3,7 +3,15 @@ import { render } from '@testing-library/react';
 
 import BarrasDeProgreso from "./BarrasDeProgreso";
 
-const colores = ["orange", "green", "blue", "purple", "pink", "red", "teal"];
+const colores = [
+  { nombre: "orange", tag: 'Incompleto' },
+  { nombre: "green",  tag: 'Completo'   },
+  { nombre: "blue",   tag: 'Semestre-1' },
+  { nombre: "purple", tag: 'Semestre-2' },
+  { nombre: "pink",   tag: 'Semestre-3' },
+  { nombre: "red",    tag: 'Semestre-4' },
+  { nombre: "teal",   tag: 'Semestre-5' }
+];
 const cantMateriasPorColor = [
   { orange: 10, green: 0, blue: 0, purple: 0, pink: 0, red: 0, teal: 0 },
   { orange: 2, green: 3, blue: 4, purple: 1, pink: 0, red: 0, teal: 0 },

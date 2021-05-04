@@ -41,11 +41,11 @@ export default function PlanDeEstudio() {
   const [colores, setColores] = useState([
     { nombre: "orange", tag: 'Incompleto' }, 
     { nombre: "green",  tag: 'Completo' }, 
-    { nombre: "blue",   tag: 'Semestre 1' }, 
-    { nombre: "purple", tag: 'Semestre 2' }, 
-    { nombre: "pink",   tag: 'Semestre 3' }, 
-    { nombre: "red",    tag: 'Semestre 4' }, 
-    { nombre: "teal",   tag: 'Semestre 5' }
+    { nombre: "blue",   tag: 'Semestre-1' }, 
+    { nombre: "purple", tag: 'Semestre-2' }, 
+    { nombre: "pink",   tag: 'Semestre-3' }, 
+    { nombre: "red",    tag: 'Semestre-4' }, 
+    { nombre: "teal",   tag: 'Semestre-5' }
   ]);
   const [colorSeleccionado, setColorSeleccionado] = useState('green')
   const [cantMateriasPorColor, setCantMateriasPorColor] = useState({ orange: 1, green: 0, blue: 0, purple: 0, pink: 0, red: 0, teal: 0 })
