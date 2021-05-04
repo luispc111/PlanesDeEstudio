@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from '@testing-library/react';
+import { render, fireEvent  } from '@testing-library/react';
 
 import BotonesDeColor from "./BotonesDeColor";
 
@@ -50,4 +50,22 @@ it("renderiza los botones de colores", () => {
   const teal = container.querySelector('.bg-teal.boton-color');
   expect(teal).toBeInTheDocument();
   expect(getByText(/Semestre-5/)).toBeInTheDocument();
+
+  expect(getByText(/Editar colores/)).toBeInTheDocument();
+});
+
+it("Se cambia el color seleccionado", () => {
+
+  const { container } = render(<BotonesDeColor
+                                  colores={colores}
+                                  cambiarColores={jest.fn()}
+                                  cambiarColorSeleccionado={jest.fn()}
+                                  colorSeleccionado={'orange'}
+                                />);
+
+
+  const boton = container.querySelector('.bg-purple.boton-color');
+  // fireEvent.click(boton);
+  fireEvent.click(boton, { button: 2 })
+  expect(boton.className).toEqual('text-center m-0 bg-purple boton-color col-md-2 col-sm-4 col-6')
 });
