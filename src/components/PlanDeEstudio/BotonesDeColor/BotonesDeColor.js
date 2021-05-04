@@ -91,7 +91,18 @@ export default function BotonesDeColor({ colores, cambiarColores, cambiarColorSe
 
   return (
     <Row className="mt-4 m-0 p-0">
-      <Col md={10} className="m-0 p-0">
+      <Col md={1} className="mt-4 mb-4">
+        <Button variant="info" onClick={() => setModalShow(true)}>
+          Editar colores
+        </Button>
+        <ModalColores
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+          colores={colores}
+          cambiarColores={cambiarColores}
+        />
+      </Col>
+      <Col md={11}>
         <Row className="m-0 p-0">
           {colores.map((color, indice) => (
             <BotonDeColor
@@ -102,17 +113,6 @@ export default function BotonesDeColor({ colores, cambiarColores, cambiarColorSe
             />
           ))}
         </Row>
-      </Col>
-      <Col md={2}>
-        <Button variant="info" onClick={() => setModalShow(true)}>
-          Editar colores
-        </Button>
-        <ModalColores
-          show={modalShow}
-          onHide={() => setModalShow(false)}
-          colores={colores}
-          cambiarColores={cambiarColores}
-        />
       </Col>
     </Row>
   )
