@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import axios from "axios";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from 'react-bootstrap';
+
+import { BACKEND_URL } from '../utils'; 
 
 import BarrasDeProgreso from './BarrasDeProgreso/BarrasDeProgreso';
 import Semestre from './Semestre/Semestre';
@@ -57,16 +60,34 @@ export default function PlanDeEstudio() {
 
   useEffect(() => {
     // TODO: request a la base de datos
+    axios.get(`${BACKEND_URL}/planes/${clave}`)
+    .then(res => {
+      // setPlanesDeEstudio(res.data.map(plan => ({ nombre: plan.siglas,  clave: plan.siglas})));
+      console.log(res.data)
+      let plan = JSON.parse(JSON.stringify(res.data));;
 
-    let { plan, cant } = crearPlanDeEstudios(clave);
+      let materias = plan.materias.map(sem => sem.map(materia => {
+        materia['color'] = 'orange';
+        return materia;
+      }))
 
-    let colorMaterias = { orange: 0, green: 0, blue: 0, purple: 0, pink: 0, red: 0, teal: 0 };
+      plan.materias = materias;
 
-    colorMaterias.orange = cant;
+      let cant = 0;
 
-    setPlanDeEstudios(plan);
-    setCantMaterias(cant);
-    setCantMateriasPorColor(colorMaterias);
+      plan.materias.forEach(sem => {
+        cant += sem.length;
+      })
+
+      let colorMaterias = { orange: 0, green: 0, blue: 0, purple: 0, pink: 0, red: 0, teal: 0 };
+
+      colorMaterias.orange = cant;
+
+      setPlanDeEstudios(plan);
+      setCantMaterias(cant);
+      setCantMateriasPorColor(colorMaterias);
+    })
+    .catch((err) => err);
   }, [clave])
 
   useEffect(() => {
@@ -88,7 +109,7 @@ export default function PlanDeEstudio() {
     <Container fluid>
       <Row>
         <Col>
-          <h2 className="titulo-tabla"> Plan de estudios {planDeEstudios.nombre} </h2>
+          <h2 className="titulo-tabla"> {planDeEstudios.nombre} </h2>
         </Col>
       </Row>
       <BotonesDeColor
@@ -111,7 +132,7 @@ export default function PlanDeEstudio() {
             key={indice}
             numSemestre={indice}
             materias={semestre}
-            tec21={planDeEstudios?.tec21}
+            tec21={planDeEstudios?.esTec21}
             colorSeleccionado={colorSeleccionado}
             clicks={{clickSemestre, clickMateria}}
           />

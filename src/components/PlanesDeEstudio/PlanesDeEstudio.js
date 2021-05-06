@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import axios from "axios";
 import { Button, Container, Row, FormControl, InputGroup } from 'react-bootstrap';
 
-import { PUBLIC_URL } from '../utils'; 
+import { PUBLIC_URL, BACKEND_URL } from '../utils'; 
 
 /** Vista de lista de todos los planes de estudio */
 export default function PlanesDeEstudio() {
@@ -10,29 +11,11 @@ export default function PlanesDeEstudio() {
   const [filtroCarreras, setFiltroCarreras] = useState('');
 
   useEffect(() => {
-    // TODO: Cambiar a un request al back cuando esté funcionando
-    let planes = [
-      {nombre: 'ITC 11', clave: 'itc_11',},
-      {nombre: 'LAD 11', clave: 'lad_11',},
-      {nombre: 'LAD 17', clave: 'lad_17',},
-      {nombre: 'LAD 11', clave: 'lad_11',},
-      {nombre: 'LAD 11', clave: 'lad_11',},
-      {nombre: 'LAD 11', clave: 'lad_11',},
-      {nombre: 'LAD 11', clave: 'lad_11',},
-      {nombre: 'LAF 11', clave: 'laf_11',},
-      {nombre: 'LAD 11', clave: 'lad_11',},
-      {nombre: 'LAD 11', clave: 'lad_11',},
-      {nombre: 'LAD 11', clave: 'lad_11',},
-      {nombre: 'LAD 11', clave: 'lad_11',},
-      {nombre: 'LAD 11', clave: 'lad_11',},
-      {nombre: 'LAD 11', clave: 'lad_11',},
-      {nombre: 'LAD 11', clave: 'lad_11',},
-      {nombre: 'LAD 11', clave: 'lad_11',},
-      {nombre: 'LAD 11', clave: 'lad_11',},
-      {nombre: 'LAD 11', clave: 'lad_11',},
-    ];
-
-    setPlanesDeEstudio(planes);
+    axios.get(`${BACKEND_URL}/planes`)
+    .then(res => {
+      setPlanesDeEstudio(res.data.map(plan => ({ nombre: plan.siglas,  clave: plan.siglas})));
+    })
+    .catch((err) => err);
   }, []);
 
   const planesFiltrados = planesDeEstudio.filter(carrera => carrera.nombre.includes(filtroCarreras)).sort((a, b) => (a.nombre).localeCompare(b.nombre));
