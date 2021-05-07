@@ -9,10 +9,9 @@ export default function Materia ({ nums, materia, tec21, clickMateria }) {
     <Row className={`p-0 m-0 materia labelMateria bg-${materia.color}`} onClick={() => clickMateria(numSemestre, numMateria)}>
       <Col className="p-0 m-0">
         <Row className="nombre-materia p-0 m-0">
-          <Col className="p-0 m-0">
+          <Col className="p-0 m-0 texto-materia">
             <label>{materia.nombre}</label>
-            <br></br>
-            <label className="unidades">Unidades: {materia.unidades}</label>
+            <label className="unidades d-block">Unidades: {materia.unidades}</label>
           </Col>
         </Row>
         {tec21 && (

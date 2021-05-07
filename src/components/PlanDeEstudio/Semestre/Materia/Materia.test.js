@@ -30,7 +30,7 @@ it("renderiza una materia", () => {
   const materia = container.querySelector('.bg-orange');
   expect(materia).toBeInTheDocument();
 
-  expect(getByText(/Unidades:/)).toBeInTheDocument();
+  expect(getByText(/Unidades: 8/)).toBeInTheDocument();
 
   const unidades = container.querySelector('.unidades');
   expect(unidades).toBeInTheDocument();
@@ -49,7 +49,7 @@ it("renderiza una materia de tec21", () => {
   const materia = container.querySelector('.bg-orange');
   expect(materia).toBeInTheDocument();
 
-  expect(getByText(/Unidades:/)).toBeInTheDocument();
+  expect(getByText(/Unidades: 8/)).toBeInTheDocument();
 
   const unidades = container.querySelector('.unidades');
   expect(unidades).toBeInTheDocument();
