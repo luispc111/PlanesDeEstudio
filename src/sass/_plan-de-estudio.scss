@@ -3,18 +3,6 @@
   float: right;
 }
 
-.semester {
-  color: white;
-  text-align: center;
-}
-
-.materia {
-  border: solid 1px #191C25;
-  width: 100%;
-  height: 7vh;
-  text-align: center;
-}
-
 .boton-color {
   font-size: 0.9rem;
   border: 1px solid;
@@ -22,6 +10,71 @@
   &-seleccionado{
     font-size: 0.9rem;
     border: 2px solid;
+  }
+}
+
+.semestre {
+  color: white;
+  text-align: center;
+  text-align: center;
+  
+  > .semestre-label {
+    border-radius: 2px;
+  
+    > label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  > div {
+    width: 100%;
+  }
+
+  > .materia {
+    border-radius: 2px;
+    margin-top: 2px;
+    font-size: 1rem;
+
+    @media (min-width: 768px){
+      font-size: 0.8rem;
+    }
+    
+    @media (min-width: 1220px){
+      font-size: 0.7rem;
+    }
+
+    .labelMateria {
+      line-height: 1em;
+      padding: 2px;
+
+      .nombre-materia {
+        height: 4em;
+        width: 100%;
+        display: block;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+      }
+
+      .unidades {
+        font-weight: lighter;
+      }
+
+      label {
+        width: 100%;
+      }
+    }
+
+    .tec21 {
+      height: 6px;
+      opacity: 0.65;
+
+      > div {
+        border: 1px solid #00000080;
+      }
+    }
   }
 }
 

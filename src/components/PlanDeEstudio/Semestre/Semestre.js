@@ -43,13 +43,9 @@ export default function Semestre ({ numSemestre, materias, tec21, colorSeleccion
   }, [materias, colorDeFondo]);
 
   return (
-    <Col xs={4} md className="semestre m-0 p-0 mb-4">
-      <div
-        className="materia"
-        style={{backgroundColor: listaColores[colorDeFondo].color}}
-        onClick={() => botonClickeado()}
-      >
-        <label>Semestre {numSemestre + 1}</label>
+    <Col xs={6} md={3} lg className="semestre p-0 pr-1 mb-4">
+      <div className="semestre-label" style={{backgroundColor: listaColores[colorDeFondo].color}} onClick={() => botonClickeado()}>
+        <label className="mb-1">Semestre {numSemestre + 1}</label>
       </div>
       {materias.map((materia, indice) => (
         <Materia
