@@ -71,7 +71,7 @@ export default function PlanDeEstudio() {
   }, [clave])
 
   useEffect(() => {
-    let colorMaterias = cantMateriasPorColor.map(() => 0);
+    let colorMaterias = colores.map(() => 0);
 
     planDeEstudios.materias.forEach((semestre) => {
       semestre.forEach(materia => {
@@ -80,8 +80,7 @@ export default function PlanDeEstudio() {
     });
 
     setCantMateriasPorColor(colorMaterias);
-    // eslint-disable-next-line
-  }, [planDeEstudios])
+  }, [planDeEstudios, colores])
   
   document.title = planDeEstudios.nombre
 
