@@ -10,11 +10,18 @@ const props = {
   },
   materia: {
     nombre: 'Progra 1',
-    color: 'orange',
+    color: 0,
     periodos: [true, false, false]
   },
   clickMateria: jest.fn()
 };
+
+const colores = [
+  {
+    color: '#AAA',
+    nombre: 'a'
+  }
+]
 
 it("renderiza una materia", () => {
   const { container, getByText } = render(<Materia
@@ -22,12 +29,10 @@ it("renderiza una materia", () => {
                                             materia={props.materia}
                                             tec21={false}
                                             clickMateria={props.clickMateria}
+                                            listaColores={colores}
                                           />);
 
   expect(getByText(/Progra 1/)).toBeInTheDocument();
-
-  const materia = container.querySelector('.bg-orange');
-  expect(materia).toBeInTheDocument();
 });
 
 it("renderiza una materia de tec21", () => {
@@ -36,12 +41,10 @@ it("renderiza una materia de tec21", () => {
                                             materia={props.materia}
                                             tec21={true}
                                             clickMateria={props.clickMateria}
+                                            listaColores={colores}
                                           />);
 
   expect(getByText(/Progra 1/)).toBeInTheDocument();
-
-  const materia = container.querySelector('.bg-orange');
-  expect(materia).toBeInTheDocument();
 
   const seccionTec21 = container.querySelector('.tec21');
   expect(seccionTec21).toBeInTheDocument();

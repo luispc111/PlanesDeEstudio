@@ -30,35 +30,12 @@ it("renderiza una materia", () => {
 it("renderiza los botones de colores", () => {
   const { container } = render(componente);
 
-  const orange = container.querySelector('.bg-orange.boton-color');
-  expect(orange).toBeInTheDocument();
-
-  const green = container.querySelector('.bg-green.boton-color-seleccionado');
+  const green = container.querySelector('.boton-color-seleccionado');
   expect(green).toBeInTheDocument();
 });
 
 it("renderiza las barras de progreso", () => {
   const { container, getByText } = render(componente);
 
-  const orange = container.querySelector('.barra.bg-orange');
-  expect(orange).toBeInTheDocument();
   expect(getByText(/100.00%/i)).toBeInTheDocument();
-
-  const green = container.querySelector('.barra.bg-green');
-  expect(green).toBeInTheDocument();
-
-  const blue = container.querySelector('.barra.bg-blue');
-  expect(blue).toBeInTheDocument();
-
-  const purple = container.querySelector('.barra.bg-purple');
-  expect(purple).toBeInTheDocument();
-
-  const pink = container.querySelector('.barra.bg-pink');
-  expect(pink).toBeInTheDocument();
-
-  const red = container.querySelector('.barra.bg-red');
-  expect(red).toBeInTheDocument();
-
-  const teal = container.querySelector('.barra.bg-teal');
-  expect(teal).toBeInTheDocument();
 });

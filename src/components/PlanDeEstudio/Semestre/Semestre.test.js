@@ -6,17 +6,27 @@ import Semestre from "./Semestre";
 const materias = [
   {
     nombre: 'Progra 1',
-    color: 'green',
+    color: 0,
   },
   {
     nombre: 'Progra 2',
-    color: 'teal',
+    color: 1,
   },
   {
     nombre: 'Progra 3',
-    color: 'blue',
+    color: 2,
   },
 ]
+
+const colores = [
+  { color: "#BF7913", nombre: 'Incompleto' },
+  { color: "#439630", nombre: 'Completo'   },
+  { color: "#C14B4C", nombre: 'Semestre-1' },
+  { color: "#2653AD", nombre: 'Semestre-2' },
+  { color: "#633B8D", nombre: 'Semestre-3' },
+  { color: "#B02828", nombre: 'Semestre-4' },
+  { color: "#008080", nombre: 'Semestre-5' }
+];
 
 const props = {
   clicks: {
@@ -35,14 +45,12 @@ it("renderiza un semestre", () => {
                                             numSemestre={0}
                                             materias={materias}
                                             tec21={false}
-                                            colorSeleccionado={'orange'}
+                                            colorSeleccionado={0}
                                             clicks={props.clicks}
+                                            listaColores={colores}
                                           />);
 
   expect(getByText(/Semestre 1/)).toBeInTheDocument();
-
-  const semestre = container.querySelector('.bg-orange');
-  expect(semestre).toBeInTheDocument();
 });
 
 it("renderiza las materias de un semestre", () => {
@@ -51,23 +59,16 @@ it("renderiza las materias de un semestre", () => {
                                             numSemestre={0}
                                             materias={materias}
                                             tec21={false}
-                                            colorSeleccionado={'orange'}
+                                            colorSeleccionado={0}
                                             clicks={props.clicks}
+                                            listaColores={colores}
                                           />);
 
   expect(getByText(/Semestre 1/)).toBeInTheDocument();
-  const semestre = container.querySelector('.bg-orange');
-  expect(semestre).toBeInTheDocument();
 
   expect(getByText(/Progra 1/)).toBeInTheDocument();
-  const materia1 = container.querySelector('.bg-green');
-  expect(materia1).toBeInTheDocument();
 
   expect(getByText(/Progra 2/)).toBeInTheDocument();
-  const materia2 = container.querySelector('.bg-teal');
-  expect(materia2).toBeInTheDocument();
 
   expect(getByText(/Progra 3/)).toBeInTheDocument();
-  const materia3 = container.querySelector('.bg-blue');
-  expect(materia3).toBeInTheDocument();
 });
