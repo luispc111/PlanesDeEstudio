@@ -6,11 +6,12 @@ export default function BarrasDeProgreso({ listaColores, cantMateriasPorColor, t
   return (
     <ProgressBar className="m-0 barra-progreso">
       {listaColores.map((color, indice) => {
-        let cant = (cantMateriasPorColor[color.nombre] / totalMaterias * 100).toFixed(2) || 0;
+        let cant = (cantMateriasPorColor[indice] / totalMaterias * 100).toFixed(2) || 0;
         return (
           <ProgressBar
             // striped
-            className={`bg-${color.nombre} barra`}
+            className="barra"
+            style={{backgroundColor: color.color}}
             now={cant}
             label={`${cant}%`}
             key={indice}

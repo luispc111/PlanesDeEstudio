@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { Row, Col, Button, Modal, InputGroup, FormControl } from 'react-bootstrap';
 
-function ColorInput({ color, actualizarColor }) {
+function ColorInput({ color, actualizarColor, indice }) {
   return (
     <Row className="mt-3 mb-3">
       <Col xs={1}>
-        <div className={`cuadrado-color bg-${color.nombre}`}></div>
+        <div className={`cuadrado-color`} style={{backgroundColor: color.color}}></div>
       </Col>
       <Col>
         <InputGroup>
           <FormControl
             placeholder="Tag Color"
-            value={color.tag}
-            onChange={(e) => actualizarColor(color.nombre, e.target.value)}
+            value={color.nombre}
+            onChange={(e) => actualizarColor(indice, e.target.value)}
             aria-label="Username"
             aria-describedby="basic-addon1"
           />
@@ -31,13 +31,9 @@ function ModalColores({ show, onHide, colores, cambiarColores }) {
   }
 
   const actualizarColor = (color, tag) => {
-    setListaColores(listaColores.map(col => {
-      if (col.nombre === color) {
-        return { nombre: color, tag: tag};
-      } else {
-        return col;
-      }
-    }));
+    let cols = JSON.parse(JSON.stringify(listaColores));
+    cols[color].nombre = tag;
+    setListaColores(cols);
   }
 
   const cerrarModal = () => {
@@ -59,7 +55,7 @@ function ModalColores({ show, onHide, colores, cambiarColores }) {
       </Modal.Header>
       <Modal.Body className="modal-bg">
         <div>
-          {listaColores.map((color, index) => (<ColorInput key={index} color={color} actualizarColor={actualizarColor} />))}
+          {listaColores.map((color, index) => (<ColorInput key={index} color={color} actualizarColor={actualizarColor} indice={index} />))}
         </div>
       </Modal.Body>
       <Modal.Footer className="modal-bg">
@@ -71,16 +67,17 @@ function ModalColores({ show, onHide, colores, cambiarColores }) {
 }
 
 /** Boton individual de la lista de colores **/
-const BotonDeColor = ({ color, cambiarColorSeleccionado, colorSeleccionado }) => {
+const BotonDeColor = ({ indice, color, cambiarColorSeleccionado, colorSeleccionado }) => {
   return (
     <Col
       xs={6}
       sm={4}
       md={2}
-      className={`text-center m-0 bg-${color.nombre} boton-color${(color.nombre === colorSeleccionado) ? '-seleccionado' : ''}`}
-      onClick={() => cambiarColorSeleccionado(color.nombre)}
+      className={`text-center m-0 boton-color${(indice === colorSeleccionado) ? '-seleccionado' : ''}`}
+      style={{backgroundColor: color.color}}
+      onClick={() => cambiarColorSeleccionado(indice)}
     >
-      {color.tag}
+      {color.nombre}
     </Col>
   )
 }
@@ -106,8 +103,9 @@ export default function BotonesDeColor({ colores, cambiarColores, cambiarColorSe
         <Row className="m-0 p-0">
           {colores.map((color, indice) => (
             <BotonDeColor
-              color={color}
               key={indice}
+              indice={indice}
+              color={color}
               cambiarColorSeleccionado={cambiarColorSeleccionado}
               colorSeleccionado={colorSeleccionado}
             />
