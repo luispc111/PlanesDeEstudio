@@ -80,6 +80,7 @@ export default function PlanDeEstudio() {
     });
 
     setCantMateriasPorColor(colorMaterias);
+    // eslint-disable-next-line
   }, [planDeEstudios])
   
   document.title = planDeEstudios.nombre
