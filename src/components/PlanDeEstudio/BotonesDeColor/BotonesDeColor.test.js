@@ -15,7 +15,7 @@ const colores = [
 
 it("renderiza los botones de colores", () => {
 
-  const { container, getByText } = render(<BotonesDeColor
+  const { getByText } = render(<BotonesDeColor
                                   colores={colores}
                                   cambiarColores={jest.fn()}
                                   cambiarColorSeleccionado={jest.fn()}
@@ -29,24 +29,6 @@ it("renderiza los botones de colores", () => {
   expect(getByText(/Semestre-3/)).toBeInTheDocument();
   expect(getByText(/Semestre-4/)).toBeInTheDocument();
   expect(getByText(/Semestre-5/)).toBeInTheDocument();
-  // const otros = container.querySelectorAll('.bg-teal.boton-color');
-  // expect(teal).toBeInTheDocument();
 
   expect(getByText(/Editar colores/)).toBeInTheDocument();
 });
-
-// it("Se cambia el color seleccionado", () => {
-
-//   const { container } = render(<BotonesDeColor
-//                                   colores={colores}
-//                                   cambiarColores={jest.fn()}
-//                                   cambiarColorSeleccionado={jest.fn()}
-//                                   colorSeleccionado={1}
-//                                 />);
-
-
-//   const boton = container.querySelector('.bg-purple.boton-color');
-//   // fireEvent.click(boton);
-//   fireEvent.click(boton, { button: 2 })
-//   expect(boton.className).toEqual('text-center m-0 bg-purple boton-color col-md-2 col-sm-4 col-6')
-// });

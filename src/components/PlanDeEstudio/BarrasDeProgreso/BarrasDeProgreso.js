@@ -9,7 +9,6 @@ export default function BarrasDeProgreso({ listaColores, cantMateriasPorColor, t
         let cant = (cantMateriasPorColor[indice] / totalMaterias * 100).toFixed(2) || 0;
         return (
           <ProgressBar
-            // striped
             className="barra"
             style={{backgroundColor: color.color}}
             now={cant}

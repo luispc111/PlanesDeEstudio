@@ -41,7 +41,7 @@ const props = {
 
 it("renderiza un semestre", () => {
 
-  const { container, getByText } = render(<Semestre
+  const { getByText } = render(<Semestre
                                             numSemestre={0}
                                             materias={materias}
                                             tec21={false}
@@ -65,10 +65,7 @@ it("renderiza las materias de un semestre", () => {
                                           />);
 
   expect(getByText(/Semestre 1/)).toBeInTheDocument();
-
   expect(getByText(/Progra 1/)).toBeInTheDocument();
-
   expect(getByText(/Progra 2/)).toBeInTheDocument();
-
   expect(getByText(/Progra 3/)).toBeInTheDocument();
 });

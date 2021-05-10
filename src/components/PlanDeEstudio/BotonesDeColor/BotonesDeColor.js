@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { Row, Col, Button, Modal, InputGroup, FormControl } from 'react-bootstrap';
 import { SliderPicker as Picker} from 'react-color';
 
+/** Input para cambiar el valor hexadecimal y el tag de un color **/
 function ColorInput({ color, actualizarNombre, actualizarColor, indice }) {
   return (
     <Row className="mt-5 mb-3">
       <Col xs={6}>
         <Picker
           color={ color.color }
-          // colors={[color.color]}
           onChangeComplete={(c) => actualizarColor(c.hex, indice) }
         />
       </Col>
@@ -27,6 +27,7 @@ function ColorInput({ color, actualizarNombre, actualizarColor, indice }) {
   )
 }
 
+/** Modal donde puedes ver la lista de todos los colores y modificarlos **/
 function ModalColores({ show, onHide, colores, cambiarColores }) {
   const [listaColores, setListaColores] = useState(colores);
 
