@@ -65,24 +65,27 @@ export default function PlanDeEstudio() {
     let { plan, cant } = crearPlanDeEstudios(clave);
 
     let colorMaterias = [cant, 0];
+    let colorUnidades = [cant, 0];
 
     setPlanDeEstudios(plan);
     setCantMaterias(cant);
     setCantMateriasPorColor(colorMaterias);
-    setCantUnidadesPorColor(colorMaterias);
+    setCantUnidadesPorColor(colorUnidades);
   }, [clave])
 
   useEffect(() => {
     let colorMaterias = colores.map(() => 0);
+    let colorUnidades = colores.map(() => 0);
 
     planDeEstudios.materias.forEach((semestre) => {
       semestre.forEach(materia => {
         colorMaterias[materia.color] += 1;
+        colorUnidades[materia.color] += +materia.unidades;
       });
     });
 
     setCantMateriasPorColor(colorMaterias);
-    setCantUnidadesPorColor(colorMaterias);
+    setCantUnidadesPorColor(colorUnidades);
   }, [planDeEstudios, colores])
   
   document.title = planDeEstudios.nombre

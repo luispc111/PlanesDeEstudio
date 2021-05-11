@@ -111,7 +111,7 @@ const BotonDeColor = ({ indice, color, cambiarColorSeleccionado, colorSelecciona
     >
       <Row>
         <Col>
-          {color.nombre}
+          <b>{color.nombre}</b>
         </Col>        
       </Row>
       <Row>
