@@ -8,9 +8,9 @@ import BotonesDeColor from './BotonesDeColor/BotonesDeColor';
 
 const crearPlanDeEstudios = (clave) => {
   let materias = [
-    {unidades: '4', color: 0, periodos: [true, false, false], nombre: 'Fundamentos de programación',},
-    {unidades: '8', color: 0, periodos: [false, true, false], nombre: 'Programación Orientada a Objetos',},
-    {unidades: '8', color: 0, periodos: [true, false, true], nombre: 'Estructura de Datos',}
+    {unidades: 4, color: 0, periodos: [true, false, false], nombre: 'Fundamentos de programación',},
+    {unidades: 8, color: 0, periodos: [false, true, false], nombre: 'Programación Orientada a Objetos',},
+    {unidades: 8, color: 0, periodos: [true, false, true], nombre: 'Estructura de Datos',}
   ]
 
   let cant = 0;
@@ -80,7 +80,7 @@ export default function PlanDeEstudio() {
     planDeEstudios.materias.forEach((semestre) => {
       semestre.forEach(materia => {
         colorMaterias[materia.color] += 1;
-        colorUnidades[materia.color] += +materia.unidades;
+        colorUnidades[materia.color] += materia.unidades;
       });
     });
 
