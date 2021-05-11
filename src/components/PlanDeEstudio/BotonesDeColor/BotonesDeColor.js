@@ -99,7 +99,7 @@ function ModalColores({ show, onHide, colores, cambiarColores }) {
 }
 
 /** Boton individual de la lista de colores **/
-const BotonDeColor = ({ indice, color, cambiarColorSeleccionado, colorSeleccionado }) => {
+const BotonDeColor = ({ indice, color, cambiarColorSeleccionado, colorSeleccionado, cantMateriasPorColor, cantUnidadesPorColor }) => {
   return (
     <Col
       xs={6}
@@ -109,13 +109,27 @@ const BotonDeColor = ({ indice, color, cambiarColorSeleccionado, colorSelecciona
       style={{backgroundColor: color.color}}
       onClick={() => cambiarColorSeleccionado(indice)}
     >
-      {color.nombre}
+      <Row>
+        <Col>
+          {color.nombre}
+        </Col>        
+      </Row>
+      <Row>
+        <Col>
+          {`Unidades: ${cantUnidadesPorColor[indice]}`}
+        </Col>        
+      </Row>
+      <Row>
+        <Col>
+        {`Materias: ${cantMateriasPorColor[indice]}`}
+        </Col>        
+      </Row>
     </Col>
   )
 }
 
 /** Lista de colores que se pueden colocar en cada materia del plan de estudios **/
-export default function BotonesDeColor({ colores, cambiarColores, cambiarColorSeleccionado, colorSeleccionado }) {
+export default function BotonesDeColor({ colores, cambiarColores, cambiarColorSeleccionado, colorSeleccionado, cantMateriasPorColor, cantUnidadesPorColor }) {
   const [modalShow, setModalShow] = useState(false);
 
   const esconder = () => {
@@ -144,6 +158,8 @@ export default function BotonesDeColor({ colores, cambiarColores, cambiarColorSe
               color={color}
               cambiarColorSeleccionado={cambiarColorSeleccionado}
               colorSeleccionado={colorSeleccionado}
+              cantMateriasPorColor={cantMateriasPorColor}
+              cantUnidadesPorColor={cantUnidadesPorColor}
             />
           ))}
         </Row>

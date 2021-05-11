@@ -18,7 +18,7 @@
 .boton-color {
   font-size: 0.9rem;
   border: 1px solid;
-  height: 2.5rem;
+  height: 3.75rem;
   &-seleccionado{
     font-size: 0.9rem;
     border: 2px solid;
@@ -62,9 +62,6 @@
   }
 
   .boton-color {
-    height: 3rem;
-    &-seleccionado{
-      height: 3rem;
-    }
+    height: 4rem;
   }
 }

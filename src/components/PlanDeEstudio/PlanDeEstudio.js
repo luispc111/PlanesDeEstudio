@@ -44,6 +44,7 @@ export default function PlanDeEstudio() {
   ]);
   const [colorSeleccionado, setColorSeleccionado] = useState(1)
   const [cantMateriasPorColor, setCantMateriasPorColor] = useState([1, 0])
+  const [cantUnidadesPorColor, setCantUnidadesPorColor] = useState([1, 0])
   const [cantMaterias, setCantMaterias] = useState(1);
 
   const clickMateria = (sem, materia) => {
@@ -68,6 +69,7 @@ export default function PlanDeEstudio() {
     setPlanDeEstudios(plan);
     setCantMaterias(cant);
     setCantMateriasPorColor(colorMaterias);
+    setCantUnidadesPorColor(colorMaterias);
   }, [clave])
 
   useEffect(() => {
@@ -80,6 +82,7 @@ export default function PlanDeEstudio() {
     });
 
     setCantMateriasPorColor(colorMaterias);
+    setCantUnidadesPorColor(colorMaterias);
   }, [planDeEstudios, colores])
   
   document.title = planDeEstudios.nombre
@@ -96,6 +99,8 @@ export default function PlanDeEstudio() {
         cambiarColores={setColores}
         cambiarColorSeleccionado={setColorSeleccionado}
         colorSeleccionado={colorSeleccionado}
+        cantMateriasPorColor={cantMateriasPorColor}
+        cantUnidadesPorColor={cantUnidadesPorColor}
       />
       <Row>
         <Col className="m-0 p-0 mt-4">
