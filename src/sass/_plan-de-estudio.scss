@@ -16,15 +16,19 @@
 }
 
 .boton-color {
+  font-size: 0.9rem;
   border: 1px solid;
-  color: #DDDDDD;
+  height: 2.5rem;
+  &-seleccionado{
+    font-size: 0.9rem;
+    border: 2px solid;
+  }
+}
+
+.cuadrado-color {
+  border: 1px solid;
   height: 2.5rem;
   width: 2.5rem;
-  &-seleccionado{
-    border: 3px solid;
-    color: white;
-    width: 2.5rem;
-  }
 }
 
 .nombre-materia {
@@ -42,6 +46,10 @@
   }
 }
 
+.modal-bg {
+  background-color: $fondo-app;
+}
+
 @media (max-width:1461px){
   .materia {
       font-size: 1.3vh;
@@ -50,6 +58,13 @@
 
 @media (max-width:1220px){
   .materia {
-      font-size: 1.2vh;
+    font-size: 1.2vh;
+  }
+
+  .boton-color {
+    height: 3rem;
+    &-seleccionado{
+      height: 3rem;
+    }
   }
 }
