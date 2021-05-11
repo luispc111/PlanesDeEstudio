@@ -2,11 +2,15 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 
 /** Bloque de una materia individual **/
-export default function Materia ({ nums, materia, tec21, clickMateria }) {
+export default function Materia ({ nums, materia, tec21, clickMateria, listaColores }) {
   const {numSemestre, numMateria} = nums
 
   return (
-    <Row className={`p-0 m-0 materia labelMateria bg-${materia.color}`} onClick={() => clickMateria(numSemestre, numMateria)}>
+    <Row
+      className={`p-0 m-0 materia labelMateria`}
+      style={{backgroundColor: listaColores[materia.color].color}}
+      onClick={() => clickMateria(numSemestre, numMateria)}
+    >
       <Col className="p-0 m-0">
         <Row className="nombre-materia p-0 m-0">
           <Col className="p-0 m-0">

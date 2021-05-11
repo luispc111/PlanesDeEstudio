@@ -11,9 +11,9 @@ import BotonesDeColor from './BotonesDeColor/BotonesDeColor';
 
 const crearPlanDeEstudios = (clave) => {
   let materias = [
-    {color: 'orange', periodos: [true, false, false], nombre: 'Fundamentos de programación',},
-    {color: 'orange', periodos: [false, true, false], nombre: 'Programación Orientada a Objetos',},
-    {color: 'orange', periodos: [true, false, true], nombre: 'Estructura de Datos',}
+    {color: 0, periodos: [true, false, false], nombre: 'Fundamentos de programación',},
+    {color: 0, periodos: [false, true, false], nombre: 'Programación Orientada a Objetos',},
+    {color: 0, periodos: [true, false, true], nombre: 'Estructura de Datos',}
   ]
 
   let cant = 0;
@@ -41,9 +41,12 @@ export default function PlanDeEstudio() {
 
   const [planDeEstudios, setPlanDeEstudios] = useState({materias: []});
   // eslint-disable-next-line
-  const [colores, setColores] = useState(["orange", "green", "blue", "purple", "pink", "red", "teal"])
-  const [colorSeleccionado, setColorSeleccionado] = useState('green')
-  const [cantMateriasPorColor, setCantMateriasPorColor] = useState({ orange: 1, green: 0, blue: 0, purple: 0, pink: 0, red: 0, teal: 0 })
+  const [colores, setColores] = useState([
+    { color: "#BF7913", nombre: 'Incompleto' }, 
+    { color: "#439630", nombre: 'Completo' }
+  ]);
+  const [colorSeleccionado, setColorSeleccionado] = useState(1)
+  const [cantMateriasPorColor, setCantMateriasPorColor] = useState([1, 0])
   const [cantMaterias, setCantMaterias] = useState(1);
 
   const clickMateria = (sem, materia) => {
@@ -79,6 +82,7 @@ export default function PlanDeEstudio() {
         cant += sem.length;
       })
 
+      // let colorMaterias = [cant, 0];
       let colorMaterias = { orange: 0, green: 0, blue: 0, purple: 0, pink: 0, red: 0, teal: 0 };
 
       colorMaterias.orange = cant;
@@ -91,17 +95,16 @@ export default function PlanDeEstudio() {
   }, [clave])
 
   useEffect(() => {
-    let plan = JSON.parse(JSON.stringify(planDeEstudios));
-    let colorMaterias = { orange: 0, green: 0, blue: 0, purple: 0, pink: 0, red: 0, teal: 0 };
+    let colorMaterias = colores.map(() => 0);
 
-    plan.materias.forEach((semestre) => {
+    planDeEstudios.materias.forEach((semestre) => {
       semestre.forEach(materia => {
         colorMaterias[materia.color] += 1;
       });
     });
 
     setCantMateriasPorColor(colorMaterias);
-  }, [planDeEstudios])
+  }, [planDeEstudios, colores])
   
   document.title = planDeEstudios.nombre
 
@@ -114,6 +117,7 @@ export default function PlanDeEstudio() {
       </Row>
       <BotonesDeColor
         colores={colores}
+        cambiarColores={setColores}
         cambiarColorSeleccionado={setColorSeleccionado}
         colorSeleccionado={colorSeleccionado}
       />
@@ -135,6 +139,7 @@ export default function PlanDeEstudio() {
             tec21={planDeEstudios?.esTec21}
             colorSeleccionado={colorSeleccionado}
             clicks={{clickSemestre, clickMateria}}
+            listaColores={colores}
           />
         ))}
       </Row>
