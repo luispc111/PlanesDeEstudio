@@ -6,6 +6,7 @@ import Header from './components/shared/Header';
 import Footer from './components/shared/Footer';
 import PlanDeEstudio from './components/PlanDeEstudio/PlanDeEstudio';
 import PlanesDeEstudio from './components/PlanesDeEstudio/PlanesDeEstudio';
+import Profile from './components/Profile/Profile';
 
 import { UserContext } from "./context";
 import { PUBLIC_URL } from './components/utils'; 
@@ -45,6 +46,10 @@ function App() {
             <Route
               path="/plan/:clave"
               component={PlanDeEstudio}
+            />
+            <Route
+              path="/perfil/:matricula"
+              component={Profile}
             />
           <div className="flex-grow-1"></div>
           <Footer />
