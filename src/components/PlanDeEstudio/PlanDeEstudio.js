@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from 'react-bootstrap';
 
 import { BACKEND_URL } from '../utils'; 
+import { UserContext } from "./../../context";
 
 import BarrasDeProgreso from './BarrasDeProgreso/BarrasDeProgreso';
 import Semestre from './Semestre/Semestre';
@@ -34,8 +35,43 @@ const crearPlanDeEstudios = (clave) => {
   return { plan: { nombre: 'ITC 11', tec21: true, materias: carrera, clave }, cant }
 }
 
+const conseguirPlanDeEstudios = (clave, setPlanDeEstudios, setCantMaterias, setCantMateriasPorColor) => {
+  axios.get(`${BACKEND_URL}/planes/${clave}`)
+  .then(res => {
+    // setPlanesDeEstudio(res.data.map(plan => ({ nombre: plan.siglas,  clave: plan.siglas})));
+    console.log(res.data)
+    let parsedData = JSON.parse(JSON.stringify(res.data));
+
+    let cant = 0;
+
+    let plan = {
+      nombre: parsedData.nombre,
+      esTec21: parsedData.esTec21,
+      materias: parsedData.materias.map(sem => sem.map(materia => {
+        let mat = {
+          clave: materia.clave,
+          nombre: materia.nombre,
+          unidades: materia.unidades,
+          color: 0
+        }
+        cant++;
+        return mat;
+      }))
+    }
+
+    let colorMaterias = [cant, 0]
+
+    setPlanDeEstudios(plan);
+    setCantMaterias(cant);
+    setCantMateriasPorColor(colorMaterias);
+  })
+  .catch((err) => err);
+}
+
 /** Vista de la tabla de un plan de estudio individual, junto con una lista de colores y barras de progreso **/
 export default function PlanDeEstudio() {
+  const loggedUser = useContext(UserContext);
+  // const { matricula } = loggedUser || {};
 
   const { clave } = useParams();
 
@@ -62,37 +98,12 @@ export default function PlanDeEstudio() {
   }
 
   useEffect(() => {
-    // TODO: request a la base de datos
-    axios.get(`${BACKEND_URL}/planes/${clave}`)
-    .then(res => {
-      // setPlanesDeEstudio(res.data.map(plan => ({ nombre: plan.siglas,  clave: plan.siglas})));
-      console.log(res.data)
-      let plan = JSON.parse(JSON.stringify(res.data));;
+    if (loggedUser) {
 
-      let materias = plan.materias.map(sem => sem.map(materia => {
-        materia['color'] = 'orange';
-        return materia;
-      }))
-
-      plan.materias = materias;
-
-      let cant = 0;
-
-      plan.materias.forEach(sem => {
-        cant += sem.length;
-      })
-
-      // let colorMaterias = [cant, 0];
-      let colorMaterias = { orange: 0, green: 0, blue: 0, purple: 0, pink: 0, red: 0, teal: 0 };
-
-      colorMaterias.orange = cant;
-
-      setPlanDeEstudios(plan);
-      setCantMaterias(cant);
-      setCantMateriasPorColor(colorMaterias);
-    })
-    .catch((err) => err);
-  }, [clave])
+    } else {
+      conseguirPlanDeEstudios(clave, setPlanDeEstudios, setCantMaterias, setCantMateriasPorColor);
+    }
+  }, [clave, loggedUser])
 
   useEffect(() => {
     let colorMaterias = colores.map(() => 0);
