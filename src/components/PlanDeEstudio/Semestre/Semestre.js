@@ -4,8 +4,8 @@ import { Col } from 'react-bootstrap';
 import Materia from './Materia/Materia';
 
 /** Lista de materias con bloque que define qué semestre es **/
-export default function Semestre ({ numSemestre, materias, tec21, colorSeleccionado, clicks }) {
-  const [colorDeFondo, setColorDeFondo] = useState('orange');
+export default function Semestre ({ numSemestre, materias, tec21, colorSeleccionado, clicks, listaColores }) {
+  const [colorDeFondo, setColorDeFondo] = useState(0);
 
   const { clickSemestre, clickMateria } = clicks;
 
@@ -17,10 +17,10 @@ export default function Semestre ({ numSemestre, materias, tec21, colorSeleccion
   // Se actualiza el color del boton del semestre
   useEffect(() => {
     // Este if es para colorear el semestre de naranja por si alguna materia se pintó de otro color cuando todas estaban del mismo color
-    if (colorDeFondo !== 'orange') {
+    if (colorDeFondo > 0) {
       materias.forEach(materia => {
         if (materia.color !== colorDeFondo) {
-          setColorDeFondo('orange');
+          setColorDeFondo(0);
           return;
         }
       });
@@ -44,7 +44,13 @@ export default function Semestre ({ numSemestre, materias, tec21, colorSeleccion
 
   return (
     <Col xs={4} md className="semestre m-0 p-0 mb-4">
-      <div className={`materia bg-${colorDeFondo}`} onClick={() => botonClickeado()}><label>Semestre {numSemestre + 1}</label></div>
+      <div
+        className="materia"
+        style={{backgroundColor: listaColores[colorDeFondo].color}}
+        onClick={() => botonClickeado()}
+      >
+        <label>Semestre {numSemestre + 1}</label>
+      </div>
       {materias.map((materia, indice) => (
         <Materia
           key={indice}
@@ -52,6 +58,7 @@ export default function Semestre ({ numSemestre, materias, tec21, colorSeleccion
           materia={materia}
           tec21={tec21}
           clickMateria={clickMateria}
+          listaColores={listaColores}
         />
       ))}
     </Col>
