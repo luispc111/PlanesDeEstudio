@@ -35,9 +35,6 @@ it("renderiza una materia", () => {
 
   expect(getByText(/Progra 1/)).toBeInTheDocument();
 
-  //const materia = container.querySelector('.bg-orange');
-  //expect(materia).toBeInTheDocument();
-
   expect(getByText(/Unidades: 8/)).toBeInTheDocument();
 
   const unidades = container.querySelector('.unidades');
@@ -54,9 +51,6 @@ it("renderiza una materia de tec21", () => {
                                           />);
 
   expect(getByText(/Progra 1/)).toBeInTheDocument();
-
-  //const materia = container.querySelector('.bg-orange');
-  //expect(materia).toBeInTheDocument();
 
   expect(getByText(/Unidades: 8/)).toBeInTheDocument();
 
