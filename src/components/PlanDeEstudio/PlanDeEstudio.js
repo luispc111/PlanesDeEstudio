@@ -147,7 +147,7 @@ export default function PlanDeEstudio() {
         </Col>
       </Row>
       <Row className="mt-4 m-0 p-0">
-        <Col md={1} className="mt-4 mb-4">
+        <Col md={1} className="m-0 p-0 pr-2">
           <Button onClick={guardarPlanificado}> Guardar Plan </Button>
         </Col>
         <BotonesDeColor

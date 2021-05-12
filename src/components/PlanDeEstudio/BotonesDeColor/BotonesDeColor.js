@@ -117,7 +117,7 @@ const BotonDeColor = ({ indice, color, cambiarColorSeleccionado, colorSelecciona
       xs={6}
       sm={4}
       md={1}
-      className={`text-center m-0 boton-color${(indice === colorSeleccionado) ? '-seleccionado' : ''}`}
+      className={`text-center m-0 p-0 boton-color${(indice === colorSeleccionado) ? '-seleccionado' : ''}`}
       style={{backgroundColor: color.color}}
       onClick={() => cambiarColorSeleccionado(indice)}
     >
@@ -136,7 +136,7 @@ export default function BotonesDeColor({ colores, cambiarColores, cambiarColorSe
 
   return (
     <>
-      <Col md={1} className="mt-4 mb-4">
+      <Col md={1} className="m-0 p-0 pr-2">
         <Button variant="info" onClick={() => setModalShow(true)}>
           Editar colores
         </Button>
