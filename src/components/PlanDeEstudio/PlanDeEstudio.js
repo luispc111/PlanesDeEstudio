@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 
 import { BACKEND_URL } from '../utils'; 
 import { UserContext } from "./../../context";
@@ -10,68 +10,10 @@ import BarrasDeProgreso from './BarrasDeProgreso/BarrasDeProgreso';
 import Semestre from './Semestre/Semestre';
 import BotonesDeColor from './BotonesDeColor/BotonesDeColor';
 
-const crearPlanDeEstudios = (clave) => {
-  let materias = [
-    {color: 0, periodos: [true, false, false], nombre: 'Fundamentos de programación',},
-    {color: 0, periodos: [false, true, false], nombre: 'Programación Orientada a Objetos',},
-    {color: 0, periodos: [true, false, true], nombre: 'Estructura de Datos',}
-  ]
-
-  let cant = 0;
-
-  let carrera = [];
-
-  for (let i = 0; i < 9; i++) {
-    let semestre = [];
-
-    for (let i = 0; i < 7; i++) {
-      semestre.push(materias[Math.floor(Math.random() * 3)]);
-      cant++;
-    }
-
-    carrera.push(semestre);
-  }
-
-  return { plan: { nombre: 'ITC 11', tec21: true, materias: carrera, clave }, cant }
-}
-
-const conseguirPlanDeEstudios = (clave, setPlanDeEstudios, setCantMaterias, setCantMateriasPorColor) => {
-  axios.get(`${BACKEND_URL}/planes/${clave}`)
-  .then(res => {
-    // setPlanesDeEstudio(res.data.map(plan => ({ nombre: plan.siglas,  clave: plan.siglas})));
-    console.log(res.data)
-    let parsedData = JSON.parse(JSON.stringify(res.data));
-
-    let cant = 0;
-
-    let plan = {
-      nombre: parsedData.nombre,
-      esTec21: parsedData.esTec21,
-      materias: parsedData.materias.map(sem => sem.map(materia => {
-        let mat = {
-          clave: materia.clave,
-          nombre: materia.nombre,
-          unidades: materia.unidades,
-          color: 0
-        }
-        cant++;
-        return mat;
-      }))
-    }
-
-    let colorMaterias = [cant, 0]
-
-    setPlanDeEstudios(plan);
-    setCantMaterias(cant);
-    setCantMateriasPorColor(colorMaterias);
-  })
-  .catch((err) => err);
-}
-
 /** Vista de la tabla de un plan de estudio individual, junto con una lista de colores y barras de progreso **/
 export default function PlanDeEstudio() {
   const loggedUser = useContext(UserContext);
-  // const { matricula } = loggedUser || {};
+  const { matricula } = loggedUser || {};
 
   const { clave } = useParams();
 
@@ -97,14 +39,76 @@ export default function PlanDeEstudio() {
     setPlanDeEstudios(plan);
   }
 
-  useEffect(() => {
-    if (loggedUser) {
-
-    } else {
-      conseguirPlanDeEstudios(clave, setPlanDeEstudios, setCantMaterias, setCantMateriasPorColor);
+  const guardarPlanificado = (e) => {
+    let plan = {
+      usuario: matricula,
+      siglas: planDeEstudios.siglas,
+      nombre: planDeEstudios.nombre,
+      etiquetas: JSON.parse(JSON.stringify(colores)),
+      materias: planDeEstudios.materias.map(sem => sem.map(materia => ({ clave: materia.clave, color: materia.color}))),
     }
-  }, [clave, loggedUser])
+    axios.put(`${BACKEND_URL}/planificados/${planDeEstudios._id}`, plan)
+    .then(res => console.log(res.data))
+    .catch((err) => err);
+  }
 
+  /** Consigue la información del plan de estudios **/
+  useEffect(() => {
+    if (!loggedUser) {
+      axios.get(`${BACKEND_URL}/planes/${clave}`)
+      .then(res => {
+        let planOficial = JSON.parse(JSON.stringify(res.data));
+        let cant = 0;
+
+        planOficial.materias = planOficial.materias.map(sem => sem.map(materia => {
+          cant++;
+          return {
+            clave: materia.clave,
+            nombre: materia.nombre,
+            unidades: materia.unidades,
+            color: 0
+          }
+        }))
+    
+        let colorMaterias = [cant, 0]
+
+        setPlanDeEstudios(planOficial);
+        setCantMaterias(cant);
+        setCantMateriasPorColor(colorMaterias);
+
+      })
+      .catch((err) => err);
+    } else {
+      axios.post(`${BACKEND_URL}/planificados/crearPlanificadoBase/${clave}`, { matricula })
+      .then(res => {
+        console.log(res)
+        let cant = 0;
+        let oficial = res.data.oficial;
+        let planificado = res.data.planificado;
+        let plan = {
+          _id: planificado._id,
+          nombre: oficial.nombre,
+          siglas: oficial.siglas,
+          esTec21: oficial.esTec21,
+          materias: oficial.materias.map((sem, semIndice) => sem.map((materia, materiaIndice) => {
+            cant++;
+            return {
+              nombre: materia.nombre,
+              clave: materia.clave,
+              color: planificado.etiquetas[semIndice][materiaIndice].color,
+              unidades: materia.unidades
+            }
+          })),
+        }
+        setPlanDeEstudios(plan);
+        setCantMaterias(cant);
+        setColores(planificado.etiquetas);
+      })
+      .catch((err) => err);
+    }
+  }, [clave, loggedUser, matricula])
+
+  /** Actualiza la cantidad de materias por color **/
   useEffect(() => {
     let colorMaterias = colores.map(() => 0);
 
@@ -153,6 +157,15 @@ export default function PlanDeEstudio() {
             listaColores={colores}
           />
         ))}
+      </Row>
+      <Row>
+        <Col>
+          <Button
+            onClick={guardarPlanificado}
+          >
+            Guardar Plan
+          </Button>
+        </Col>
       </Row>
     </Container>
   )
