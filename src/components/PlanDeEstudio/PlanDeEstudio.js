@@ -129,12 +129,17 @@ export default function PlanDeEstudio() {
           <h2 className="titulo-tabla"> {planDeEstudios.nombre} </h2>
         </Col>
       </Row>
-      <BotonesDeColor
-        colores={colores}
-        cambiarColores={setColores}
-        cambiarColorSeleccionado={setColorSeleccionado}
-        colorSeleccionado={colorSeleccionado}
-      />
+      <Row className="mt-4 m-0 p-0">
+        <Col md={1} className="mt-4 mb-4">
+          <Button onClick={guardarPlanificado}> Guardar Plan </Button>
+        </Col>
+        <BotonesDeColor
+          colores={colores}
+          cambiarColores={setColores}
+          cambiarColorSeleccionado={setColorSeleccionado}
+          colorSeleccionado={colorSeleccionado}
+        />
+      </Row>
       <Row>
         <Col className="m-0 p-0 mt-4">
           <BarrasDeProgreso 
@@ -156,15 +161,6 @@ export default function PlanDeEstudio() {
             listaColores={colores}
           />
         ))}
-      </Row>
-      <Row>
-        <Col>
-          <Button
-            onClick={guardarPlanificado}
-          >
-            Guardar Plan
-          </Button>
-        </Col>
       </Row>
     </Container>
   )
