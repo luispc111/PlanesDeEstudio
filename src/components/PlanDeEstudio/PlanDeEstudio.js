@@ -106,7 +106,7 @@ export default function PlanDeEstudio() {
         cantUnidadesPorColor={cantUnidadesPorColor}
       />
       <Row>
-        <Col className="m-0 p-0 mt-4">
+        <Col className="m-0 p-0 mt-3">
           <BarrasDeProgreso 
             listaColores={colores}
             cantMateriasPorColor={cantMateriasPorColor}
@@ -114,7 +114,7 @@ export default function PlanDeEstudio() {
           />
         </Col>
       </Row>
-      <Row className="mt-4">
+      <Row className="mt-3">
         {planDeEstudios.materias.map((semestre, indice) => (
           <Semestre
             key={indice}
