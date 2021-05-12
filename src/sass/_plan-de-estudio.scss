@@ -50,6 +50,10 @@
   background-color: $fondo-app;
 }
 
+.toast-bg {
+  background-color: $toast;
+}
+
 @media (max-width:1461px){
   .materia {
       font-size: 1.3vh;

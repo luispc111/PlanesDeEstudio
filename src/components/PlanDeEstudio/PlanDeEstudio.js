@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button, Toast } from 'react-bootstrap';
 
 import { BACKEND_URL } from '../utils'; 
 import { UserContext } from "./../../context";
@@ -16,6 +16,9 @@ export default function PlanDeEstudio() {
   const { matricula } = loggedUser || {};
 
   const { clave } = useParams();
+
+  const [mostrarToast, setMostrarToast] = useState(false);
+  const [infoToast, setInfoToast] = useState({ titulo: 'Titulo', texto: 'Texto' });
 
   const [planDeEstudios, setPlanDeEstudios] = useState({materias: []});
   // eslint-disable-next-line
@@ -48,7 +51,11 @@ export default function PlanDeEstudio() {
       materias: planDeEstudios.materias.map(sem => sem.map(materia => ({ clave: materia.clave, color: materia.color}))),
     }
     axios.put(`${BACKEND_URL}/planificados/${planDeEstudios._id}`, plan)
-    .then(res => console.log(res.data))
+    .then(res => {
+      // console.log(res.data);
+      setMostrarToast(true);
+      setInfoToast({ titulo: '¡Actualización exitosa!', texto: res.data })
+    })
     .catch((err) => err);
   }
 
@@ -127,6 +134,16 @@ export default function PlanDeEstudio() {
       <Row>
         <Col>
           <h2 className="titulo-tabla"> {planDeEstudios.nombre} </h2>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Toast className="toast-bg" onClose={() => setMostrarToast(false)} show={mostrarToast} delay={3000} autohide>
+            <Toast.Header className="toast-bg">
+              <strong className="mr-auto">{infoToast.titulo}</strong>
+            </Toast.Header>
+            <Toast.Body>{infoToast.texto}</Toast.Body>
+          </Toast>
         </Col>
       </Row>
       <Row className="mt-4 m-0 p-0">

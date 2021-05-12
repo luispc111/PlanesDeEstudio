@@ -68,7 +68,7 @@ function ModalColores({ show, onHide, colores, cambiarColores }) {
   }
 
   const borrarColor = (color) => {
-    setListaColores(listaColores.filter(col => col != color));
+    setListaColores(listaColores.filter(col => col !== color));
   }
 
   useEffect(() => {
