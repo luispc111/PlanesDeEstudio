@@ -75,16 +75,14 @@ export default function PlanDeEstudio() {
         setPlanDeEstudios(planOficial);
         setCantMaterias(cant);
         setCantMateriasPorColor(colorMaterias);
-
       })
       .catch((err) => err);
     } else {
       axios.post(`${BACKEND_URL}/planificados/crearPlanificadoBase/${clave}`, { matricula })
       .then(res => {
-        console.log(res)
         let cant = 0;
         let oficial = res.data.oficial;
-        let planificado = res.data.planificado;
+        let planificado = res.data.planificado[0];
         let plan = {
           _id: planificado._id,
           nombre: oficial.nombre,
@@ -95,11 +93,12 @@ export default function PlanDeEstudio() {
             return {
               nombre: materia.nombre,
               clave: materia.clave,
-              color: planificado.etiquetas[semIndice][materiaIndice].color,
+              color: planificado.materias[semIndice][materiaIndice].color,
               unidades: materia.unidades
             }
           })),
         }
+
         setPlanDeEstudios(plan);
         setCantMaterias(cant);
         setColores(planificado.etiquetas);

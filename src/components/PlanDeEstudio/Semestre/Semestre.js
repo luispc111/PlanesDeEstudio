@@ -48,7 +48,7 @@ export default function Semestre ({ numSemestre, materias, tec21, colorSeleccion
     <Col xs={4} md className="semestre m-0 p-0 mb-4">
       <div
         className="materia"
-        style={{backgroundColor: listaColores[colorDeFondo].color}}
+        style={{backgroundColor: listaColores[colorDeFondo]?.color}}
         onClick={() => botonClickeado()}
       >
         <label>Semestre {numSemestre + 1}</label>

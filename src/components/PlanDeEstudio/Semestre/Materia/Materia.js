@@ -8,7 +8,7 @@ export default function Materia ({ nums, materia, tec21, clickMateria, listaColo
   return (
     <Row
       className={`p-0 m-0 materia labelMateria`}
-      style={{backgroundColor: listaColores[materia.color].color}}
+      style={{backgroundColor: listaColores[materia.color]?.color}}
       onClick={() => clickMateria(numSemestre, numMateria)}
     >
       <Col className="p-0 m-0">
