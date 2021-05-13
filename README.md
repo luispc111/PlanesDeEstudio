@@ -20,9 +20,19 @@ Clona o descarga el repo, desde una terminal vete a la carpeta donde lo tengas y
 
 Desde la terminal, escribe `npm start` estando en la carpeta del repo y la aplicación empezará a correr, abriendo automaticamente una pestaña en tu navegador de preferencia. Como estamos utilizando React, el servidor tiene '_hot reload_', por lo que se actualizará solo cada que guardes cambios.
 
+También necesitas el servidor del back-end corriendo, encontrado en [este link](https://github.com/Dino-4-Fantasticos/PlanesDeEstudioBack).
+
 ### __Cómo correr las pruebas__
 
 Desde la terminal, escribe `npm test` estando en la carpeta del repo y se empezarán las pruebas solas. Al igual que al correr la aplicación, cada vez que guardes cambios, las pruebas se correran solas de nuevo.
+
+### __Variables de ambiente__
+
+Necesitas las siguientes variables de ambiente:
+
+```
+REACT_APP_BACKEND_URL=http://localhost:5000/api
+```
 
 ## Guía de contribución
 
@@ -51,61 +61,26 @@ Pequeña descripción de la tarea
 
 ### __Plan de Estudio__
 
-Si quieres aportar con la información de tu plan de estudios, mandanos la información de las materias con este formato:
+Si quieres aportar con la información de tu plan de estudios, mandanos la información del plan de estudio con el siguiente formato:
 
 ```json
-[
-    {
-        "nombre": "Nombre",
-        "clave": "Clave tipo TI2011",
-        "semestre": 0,
-        "requisitos": ["Clave de la materia"]
-    },
-]
+{
+  "nombre": "Ingeniería en CienciasComputacionales",
+  "siglas": "ITC19",
+  "esTec21": true,
+  "materias": [
+    [
+      {
+        "clave": "TC1018",
+        "nombre": "Estructura de datos",
+        "horasClase": 3,
+        "horasLaboratorio": 0,
+        "unidades": 8,
+        "creditosAcademicos": 8,
+        "unidadesDeCarga": 3.5,
+        "periodos": [true, false, false] // únicamente para planes de estudios de Tec21
+      }
+    ]
+  ]
+}
 ```
-
-Ejemplo:
-```json
-[
-    {
-        "nombre": "Desarrollo de aplicaciones web",
-        "clave": "TC2026",
-        "semestre": 7,
-        "requisitos": ["TC1020", "TC2022"]
-    },
-]
-```
-
-## Planes de estudios implementados
-- ARQ11
-- IBT11
-- IDS11
-- IFI11
-- IIA11
-- IID12
-- IID17
-- IIS11
-- IMA11
-- IMD11
-- IME11
-- IMI11
-- IMT11
-- INCQ13
-- INT11
-- IQA11
-- IQP11
-- ISD11
-- ITC11
-- LAD11
-- LAF11
-- LCDE11
-- LCMD17
-- LDF11
-- LDI11
-- LEC11
-- LED11
-- LEM11
-- LIN11
-- LPM12
-- LPO11
-- LRI11
