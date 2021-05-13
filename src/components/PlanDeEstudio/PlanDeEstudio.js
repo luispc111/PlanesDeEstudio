@@ -21,7 +21,7 @@ export default function PlanDeEstudio() {
   const [infoToast, setInfoToast] = useState({ titulo: 'Titulo', texto: 'Texto' });
 
   const [planDeEstudios, setPlanDeEstudios] = useState({materias: []});
-  // eslint-disable-next-line
+
   const [colores, setColores] = useState([
     { color: "#BF7913", nombre: 'Incompleto' }, 
     { color: "#439630", nombre: 'Completo' }
@@ -65,12 +65,12 @@ export default function PlanDeEstudio() {
 
   /** Consigue la información del plan de estudios **/
   useEffect(() => {
-    if (!loggedUser) {
-      axios.get(`${BACKEND_URL}/planes/${clave}`)
-      .then(res => {
+    const conseguirPlan = async () => {
+      if (!loggedUser) {
+        let res = await axios.get(`${BACKEND_URL}/planes/${clave}`)
         let planOficial = JSON.parse(JSON.stringify(res.data));
         let cant = 0;
-
+  
         planOficial.materias = planOficial.materias.map(sem => sem.map(materia => {
           cant++;
           return {
@@ -83,18 +83,16 @@ export default function PlanDeEstudio() {
         }));
     
         let colorMaterias = [cant, 0]
-
+  
         setPlanDeEstudios(planOficial);
         setCantMaterias(cant);
         setCantMateriasPorColor(colorMaterias);
-      })
-      .catch((err) => err);
-    } else {
-      axios.post(`${BACKEND_URL}/planificados/crearPlanificadoBase/${clave}`, { matricula })
-      .then(res => {
+      } else {
+        let res = await axios.post(`${BACKEND_URL}/planificados/crearPlanificadoBase/${clave}`, { matricula })
         let cant = 0;
         let oficial = res.data.oficial;
-        let planificado = res.data.planificado[0];
+        let planificado = res.data.planificado;
+  
         let plan = {
           _id: planificado._id,
           nombre: oficial.nombre,
@@ -110,13 +108,14 @@ export default function PlanDeEstudio() {
             }
           })),
         }
-
+  
         setPlanDeEstudios(plan);
         setCantMaterias(cant);
         setColores(planificado.etiquetas);
-      })
-      .catch((err) => err);
+      }
     }
+
+    conseguirPlan();
   }, [clave, loggedUser, matricula])
 
   /** Actualiza la cantidad de materias por color **/
