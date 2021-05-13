@@ -30,6 +30,7 @@ jobs:
     - run: npm test
   
   deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
