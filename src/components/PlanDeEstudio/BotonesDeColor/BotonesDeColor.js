@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Row, Col, Button, Modal, InputGroup, FormControl } from 'react-bootstrap';
 import { SliderPicker as Picker} from 'react-color';
 
 /** Input para cambiar el valor hexadecimal y el tag de un color **/
-function ColorInput({ color, actualizarNombre, actualizarColor, indice }) {
+function ColorInput({ color, actualizarNombre, actualizarColor, borrarColor, indice }) {
   return (
     <Row className="mt-5 mb-3">
-      <Col xs={6}>
+      <Col xs={5}>
         <Picker
           color={ color.color }
           onChangeComplete={(c) => actualizarColor(c.hex, indice) }
         />
       </Col>
-      <Col>
+      <Col xs={5}>
         <InputGroup>
           <FormControl
             placeholder="Tag Color"
@@ -22,6 +22,9 @@ function ColorInput({ color, actualizarNombre, actualizarColor, indice }) {
             aria-describedby="basic-addon1"
           />
         </InputGroup>
+      </Col>
+      <Col xs={1}>
+        <Button variant="danger" onClick={() => borrarColor(color)}> Borrar </Button>
       </Col>
     </Row>
   )
@@ -64,6 +67,14 @@ function ModalColores({ show, onHide, colores, cambiarColores }) {
     setListaColores(cols);
   }
 
+  const borrarColor = (color) => {
+    setListaColores(listaColores.filter(col => col !== color));
+  }
+
+  useEffect(() => {
+    setListaColores(colores);
+  }, [colores])
+
   return (
     <Modal
       show={show}
@@ -71,7 +82,7 @@ function ModalColores({ show, onHide, colores, cambiarColores }) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header className="modal-bg" closeButton>
+      <Modal.Header className="modal-bg">
         <Modal.Title id="contained-modal-title-vcenter">
           Colores
         </Modal.Title>
@@ -85,6 +96,7 @@ function ModalColores({ show, onHide, colores, cambiarColores }) {
               actualizarNombre={actualizarNombre}
               actualizarColor={actualizarColor}
               indice={index}
+              borrarColor={borrarColor}
             />
           ))}
           <Button variant="info" onClick={crearColor}>Agregar Color</Button>
@@ -129,12 +141,10 @@ const BotonDeColor = ({ indice, color, cambiarColorSeleccionado, colorSelecciona
 export default function BotonesDeColor({ colores, cambiarColores, cambiarColorSeleccionado, colorSeleccionado, cantMateriasPorColor, cantUnidadesPorColor }) {
   const [modalShow, setModalShow] = useState(false);
 
-  const esconder = () => {
-    setModalShow(false)
-  }
+  const esconder = () => setModalShow(false);
 
   return (
-    <Row className="mt-4 m-0 p-0 align-items-center">
+    <>
       <Col xs={12} md={2} xl={1} className="mt-2 mb-2">
         <Button variant="info" className="w-100" onClick={() => setModalShow(true)}>
           Editar colores
@@ -159,6 +169,6 @@ export default function BotonesDeColor({ colores, cambiarColores, cambiarColorSe
           />
         ))}
       </Col>
-    </Row>
+    </>
   )
 }
