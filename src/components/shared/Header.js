@@ -12,9 +12,19 @@ import { UserContext } from "../../context";
  * 
  * @param {Boolean} loggedUser Indica el usuario de la sesión.
  */
-export default function Header() {
+export default function Header({ checarSesion }) {
   const loggedUser = useContext(UserContext);
   const { matricula } = loggedUser || {};
+
+  const iniciarSesion = async ({ profileObj }) => {
+    await login({ profileObj });
+    checarSesion();
+  }
+
+  const cerrarSesion = () => {
+    logout();
+    checarSesion();
+  }
 
   return (
     <Navbar variant="dark" className="header-navbar p-0 pb-4" expand="md" height={66}>
@@ -39,7 +49,7 @@ export default function Header() {
                 </Button>
               </Nav.Link>
               <Nav.Link href={`${PUBLIC_URL}/#/`} className="element">
-                <Button onClick={logout} variant="danger" className="d-flex">
+                <Button onClick={cerrarSesion} variant="danger" className="d-flex">
                   <div>Cerrar<br/>Sesión</div>
                   <Image src={logoutIcon} width={48} height={48} alt="Cerrar sesión" className="ml-3" />
                 </Button>
@@ -51,7 +61,7 @@ export default function Header() {
               <GoogleLogin
                 clientId={G_CLIENT_ID}
                 buttonText="Iniciar sesión"
-                onSuccess={login}
+                onSuccess={iniciarSesion}
                 onFailure={(res) => console.log(res)}
                 cookiePolicy={"single_host_origin"}
                 prompt="select_account"

@@ -30,6 +30,8 @@ async function checkSession(setLoggedUser) {
 function App() {
   const [loggedUser, setLoggedUser] = useState(undefined);
 
+  const checarSesion = () => checkSession(setLoggedUser);
+
   useEffect(() => {
     checkSession(setLoggedUser);
   }, []);
@@ -38,7 +40,7 @@ function App() {
     <Router basename={PUBLIC_URL}>
       <div className="App">
         <UserContext.Provider value={loggedUser}>
-          <Header/>
+          <Header checarSesion={checarSesion} />
             <Route
               exact path="/"
               component={PlanesDeEstudio}
