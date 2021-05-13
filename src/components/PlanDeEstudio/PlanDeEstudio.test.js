@@ -45,7 +45,7 @@ it("renderiza plan de estudios sin iniciar sesión", async () => {
   const siglas = PlanOficial.siglas;
   axios.get.mockImplementationOnce(() => Promise.resolve(data[0]));
 
-  const { getByText } = render(componente(siglas));
+  const { getByText, container } = render(componente(siglas));
 
   await expect(axios.get).toHaveBeenCalledWith(PLAN_URL(siglas));;
 
@@ -64,13 +64,18 @@ it("renderiza plan de estudios sin iniciar sesión", async () => {
 
   expect(getByText(/Completo/)).toBeInTheDocument();
   expect(getByText(/Incompleto/i)).toBeInTheDocument();
+
+  const botones = container.querySelectorAll('.boton-color');
+  expect(botones.length).toBe(2);
+  expect(botones[0]).toBeInTheDocument();
+  expect(botones[1]).toBeInTheDocument();
 });
 
 it("renderiza plan de estudios tec21 sin iniciar sesión", async () => {
   const siglas = PlanOficialTec21.siglas;
   axios.get.mockImplementationOnce(() => Promise.resolve(data[1]));
 
-  const { getByText } = render(componente(siglas));
+  const { getByText, container } = render(componente(siglas));
 
   await expect(axios.get).toHaveBeenCalledWith(PLAN_URL(siglas));;
 
@@ -89,16 +94,18 @@ it("renderiza plan de estudios tec21 sin iniciar sesión", async () => {
 
   expect(getByText(/Completo/)).toBeInTheDocument();
   expect(getByText(/Incompleto/)).toBeInTheDocument();
-  
-  const green = container.querySelector('.boton-color');
-  expect(green).toBeInTheDocument();
+
+  const botones = container.querySelectorAll('.boton-color');
+  expect(botones.length).toBe(2);
+  expect(botones[0]).toBeInTheDocument();
+  expect(botones[1]).toBeInTheDocument();
 });
 
 it("renderiza plan de estudios con sesión iniciada", async () => {
   const siglas = PlanOficial.siglas;
   axios.post.mockImplementationOnce(() => Promise.resolve(data[2]));
 
-  const { getByText, getAllByText } = render(componenteSesionIniciada(siglas));
+  const { getByText, container } = render(componenteSesionIniciada(siglas));
 
   await expect(axios.post).toHaveBeenCalledWith(PLANIFICADO_PREDETERMINADO_URL(siglas), { matricula: 'A00822222' });;
 
@@ -113,8 +120,11 @@ it("renderiza plan de estudios con sesión iniciada", async () => {
   expect(getByText(/Materia 5/)).toBeInTheDocument();
   expect(getByText(/Materia 6/)).toBeInTheDocument();
 
-  // const porcentajes = getAllByText(/33.33%/);
-  // expect(porcentajes.length).toBe(3);
+  const botones = container.querySelectorAll('.boton-color');
+  expect(botones.length).toBe(3);
+  expect(botones[0]).toBeInTheDocument();
+  expect(botones[1]).toBeInTheDocument();
+  expect(botones[2]).toBeInTheDocument();
 
   expect(getByText(/Completo/)).toBeInTheDocument();
   expect(getByText(/Incompleto/)).toBeInTheDocument();
