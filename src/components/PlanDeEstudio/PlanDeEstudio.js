@@ -73,9 +73,10 @@ export default function PlanDeEstudio() {
             clave: materia.clave,
             nombre: materia.nombre,
             unidades: materia.unidades,
-            color: 0
+            color: 0,
+            periodos: materia.periodos || [false, false, false]
           }
-        }))
+        }));
     
         let colorMaterias = [cant, 0]
 
@@ -147,9 +148,11 @@ export default function PlanDeEstudio() {
         </Col>
       </Row>
       <Row className="mt-4 m-0 p-0">
-        <Col md={1} className="m-0 p-0 pr-2">
-          <Button onClick={guardarPlanificado}> Guardar Plan </Button>
-        </Col>
+        {loggedUser &&
+          <Col md={1} className="m-0 p-0 pr-2">
+            <Button onClick={guardarPlanificado}> Guardar Plan </Button>
+          </Col>
+        }
         <BotonesDeColor
           colores={colores}
           cambiarColores={setColores}
