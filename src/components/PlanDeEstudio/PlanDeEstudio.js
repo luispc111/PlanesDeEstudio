@@ -156,8 +156,8 @@ export default function PlanDeEstudio() {
       </Row>
       <Row className="mt-4 m-0 p-0 align-items-center">
         {loggedUser &&
-          <Col md={1} className="m-0 p-0 pr-2">
-            <Button onClick={guardarPlanificado}> Guardar Plan </Button>
+          <Col xs={12} md={2} xl={1} className="mt-2 mb-2">
+            <Button className="w-100" onClick={guardarPlanificado}> Guardar Plan </Button>
           </Col>
         }
         <BotonesDeColor
