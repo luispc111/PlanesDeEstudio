@@ -30,7 +30,7 @@ it("renderiza una materia", () => {
 it("renderiza los botones de colores", () => {
   const { container } = render(componente);
 
-  const green = container.querySelector('.boton-color-seleccionado');
+  const green = container.querySelector('.boton-color');
   expect(green).toBeInTheDocument();
 });
 

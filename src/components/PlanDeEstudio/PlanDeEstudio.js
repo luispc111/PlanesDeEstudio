@@ -8,9 +8,9 @@ import BotonesDeColor from './BotonesDeColor/BotonesDeColor';
 
 const crearPlanDeEstudios = (clave) => {
   let materias = [
-    {color: 0, periodos: [true, false, false], nombre: 'Fundamentos de programación',},
-    {color: 0, periodos: [false, true, false], nombre: 'Programación Orientada a Objetos',},
-    {color: 0, periodos: [true, false, true], nombre: 'Estructura de Datos',}
+    {unidades: 4, color: 0, periodos: [true, false, false], nombre: 'Fundamentos de programación',},
+    {unidades: 8, color: 0, periodos: [false, true, false], nombre: 'Programación Orientada a Objetos',},
+    {unidades: 8, color: 0, periodos: [true, false, true], nombre: 'Estructura de Datos',}
   ]
 
   let cant = 0;
@@ -44,6 +44,7 @@ export default function PlanDeEstudio() {
   ]);
   const [colorSeleccionado, setColorSeleccionado] = useState(1)
   const [cantMateriasPorColor, setCantMateriasPorColor] = useState([1, 0])
+  const [cantUnidadesPorColor, setCantUnidadesPorColor] = useState([1, 0])
   const [cantMaterias, setCantMaterias] = useState(1);
 
   const clickMateria = (sem, materia) => {
@@ -64,22 +65,27 @@ export default function PlanDeEstudio() {
     let { plan, cant } = crearPlanDeEstudios(clave);
 
     let colorMaterias = [cant, 0];
+    let colorUnidades = [cant, 0];
 
     setPlanDeEstudios(plan);
     setCantMaterias(cant);
     setCantMateriasPorColor(colorMaterias);
+    setCantUnidadesPorColor(colorUnidades);
   }, [clave])
 
   useEffect(() => {
     let colorMaterias = colores.map(() => 0);
+    let colorUnidades = colores.map(() => 0);
 
     planDeEstudios.materias.forEach((semestre) => {
       semestre.forEach(materia => {
         colorMaterias[materia.color] += 1;
+        colorUnidades[materia.color] += materia.unidades;
       });
     });
 
     setCantMateriasPorColor(colorMaterias);
+    setCantUnidadesPorColor(colorUnidades);
   }, [planDeEstudios, colores])
   
   document.title = planDeEstudios.nombre
@@ -96,9 +102,11 @@ export default function PlanDeEstudio() {
         cambiarColores={setColores}
         cambiarColorSeleccionado={setColorSeleccionado}
         colorSeleccionado={colorSeleccionado}
+        cantMateriasPorColor={cantMateriasPorColor}
+        cantUnidadesPorColor={cantUnidadesPorColor}
       />
       <Row>
-        <Col className="m-0 p-0 mt-4">
+        <Col className="m-0 p-0 mt-3">
           <BarrasDeProgreso 
             listaColores={colores}
             cantMateriasPorColor={cantMateriasPorColor}
@@ -106,7 +114,7 @@ export default function PlanDeEstudio() {
           />
         </Col>
       </Row>
-      <Row className="mt-4">
+      <Row className="mt-3">
         {planDeEstudios.materias.map((semestre, indice) => (
           <Semestre
             key={indice}

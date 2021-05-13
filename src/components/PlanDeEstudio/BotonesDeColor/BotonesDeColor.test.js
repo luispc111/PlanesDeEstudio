@@ -20,6 +20,8 @@ it("renderiza los botones de colores", () => {
                                   cambiarColores={jest.fn()}
                                   cambiarColorSeleccionado={jest.fn()}
                                   colorSeleccionado={0}
+                                  cantMateriasPorColor={0}
+                                  cantUnidadesPorColor={0}
                                 />);
 
   expect(getByText(/Incompleto/)).toBeInTheDocument();

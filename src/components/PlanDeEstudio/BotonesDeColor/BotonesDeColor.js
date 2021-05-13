@@ -99,23 +99,34 @@ function ModalColores({ show, onHide, colores, cambiarColores }) {
 }
 
 /** Boton individual de la lista de colores **/
-const BotonDeColor = ({ indice, color, cambiarColorSeleccionado, colorSeleccionado }) => {
+const BotonDeColor = ({ indice, color, cambiarColorSeleccionado, colorSeleccionado, cantMateriasPorColor, cantUnidadesPorColor }) => {
   return (
-    <Col
-      xs={6}
-      sm={4}
-      md={1}
-      className={`text-center m-0 boton-color${(indice === colorSeleccionado) ? '-seleccionado' : ''}`}
+    <div
+      className={`text-center m-1 boton-color ${(indice === colorSeleccionado) ? 'seleccionado' : ''}`}
       style={{backgroundColor: color.color}}
       onClick={() => cambiarColorSeleccionado(indice)}
     >
-      {color.nombre}
-    </Col>
+      <Row>
+        <Col style={{ whiteSpace: "nowrap" }}>
+          <b>{color.nombre}</b>
+        </Col>        
+      </Row>
+      <Row>
+        <Col style={{ whiteSpace: "nowrap" }}>
+          {`Unidades: ${cantUnidadesPorColor[indice]}`}
+        </Col>        
+      </Row>
+      <Row>
+        <Col style={{ whiteSpace: "nowrap" }}>
+        {`Materias: ${cantMateriasPorColor[indice]}`}
+        </Col>        
+      </Row>
+    </div>
   )
 }
 
 /** Lista de colores que se pueden colocar en cada materia del plan de estudios **/
-export default function BotonesDeColor({ colores, cambiarColores, cambiarColorSeleccionado, colorSeleccionado }) {
+export default function BotonesDeColor({ colores, cambiarColores, cambiarColorSeleccionado, colorSeleccionado, cantMateriasPorColor, cantUnidadesPorColor }) {
   const [modalShow, setModalShow] = useState(false);
 
   const esconder = () => {
@@ -123,9 +134,9 @@ export default function BotonesDeColor({ colores, cambiarColores, cambiarColorSe
   }
 
   return (
-    <Row className="mt-4 m-0 p-0">
-      <Col md={1} className="mt-4 mb-4">
-        <Button variant="info" onClick={() => setModalShow(true)}>
+    <Row className="mt-4 m-0 p-0 align-items-center">
+      <Col xs={12} md={2} xl={1} className="mt-2 mb-2">
+        <Button variant="info" className="w-100" onClick={() => setModalShow(true)}>
           Editar colores
         </Button>
         <ModalColores
@@ -135,18 +146,18 @@ export default function BotonesDeColor({ colores, cambiarColores, cambiarColorSe
           cambiarColores={cambiarColores}
         />
       </Col>
-      <Col md={11}>
-        <Row className="m-0 p-0">
-          {colores.map((color, indice) => (
-            <BotonDeColor
-              key={indice}
-              indice={indice}
-              color={color}
-              cambiarColorSeleccionado={cambiarColorSeleccionado}
-              colorSeleccionado={colorSeleccionado}
-            />
-          ))}
-        </Row>
+      <Col className="colores-container mt-2 mb-2">
+        {colores.map((color, indice) => (
+          <BotonDeColor
+            key={indice}
+            indice={indice}
+            color={color}
+            cambiarColorSeleccionado={cambiarColorSeleccionado}
+            colorSeleccionado={colorSeleccionado}
+            cantMateriasPorColor={cantMateriasPorColor}
+            cantUnidadesPorColor={cantUnidadesPorColor}
+          />
+        ))}
       </Col>
     </Row>
   )
