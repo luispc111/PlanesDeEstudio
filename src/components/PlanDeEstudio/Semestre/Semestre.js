@@ -27,7 +27,7 @@ export default function Semestre ({ numSemestre, materias, tec21, colorSeleccion
     } 
     // Este else es para colorear el semestre del color de todas las materias cuando todas están del mismo color
     else {
-      if (materias.length > 0) {
+      if (materias.length) {
         let color = materias[0].color;
         let cambiarColor = true;
   
