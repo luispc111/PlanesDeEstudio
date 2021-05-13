@@ -36,7 +36,7 @@ const data = [
   {
     data: {
       oficial: PlanOficial,
-      planificado: [PlanPlanificado]
+      planificado: PlanPlanificado
     }
   }
 ]
