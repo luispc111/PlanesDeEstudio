@@ -28,6 +28,7 @@ export default function PlanDeEstudio() {
   ]);
   const [colorSeleccionado, setColorSeleccionado] = useState(1)
   const [cantMateriasPorColor, setCantMateriasPorColor] = useState([1, 0])
+  const [cantUnidadesPorColor, setCantUnidadesPorColor] = useState([1, 0])
   const [cantMaterias, setCantMaterias] = useState(1);
 
   const clickMateria = (sem, materia) => {
@@ -52,11 +53,14 @@ export default function PlanDeEstudio() {
     }
     axios.put(`${BACKEND_URL}/planificados/${planDeEstudios._id}`, plan)
     .then(res => {
-      // console.log(res.data);
       setMostrarToast(true);
       setInfoToast({ titulo: '¡Actualización exitosa!', texto: res.data })
     })
-    .catch((err) => err);
+    .catch((err) => {
+      console.log({...err});
+      setMostrarToast(true);
+      setInfoToast({ titulo: 'Error', texto: err.response.data.msg })
+    });
   }
 
   /** Consigue la información del plan de estudios **/
@@ -118,14 +122,17 @@ export default function PlanDeEstudio() {
   /** Actualiza la cantidad de materias por color **/
   useEffect(() => {
     let colorMaterias = colores.map(() => 0);
+    let colorUnidades = colores.map(() => 0);
 
     planDeEstudios.materias.forEach((semestre) => {
       semestre.forEach(materia => {
         colorMaterias[materia.color] += 1;
+        colorUnidades[materia.color] += materia.unidades;
       });
     });
 
     setCantMateriasPorColor(colorMaterias);
+    setCantUnidadesPorColor(colorUnidades);
   }, [planDeEstudios, colores])
   
   document.title = planDeEstudios.nombre
@@ -147,7 +154,7 @@ export default function PlanDeEstudio() {
           </Toast>
         </Col>
       </Row>
-      <Row className="mt-4 m-0 p-0">
+      <Row className="mt-4 m-0 p-0 align-items-center">
         {loggedUser &&
           <Col md={1} className="m-0 p-0 pr-2">
             <Button onClick={guardarPlanificado}> Guardar Plan </Button>
@@ -158,10 +165,12 @@ export default function PlanDeEstudio() {
           cambiarColores={setColores}
           cambiarColorSeleccionado={setColorSeleccionado}
           colorSeleccionado={colorSeleccionado}
+          cantMateriasPorColor={cantMateriasPorColor}
+          cantUnidadesPorColor={cantUnidadesPorColor}
         />
       </Row>
       <Row>
-        <Col className="m-0 p-0 mt-4">
+        <Col className="m-0 p-0 mt-3">
           <BarrasDeProgreso 
             listaColores={colores}
             cantMateriasPorColor={cantMateriasPorColor}
@@ -169,7 +178,7 @@ export default function PlanDeEstudio() {
           />
         </Col>
       </Row>
-      <Row className="mt-4">
+      <Row className="mt-3">
         {planDeEstudios.materias.map((semestre, indice) => (
           <Semestre
             key={indice}

@@ -89,6 +89,9 @@ it("renderiza plan de estudios tec21 sin iniciar sesión", async () => {
 
   expect(getByText(/Completo/)).toBeInTheDocument();
   expect(getByText(/Incompleto/)).toBeInTheDocument();
+  
+  const green = container.querySelector('.boton-color');
+  expect(green).toBeInTheDocument();
 });
 
 it("renderiza plan de estudios con sesión iniciada", async () => {
