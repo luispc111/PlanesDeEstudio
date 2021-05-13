@@ -82,7 +82,7 @@ function ModalColores({ show, onHide, colores, cambiarColores }) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header className="modal-bg" closeButton>
+      <Modal.Header className="modal-bg">
         <Modal.Title id="contained-modal-title-vcenter">
           Colores
         </Modal.Title>
@@ -130,9 +130,7 @@ const BotonDeColor = ({ indice, color, cambiarColorSeleccionado, colorSelecciona
 export default function BotonesDeColor({ colores, cambiarColores, cambiarColorSeleccionado, colorSeleccionado }) {
   const [modalShow, setModalShow] = useState(false);
 
-  const esconder = () => {
-    setModalShow(false)
-  }
+  const esconder = () => setModalShow(false);
 
   return (
     <>
