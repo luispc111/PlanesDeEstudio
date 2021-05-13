@@ -4,6 +4,7 @@
 }
 
 .colores-container {
+  flex-wrap: wrap;
   display: flex;
   overflow-x: scroll;
   &::-webkit-scrollbar {
