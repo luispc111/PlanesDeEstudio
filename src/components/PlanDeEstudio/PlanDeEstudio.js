@@ -10,6 +10,8 @@ import BarrasDeProgreso from './BarrasDeProgreso/BarrasDeProgreso';
 import Semestre from './Semestre/Semestre';
 import BotonesDeColor from './BotonesDeColor/BotonesDeColor';
 
+import refreshIcon from "./refresh_white_24dp.svg";
+
 /** Vista de la tabla de un plan de estudio individual, junto con una lista de colores y barras de progreso **/
 export default function PlanDeEstudio() {
   const loggedUser = useContext(UserContext);
@@ -17,20 +19,13 @@ export default function PlanDeEstudio() {
 
   const { clave } = useParams();
 
-  const [mostrarToast, setMostrarToast] = useState(false);
-  const [infoToast, setInfoToast] = useState({ titulo: 'Titulo', texto: 'Texto' });
+  const [infoToast, setInfoToast] = useState(null);
 
-  const [planDeEstudios, setPlanDeEstudios] = useState({materias: []});
+  const [planDeEstudios, setPlanDeEstudios] = useState(undefined);
 
-  const [colores, setColores] = useState([
-    { color: "#BF7913", nombre: 'Incompleto' }, 
-    { color: "#439630", nombre: 'Completo' }
-  ]);
-  const [colorSeleccionado, setColorSeleccionado] = useState(1)
-  const [cantMateriasPorColor, setCantMateriasPorColor] = useState([1, 0])
-  const [cantUnidadesPorColor, setCantUnidadesPorColor] = useState([1, 0])
-  const [cantMaterias, setCantMaterias] = useState(1);
-
+  const [colores, setColores] = useState(undefined);
+  const [colorSeleccionado, setColorSeleccionado] = useState(1);
+  
   const clickMateria = (sem, materia) => {
     let plan = JSON.parse(JSON.stringify(planDeEstudios));
     plan.materias[sem][materia].color = colorSeleccionado;
@@ -52,15 +47,11 @@ export default function PlanDeEstudio() {
       materias: planDeEstudios.materias.map(sem => sem.map(materia => ({ clave: materia.clave, color: materia.color}))),
     }
     axios.put(`${BACKEND_URL}/planificados/${planDeEstudios._id}`, plan)
-    .then(res => {
-      setMostrarToast(true);
-      setInfoToast({ titulo: '¡Actualización exitosa!', texto: res.data })
-    })
-    .catch((err) => {
-      console.log({...err});
-      setMostrarToast(true);
-      setInfoToast({ titulo: 'Error', texto: err.response.data.msg })
-    });
+      .then(res => setInfoToast({ titulo: '¡Actualización exitosa!', texto: res.data }))
+      .catch((err) => {
+        console.log({...err});
+        setInfoToast({ titulo: 'Error', texto: err.response.data.msg })
+      });
   }
 
   /** Consigue la información del plan de estudios **/
@@ -69,10 +60,8 @@ export default function PlanDeEstudio() {
       if (!loggedUser) {
         let res = await axios.get(`${BACKEND_URL}/planes/${clave}`)
         let planOficial = JSON.parse(JSON.stringify(res.data));
-        let cant = 0;
   
         planOficial.materias = planOficial.materias.map(sem => sem.map(materia => {
-          cant++;
           return {
             clave: materia.clave,
             nombre: materia.nombre,
@@ -82,60 +71,69 @@ export default function PlanDeEstudio() {
           }
         }));
     
-        let colorMaterias = [cant, 0]
-  
         setPlanDeEstudios(planOficial);
-        setCantMaterias(cant);
-        setCantMateriasPorColor(colorMaterias);
-      } else {
-        let res = await axios.post(`${BACKEND_URL}/planificados/crearPlanificadoBase/${clave}`, { matricula })
-        let cant = 0;
-        let oficial = res.data.oficial;
-        let planificado = res.data.planificado;
-  
-        let plan = {
-          _id: planificado._id,
-          nombre: oficial.nombre,
-          siglas: oficial.siglas,
-          esTec21: oficial.esTec21,
-          materias: oficial.materias.map((sem, semIndice) => sem.map((materia, materiaIndice) => {
-            cant++;
-            return {
+        setColores([
+          { color: "#BF7913", nombre: 'Incompleto' }, 
+          { color: "#439630", nombre: 'Completo' }
+        ]);
+
+        return;
+      }
+        
+      let res = await axios.post(`${BACKEND_URL}/planificados/crearPlanificadoBase/${clave}`, { matricula })
+      let oficial = res.data.oficial;
+      let planificado = res.data.planificado;
+
+      let plan = {
+        _id: planificado._id,
+        nombre: oficial.nombre,
+        siglas: oficial.siglas,
+        esTec21: oficial.esTec21,
+        materias: oficial.materias.map(
+          (sem, semIdx) => sem.map(
+            (materia, matIdx) => ({
               nombre: materia.nombre,
               clave: materia.clave,
-              color: planificado?.materias[semIndice][materiaIndice]?.color ?? 0,
+              color: planificado?.materias?.[semIdx]?.[matIdx]?.color ?? 0,
               unidades: materia.unidades,
               periodos: materia.periodos || [false, false, false]
-            }
-          })),
-        }
-  
-        setPlanDeEstudios(plan);
-        setCantMaterias(cant);
-        setColores(planificado.etiquetas);
+            })
+          )
+        ),
       }
+
+      setPlanDeEstudios(plan);
+      setColores(planificado.etiquetas);
     }
 
     conseguirPlan();
   }, [clave, loggedUser, matricula])
 
-  /** Actualiza la cantidad de materias por color **/
-  useEffect(() => {
-    let colorMaterias = colores.map(() => 0);
-    let colorUnidades = colores.map(() => 0);
-
-    planDeEstudios.materias.forEach((semestre) => {
-      semestre.forEach(materia => {
-        colorMaterias[materia.color] += 1;
-        colorUnidades[materia.color] += materia.unidades;
-      });
-    });
-
-    setCantMateriasPorColor(colorMaterias);
-    setCantUnidadesPorColor(colorUnidades);
-  }, [planDeEstudios, colores])
+  const stillLoading = !planDeEstudios || !colores;
+  if (stillLoading) {
+    return (
+      <section className="row mt-5">
+        <div className="loading-logo" style={{ margin: "0 auto", textAlign: "center" }}>
+          <img src={refreshIcon} alt="loading" />
+          <p>Cargando plan de estudios...</p>
+        </div>
+      </section>
+    );
+  }
   
-  document.title = planDeEstudios.nombre
+  document.title = planDeEstudios.nombre;
+
+  /** Actualiza la cantidad de materias por color **/
+  let cantMaterias = 0;
+  const cantMateriasPorColor = colores.map(() => 0);
+  const cantUnidadesPorColor = colores.map(() => 0);
+  planDeEstudios.materias.forEach((semestre) => {
+    semestre.forEach(materia => {
+      cantMaterias++;
+      cantMateriasPorColor[materia.color] += 1;
+      cantUnidadesPorColor[materia.color] += materia.unidades;
+    });
+  });
 
   return (
     <Container fluid>
@@ -146,11 +144,11 @@ export default function PlanDeEstudio() {
       </Row>
       <Row>
         <Col>
-          <Toast className="toast-bg" onClose={() => setMostrarToast(false)} show={mostrarToast} delay={3000} autohide>
+          <Toast className="toast-bg" onClose={() => setInfoToast(null)} show={!!infoToast} delay={3000} autohide>
             <Toast.Header className="toast-bg">
-              <strong className="mr-auto">{infoToast.titulo}</strong>
+              <strong className="mr-auto">{infoToast?.titulo}</strong>
             </Toast.Header>
-            <Toast.Body>{infoToast.texto}</Toast.Body>
+            <Toast.Body>{infoToast?.texto}</Toast.Body>
           </Toast>
         </Col>
       </Row>
