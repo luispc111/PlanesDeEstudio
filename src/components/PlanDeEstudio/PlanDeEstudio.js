@@ -139,10 +139,10 @@ export default function PlanDeEstudio() {
 
   return (
     <Container fluid>
-      <Row>
-        <Col>
-          <h2 className="titulo-tabla"> {planDeEstudios.nombre} </h2>
-        </Col>
+      <Row className="mt-3 justify-content-center">
+        <h2 className="titulo-tabla font-weight-light">
+          {planDeEstudios.nombre}
+        </h2>
       </Row>
       <Row>
         <Col>
@@ -154,7 +154,7 @@ export default function PlanDeEstudio() {
           </Toast>
         </Col>
       </Row>
-      <Row className="mt-4 m-0 p-0 align-items-center">
+      <Row className="m-0 p-0 align-items-center">
         {loggedUser &&
           <Col xs={12} md={2} xl={1} className="mt-2 mb-2">
             <Button className="w-100" onClick={guardarPlanificado}> Guardar Plan </Button>

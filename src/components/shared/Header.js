@@ -27,8 +27,8 @@ export default function Header({ checarSesion }) {
   }
 
   return (
-    <Navbar variant="dark" className="header-navbar p-0 pb-4" expand="md" height={66}>
-      <Container fluid className="fixed-top pr-3 pl-3">
+    <Navbar variant="dark" className="header-navbar p-0" expand="md" height={56}>
+      <Container fluid className="fixed-top pr-3 pl-3" height={56}>
         <Navbar.Brand href={`${PUBLIC_URL}/#/`}>
           <h1> Planes de Estudio </h1>
         </Navbar.Brand>
@@ -36,22 +36,22 @@ export default function Header({ checarSesion }) {
         <Navbar.Collapse id="header-collapse" className="justify-content-end">
           {loggedUser && (
             <>
-              <Nav.Link href={`${PUBLIC_URL}/#/perfil/${matricula}`} className="element">
-                <Button className="d-flex">
-                  <div>Ver<br/>Perfil</div>
+              <Nav.Link href={`${PUBLIC_URL}/#/perfil/${matricula}`} className="element p-1">
+                <Button className="d-flex p-1">
+                  <div style={{ lineHeight: "1em" }} className="flex-grow-1">Ver<br/>Perfil</div>
                   <Image
-                    className="ml-4 imagen-perfil" 
-                    width={48}
-                    height={48}
+                    className="imagen-perfil" 
+                    width={40}
+                    height={40}
                     src={loggedUser.urlFoto}
                     roundedCircle
                   />
                 </Button>
               </Nav.Link>
-              <Nav.Link href={`${PUBLIC_URL}/#/`} className="element">
-                <Button onClick={cerrarSesion} variant="danger" className="d-flex">
-                  <div>Cerrar<br/>Sesión</div>
-                  <Image src={logoutIcon} width={48} height={48} alt="Cerrar sesión" className="ml-3" />
+              <Nav.Link href={`${PUBLIC_URL}/#/`} className="element p-1">
+                <Button onClick={cerrarSesion} variant="danger" className="d-flex p-1">
+                  <div style={{ lineHeight: "1em" }}>Cerrar<br/>Sesión</div>
+                  <Image src={logoutIcon} width={40} height={40} alt="Cerrar sesión" />
                 </Button>
               </Nav.Link>
             </>
