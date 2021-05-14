@@ -17,9 +17,9 @@ export default function Materia ({ nums, materia, tec21, clickMateria, listaColo
       </div>
       {tec21 && (
         <Row className="tec21 p-0 m-0 w-100">
-          <Col className={`bloque-tec21 ${(materia?.periodos[0]) ? 'activo bg-white' : 'no-activo'} p-0 m-0`}></Col>
-          <Col className={`bloque-tec21 ${(materia?.periodos[1]) ? 'activo bg-white' : 'no-activo'} p-0 m-0`}></Col>
-          <Col className={`bloque-tec21 ${(materia?.periodos[2]) ? 'activo bg-white' : 'no-activo'} p-0 m-0`}></Col>
+          <Col className={`bloque-tec21 ${(materia?.periodos ? materia?.periodos[0] : false) ? 'activo bg-white' : 'no-activo'} p-0 m-0`}></Col>
+          <Col className={`bloque-tec21 ${(materia?.periodos ? materia?.periodos[1] : false) ? 'activo bg-white' : 'no-activo'} p-0 m-0`}></Col>
+          <Col className={`bloque-tec21 ${(materia?.periodos ? materia?.periodos[2] : false) ? 'activo bg-white' : 'no-activo'} p-0 m-0`}></Col>
         </Row>
       )}
     </div>

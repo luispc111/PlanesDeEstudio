@@ -103,8 +103,9 @@ export default function PlanDeEstudio() {
             return {
               nombre: materia.nombre,
               clave: materia.clave,
-              color: planificado.materias[semIndice][materiaIndice].color,
-              unidades: materia.unidades
+              color: planificado?.materias[semIndice][materiaIndice]?.color ?? 0,
+              unidades: materia.unidades,
+              periodos: materia.periodos || [false, false, false]
             }
           })),
         }
