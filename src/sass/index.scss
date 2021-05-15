@@ -112,3 +112,68 @@ body {
     color: white;
   }
 }
+
+.planificado-summary {
+  margin: 1rem 0;
+  display: flex;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.5em;
+
+  .plan-content {
+    padding: 0.5rem;
+    flex-grow: 1;
+    overflow-x: clip;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.15em;
+  }
+
+  .edit-button {
+    display: flex;
+    align-items: center;
+  }
+
+  .icons-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      margin-right: 0.5em;
+    }
+
+    a,
+    button {
+      background-color: transparent;
+      border: none;
+      height: fit-content;
+    }
+
+    img {
+      height: 1.5em;
+    }
+
+    .delete-button {
+      padding: 0;
+      display: block;
+    }
+  }
+
+  .siglas {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  .tec21-label {
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 14px;
+    height: 0.75em;
+    line-height: 1.5em;
+  }
+}
