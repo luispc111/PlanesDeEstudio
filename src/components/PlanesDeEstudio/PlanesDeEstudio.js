@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-import { Button, Container, Row, FormControl, InputGroup } from 'react-bootstrap';
+import { Button, Container, Row, Form } from 'react-bootstrap';
 
 import { PUBLIC_URL, BACKEND_URL } from '../utils'; 
 
@@ -21,18 +21,22 @@ export default function PlanesDeEstudio() {
   const planesFiltrados = planesDeEstudio.filter(carrera => carrera.nombre.includes(filtroCarreras)).sort((a, b) => (a.nombre).localeCompare(b.nombre));
 
   return (
-    <Container fluid>
-      <Row className="mb-3" width ="100%">
+    <Container fluid className="mt-3">
+      <Row>
         <h2 className="mb-4">
           Selecciona tu plan de estudios:
         </h2>
-        <InputGroup>
-          <FormControl
+      </Row>
+      <Row>
+        <Form.Group className="col-12 col-md-6 col-lg-4">
+          <Form.Control
+            type="text"
             placeholder="Ingresa tu carrera"
             aria-label="Clave del plan de estudio"
-            onChange={(event) => {setFiltroCarreras(event.target.value.toUpperCase())}}
+            onChange={(e) => setFiltroCarreras(e.target.value.toUpperCase())}
           />
-        </InputGroup>
+          <Form.Label>Ingresa las siglas de tu carrera:</Form.Label>
+        </Form.Group>
       </Row>
       <Row className="mb-3" width ="100%">
         {planesFiltrados.map(({clave, nombre}, indice) => (

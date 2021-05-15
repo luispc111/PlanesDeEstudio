@@ -71,3 +71,44 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.form-group {
+  margin-bottom: 1em;
+  padding-top: 1.5em;
+  transition: all 0.3s;
+  min-height: 3.5em;
+  position: relative;
+
+  .form-control {
+    font-size: inherit;
+    transition: all 0.5s;
+
+    &::placeholder {
+      color: transparent;
+      box-shadow: none;
+      outline: none;
+      border-color: orange;
+    }
+  }
+
+  .form-label {
+    position: absolute;
+    pointer-events: none;
+    font-size: 1em;
+    color: #aaa;
+    display: block;
+    opacity: 1;
+    transform: translate(0.9em, -1.75em);
+    transform-origin: 0 0;
+    transition: all 0.3s;
+    white-space: nowrap;
+    line-height: 1em;
+  }
+
+  .form-control:focus + .form-label,
+  .form-control:not(:placeholder-shown) + .form-label {
+    transform: translate(0.5em, -4.4em);
+    font-size: 0.8em;
+    color: white;
+  }
+}
