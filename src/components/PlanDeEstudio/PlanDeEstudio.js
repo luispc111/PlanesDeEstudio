@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col, Button, Toast } from 'react-bootstrap';
 
-import { BACKEND_URL } from '../utils'; 
+import { PUBLIC_URL, BACKEND_URL } from '../utils'; 
 import { UserContext } from "./../../context";
 
 import BarrasDeProgreso from './BarrasDeProgreso/BarrasDeProgreso';
@@ -56,10 +56,19 @@ export default function PlanDeEstudio() {
 
   /** Consigue la información del plan de estudios **/
   useEffect(() => {
+    if (loggedUser === undefined) return;
+    
     const conseguirPlan = async () => {
-      if (!loggedUser) {
-        let res = await axios.get(`${BACKEND_URL}/planes/${clave}`)
-        let planOficial = JSON.parse(JSON.stringify(res.data));
+      if (loggedUser === null) {
+        const resGet = await axios
+          .get(`${BACKEND_URL}/planes/${clave}`)
+          .catch((err) => err);
+        if (resGet instanceof Error) {
+          alert(resGet?.response?.data?.msg || "Hubo un error de conexión al servidor.");
+          window.location = PUBLIC_URL;
+          return;
+        }
+        const planOficial = JSON.parse(JSON.stringify(resGet.data));
   
         planOficial.materias = planOficial.materias.map(sem => sem.map(materia => {
           return {
@@ -73,18 +82,25 @@ export default function PlanDeEstudio() {
     
         setPlanDeEstudios(planOficial);
         setColores([
-          { color: "#BF7913", nombre: 'Incompleto' }, 
+          { color: "#BF7913", nombre: 'Incompleto' },
           { color: "#439630", nombre: 'Completo' }
         ]);
 
         return;
       }
         
-      let res = await axios.post(`${BACKEND_URL}/planificados/crearPlanificadoBase/${clave}`, { matricula })
-      let oficial = res.data.oficial;
-      let planificado = res.data.planificado;
+      const resPost = await axios
+        .post(`${BACKEND_URL}/planificados/crearPlanificadoBase/${clave}`, { matricula })
+        .catch((err) => err);
+      if (resPost instanceof Error) {
+        alert(resPost?.response?.data?.msg || "Hubo un error de conexión al servidor.");
+        window.location = PUBLIC_URL;
+        return;
+      }
+      const oficial = resPost.data.oficial;
+      const planificado = resPost.data.planificado;
 
-      let plan = {
+      const plan = {
         _id: planificado._id,
         nombre: oficial.nombre,
         siglas: oficial.siglas,
@@ -107,7 +123,7 @@ export default function PlanDeEstudio() {
     }
 
     conseguirPlan();
-  }, [clave, loggedUser, matricula])
+  }, [clave, loggedUser, matricula]);
 
   const stillLoading = !planDeEstudios || !colores;
   if (stillLoading) {
