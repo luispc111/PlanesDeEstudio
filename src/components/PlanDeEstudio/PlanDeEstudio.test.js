@@ -1,5 +1,6 @@
 import React from "react";
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
+
 import { MemoryRouter, Route } from "react-router";
 import axios from 'axios';
 
@@ -25,6 +26,7 @@ const PLANIFICADO_URL = (clave) => `${BACKEND_URL}/planificados/${clave}`
 const PLANIFICADO_PREDETERMINADO_URL = (clave) => `${BACKEND_URL}/planificados/crearPlanificadoBase/${clave}`
 const componente = (clave) => <MemoryRouter initialEntries={[`/plan/${clave}`]}>  <Route path="/plan/:clave" component={PlanDeEstudio} /> </MemoryRouter>
 const componenteSesionIniciada = (clave) => <UserContext.Provider value={{urlFoto: "https://www.dominio.com/imagen.jpg", matricula: 'A00822222'}}> {componente(clave)} </UserContext.Provider>
+const componenteSesionNoIniciada = (clave) => <UserContext.Provider value={null}> {componente(clave)} </UserContext.Provider>
 
 const data = [
   {
@@ -41,13 +43,22 @@ const data = [
   }
 ]
 
+it("renderiza que plan está cargando", async () => {
+  const siglas = PlanOficial.siglas;
+  axios.get.mockImplementationOnce(() => Promise.resolve(data[0]));
+
+  const { getByText } = render(componenteSesionNoIniciada(siglas));
+
+  expect(getByText(/Cargando plan de estudios.../)).toBeInTheDocument();
+});
+
 it("renderiza plan de estudios sin iniciar sesión", async () => {
   const siglas = PlanOficial.siglas;
   axios.get.mockImplementationOnce(() => Promise.resolve(data[0]));
 
-  const { getByText, container } = render(componente(siglas));
+  const { getByText, container } = render(componenteSesionNoIniciada(siglas));
 
-  await expect(axios.get).toHaveBeenCalledWith(PLAN_URL(siglas));;
+  await waitFor(() => expect(axios.get).toHaveBeenCalledWith(PLAN_URL(siglas)));
 
   expect(getByText(/Ingeniería en Ciencias Computacionales/)).toBeInTheDocument();
   
@@ -75,9 +86,9 @@ it("renderiza plan de estudios tec21 sin iniciar sesión", async () => {
   const siglas = PlanOficialTec21.siglas;
   axios.get.mockImplementationOnce(() => Promise.resolve(data[1]));
 
-  const { getByText, container } = render(componente(siglas));
+  const { getByText, container } = render(componenteSesionNoIniciada(siglas));
 
-  await expect(axios.get).toHaveBeenCalledWith(PLAN_URL(siglas));;
+  await waitFor(() => expect(axios.get).toHaveBeenCalledWith(PLAN_URL(siglas)));
 
   expect(getByText(/Ingeniería en Ciencias Computacionales/)).toBeInTheDocument();
   
@@ -107,7 +118,7 @@ it("renderiza plan de estudios con sesión iniciada", async () => {
 
   const { getByText, container } = render(componenteSesionIniciada(siglas));
 
-  await expect(axios.post).toHaveBeenCalledWith(PLANIFICADO_PREDETERMINADO_URL(siglas), { matricula: 'A00822222' });;
+  await waitFor(() => expect(axios.post).toHaveBeenCalledWith(PLANIFICADO_PREDETERMINADO_URL(siglas), { matricula: 'A00822222' }));
 
   expect(getByText(/Ingeniería en Ciencias Computacionales/i)).toBeInTheDocument();
   
