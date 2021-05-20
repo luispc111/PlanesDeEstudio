@@ -41,18 +41,18 @@ function App() {
       <div className="App">
         <UserContext.Provider value={loggedUser}>
           <Header checarSesion={checarSesion} />
-            <Route
-              exact path="/"
-              component={PlanesDeEstudio}
-            />
-            <Route
-              path="/plan/:clave"
-              component={PlanDeEstudio}
-            />
-            <Route
-              path="/perfil/:matricula"
-              component={Profile}
-            />
+          <Route
+            exact path="/"
+            component={PlanesDeEstudio}
+          />
+          <Route
+            path="/plan/:clave"
+            component={PlanDeEstudio}
+          />
+          <Route
+            path="/perfil/:matricula"
+            component={Profile}
+          />
           <div className="flex-grow-1"></div>
           <Footer />
         </UserContext.Provider>

@@ -3,12 +3,14 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col, Button, Toast } from 'react-bootstrap';
 
-import { BACKEND_URL } from '../utils'; 
+import { PUBLIC_URL, BACKEND_URL } from '../utils'; 
 import { UserContext } from "./../../context";
 
 import BarrasDeProgreso from './BarrasDeProgreso/BarrasDeProgreso';
 import Semestre from './Semestre/Semestre';
 import BotonesDeColor from './BotonesDeColor/BotonesDeColor';
+
+import refreshIcon from "./refresh_white_24dp.svg";
 
 /** Vista de la tabla de un plan de estudio individual, junto con una lista de colores y barras de progreso **/
 export default function PlanDeEstudio() {
@@ -17,20 +19,13 @@ export default function PlanDeEstudio() {
 
   const { clave } = useParams();
 
-  const [mostrarToast, setMostrarToast] = useState(false);
-  const [infoToast, setInfoToast] = useState({ titulo: 'Titulo', texto: 'Texto' });
+  const [infoToast, setInfoToast] = useState(null);
 
-  const [planDeEstudios, setPlanDeEstudios] = useState({materias: []});
+  const [planDeEstudios, setPlanDeEstudios] = useState(undefined);
 
-  const [colores, setColores] = useState([
-    { color: "#BF7913", nombre: 'Incompleto' }, 
-    { color: "#439630", nombre: 'Completo' }
-  ]);
-  const [colorSeleccionado, setColorSeleccionado] = useState(1)
-  const [cantMateriasPorColor, setCantMateriasPorColor] = useState([1, 0])
-  const [cantUnidadesPorColor, setCantUnidadesPorColor] = useState([1, 0])
-  const [cantMaterias, setCantMaterias] = useState(1);
-
+  const [colores, setColores] = useState(undefined);
+  const [colorSeleccionado, setColorSeleccionado] = useState(1);
+  
   const clickMateria = (sem, materia) => {
     let plan = JSON.parse(JSON.stringify(planDeEstudios));
     plan.materias[sem][materia].color = colorSeleccionado;
@@ -52,27 +47,30 @@ export default function PlanDeEstudio() {
       materias: planDeEstudios.materias.map(sem => sem.map(materia => ({ clave: materia.clave, color: materia.color}))),
     }
     axios.put(`${BACKEND_URL}/planificados/${planDeEstudios._id}`, plan)
-    .then(res => {
-      setMostrarToast(true);
-      setInfoToast({ titulo: '¡Actualización exitosa!', texto: res.data })
-    })
-    .catch((err) => {
-      console.log({...err});
-      setMostrarToast(true);
-      setInfoToast({ titulo: 'Error', texto: err.response.data.msg })
-    });
+      .then(res => setInfoToast({ titulo: '¡Actualización exitosa!', texto: res.data }))
+      .catch((err) => {
+        console.log({...err});
+        setInfoToast({ titulo: 'Error', texto: err.response.data.msg })
+      });
   }
 
   /** Consigue la información del plan de estudios **/
   useEffect(() => {
+    if (loggedUser === undefined) return;
+    
     const conseguirPlan = async () => {
-      if (!loggedUser) {
-        let res = await axios.get(`${BACKEND_URL}/planes/${clave}`)
-        let planOficial = JSON.parse(JSON.stringify(res.data));
-        let cant = 0;
+      if (loggedUser === null) {
+        const resGet = await axios
+          .get(`${BACKEND_URL}/planes/${clave}`)
+          .catch((err) => err);
+        if (resGet instanceof Error) {
+          alert(resGet?.response?.data?.msg || "Hubo un error de conexión al servidor.");
+          window.location = PUBLIC_URL;
+          return;
+        }
+        const planOficial = JSON.parse(JSON.stringify(resGet.data));
   
         planOficial.materias = planOficial.materias.map(sem => sem.map(materia => {
-          cant++;
           return {
             clave: materia.clave,
             nombre: materia.nombre,
@@ -82,79 +80,95 @@ export default function PlanDeEstudio() {
           }
         }));
     
-        let colorMaterias = [cant, 0]
-  
         setPlanDeEstudios(planOficial);
-        setCantMaterias(cant);
-        setCantMateriasPorColor(colorMaterias);
-      } else {
-        let res = await axios.post(`${BACKEND_URL}/planificados/crearPlanificadoBase/${clave}`, { matricula })
-        let cant = 0;
-        let oficial = res.data.oficial;
-        let planificado = res.data.planificado;
-  
-        let plan = {
-          _id: planificado._id,
-          nombre: oficial.nombre,
-          siglas: oficial.siglas,
-          esTec21: oficial.esTec21,
-          materias: oficial.materias.map((sem, semIndice) => sem.map((materia, materiaIndice) => {
-            cant++;
-            return {
+        setColores([
+          { color: "#BF7913", nombre: 'Incompleto' },
+          { color: "#439630", nombre: 'Completo' }
+        ]);
+
+        return;
+      }
+        
+      const resPost = await axios
+        .post(`${BACKEND_URL}/planificados/crearPlanificadoBase/${clave}`, { matricula })
+        .catch((err) => err);
+      if (resPost instanceof Error) {
+        alert(resPost?.response?.data?.msg || "Hubo un error de conexión al servidor.");
+        window.location = PUBLIC_URL;
+        return;
+      }
+      const oficial = resPost.data.oficial;
+      const planificado = resPost.data.planificado;
+
+      const plan = {
+        _id: planificado._id,
+        nombre: oficial.nombre,
+        siglas: oficial.siglas,
+        esTec21: oficial.esTec21,
+        materias: oficial.materias.map(
+          (sem, semIdx) => sem.map(
+            (materia, matIdx) => ({
               nombre: materia.nombre,
               clave: materia.clave,
-              color: planificado?.materias[semIndice][materiaIndice]?.color ?? 0,
+              color: planificado?.materias?.[semIdx]?.[matIdx]?.color ?? 0,
               unidades: materia.unidades,
               periodos: materia.periodos || [false, false, false]
-            }
-          })),
-        }
-  
-        setPlanDeEstudios(plan);
-        setCantMaterias(cant);
-        setColores(planificado.etiquetas);
+            })
+          )
+        ),
       }
+
+      setPlanDeEstudios(plan);
+      setColores(planificado.etiquetas);
     }
 
     conseguirPlan();
-  }, [clave, loggedUser, matricula])
+  }, [clave, loggedUser, matricula]);
+
+  const stillLoading = !planDeEstudios || !colores;
+  if (stillLoading) {
+    return (
+      <section className="row mt-5">
+        <div className="loading-logo" style={{ margin: "0 auto", textAlign: "center" }}>
+          <img src={refreshIcon} alt="loading" />
+          <p>Cargando plan de estudios...</p>
+        </div>
+      </section>
+    );
+  }
+  
+  document.title = planDeEstudios.nombre;
 
   /** Actualiza la cantidad de materias por color **/
-  useEffect(() => {
-    let colorMaterias = colores.map(() => 0);
-    let colorUnidades = colores.map(() => 0);
-
-    planDeEstudios.materias.forEach((semestre) => {
-      semestre.forEach(materia => {
-        colorMaterias[materia.color] += 1;
-        colorUnidades[materia.color] += materia.unidades;
-      });
+  let cantMaterias = 0;
+  const cantMateriasPorColor = colores.map(() => 0);
+  const cantUnidadesPorColor = colores.map(() => 0);
+  planDeEstudios.materias.forEach((semestre) => {
+    semestre.forEach(materia => {
+      cantMaterias++;
+      cantMateriasPorColor[materia.color] += 1;
+      cantUnidadesPorColor[materia.color] += materia.unidades;
     });
-
-    setCantMateriasPorColor(colorMaterias);
-    setCantUnidadesPorColor(colorUnidades);
-  }, [planDeEstudios, colores])
-  
-  document.title = planDeEstudios.nombre
+  });
 
   return (
     <Container fluid>
-      <Row>
-        <Col>
-          <h2 className="titulo-tabla"> {planDeEstudios.nombre} </h2>
-        </Col>
+      <Row className="mt-3 justify-content-center">
+        <h2 className="titulo-tabla font-weight-light">
+          {planDeEstudios.nombre}
+        </h2>
       </Row>
       <Row>
         <Col>
-          <Toast className="toast-bg" onClose={() => setMostrarToast(false)} show={mostrarToast} delay={3000} autohide>
+          <Toast className="toast-bg" onClose={() => setInfoToast(null)} show={!!infoToast} delay={3000} autohide>
             <Toast.Header className="toast-bg">
-              <strong className="mr-auto">{infoToast.titulo}</strong>
+              <strong className="mr-auto">{infoToast?.titulo}</strong>
             </Toast.Header>
-            <Toast.Body>{infoToast.texto}</Toast.Body>
+            <Toast.Body>{infoToast?.texto}</Toast.Body>
           </Toast>
         </Col>
       </Row>
-      <Row className="mt-4 m-0 p-0 align-items-center">
+      <Row className="m-0 p-0 align-items-center">
         {loggedUser &&
           <Col xs={12} md={2} xl={1} className="mt-2 mb-2">
             <Button className="w-100" onClick={guardarPlanificado}> Guardar Plan </Button>
