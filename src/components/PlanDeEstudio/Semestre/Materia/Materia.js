@@ -6,7 +6,7 @@ export default function Materia ({ nums, materia, tec21, clickMateria, listaColo
   const {numSemestre, numMateria} = nums
 
   return (
-    <div className="materia" style={{backgroundColor: listaColores[materia.color]?.color}} onClick={() => clickMateria(numSemestre, numMateria)}>
+    <div className="materia" style={{backgroundColor: listaColores[materia.color]?.color ?? 0}} onClick={() => clickMateria(numSemestre, numMateria)}>
       <div className="labelMateria">
         <div className="nombre-materia">
           <label className="m-0">{materia.nombre}</label>
