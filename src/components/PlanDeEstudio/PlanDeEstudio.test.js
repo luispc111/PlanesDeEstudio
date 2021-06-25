@@ -3,6 +3,7 @@ import { render, waitFor } from '@testing-library/react';
 
 import { MemoryRouter, Route } from "react-router";
 import axios from 'axios';
+import { ToastProvider } from 'react-toast-notifications';
 
 import PlanDeEstudio from "./PlanDeEstudio";
 import { BACKEND_URL } from '../utils';
@@ -24,7 +25,7 @@ jest.mock('axios');
 const PLAN_URL = (clave) => `${BACKEND_URL}/planes/${clave}`
 const PLANIFICADO_URL = (clave) => `${BACKEND_URL}/planificados/${clave}`
 const PLANIFICADO_PREDETERMINADO_URL = (clave) => `${BACKEND_URL}/planificados/crearPlanificadoBase/${clave}`
-const componente = (clave) => <MemoryRouter initialEntries={[`/plan/${clave}`]}>  <Route path="/plan/:clave" component={PlanDeEstudio} /> </MemoryRouter>
+const componente = (clave) => <ToastProvider> <MemoryRouter initialEntries={[`/plan/${clave}`]}>  <Route path="/plan/:clave" component={PlanDeEstudio} /> </MemoryRouter> </ToastProvider>
 const componenteSesionIniciada = (clave) => <UserContext.Provider value={{urlFoto: "https://www.dominio.com/imagen.jpg", matricula: 'A00822222'}}> {componente(clave)} </UserContext.Provider>
 const componenteSesionNoIniciada = (clave) => <UserContext.Provider value={null}> {componente(clave)} </UserContext.Provider>
 

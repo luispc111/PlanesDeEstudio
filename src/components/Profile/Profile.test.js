@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from '@testing-library/react';
+import { ToastProvider } from 'react-toast-notifications';
 import { UserContext } from "../../context";
-// import { act } from "react-dom/test-utils";
 
 import Profile from "./Profile";
 
@@ -13,9 +13,11 @@ it("renderiza la vista de perfil de usuario", () => {
     matricula: "A00000000"
   }
   const { getByText, container } = render(
-    <UserContext.Provider value={usuario}>
-      <Profile/>
-    </UserContext.Provider>
+    <ToastProvider>
+      <UserContext.Provider value={usuario}>
+        <Profile/>
+      </UserContext.Provider>
+    </ToastProvider>
   );
 
   const nombreUsuario = getByText(/Peter Parker/);
