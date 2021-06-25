@@ -19,6 +19,7 @@
     "react-google-login": "^5.2.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "react-toast-notifications": "^2.4.4",
     "web-vitals": "^1.1.1"
   },
   "scripts": {

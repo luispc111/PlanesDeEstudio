@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { Container, Row, Col, Button, Toast } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import { useToasts } from 'react-toast-notifications';
 
 import { PUBLIC_URL, BACKEND_URL } from '../utils'; 
 import { UserContext } from "./../../context";
@@ -19,13 +20,20 @@ export default function PlanDeEstudio() {
 
   const { clave } = useParams();
 
-  const [infoToast, setInfoToast] = useState(null);
+  const { addToast } = useToasts();
 
   const [planDeEstudios, setPlanDeEstudios] = useState(undefined);
 
   const [colores, setColores] = useState(undefined);
   const [colorSeleccionado, setColorSeleccionado] = useState(1);
   
+  const agregarToastError = (mensaje) => {
+    addToast(`Error: ${mensaje || "Hubo un error de conexión al servidor."}`, {
+      appearance: 'error',
+      autoDismiss: true,
+    });
+  }
+
   const clickMateria = (sem, materia) => {
     let plan = JSON.parse(JSON.stringify(planDeEstudios));
     plan.materias[sem][materia].color = colorSeleccionado;
@@ -47,10 +55,15 @@ export default function PlanDeEstudio() {
       materias: planDeEstudios.materias.map(sem => sem.map(materia => ({ clave: materia.clave, color: materia.color}))),
     }
     axios.put(`${BACKEND_URL}/planificados/${planDeEstudios._id}`, plan)
-      .then(res => setInfoToast({ titulo: '¡Actualización exitosa!', texto: res.data }))
+      .then(res => {
+        addToast(`¡Actualización exitosa! ${res.data}`, {
+          appearance: 'success',
+          autoDismiss: true,
+        });
+      })
       .catch((err) => {
         console.log({...err});
-        setInfoToast({ titulo: 'Error', texto: err.response.data.msg })
+        agregarToastError(err?.response?.data?.msg);
       });
   }
 
@@ -64,7 +77,8 @@ export default function PlanDeEstudio() {
           .get(`${BACKEND_URL}/planes/${clave}`)
           .catch((err) => err);
         if (resGet instanceof Error) {
-          alert(resGet?.response?.data?.msg || "Hubo un error de conexión al servidor.");
+          console.log(resGet);
+          
           window.location = PUBLIC_URL;
           return;
         }
@@ -93,7 +107,8 @@ export default function PlanDeEstudio() {
         .post(`${BACKEND_URL}/planificados/crearPlanificadoBase/${clave}`, { matricula })
         .catch((err) => err);
       if (resPost instanceof Error) {
-        alert(resPost?.response?.data?.msg || "Hubo un error de conexión al servidor.");
+        console.log(resPost);
+        agregarToastError(resPost?.response?.data?.msg);
         window.location = PUBLIC_URL;
         return;
       }
@@ -123,7 +138,7 @@ export default function PlanDeEstudio() {
     }
 
     conseguirPlan();
-  }, [clave, loggedUser, matricula]);
+  }, [clave, loggedUser, matricula, addToast]);
 
   const stillLoading = !planDeEstudios || !colores;
   if (stillLoading) {
@@ -157,16 +172,6 @@ export default function PlanDeEstudio() {
         <h2 className="titulo-tabla font-weight-light">
           {planDeEstudios.nombre}
         </h2>
-      </Row>
-      <Row>
-        <Col>
-          <Toast className="toast-bg" onClose={() => setInfoToast(null)} show={!!infoToast} delay={3000} autohide>
-            <Toast.Header className="toast-bg">
-              <strong className="mr-auto">{infoToast?.titulo}</strong>
-            </Toast.Header>
-            <Toast.Body>{infoToast?.texto}</Toast.Body>
-          </Toast>
-        </Col>
       </Row>
       <Row className="m-0 p-0 align-items-center">
         {loggedUser &&

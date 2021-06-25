@@ -31,13 +31,16 @@ async function authenticate() {
 };
 
 /** Guardar la sesión en una cookie y refrescar la página. */
-async function login({ profileObj }) {
+async function login(profileObj, addToast) {
   const resLogin = await axios.post(`${BACKEND_URL}/login/`, profileObj).catch((err) => err);
   if (resLogin instanceof Error) {
     const errMsg = resLogin.response
       ? resLogin.response.data.msg
       : "Hubo un error de conexión al servidor.";
-    alert(errMsg);
+    addToast(`Error: ${errMsg}`, {
+      appearance: 'error',
+      autoDismiss: true,
+    });
     return;
   }
   Cookies.set(TOKEN_NAME, resLogin.data.token, { expires: 365 });
