@@ -12,12 +12,12 @@ import { UserContext } from "../../context";
  * 
  * @param {Boolean} loggedUser Indica el usuario de la sesión.
  */
-export default function Header({ checarSesion }) {
+export default function Header({ checarSesion, addToast }) {
   const loggedUser = useContext(UserContext);
   const { matricula } = loggedUser || {};
 
   const iniciarSesion = async ({ profileObj }) => {
-    await login({ profileObj });
+    await login(profileObj, addToast);
     checarSesion();
   }
 

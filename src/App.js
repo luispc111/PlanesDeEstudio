@@ -1,6 +1,6 @@
-// import React, { useState, useEffect, useCallback } from 'react';
 import React, { useEffect, useState } from 'react';
 import { HashRouter as Router, Route } from 'react-router-dom';
+import { useToasts } from 'react-toast-notifications';
 
 import Header from './components/shared/Header';
 import Footer from './components/shared/Footer';
@@ -12,14 +12,19 @@ import { UserContext } from "./context";
 import { PUBLIC_URL } from './components/utils'; 
 import { authenticate } from "./components/auth";
 
-/** Función que verifica si la sesión está iniciada y cambia el loggedUser correspondientemente. */
-async function checkSession(setLoggedUser) {
+async function checkSession(setLoggedUser, addToast) {
   const resAuth = await authenticate().catch((err) => err);
   if (resAuth instanceof Error) {
     if (!resAuth.response) {
-      alert("Hubo un error de conexión al servidor para validar sesión iniciada.");
+      addToast('Error: Hubo un error de conexión al servidor para validar sesión iniciada.', {
+        appearance: 'error',
+        autoDismiss: true,
+      });
     } else if (resAuth.response.data.msg) {
-      alert(resAuth.response.data.msg);
+      addToast(`Error: ${resAuth.response.data.msg}`, {
+        appearance: 'error',
+        autoDismiss: true,
+      });
     }
     setLoggedUser(null);
     return;
@@ -30,30 +35,38 @@ async function checkSession(setLoggedUser) {
 function App() {
   const [loggedUser, setLoggedUser] = useState(undefined);
 
-  const checarSesion = () => checkSession(setLoggedUser);
+  const { addToast } = useToasts();
+
+  const checarSesion = () => checkSession(setLoggedUser, addToast);
 
   useEffect(() => {
-    checkSession(setLoggedUser);
-  }, []);
+    checkSession(setLoggedUser, addToast);
+  }, [addToast]);
+
+  /** Función que verifica si la sesión está iniciada y cambia el loggedUser correspondientemente. */
+  
   
   return (
     <Router basename={PUBLIC_URL}>
       <div className="App">
         <UserContext.Provider value={loggedUser}>
-          <Header checarSesion={checarSesion} />
-          <Route
-            exact path="/"
-            component={PlanesDeEstudio}
+          <Header
+            checarSesion={checarSesion}
+            addToast={addToast}
           />
-          <Route
-            path="/plan/:clave"
-            component={PlanDeEstudio}
-          />
-          <Route
-            path="/perfil/:matricula"
-            component={Profile}
-          />
-          <div className="flex-grow-1"></div>
+            <Route
+              exact path="/"
+              component={PlanesDeEstudio}
+            />
+            <Route
+              path="/plan/:clave"
+              component={PlanDeEstudio}
+            />
+            <Route
+              path="/perfil/:matricula"
+              component={Profile}
+            />
+            <div className="flex-grow-1"></div>
           <Footer />
         </UserContext.Provider>
       </div>
