@@ -9,7 +9,7 @@ function ColorInput({ color, actualizarNombre, actualizarColor, borrarColor, ind
       <Col xs={5}>
         <Picker
           color={ color.color }
-          onChangeComplete={(c) => actualizarColor(c.hex, indice) }
+          onChange={(c) => actualizarColor(c.hex, indice) }
         />
       </Col>
       <Col xs={5}>
